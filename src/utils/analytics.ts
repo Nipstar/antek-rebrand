@@ -1,63 +1,84 @@
-/**
- * Google Analytics utility functions
- * Handles initialization and page view tracking
- */
+import { getStoredConsent } from './consent'
 
-// Initialize Google Analytics with gtag script — deferred until browser is idle
+let initialised = false
+
 export const initializeGoogleAnalytics = (gtagId: string) => {
   if (!gtagId || gtagId === 'G-XXXXXXXXXX') {
-    console.warn('Google Analytics ID not configured');
-    return;
+    console.warn('Google Analytics ID not configured')
+    return
   }
+  if (typeof window === 'undefined' || initialised) return
+  initialised = true
 
   const loadGA = () => {
-    // Load gtag script
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
-    document.head.appendChild(script1);
+    window.dataLayer = window.dataLayer || []
+    function gtag(..._args: unknown[]) {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments)
+    }
+    window.gtag = gtag as (...args: unknown[]) => void
 
-    // Initialize gtag
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${gtagId}', {
-        'page_path': window.location.pathname,
-        'anonymize_ip': true
-      });
-    `;
-    document.head.appendChild(script2);
-  };
+    // Google Consent Mode v2 — default denied. GA script can still load but
+    // won't store identifiers or send personal data until consent is granted.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500,
+    })
+
+    // If user previously accepted, grant immediately
+    if (getStoredConsent() === 'accepted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' })
+    }
+
+    const s = document.createElement('script')
+    s.async = true
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`
+    document.head.appendChild(s)
+
+    gtag('js', new Date())
+    gtag('config', gtagId, {
+      page_path: window.location.pathname,
+      anonymize_ip: true,
+    })
+  }
 
   if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadGA);
+    (window as unknown as { requestIdleCallback: (cb: () => void) => void }).requestIdleCallback(loadGA)
   } else {
-    setTimeout(loadGA, 2000);
+    setTimeout(loadGA, 2000)
   }
-};
+}
 
-// Track page views (call this when route changes)
+export const grantAnalyticsConsent = () => {
+  if (typeof window === 'undefined' || !window.gtag) return
+  window.gtag('consent', 'update', { analytics_storage: 'granted' })
+}
+
+export const revokeAnalyticsConsent = () => {
+  if (typeof window === 'undefined' || !window.gtag) return
+  window.gtag('consent', 'update', { analytics_storage: 'denied' })
+}
+
 export const trackPageView = (path: string) => {
   if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
     window.gtag('config', import.meta.env.VITE_GOOGLE_ANALYTICS_ID, {
-      'page_path': path,
-    });
+      page_path: path,
+    })
   }
-};
+}
 
-// Track custom events
 export const trackEvent = (eventName: string, eventData?: Record<string, string | number | boolean>) => {
   if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
-    window.gtag('event', eventName, eventData || {});
+    window.gtag('event', eventName, eventData || {})
   }
-};
+}
 
-// Extend window interface for gtag
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
-    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void
+    dataLayer: unknown[]
   }
 }

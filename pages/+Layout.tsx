@@ -1,7 +1,10 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { Navigation } from '../src/components/Navigation'
 import { Footer } from '../src/components/Footer'
-import { initializeGoogleAnalytics, trackPageView } from '../src/utils/analytics'
+import { CookieConsent } from '../src/components/CookieConsent'
+import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsent, trackPageView } from '../src/utils/analytics'
+import { initializeMetaPixel } from '../src/utils/metaPixel'
+import { getStoredConsent } from '../src/utils/consent'
 import '../src/index.css'
 
 const ChatbotWidget = lazy(() =>
@@ -14,9 +17,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const gtagId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
     if (gtagId) {
+      // Loads GA with Consent Mode v2 default-denied. Safe to run on first visit;
+      // analytics_storage stays denied until the user clicks Accept.
       initializeGoogleAnalytics(gtagId)
     }
     trackPageView(window.location.pathname || '/')
+
+    // If the user already accepted on a prior visit, load Meta Pixel now.
+    if (getStoredConsent() === 'accepted') {
+      initializeMetaPixel()
+    }
+
+    // React to consent decisions made later in the session.
+    const onConsentChange = (e: Event) => {
+      const detail = (e as CustomEvent).detail as 'accepted' | 'rejected' | null
+      if (detail === 'accepted') {
+        grantAnalyticsConsent()
+        initializeMetaPixel()
+      } else if (detail === 'rejected') {
+        revokeAnalyticsConsent()
+      }
+    }
+    window.addEventListener('cookie-consent-change', onConsentChange)
+    return () => window.removeEventListener('cookie-consent-change', onConsentChange)
   }, [])
 
   // Defer ChatbotWidget mount until browser is idle or after a short delay,
@@ -62,16 +85,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-off-white">
-      {/* Meta Pixel noscript fallback */}
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1430686008694674&ev=PageView&noscript=1"
-          alt=""
-        />
-      </noscript>
       <Navigation />
       <main>{children}</main>
       <Footer />
@@ -80,6 +93,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <ChatbotWidget />
         </Suspense>
       )}
+      <CookieConsent />
     </div>
   )
 }
