@@ -2,6 +2,7 @@ import { useState, Suspense, lazy } from 'react';
 import { Button } from '../../../src/components/Button';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
+import { CalBooking } from '../../../src/components/CalBooking';
 import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
 
 const VoiceChat = lazy(() => import('../../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
@@ -238,6 +239,22 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* ── BOOK A CALL (Cal.com) ── */}
+      <section className="bg-off-white border-t-3 border-charcoal py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-10">
+            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
+              Pick a Time That Works for You
+            </h2>
+            <p className="text-charcoal max-w-2xl mx-auto">
+              Book a free 30-minute call below &mdash; or use the contact form if you prefer.
+            </p>
+          </div>
+          <CalBooking />
+        </div>
+      </section>
+
 
       {/* ── VOICE CHAT MODAL ── */}
       {isVoiceChatOpen && (

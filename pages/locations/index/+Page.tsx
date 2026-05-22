@@ -1,4 +1,5 @@
 import { Button } from '../../../src/components/Button';
+import { CalBooking } from '../../../src/components/CalBooking';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 
@@ -106,12 +107,27 @@ export default function Page() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
             <a href="/contact">
-              <Button variant="primary">Book a free 15-min chat</Button>
+              <Button variant="primary">Use the contact form</Button>
             </a>
             <a href="tel:03330389960">
               <Button variant="secondary">Call 0333 038 9960</Button>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ── BOOK A CALL (Cal.com) ── */}
+      <section className="bg-off-white border-t-3 border-charcoal py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-10">
+            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
+              Pick a Time That Works for You
+            </h2>
+            <p className="text-charcoal max-w-2xl mx-auto">
+              Book a free 30-minute call below.
+            </p>
+          </div>
+          <CalBooking />
         </div>
       </section>
     </div>
