@@ -56,10 +56,10 @@ export function CalBooking({
     Cal('init', namespace, { origin: 'https://app.cal.com' })
     Cal.ns[namespace]('inline', {
       elementOrSelector: `#${elementId}`,
-      config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
+      config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true', theme: 'light' },
       calLink,
     })
-    Cal.ns[namespace]('ui', { hideEventTypeDetails: false, layout: 'month_view' })
+    Cal.ns[namespace]('ui', { theme: 'light', hideEventTypeDetails: false, layout: 'month_view' })
   }, [calLink, namespace, elementId])
 
   return <div id={elementId} className={className} />
