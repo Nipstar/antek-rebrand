@@ -183,6 +183,32 @@ export default function Page() {
                 <li><span className="font-bold text-charcoal">Areas Served:</span> UK-wide, headquartered in Hampshire</li>
               </ul>
             </Card>
+
+            <Card>
+              <h3 className="font-black text-lg uppercase text-charcoal mb-4">Find Antek elsewhere</h3>
+              <ul className="space-y-2 text-mid-gray text-sm">
+                <li>
+                  <span className="font-bold text-charcoal">About.me:</span>{' '}
+                  <a className="underline hover:text-terracotta" href="https://about.me/andynorman" target="_blank" rel="noopener noreferrer">about.me/andynorman</a>
+                </li>
+                <li>
+                  <span className="font-bold text-charcoal">Upwork:</span>{' '}
+                  <a className="underline hover:text-terracotta" href="https://www.upwork.com/freelancers/antekautomation" target="_blank" rel="noopener noreferrer">upwork.com/freelancers/antekautomation</a>
+                </li>
+                <li>
+                  <span className="font-bold text-charcoal">Clutch:</span>{' '}
+                  <a className="underline hover:text-terracotta" href="https://clutch.co/profile/antek-automation" target="_blank" rel="noopener noreferrer">clutch.co/profile/antek-automation</a>
+                </li>
+                <li>
+                  <span className="font-bold text-charcoal">LinkedIn (company):</span>{' '}
+                  <a className="underline hover:text-terracotta" href="https://www.linkedin.com/company/antek-automation" target="_blank" rel="noopener noreferrer">linkedin.com/company/antek-automation</a>
+                </li>
+                <li>
+                  <span className="font-bold text-charcoal">Crunchbase:</span>{' '}
+                  <a className="underline hover:text-terracotta" href="https://www.crunchbase.com/organization/antek-automation" target="_blank" rel="noopener noreferrer">crunchbase.com/organization/antek-automation</a>
+                </li>
+              </ul>
+            </Card>
           </div>
         </div>
       </section>

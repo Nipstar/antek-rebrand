@@ -285,13 +285,19 @@ export function Head() {
         "https://www.crunchbase.com/organization/antek-automation",
         "https://www.google.com/search?kgmid=/g/11yt2ybv_c",
         "https://www.google.com/maps?cid=17451278745729112685",
-        "https://local.google.com/place?id=17451278745729112685&use=srp"
+        "https://local.google.com/place?id=17451278745729112685&use=srp",
+        "https://about.me/andynorman",
+        "https://www.upwork.com/freelancers/antekautomation",
+        "https://clutch.co/profile/antek-automation"
       ],
       "founder": {
         "@type": "Person",
         "@id": "https://www.antekautomation.com/#founder",
         "name": "Andy Norman",
-        "sameAs": ["https://www.linkedin.com/in/andy-norman-ab78443a1"]
+        "sameAs": [
+          "https://www.linkedin.com/in/andy-norman-ab78443a1",
+          "https://about.me/andynorman"
+        ]
       },
       "logo": { "@id": "https://www.antekautomation.com/#logo" },
       "hasCredential": {
