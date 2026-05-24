@@ -47,6 +47,24 @@ export default function Page() {
             <p className="text-sm text-charcoal/70 mt-4 tracking-wide">
               AI voice agents from &pound;97/month &middot; Workflow automation from &pound;250 &middot; <a href="/pricing" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">See full pricing</a>
             </p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm md:text-base text-charcoal font-bold" aria-label="Why work with us">
+              <li className="flex items-center gap-2">
+                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
+                Replies within 1 hour Mon&ndash;Fri
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
+                Free 30-min discovery call
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
+                No long-term contracts
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
+                Certified Retell AI Partner
+              </li>
+            </ul>
           </div>
         </div>
       </section>

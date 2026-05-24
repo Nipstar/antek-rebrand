@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useState } from 'react'
 import { Navigation } from '../src/components/Navigation'
 import { Footer } from '../src/components/Footer'
 import { CookieConsent } from '../src/components/CookieConsent'
+import { StickyMobileCTA } from '../src/components/StickyMobileCTA'
 import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsent, trackPageView } from '../src/utils/analytics'
 import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
@@ -101,6 +102,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <ChatbotWidget />
         </Suspense>
       )}
+      <StickyMobileCTA />
       <CookieConsent />
     </div>
   )

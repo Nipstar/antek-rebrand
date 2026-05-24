@@ -171,19 +171,27 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-soft-sage py-20 md:py-28">
+    <div className="bg-soft-sage py-20 md:py-28" data-contact-region>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-12">
           <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6">
             Let's Build Your AI Automation Solution
           </h1>
           <p className="text-lg text-charcoal leading-normal max-w-2xl mx-auto">
-            Whether you're a restaurant, consultancy, retailer, or healthcare provider—tell us your challenges and we'll show you exactly how AI automation can transform your business
+            Whether you're a restaurant, consultancy, retailer, or healthcare provider&mdash;tell us your challenges and we'll show you exactly how AI automation can transform your business
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <Card>
+            <div className="mb-6 border-l-4 border-terracotta bg-warm-beige/60 px-4 py-3 text-charcoal">
+              <p className="font-bold text-sm md:text-base">
+                Free 30-min discovery call. No sales pitch.
+              </p>
+              <p className="text-sm text-charcoal/80 mt-1">
+                We reply within 1 hour Mon&ndash;Fri 9&ndash;6. No long-term contracts.
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
