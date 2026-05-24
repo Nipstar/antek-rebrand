@@ -5,11 +5,19 @@ import { CONSTANTS } from '../constants';
 
 const CHATBOT_WEBHOOK_URL = import.meta.env.VITE_CHATBOT_WEBHOOK_URL || '';
 
+const CONVERSATION_STARTERS = [
+  'How much does it cost?',
+  'Can I see a demo?',
+  'Does it integrate with my CRM?',
+  'How quickly can it be live?',
+];
+
 export function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [startersUsed, setStartersUsed] = useState(false);
   const [sessionId] = useState(() => `${CONSTANTS.SESSION_ID_PREFIX}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
   const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -71,14 +79,14 @@ export function ChatbotWidget() {
     }
   }, [isOpen, isLoading]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!inputMessage.trim() || isLoading) return;
+  const sendMessage = async (text: string) => {
+    const trimmed = text.trim();
+    if (!trimmed || isLoading) return;
 
     const userMessage: ChatMessage = {
       id: `msg_${Date.now()}`,
       sessionId,
-      message: inputMessage,
+      message: trimmed,
       timestamp: new Date().toISOString(),
       pageUrl: window.location.href,
       source: CONSTANTS.WEBHOOK_SOURCE_CHATBOT,
@@ -87,6 +95,7 @@ export function ChatbotWidget() {
 
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage('');
+    setStartersUsed(true);
     setIsLoading(true);
 
     try {
@@ -159,6 +168,15 @@ export function ChatbotWidget() {
     }
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    sendMessage(inputMessage);
+  };
+
+  const handleStarter = (text: string) => {
+    sendMessage(text);
+  };
+
   return (
     <>
       <button
@@ -213,6 +231,25 @@ export function ChatbotWidget() {
                     <div className="w-2 h-2 bg-charcoal rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                     <div className="w-2 h-2 bg-charcoal rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                   </div>
+                </div>
+              </div>
+            )}
+            {!startersUsed && !isLoading && messages.length > 0 && (
+              <div className="pt-1">
+                <p className="text-[11px] uppercase tracking-wide text-charcoal/60 font-bold mb-2">
+                  Quick questions
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {CONVERSATION_STARTERS.map((s) => (
+                    <button
+                      key={s}
+                      type="button"
+                      onClick={() => handleStarter(s)}
+                      className="text-left text-xs bg-white border-2 border-charcoal text-charcoal px-3 py-2 hover:bg-warm-beige hover:-translate-y-0.5 hover:shadow-brutal-xs transition-all"
+                    >
+                      {s}
+                    </button>
+                  ))}
                 </div>
               </div>
             )}
