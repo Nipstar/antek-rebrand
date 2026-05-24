@@ -3,6 +3,7 @@ import { Navigation } from '../src/components/Navigation'
 import { Footer } from '../src/components/Footer'
 import { CookieConsent } from '../src/components/CookieConsent'
 import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsent, trackPageView } from '../src/utils/analytics'
+import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
 import { getStoredConsent } from '../src/utils/consent'
 import '../src/index.css'
@@ -23,6 +24,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
     }
     trackPageView(window.location.pathname || '/')
 
+    const clarityId = import.meta.env.VITE_CLARITY_ID
+    if (clarityId) {
+      initializeClarity(clarityId)
+      tagClarityPage({ page_path: window.location.pathname || '/' })
+    }
+
     // If the user already accepted on a prior visit, load Meta Pixel now.
     if (getStoredConsent() === 'accepted') {
       initializeMetaPixel()
@@ -33,6 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       const detail = (e as CustomEvent).detail as 'accepted' | 'rejected' | null
       if (detail === 'accepted') {
         grantAnalyticsConsent()
+        grantClarityConsent()
         initializeMetaPixel()
       } else if (detail === 'rejected') {
         revokeAnalyticsConsent()
