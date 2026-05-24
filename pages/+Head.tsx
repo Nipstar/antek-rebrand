@@ -30,8 +30,12 @@ export function Head() {
       <meta name="twitter:image" content="https://www.antekautomation.com/og-image.png" />
       <meta name="twitter:image:alt" content="Antek Automation — AI automation agency for UK service businesses" />
 
-      {/* Performance */}
+      {/* Performance — preconnect third-party origins used by lazy-loaded widgets */}
       <link rel="preload" as="image" href="/logo.svg" type="image/svg+xml" />
+      <link rel="preconnect" href="https://app.cal.com" crossOrigin="" />
+      <link rel="dns-prefetch" href="https://app.cal.com" />
+      <link rel="dns-prefetch" href="https://www.clarity.ms" />
+      <link rel="dns-prefetch" href="https://dashboard.retellai.com" />
 
       {/* Meta Pixel loads only after the visitor accepts cookies — see src/utils/metaPixel.ts */}
     </>

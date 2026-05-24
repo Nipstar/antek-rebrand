@@ -98,7 +98,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-off-white">
       <Navigation />
-      <main>{children}</main>
+      <main className="pb-20 md:pb-0">{children}</main>
       <Footer />
       {chatbotReady && (
         <Suspense fallback={null}>

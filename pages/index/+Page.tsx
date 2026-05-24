@@ -34,7 +34,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <div className="max-w-4xl">
             <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
-              AI AUTOMATION FOR UK SERVICE BUSINESSES
+              AI AUTOMATION FOR UK BUSINESSES
             </p>
             <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
               Every Unanswered Call Is a Missed Opportunity
