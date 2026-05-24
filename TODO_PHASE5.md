@@ -25,7 +25,7 @@ See `antek-content-fix-phased-prompts.md` lines 736–800 for the full template.
 - [x] Call recording retention: 90 days, then deleted
 - [x] Chat transcript retention: 12 months
 - [x] Data residency: UK/EU (Retell AI infrastructure — verify exact server region in Retell dashboard)
-- [ ] ICO registration number — PENDING. Register at ico.org.uk/registration (£40/year). Add number to privacy-policy/+Page.tsx line ~28 once registered.
+- [x] ICO registration number: **ZC133436** — apply to privacy-policy/+Page.tsx ~line 28 + all 7 satellite privacy-policy.html files. (DUNS **235593033** also available — add to Organization JSON-LD schema network-wide.)
 - [x] GDPR DPA: available on request
 
 ## Case study metrics (with client consent)

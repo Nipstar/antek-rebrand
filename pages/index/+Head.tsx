@@ -70,6 +70,20 @@ export function Head() {
       },
       "name": "Antek Automation",
       "alternateName": ["Antek AI Automation"],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DUNS",
+          "value": "235593033"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ICO",
+          "name": "UK Information Commissioner's Office Registration",
+          "value": "ZC133436",
+          "url": "https://ico.org.uk/ESDWebPages/Entry/ZC133436"
+        }
+      ],
       "url": "https://www.antekautomation.com/",
       "description": "AI automation agency providing AI chatbots, voice AI phone agents, and workflow automation to businesses across all industries\u2014helping restaurants, consultancies, healthcare, and retail capture leads, book appointments, and handle customer queries 24/7.",
       "email": "hello@antekautomation.com",

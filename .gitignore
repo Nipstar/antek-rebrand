@@ -26,3 +26,6 @@ dist-ssr
 audit-output/*
 !audit-output/sample/
 .dev-notes/
+
+# Pre-build/post-build GSC + GA4 baselines (commercial data — public repo)
+baselines/
