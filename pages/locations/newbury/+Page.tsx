@@ -2,6 +2,8 @@ import { Button } from '../../../src/components/Button';
 import { CalBooking } from '../../../src/components/CalBooking';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
+import { QuickForm } from '../../../src/components/QuickForm';
+import { TrustStrip } from '../../../src/components/TrustStrip';
 
 export default function Page() {
   return (
@@ -292,9 +294,13 @@ export default function Page() {
               No sales pressure. We listen, scope, and tell you whether AI is the right answer for
               your Newbury business right now.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <a href="tel:+443330389960"><Button variant="primary">Call 0333 038 9960</Button></a>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              <a href="tel:03330389960"><Button variant="primary">Call 0333 038 9960</Button></a>
               <a href="mailto:hello@antekautomation.com"><Button variant="secondary">Email hello@antekautomation.com</Button></a>
+            </div>
+            <TrustStrip className="justify-center mb-8" variant="light" />
+            <div className="max-w-2xl mx-auto mb-10">
+              <QuickForm source="newbury-final-cta" pageTown="newbury" />
             </div>
           </div>
           <CalBooking />

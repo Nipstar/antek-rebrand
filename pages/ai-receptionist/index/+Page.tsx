@@ -16,6 +16,9 @@ import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { AIReceptionistDemoCards } from '../../../src/components/AIReceptionistDemoCards'
+import { TrustStrip } from '../../../src/components/TrustStrip'
+import { QuickForm } from '../../../src/components/QuickForm'
+import { openBookingPopup } from '../../../src/components/BookingPopupCTA'
 import { getAllIndustries, type IndustryData } from '../../../src/data/aiReceptionist'
 
 const VoiceChat = lazy(() =>
@@ -116,13 +119,21 @@ export default function Page() {
               <a href="#demo">
                 <Button variant="primary">Try the Demo</Button>
               </a>
-              <a href="/contact">
-                <Button variant="secondary">Book a 15-Min Chat</Button>
-              </a>
+              <button
+                type="button"
+                onClick={() => openBookingPopup('ai-receptionist-hero')}
+                className="inline-block"
+              >
+                <Button variant="secondary">Book a 30-min discovery call</Button>
+              </button>
             </div>
             <p className="text-sm text-charcoal/70 mt-4 tracking-wide">
               Plans from &pound;97/month &middot; Setup from &pound;249 &middot; 120 call minutes included per month — higher plans add more minutes and features
             </p>
+            <TrustStrip className="mt-6" />
+            <div className="mt-8 max-w-2xl">
+              <QuickForm source="ai-receptionist-hero" pageTown="brand-hub" />
+            </div>
           </div>
         </div>
       </section>

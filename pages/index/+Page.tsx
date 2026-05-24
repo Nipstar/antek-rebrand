@@ -6,6 +6,10 @@ import { VoiceDemoButton } from '../../src/components/VoiceDemoButton';
 import { CaseStudyCard } from '../../src/components/CaseStudyCard';
 import { QuickRecap } from '../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../src/components/ResourcesCompliance';
+import { QuickForm } from '../../src/components/QuickForm';
+import { TestimonialsStrip } from '../../src/components/TestimonialsStrip';
+import { TrustStrip } from '../../src/components/TrustStrip';
+import { openBookingPopup } from '../../src/components/BookingPopupCTA';
 import { caseStudies } from '../../src/data/caseStudies';
 
 const VoiceChat = lazy(() => import('../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
@@ -40,34 +44,27 @@ export default function Page() {
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
-              <a href="/contact">
-                <Button variant="secondary">Book a free 15-min chat</Button>
-              </a>
+              <button
+                type="button"
+                onClick={() => openBookingPopup('hero-cta')}
+                className="inline-block"
+              >
+                <Button variant="secondary">Book a free 30-min discovery call</Button>
+              </button>
             </div>
             <p className="text-sm text-charcoal/70 mt-4 tracking-wide">
               AI voice agents from &pound;97/month &middot; Workflow automation from &pound;250 &middot; <a href="/pricing" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">See full pricing</a>
             </p>
-            <ul className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm md:text-base text-charcoal font-bold" aria-label="Why work with us">
-              <li className="flex items-center gap-2">
-                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
-                Replies within 1 hour Mon&ndash;Fri
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
-                Free 30-min discovery call
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
-                No long-term contracts
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-terracotta" aria-hidden="true">&#10003;</span>
-                Certified Retell AI Partner
-              </li>
-            </ul>
+            <TrustStrip className="mt-6" />
+            <div className="mt-8 max-w-2xl">
+              <QuickForm source="home-hero" pageTown="brand-hub" />
+            </div>
           </div>
         </div>
       </section>
+
+      {/* ── TESTIMONIALS STRIP (illustrative case studies) ── */}
+      <TestimonialsStrip limit={3} />
 
       {/* ── SNIPPET BAIT ── */}
       <section className="bg-off-white border-b-3 border-charcoal py-16 md:py-20">
