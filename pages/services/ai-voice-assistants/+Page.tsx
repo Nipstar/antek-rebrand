@@ -44,7 +44,7 @@ export default function Page() {
 
       <QuickRecap items={[
         'An AI agent answers your calls 24/7, books appointments directly into your calendar, and sends you a call summary',
-        'For UK service businesses missing calls when they\'re on the job, in a meeting, or out of hours',
+        'For UK businesses missing calls when they\'re on the job, in a meeting, or out of hours',
         'From £97/month + £249 one-off setup — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
         'Live in 24–48 hours — we configure everything from your website, no long setup',
         '~80% of incoming calls handled without you picking up; the rest are transferred or messaged to you',

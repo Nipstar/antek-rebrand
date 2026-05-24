@@ -10,7 +10,7 @@
 - ICO Registration: ZC133436
 - DUNS Number: 235593033
 - Certified Retell AI Partner, FSB Member
-- Target market: UK service businesses, tradespeople, SMEs and SMBs
+- Target market: UK businesses, tradespeople, SMEs and SMBs
 
 ## Core Services
 - [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised AI phone answering. Screens callers, captures details, books appointments 24/7. Starter £97/month (120 call minutes) + £249 setup. Standard £198/month (240 mins). Pro: contact sales. £0.18/min overage. CRM and API integrations from Standard tier.

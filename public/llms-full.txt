@@ -14,7 +14,7 @@ Email: hello@antekautomation.com
 ### AI Receptionist (Productised)
 Page: https://www.antekautomation.com/ai-receptionist
 
-Productised AI phone answering service for UK SMBs and service businesses. Screens every caller, captures the details you need, and books qualified enquiries straight into your calendar.
+Productised AI phone answering service for UK SMBs and businesses. Screens every caller, captures the details you need, and books qualified enquiries straight into your calendar.
 
 Pricing tiers:
 - Starter: £97/month + £249 one-off setup. Includes 120 call minutes. Call answering, screening, summaries.

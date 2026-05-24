@@ -20,7 +20,7 @@ export function Head() {
     provider: { '@id': 'https://www.antekautomation.com/#organization' },
     serviceType: 'AI Phone Answering Service',
     areaServed: { '@type': 'Country', name: 'United Kingdom' },
-    audience: { '@type': 'BusinessAudience', name: 'UK SMBs and service businesses' },
+    audience: { '@type': 'BusinessAudience', name: 'UK SMBs and businesses' },
     url: canonical,
     offers: {
       '@type': 'Offer',

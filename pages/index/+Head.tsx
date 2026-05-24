@@ -684,7 +684,7 @@ export function Head() {
     "@type": "Service",
     "@id": "https://www.antekautomation.com/#service-voice-agents",
     "name": "AI Voice Agents",
-    "description": "AI-powered voice agents that answer calls, book appointments, qualify leads, and handle customer enquiries 24/7 for UK service businesses.",
+    "description": "AI-powered voice agents that answer calls, book appointments, qualify leads, and handle customer enquiries 24/7 for UK businesses.",
     "provider": { "@id": "https://www.antekautomation.com/#organization" },
     "serviceType": "AI Voice Agent Development",
     "areaServed": {
@@ -772,18 +772,18 @@ export function Head() {
   return (
     <>
       <title>AI Automation for UK Businesses | Antek Automation</title>
-      <meta name="description" content="We build AI voice agents, chatbots &amp; workflow automation for UK service businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
+      <meta name="description" content="We build AI voice agents, chatbots &amp; workflow automation for UK businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
       <link rel="canonical" href="https://www.antekautomation.com/" />
 
       {/* Open Graph */}
       <meta property="og:title" content="AI Automation for UK Businesses | Antek Automation" />
-      <meta property="og:description" content="We build AI voice agents, chatbots &amp; workflow automation for UK service businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
+      <meta property="og:description" content="We build AI voice agents, chatbots &amp; workflow automation for UK businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
       <meta property="og:url" content="https://www.antekautomation.com/" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
       <meta name="twitter:title" content="AI Automation for UK Businesses | Antek Automation" />
-      <meta name="twitter:description" content="We build AI voice agents, chatbots &amp; workflow automation for UK service businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
+      <meta name="twitter:description" content="We build AI voice agents, chatbots &amp; workflow automation for UK businesses. Stop missing calls. Start capturing leads 24/7. Based in Hampshire." />
 
       {/* JSON-LD: WebPage + Organization schema */}
       <script

@@ -23,12 +23,12 @@ export function Head() {
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Antek Automation — AI automation agency for UK service businesses" />
+      <meta property="og:image:alt" content="Antek Automation — AI automation agency for UK businesses" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@AntekAutomation" />
       <meta name="twitter:creator" content="@AntekAutomation" />
       <meta name="twitter:image" content="https://www.antekautomation.com/og-image.png" />
-      <meta name="twitter:image:alt" content="Antek Automation — AI automation agency for UK service businesses" />
+      <meta name="twitter:image:alt" content="Antek Automation — AI automation agency for UK businesses" />
 
       {/* Performance — preconnect third-party origins used by lazy-loaded widgets */}
       <link rel="preload" as="image" href="/logo.svg" type="image/svg+xml" />
