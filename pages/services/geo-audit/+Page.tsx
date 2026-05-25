@@ -43,7 +43,7 @@ export default function Page() {
       <QuickRecap items={[
         'A GEO audit (Generative Engine Optimisation) measures how visible your business is in AI-generated answers — ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini',
         'For UK SMEs that rely on being found online, especially those already investing in SEO or Google Ads',
-        'Quick Check from £247 one-off · Full Audit £497 · Audit + Fix £997 · Retainer from £497/month — <a href="/pricing#geo-audit" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
+        'Quick Check from £247 one-off · Full Audit £497 · Audit + Fix from £997 · Retainer from £497/month — <a href="/pricing#geo-audit" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
         'All audits delivered within 24 hours',
         'GEO is ongoing work — most clients start with an audit, then move to a monthly retainer',
       ]} />
@@ -245,7 +245,7 @@ export default function Page() {
             <Card>
               <div className="text-center mb-6">
                 <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Audit + Fix</h3>
-                <p className="font-black text-5xl text-terracotta">&pound;997</p>
+                <p className="font-black text-5xl text-terracotta"><span className="text-2xl mr-2">from</span>&pound;997</p>
               </div>
               <ul className="space-y-3 text-charcoal mb-8">
                 <li className="flex items-start gap-3">

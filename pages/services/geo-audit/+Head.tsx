@@ -114,11 +114,12 @@ export function Head() {
                 description: 'Everything in Quick Check plus full technical crawlability review, schema audit, content structure analysis, 3 competitor benchmarks, 30+ test prompts, effort/impact action plan, PDF report + 30-min video walkthrough. Delivered within 24 hours.',
               },
               {
-                '@type': 'Offer',
+                '@type': 'AggregateOffer',
                 name: 'Audit + Fix',
-                price: '997',
+                lowPrice: '997',
                 priceCurrency: 'GBP',
-                description: 'Full Audit included plus 3 weeks hands-on implementation: schema deployment, content restructuring, llms.txt setup, directory submissions, re-test to measure improvement.',
+                offerCount: '1',
+                description: 'Full Audit included plus hands-on implementation: schema deployment, content restructuring, llms.txt setup, directory submissions, re-test to measure improvement. Final price scoped to site size and complexity.',
               },
             ],
             potentialAction: {

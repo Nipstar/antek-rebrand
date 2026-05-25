@@ -288,7 +288,7 @@ export default function Page() {
             {/* Audit + Fix */}
             <div className="border-3 border-charcoal bg-white shadow-brutal-sm p-8">
               <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Audit + Fix</h3>
-              <p className="font-black text-5xl text-terracotta mb-6">&pound;997</p>
+              <p className="font-black text-5xl text-terracotta mb-6"><span className="text-2xl mr-2">from</span>&pound;997</p>
               <ul className="space-y-3 text-charcoal text-sm mb-8">
                 {[
                   'Full Audit included',

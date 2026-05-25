@@ -72,7 +72,7 @@ GEO — Generative Engine Optimisation — gets your business cited in AI-genera
 Pricing:
 - Quick Check: £247 — AI visibility across 4 platforms, 10 prompts tested, citation readiness score, top 5 priorities, Loom walkthrough + 1-page PDF
 - Full Audit: £497 — everything in Quick Check plus full technical review, schema audit, content analysis, 3 competitor benchmarks, 30+ test prompts
-- Audit + Fix: £997 — Full Audit plus we implement the priority fixes
+- Audit + Fix: from £997 — Full Audit plus we implement the priority fixes. Final price scoped to site size and complexity, since larger or messier sites need more work.
 - Monthly Retainer: £497/month (min 3 months) — ongoing citation monitoring, content updates, schema maintenance, monthly report, quarterly strategy call
 
 All audits delivered within 24 hours. Ongoing fixes handled via the monthly retainer.

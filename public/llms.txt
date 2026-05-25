@@ -17,7 +17,7 @@
 - [AI Voice Agents](https://www.antekautomation.com/services/ai-voice-assistants): Custom 24/7 AI call answering. Same tier structure as AI Receptionist. Workflow automations included on Pro tier.
 - [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Website chat agents that qualify leads and book appointments. From £57/month + £149 setup. Unlimited conversations.
 - [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): n8n-based automation connecting 400+ tools. From £250 one-off. Clients typically save 10–20 hours/week on admin.
-- [GEO Audits](https://www.antekautomation.com/services/geo-audit): AI search visibility audit across ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini. Quick Check £247, Full Audit £497, Audit + Fix £997. All delivered within 24 hours. Monthly retainer from £497/month.
+- [GEO Audits](https://www.antekautomation.com/services/geo-audit): AI search visibility audit across ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini. Quick Check £247, Full Audit £497, Audit + Fix from £997. All delivered within 24 hours. Monthly retainer from £497/month.
 - [Pricing](https://www.antekautomation.com/pricing): Full pricing page with all tiers, comparison table, and FAQ.
 
 ## Key Facts

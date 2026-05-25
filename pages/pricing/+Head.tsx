@@ -118,10 +118,11 @@ export function Head() {
         priceValidUntil: '2027-12-31',
       },
       {
-        '@type': 'Offer',
+        '@type': 'AggregateOffer',
         name: 'Audit + Fix',
-        price: '997.00',
+        lowPrice: '997.00',
         priceCurrency: 'GBP',
+        offerCount: '1',
         availability: 'https://schema.org/InStock',
         priceValidUntil: '2027-12-31',
       },

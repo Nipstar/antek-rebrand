@@ -33,7 +33,7 @@
     "tiers": [
       { "name": "Quick Check", "price": 247 },
       { "name": "Full Audit", "price": 497 },
-      { "name": "Audit + Fix", "price": 997 }
+      { "name": "Audit + Fix", "price": 997, "from": true }
     ],
     "retainer": { "name": "Monthly Retainer", "fromMonthly": 497 }
   },
