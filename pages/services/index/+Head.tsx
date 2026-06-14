@@ -67,7 +67,7 @@ export function Head() {
       <title>AI Automation Services | Antek Automation</title>
       <meta
         name="description"
-        content="AI voice agents, chatbots, workflow automation, and GEO audits for UK businesses. Built to your business, not a template. Based in Hampshire. Serving the whole UK."
+        content="AI voice agents, chatbots, workflow automation and GEO audits for UK businesses. Built to your business, not a template. Hampshire-based, UK-wide."
       />
       <link rel="canonical" href={canonical} />
 

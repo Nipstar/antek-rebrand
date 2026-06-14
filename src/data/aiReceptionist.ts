@@ -79,7 +79,7 @@ export const industries: Record<string, IndustryData> = {
   electricians: {
     slug: 'electricians',
     name: 'Electricians',
-    metaTitle: 'AI Receptionist for Electricians | Never Miss an Emergency Call',
+    metaTitle: 'AI Receptionist for Electricians | Antek Automation',
     metaDescription: 'AI phone answering for electricians. Screens emergency vs routine calls, captures job details, and books appointments while you\u2019re on the tools. From \u00a397/month.',
     iconName: 'Zap',
     gridDescription: 'AI phone answering that screens emergency vs routine calls while you\u2019re on the tools.',
@@ -136,7 +136,7 @@ export const industries: Record<string, IndustryData> = {
     slug: 'plumbers',
     name: 'Plumbers',
     metaTitle: 'AI Receptionist for Plumbers | Capture Every Emergency Call',
-    metaDescription: 'AI phone answering for plumbers. Screens emergency leaks from routine jobs, captures property details, and books callouts while you\u2019re under a sink. From \u00a397/month.',
+    metaDescription: 'AI phone answering for plumbers. Screens emergencies from routine jobs, captures property details, and books callouts 24/7. From \u00a397/month.',
     iconName: 'Droplets',
     gridDescription: 'AI phone answering that captures emergency leaks and boiler breakdowns while you\u2019re on a job.',
 
@@ -192,7 +192,7 @@ export const industries: Record<string, IndustryData> = {
   hvac: {
     slug: 'hvac',
     name: 'HVAC Engineers',
-    metaTitle: 'AI Receptionist for HVAC Engineers | Never Miss a Breakdown Call',
+    metaTitle: 'AI Receptionist for HVAC Engineers | Antek Automation',
     metaDescription: 'AI phone answering for HVAC engineers. Screens heating emergencies from routine servicing, captures system details, and books callouts 24/7. From \u00a397/month.',
     iconName: 'Thermometer',
     gridDescription: 'AI phone answering that triages heating and cooling emergencies while you\u2019re on a rooftop.',
@@ -363,8 +363,8 @@ export const industries: Record<string, IndustryData> = {
   'veterinary-practices': {
     slug: 'veterinary-practices',
     name: 'Veterinary Practices',
-    metaTitle: 'AI Receptionist for Veterinary Practices | Never Miss an Urgent Call',
-    metaDescription: 'AI phone answering for vet practices. Triages emergencies from routine appointments, captures pet and owner details, and books consultations 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Vet Practices | Antek Automation',
+    metaDescription: 'AI phone answering for vet practices. Triages emergencies, captures pet and owner details, and books consultations 24/7. From \u00a397/month.',
     iconName: 'Stethoscope',
     gridDescription: 'AI phone answering that triages emergencies and books appointments while your team focuses on patients.',
 
@@ -421,8 +421,8 @@ export const industries: Record<string, IndustryData> = {
   dentists: {
     slug: 'dentists',
     name: 'Dentists',
-    metaTitle: 'AI Receptionist for Dental Practices | Book More Appointments, Miss Fewer Calls',
-    metaDescription: 'AI phone answering for dental practices. Screens emergency toothache from routine check-ups, captures patient details, and books appointments 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Dental Practices | Antek Automation',
+    metaDescription: 'AI phone answering for dental practices. Screens emergencies from routine check-ups, captures patient details, and books 24/7. From \u00a397/month.',
     iconName: 'Smile',
     gridDescription: 'AI phone answering that books appointments and triages dental emergencies while your team treats patients.',
 
@@ -477,7 +477,7 @@ export const industries: Record<string, IndustryData> = {
   therapists: {
     slug: 'therapists',
     name: 'Therapists',
-    metaTitle: 'AI Receptionist for Therapists | 24/7 Booking | Antek',
+    metaTitle: 'AI Receptionist for Therapists | Antek Automation',
     metaDescription: 'An AI receptionist for therapy practices \u2014 answers calls, books sessions and handles enquiries 24/7, so you never interrupt a session. Book a free demo.',
     iconName: 'Brain',
     gridDescription: 'AI phone answering that handles enquiries and books consultations while you\u2019re in session.',

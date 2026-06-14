@@ -1,7 +1,7 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Newbury | Voice Agents &amp; Chatbots | Antek Automation</title>
+      <title>AI Automation Newbury | Antek Automation</title>
       <meta
         name="description"
         content="AI automation for Newbury businesses. Voice agents, chatbots, workflow automation. Andover-based AI agency 18 miles up the A34. Certified Retell AI Partner."

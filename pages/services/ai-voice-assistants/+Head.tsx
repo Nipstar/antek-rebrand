@@ -1,7 +1,7 @@
 export function Head() {
   return (
     <>
-      <title>AI Voice Agents UK | 24/7 Call Answering | Antek</title>
+      <title>AI Voice Agents UK | 24/7 Call Answering | Antek Automation</title>
       <meta
         name="description"
         content="AI voice agents that answer every call, qualify leads and book appointments 24/7. Built for UK service businesses. Certified Retell AI partner."
@@ -9,7 +9,7 @@ export function Head() {
       <link rel="canonical" href="https://www.antekautomation.com/services/ai-voice-assistants" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Voice Agents UK | 24/7 Call Answering | Antek" />
+      <meta property="og:title" content="AI Voice Agents UK | 24/7 Call Answering | Antek Automation" />
       <meta
         property="og:description"
         content="AI voice agents that answer every call, qualify leads and book appointments 24/7. Built for UK service businesses. Certified Retell AI partner."
@@ -20,7 +20,7 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="AI Voice Agents UK | 24/7 Call Answering | Antek" />
+      <meta name="twitter:title" content="AI Voice Agents UK | 24/7 Call Answering | Antek Automation" />
       <meta
         name="twitter:description"
         content="AI voice agents that answer every call, qualify leads and book appointments 24/7. Built for UK service businesses. Certified Retell AI partner."

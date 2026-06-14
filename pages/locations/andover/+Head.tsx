@@ -1,19 +1,19 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Andover | Voice Agents, Chatbots &amp; Workflow Automation</title>
-      <meta name="description" content="Andover's AI automation agency. Voice agents, chatbots & workflow automation for local businesses. We're local, we're straight-talking, and we deliver results." />
+      <title>AI Automation Andover | Antek Automation</title>
+      <meta name="description" content="Andover's AI automation agency. Voice agents, chatbots and workflow automation for local businesses — straight-talking, and we deliver. Book a free call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/andover" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Andover | Voice Agents, Chatbots & Workflow Automation" />
-      <meta property="og:description" content="Andover's AI automation agency. Voice agents, chatbots & workflow automation for local businesses. We're local, we're straight-talking, and we deliver results." />
+      <meta property="og:title" content="AI Automation Andover | Antek Automation" />
+      <meta property="og:description" content="Andover's AI automation agency. Voice agents, chatbots and workflow automation for local businesses — straight-talking, and we deliver. Book a free call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/andover" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Andover | Voice Agents, Chatbots & Workflow Automation" />
-      <meta name="twitter:description" content="Andover's AI automation agency. Voice agents, chatbots & workflow automation for local businesses. We're local, we're straight-talking, and we deliver results." />
+      <meta name="twitter:title" content="AI Automation Andover | Antek Automation" />
+      <meta name="twitter:description" content="Andover's AI automation agency. Voice agents, chatbots and workflow automation for local businesses — straight-talking, and we deliver. Book a free call." />
 
       {/* BreadcrumbList Schema */}
       <script

@@ -4,7 +4,7 @@ export function Head() {
       <title>AI Automation Agency Hampshire & UK | Antek</title>
       <meta
         name="description"
-        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
+        content="Hampshire-based AI automation agency in Andover — voice agents, chatbots and workflow automation for businesses across Hampshire and the UK. Book a free call."
       />
       <link rel="canonical" href="https://www.antekautomation.com/locations" />
 
@@ -12,7 +12,7 @@ export function Head() {
       <meta property="og:title" content="AI Automation Agency Hampshire & UK | Antek" />
       <meta
         property="og:description"
-        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
+        content="Hampshire-based AI automation agency in Andover — voice agents, chatbots and workflow automation for businesses across Hampshire and the UK. Book a free call."
       />
       <meta property="og:url" content="https://www.antekautomation.com/locations" />
       <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@ export function Head() {
       <meta name="twitter:title" content="AI Automation Agency Hampshire & UK | Antek" />
       <meta
         name="twitter:description"
-        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
+        content="Hampshire-based AI automation agency in Andover — voice agents, chatbots and workflow automation for businesses across Hampshire and the UK. Book a free call."
       />
 
       {/* BreadcrumbList Schema */}

@@ -766,18 +766,18 @@ export function Head() {
 
   return (
     <>
-      <title>AI Automation Agency UK | Stop Missing Calls | Antek</title>
+      <title>AI Automation UK | Stop Missing Calls | Antek Automation</title>
       <meta name="description" content="Hampshire-based AI automation agency. Voice agents, chatbots and workflow automation that answer calls and capture leads 24/7. Certified Retell partner." />
       <link rel="canonical" href="https://www.antekautomation.com/" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Agency UK | Stop Missing Calls | Antek" />
+      <meta property="og:title" content="AI Automation UK | Stop Missing Calls | Antek Automation" />
       <meta property="og:description" content="Hampshire-based AI automation agency. Voice agents, chatbots and workflow automation that answer calls and capture leads 24/7. Certified Retell partner." />
       <meta property="og:url" content="https://www.antekautomation.com/" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Agency UK | Stop Missing Calls | Antek" />
+      <meta name="twitter:title" content="AI Automation UK | Stop Missing Calls | Antek Automation" />
       <meta name="twitter:description" content="Hampshire-based AI automation agency. Voice agents, chatbots and workflow automation that answer calls and capture leads 24/7. Certified Retell partner." />
 
       {/* JSON-LD: WebPage + Organization schema */}

@@ -1,7 +1,7 @@
 export function Head() {
   return (
     <>
-      <title>Workflow Automation for UK Businesses | Save 10-20 Hours a Week</title>
+      <title>Workflow Automation for UK Business | Antek Automation</title>
       <meta
         name="description"
         content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."
@@ -9,7 +9,7 @@ export function Head() {
       <link rel="canonical" href="https://www.antekautomation.com/services/workflow-automation" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="Workflow Automation for UK Businesses | Save 10-20 Hours a Week" />
+      <meta property="og:title" content="Workflow Automation for UK Business | Antek Automation" />
       <meta
         property="og:description"
         content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."
@@ -20,7 +20,7 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Workflow Automation for UK Businesses | Save 10-20 Hours a Week" />
+      <meta name="twitter:title" content="Workflow Automation for UK Business | Antek Automation" />
       <meta
         name="twitter:description"
         content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."

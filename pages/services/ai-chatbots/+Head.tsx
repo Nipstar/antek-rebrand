@@ -1,7 +1,7 @@
 export function Head() {
   return (
     <>
-      <title>AI Chatbots for UK Businesses | Capture Leads While You Sleep</title>
+      <title>AI Chatbots for UK Business | Antek Automation</title>
       <meta
         name="description"
         content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."
@@ -9,7 +9,7 @@ export function Head() {
       <link rel="canonical" href="https://www.antekautomation.com/services/ai-chatbots" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Chatbots for UK Businesses | Capture Leads While You Sleep" />
+      <meta property="og:title" content="AI Chatbots for UK Business | Antek Automation" />
       <meta
         property="og:description"
         content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."
@@ -20,7 +20,7 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="AI Chatbots for UK Businesses | Capture Leads While You Sleep" />
+      <meta name="twitter:title" content="AI Chatbots for UK Business | Antek Automation" />
       <meta
         name="twitter:description"
         content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."

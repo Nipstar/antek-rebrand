@@ -1,18 +1,18 @@
 export function Head() {
   return (
     <>
-      <title>GEO Audit — Get Your Business Cited by ChatGPT &amp; AI Search | Antek Automation</title>
+      <title>GEO Audit | Cited by ChatGPT &amp; AI Search | Antek Automation</title>
       <meta
         name="description"
-        content="Is AI recommending your business or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247. Hampshire-based, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/geo-audit" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="GEO Audit — Get Your Business Cited by ChatGPT & AI Search | Antek Automation" />
+      <meta property="og:title" content="GEO Audit | Cited by ChatGPT & AI Search | Antek Automation" />
       <meta
         property="og:description"
-        content="Is AI recommending your business or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247. Hampshire-based, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/geo-audit" />
       <meta property="og:type" content="website" />
@@ -20,10 +20,10 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="GEO Audit — Get Your Business Cited by ChatGPT & AI Search | Antek Automation" />
+      <meta name="twitter:title" content="GEO Audit | Cited by ChatGPT & AI Search | Antek Automation" />
       <meta
         name="twitter:description"
-        content="Is AI recommending your business or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247. Hampshire-based, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
       />
 
       {/* BreadcrumbList Schema */}

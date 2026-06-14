@@ -131,7 +131,7 @@ export function Head() {
 
   return (
     <>
-      <title>AI Receptionist UK | Never Miss a Call Again | Antek</title>
+      <title>AI Receptionist UK | Never Miss a Call | Antek Automation</title>
       <meta
         name="description"
         content="An AI receptionist that answers every call 24/7, books appointments and sends summaries. For UK trades and service businesses. Less than a part-timer."
@@ -140,7 +140,7 @@ export function Head() {
 
       <meta
         property="og:title"
-        content="AI Receptionist UK | Never Miss a Call Again | Antek"
+        content="AI Receptionist UK | Never Miss a Call | Antek Automation"
       />
       <meta
         property="og:description"
@@ -153,7 +153,7 @@ export function Head() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="AI Receptionist UK | Never Miss a Call Again | Antek"
+        content="AI Receptionist UK | Never Miss a Call | Antek Automation"
       />
       <meta
         name="twitter:description"

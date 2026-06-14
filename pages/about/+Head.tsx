@@ -85,7 +85,7 @@ export function Head() {
       <title>About Antek Automation | AI Automation Agency UK</title>
       <meta
         name="description"
-        content="Meet Andy Norman, founder of Antek Automation. 30+ years in technology, Certified Retell AI Partner, building AI voice agents, chatbots & workflow automation for UK businesses from Andover, Hampshire."
+        content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."
       />
       <link rel="canonical" href="https://www.antekautomation.com/about" />
 
@@ -93,7 +93,7 @@ export function Head() {
       <meta property="og:title" content="About Antek Automation | AI Automation Agency UK" />
       <meta
         property="og:description"
-        content="Meet Andy Norman, founder of Antek Automation. 30+ years in technology, Certified Retell AI Partner, building AI voice agents, chatbots & workflow automation for UK businesses from Andover, Hampshire."
+        content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."
       />
       <meta property="og:url" content="https://www.antekautomation.com/about" />
       <meta property="og:type" content="website" />
@@ -107,7 +107,7 @@ export function Head() {
       <meta name="twitter:title" content="About Antek Automation | AI Automation Agency UK" />
       <meta
         name="twitter:description"
-        content="Meet Andy Norman, founder of Antek Automation. 30+ years in technology, Certified Retell AI Partner, building AI voice agents, chatbots & workflow automation for UK businesses from Andover, Hampshire."
+        content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."
       />
       <meta name="twitter:image" content="https://www.antekautomation.com/og-image.png" />
 

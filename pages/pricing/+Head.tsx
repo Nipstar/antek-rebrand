@@ -1,7 +1,7 @@
 export function Head() {
   const title = 'Pricing | AI Automation for UK Businesses | Antek Automation'
   const description =
-    'Transparent pricing for AI Voice Assistant from £97/month, AI Chatbot from £57/month, AI Receptionist from £97/month, Workflow Automation from £250, GEO Audit from £247. No contracts. UK-based.'
+    'Transparent, no-contract pricing for AI voice agents, chatbots, receptionists and workflow automation. Plans from £57/month. UK-based, Hampshire-built.'
   const canonical = 'https://www.antekautomation.com/pricing'
 
   const breadcrumbSchema = {
