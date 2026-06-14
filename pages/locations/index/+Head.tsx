@@ -1,18 +1,18 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Services Across the UK | Antek Automation</title>
+      <title>AI Automation Agency Hampshire & UK | Antek</title>
       <meta
         name="description"
-        content="AI voice agents, chatbots and workflow automation for UK businesses. Based in Hampshire, serving London, Birmingham, Manchester, Leeds, Liverpool, Glasgow, Newcastle and beyond."
+        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
       />
       <link rel="canonical" href="https://www.antekautomation.com/locations" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Services Across the UK | Antek Automation" />
+      <meta property="og:title" content="AI Automation Agency Hampshire & UK | Antek" />
       <meta
         property="og:description"
-        content="AI voice agents, chatbots and workflow automation for UK businesses. Based in Hampshire, serving London, Birmingham, Manchester, Leeds, Liverpool, Glasgow, Newcastle and beyond."
+        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
       />
       <meta property="og:url" content="https://www.antekautomation.com/locations" />
       <meta property="og:type" content="website" />
@@ -20,10 +20,10 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="AI Automation Services Across the UK | Antek Automation" />
+      <meta name="twitter:title" content="AI Automation Agency Hampshire & UK | Antek" />
       <meta
         name="twitter:description"
-        content="AI voice agents, chatbots and workflow automation for UK businesses. Based in Hampshire, serving London, Birmingham, Manchester, Leeds, Liverpool, Glasgow, Newcastle and beyond."
+        content="Hampshire-based AI automation agency in Andover, serving Southampton, Salisbury, Newbury and the whole UK remotely. Voice agents, chatbots and workflow automation. Book a free call."
       />
 
       {/* BreadcrumbList Schema */}
