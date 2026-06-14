@@ -1,10 +1,16 @@
-import { getAllCities } from '../data/cities';
 import { CONSTANTS } from '../constants';
 import { SocialLinks } from './SocialLinks';
 
-export function Footer() {
-  const cities = getAllCities();
+// Hampshire-led location cluster — kept locations only (national city pages removed)
+const FOOTER_LOCATIONS = [
+  { name: 'Hampshire', slug: 'hampshire' },
+  { name: 'Andover', slug: 'andover' },
+  { name: 'Southampton', slug: 'southampton' },
+  { name: 'Salisbury', slug: 'salisbury' },
+  { name: 'Newbury', slug: 'newbury' },
+];
 
+export function Footer() {
   return (
     <footer className="bg-mid-gray border-t-3 border-charcoal">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
@@ -74,7 +80,7 @@ export function Footer() {
               All Locations
             </a>
             <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-              {cities.map((city) => (
+              {FOOTER_LOCATIONS.map((city) => (
                 <a
                   key={city.slug}
                   href={`/locations/${city.slug}`}
@@ -83,18 +89,6 @@ export function Footer() {
                   {city.name}
                 </a>
               ))}
-              <a
-                href="/locations/salisbury"
-                className="text-off-white/80 hover:text-terracotta transition-colors text-sm inline-block min-h-[36px] py-1.5"
-              >
-                Salisbury
-              </a>
-              <a
-                href="/locations/newbury"
-                className="text-off-white/80 hover:text-terracotta transition-colors text-sm inline-block min-h-[36px] py-1.5"
-              >
-                Newbury
-              </a>
             </div>
           </div>
 
