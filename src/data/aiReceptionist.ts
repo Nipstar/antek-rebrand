@@ -79,8 +79,8 @@ export const industries: Record<string, IndustryData> = {
   electricians: {
     slug: 'electricians',
     name: 'Electricians',
-    metaTitle: 'AI Receptionist for Electricians | Antek Automation',
-    metaDescription: 'AI phone answering for electricians. Screens emergency vs routine calls, captures job details, and books appointments while you\u2019re on the tools. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Electricians UK | Never Miss a Job',
+    metaDescription: 'An AI receptionist for UK electricians \u2014 answers every call and books jobs 24/7 while you\u2019re on the tools. Certified Retell partner. Hear a live demo.',
     iconName: 'Zap',
     gridDescription: 'AI phone answering that screens emergency vs routine calls while you\u2019re on the tools.',
 
@@ -135,8 +135,8 @@ export const industries: Record<string, IndustryData> = {
   plumbers: {
     slug: 'plumbers',
     name: 'Plumbers',
-    metaTitle: 'AI Receptionist for Plumbers | Capture Every Emergency Call',
-    metaDescription: 'AI phone answering for plumbers. Screens emergencies from routine jobs, captures property details, and books callouts 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Plumbers UK | Never Miss a Callout',
+    metaDescription: 'An AI receptionist for UK plumbers \u2014 answers every call and books callouts 24/7 while you\u2019re on the job. Certified Retell partner. Hear a live demo.',
     iconName: 'Droplets',
     gridDescription: 'AI phone answering that captures emergency leaks and boiler breakdowns while you\u2019re on a job.',
 
@@ -192,8 +192,8 @@ export const industries: Record<string, IndustryData> = {
   hvac: {
     slug: 'hvac',
     name: 'HVAC Engineers',
-    metaTitle: 'AI Receptionist for HVAC Engineers | Antek Automation',
-    metaDescription: 'AI phone answering for HVAC engineers. Screens heating emergencies from routine servicing, captures system details, and books callouts 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for HVAC Engineers UK | Never Miss a Job',
+    metaDescription: 'An AI receptionist for UK HVAC engineers \u2014 answers every call and books jobs 24/7, even through peak season. Certified Retell partner. Hear a live demo.',
     iconName: 'Thermometer',
     gridDescription: 'AI phone answering that triages heating and cooling emergencies while you\u2019re on a rooftop.',
 
@@ -250,8 +250,8 @@ export const industries: Record<string, IndustryData> = {
   accountants: {
     slug: 'accountants',
     name: 'Accountants',
-    metaTitle: 'AI Receptionist for Accountants | Capture High-Value Clients',
-    metaDescription: 'AI phone answering for accountants and tax advisors. Screens new client enquiries, captures business details, and books consultations. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Accountants UK | Never Miss a Client',
+    metaDescription: 'An AI receptionist for UK accountants \u2014 answers every call, screens enquiries and books consultations 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Calculator',
     gridDescription: 'AI phone answering that screens new client enquiries while you\u2019re buried in returns.',
 
@@ -308,8 +308,8 @@ export const industries: Record<string, IndustryData> = {
   lawyers: {
     slug: 'lawyers',
     name: 'Lawyers & Solicitors',
-    metaTitle: 'AI Receptionist for Law Firms | Capture Every Client Enquiry',
-    metaDescription: 'AI phone answering for solicitors and law firms. Screens new client enquiries, captures case details, and books consultations. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Law Firms UK | Never Miss a Client',
+    metaDescription: 'An AI receptionist for UK law firms \u2014 answers every call, screens enquiries and books consultations 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Scale',
     gridDescription: 'AI phone answering that screens client enquiries and captures case details while you\u2019re in meetings.',
 
@@ -365,12 +365,12 @@ export const industries: Record<string, IndustryData> = {
   'veterinary-practices': {
     slug: 'veterinary-practices',
     name: 'Veterinary Practices',
-    metaTitle: 'AI Receptionist for Vet Practices | Antek Automation',
-    metaDescription: 'AI phone answering for vet practices. Triages emergencies, captures pet and owner details, and books consultations 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Vets UK | Never Miss a Call',
+    metaDescription: 'An AI receptionist for UK vets \u2014 answers every call, triages urgent cases and books appointments 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Stethoscope',
     gridDescription: 'AI phone answering that triages emergencies and books appointments while your team focuses on patients.',
 
-    heroEyebrow: 'AI RECEPTIONIST FOR VETERINARY PRACTICES',
+    heroEyebrow: 'AI RECEPTIONIST FOR VETS',
     heroH1: 'Your Receptionist Is Dealing With a Distressed Owner. The Phone\u2019s Ringing. Again.',
     heroSubhead: 'Vet reception is one of the hardest front-desk jobs going. Your team is juggling walk-ins, dispensing meds, calming anxious owners, and trying to answer a phone that never stops. Your AI receptionist takes the calls they can\u2019t get to \u2014 triaging emergencies, booking routine appointments, and capturing the details your team needs. From \u00a397/month.',
 
@@ -423,12 +423,12 @@ export const industries: Record<string, IndustryData> = {
   dentists: {
     slug: 'dentists',
     name: 'Dentists',
-    metaTitle: 'AI Receptionist for Dental Practices | Antek Automation',
-    metaDescription: 'AI phone answering for dental practices. Screens emergencies from routine check-ups, captures patient details, and books 24/7. From \u00a397/month.',
+    metaTitle: 'AI Receptionist for Dentists UK | Fill Every Appointment',
+    metaDescription: 'An AI receptionist for UK dentists \u2014 answers every call and fills appointments 24/7, even out of hours. Certified Retell partner. Hear a live demo.',
     iconName: 'Smile',
     gridDescription: 'AI phone answering that books appointments and triages dental emergencies while your team treats patients.',
 
-    heroEyebrow: 'AI RECEPTIONIST FOR DENTAL PRACTICES',
+    heroEyebrow: 'AI RECEPTIONIST FOR DENTISTS',
     heroH1: 'The Phone Rang 40 Times Today. Your Receptionist Answered 25.',
     heroSubhead: 'Dental reception desks are chaos. Check-ins, payments, nervous patients, treatment plan questions \u2014 and a phone that won\u2019t stop ringing. Your AI receptionist handles the overflow, booking appointments and screening emergencies so your front desk can focus on the people actually in the practice. From \u00a397/month.',
 
@@ -480,7 +480,7 @@ export const industries: Record<string, IndustryData> = {
   therapists: {
     slug: 'therapists',
     name: 'Therapists',
-    metaTitle: 'AI Receptionist for Therapists | Antek Automation',
+    metaTitle: 'AI Receptionist for Therapists UK | 24/7 Booking',
     metaDescription: 'An AI receptionist for therapy practices \u2014 answers calls, books sessions and handles enquiries 24/7, so you never interrupt a session. Book a free demo.',
     iconName: 'Brain',
     gridDescription: 'AI phone answering that handles enquiries and books consultations while you\u2019re in session.',
