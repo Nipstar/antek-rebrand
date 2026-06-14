@@ -11,6 +11,13 @@
       "destination": "https://www.antekautomation.com/$1",
       "permanent": true
     },
+    { "source": "/locations/birmingham", "destination": "/locations", "permanent": true },
+    { "source": "/locations/manchester", "destination": "/locations", "permanent": true },
+    { "source": "/locations/newcastle", "destination": "/locations", "permanent": true },
+    { "source": "/locations/london", "destination": "/locations", "permanent": true },
+    { "source": "/locations/glasgow", "destination": "/locations", "permanent": true },
+    { "source": "/locations/liverpool", "destination": "/locations", "permanent": true },
+    { "source": "/locations/leeds", "destination": "/locations", "permanent": true },
     {
       "source": "/:path+/",
       "destination": "/:path+",
