@@ -19,13 +19,13 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <div className="max-w-4xl">
             <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
-              AI VOICE AGENTS | 24/7 CALL ANSWERING | HAMPSHIRE, UK
+              AI VOICE AGENTS &bull; UK
             </p>
             <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
               An AI Receptionist That Actually Sounds Like a Real Person
             </h1>
             <p className="text-xl text-charcoal leading-normal mb-4">
-              It answers every call. Books appointments. Qualifies leads. Sends you the details. Works 24/7, costs less than a part-time hire.
+              Our AI voice agents answer every call, book appointments, qualify leads and send you the details. They work 24/7 and cost less than a part-time hire.
             </p>
             <p className="text-sm text-mid-gray mb-8">By <a href="/about" className="underline hover:text-terracotta transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Last updated March 2026</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
