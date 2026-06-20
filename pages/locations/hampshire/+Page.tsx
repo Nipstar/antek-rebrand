@@ -4,8 +4,21 @@ import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 import { CalBooking } from '../../../src/components/CalBooking';
 import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
+import { TrustBlock } from '../../../src/components/TrustBlock';
+import { QuickRecap } from '../../../src/components/QuickRecap';
 
 const VoiceChat = lazy(() => import('../../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
+
+// HUB PAGE — this is the only location page that targets the "Hampshire" head term.
+// Town pages target their own town and link up here; this page links DOWN to every town.
+const towns = [
+  { name: 'Andover', slug: 'andover', blurb: 'Our HQ. Chantry House, 38 Chantry Way. Happy to meet for a coffee.' },
+  { name: 'Basingstoke', slug: 'basingstoke', blurb: 'Hampshire’s largest town, up the A303. Chineham, Old Basing, Hatch Warren.' },
+  { name: 'Winchester', slug: 'winchester', blurb: 'The county town and cathedral city — professional firms, practices, hospitality.' },
+  { name: 'Southampton', slug: 'southampton', blurb: 'Port city with thousands of businesses, two universities, a 24/7 hospitality sector.' },
+  { name: 'Salisbury', slug: 'salisbury', blurb: 'Wiltshire cathedral city on Hampshire’s western edge, down the A303.' },
+  { name: 'Newbury', slug: 'newbury', blurb: 'Berkshire market town just up the A34. Same 24/7 AI coverage, easy face-to-face.' },
+];
 
 export default function Page() {
   const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false);
@@ -13,7 +26,7 @@ export default function Page() {
   return (
     <div className="bg-off-white">
 
-      {/* ── HERO ── */}
+      {/* ── HERO (benefit-led H1, keeps the Hampshire head term — hub only) ── */}
       <section className="bg-warm-beige border-b-4 border-charcoal">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
           <div className="max-w-4xl">
@@ -21,93 +34,128 @@ export default function Page() {
               AI AGENCY &bull; HAMPSHIRE
             </p>
             <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              AI Automation for Hampshire Businesses
+              Never Miss Another Lead Across Hampshire
             </h1>
-            <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-4 max-w-3xl">
-              We're based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, right in the middle of Hampshire. From <a href="/locations/southampton" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Southampton</a> up to Basingstoke, from Winchester across to Farnborough &mdash; if you run a service business anywhere in the county, we build the AI that keeps your phone answered and your leads captured while you're out doing the actual work.
-            </p>
             <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
-              Whether you're a plumber in Eastleigh who can't answer calls mid-job, an electrician in Fleet losing evening enquiries, or a dental practice in Winchester drowning in appointment requests &mdash; we've got something that'll genuinely help.
+              We&rsquo;re a Hampshire AI agency based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, right in the middle of the county. From Basingstoke to Southampton, Winchester to the borders, we build the AI that keeps your phone answered and your leads captured while you&rsquo;re out doing the actual work. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>.
             </p>
-            <p className="text-sm text-mid-gray mb-8">By <a href="/about" className="underline hover:text-terracotta transition-colors">Andy Norman</a>, Founder | 30+ years in technology</p>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <a href="/contact">
-                <Button variant="primary">Book a free 30-min discovery call</Button>
+                <Button variant="primary" className="w-full sm:w-auto">Book a free 30-min call</Button>
               </a>
-              <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
+              <a href="tel:03330389960">
+                <Button variant="secondary" className="w-full sm:w-auto">Call 0333 038 9960</Button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      <QuickRecap items={[
+        'AI voice agents, chatbots and workflow automation for businesses right across Hampshire',
+        'Based in Andover — founder-led, with face-to-face available across the county',
+        'Stop losing work to missed calls, slow follow-ups and admin overload',
+        'From £57/month, live within 24–48 hours — <a href="/pricing" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
+        'Everything runs remotely — same quality whether you’re in Winchester or anywhere else in the UK',
+      ]} />
+
+      {/* ── OFFER / SERVICES ── */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-4">
-              What We Build for Hampshire Businesses
+              AI Automation for Hampshire Businesses
             </h2>
             <p className="text-lg text-charcoal max-w-2xl mx-auto">
-              Three services. All of them designed to stop you losing money to missed calls, slow follow-ups, and admin that eats your evenings.
+              Three services, all designed to stop you losing money to missed calls, slow follow-ups, and admin that eats your evenings.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* AI Voice Agents */}
             <Card hover>
               <Icon letter="V" size="lg" />
               <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
-                AI Voice Agents
+                Your Phone, Answered 24/7
               </h3>
-              <p className="text-charcoal leading-relaxed mb-4">
-                An AI receptionist that picks up when you're on a job in Romsey or stuck in traffic on the M3. It answers questions, books appointments, and captures caller details in a natural, human-sounding voice. Whether you're a tradesperson in rural areas around Weyhill and Thruxton with patchy mobile signal, or running a busy practice in Winchester &mdash; it catches every call you can't.
-              </p>
               <p className="text-charcoal leading-relaxed mb-6">
-                No more missed calls. No more chasing voicemails at 9pm.
+                An AI voice agent that picks up when you&rsquo;re on a job in Romsey or stuck on the M3 &mdash; answering questions, booking appointments and capturing caller details in a natural, human-sounding voice. It catches every call you can&rsquo;t.
               </p>
               <a href="/services/ai-voice-assistants" aria-label="See how AI Voice Agents work">
                 <Button variant="primary" className="w-full">See Voice Agents</Button>
               </a>
             </Card>
 
-            {/* AI Chatbots */}
             <Card hover>
               <Icon letter="C" size="lg" />
               <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
-                AI Chatbots
+                Your Website, Answered at 2am
               </h3>
-              <p className="text-charcoal leading-relaxed mb-4">
-                A smart chat widget on your website that talks to visitors the moment they land. Answers their questions, qualifies them, and books them straight into your calendar &mdash; whether it's 2pm or 2am. New residents on Augusta Park and Picket Piece who don't have an established plumber yet? They're searching online at 10pm. Your chatbot is the one that's actually there.
-              </p>
               <p className="text-charcoal leading-relaxed mb-6">
-                Turns browsers into booked appointments while you sleep.
+                A chatbot trained on your business that talks to visitors the moment they land &mdash; answering questions, qualifying them and booking them straight into your calendar, whether it&rsquo;s 2pm or 2am.
               </p>
               <a href="/services/ai-chatbots" aria-label="See how AI Chatbots work">
                 <Button variant="primary" className="w-full">See Chatbots</Button>
               </a>
             </Card>
 
-            {/* Workflow Automation */}
             <Card hover>
               <Icon letter="A" size="lg" />
               <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
-                Workflow Automation
+                Your Admin, Handled
               </h3>
-              <p className="text-charcoal leading-relaxed mb-4">
-                We connect the tools you already use &mdash; your calendar, CRM, email, invoicing &mdash; and automate the repetitive stuff. New enquiry comes in? Logged, acknowledged, and followed up automatically. Perfect for sole traders and small teams across Test Valley who are doing everything themselves &mdash; quoting, invoicing, chasing, booking &mdash; and drowning in admin.
-              </p>
               <p className="text-charcoal leading-relaxed mb-6">
-                Less admin. Fewer mistakes. More time for paying work.
+                We connect the tools you already use &mdash; calendar, CRM, email, invoicing &mdash; and automate the repetitive stuff. New enquiry comes in? Logged, acknowledged and followed up automatically.
               </p>
               <a href="/services/workflow-automation" aria-label="See how Workflow Automation works">
                 <Button variant="primary" className="w-full">See Automation</Button>
               </a>
             </Card>
           </div>
+
+          <div className="text-center mt-14">
+            <a href="/contact">
+              <Button variant="primary">Book a free 30-min call</Button>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* ── WHY LOCAL MATTERS ── */}
+      {/* ── PROOF ── */}
+      <TrustBlock>
+        {/* local testimonial slot */}
+      </TrustBlock>
+
+      {/* ── TOWNS WE COVER (hub-and-spoke: links DOWN to every town page) ── */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mb-12">
+            <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-4">
+              Towns We Cover Across Hampshire
+            </h2>
+            <p className="text-lg text-charcoal leading-relaxed">
+              Pick your town for the local detail &mdash; or just <a href="/contact" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">book a call</a>. We cover the whole county and the border towns, and everywhere else in the UK runs remotely just the same.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {towns.map((town) => (
+              <a key={town.slug} href={`/locations/${town.slug}`} className="block group">
+                <Card hover>
+                  <Icon letter={town.name[0]} size="md" />
+                  <h3 className="font-black text-xl uppercase text-charcoal mt-4 mb-3 group-hover:text-terracotta transition-colors">
+                    {town.name}
+                  </h3>
+                  <p className="text-charcoal leading-relaxed text-sm">
+                    {town.blurb}
+                  </p>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY A HAMPSHIRE AGENCY (local / founder) ── */}
       <section className="border-y-3 border-charcoal py-20 md:py-28 bg-soft-sage">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
@@ -115,44 +163,17 @@ export default function Page() {
               Why a Hampshire AI Agency?
             </h2>
             <p className="text-lg text-charcoal leading-relaxed mb-6">
-              I'm Andy, and I'm based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>. I've got 30+ years in tech &mdash; not the trendy Silicon Valley kind, but the kind where you actually build things that work and fix them when they don't.
+              I&rsquo;m Andy, and I&rsquo;m based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>. I&rsquo;ve got 30+ years in tech &mdash; not the trendy Silicon Valley kind, but the kind where you actually build things that work and fix them when they don&rsquo;t.
             </p>
             <p className="text-lg text-charcoal leading-relaxed mb-6">
-              I set up Antek Automation because I kept seeing local tradespeople and service businesses losing work to missed calls, slow follow-ups, and admin overload. The big AI agencies don't care about a plumber in Alton or a cleaning company in Fareham. I do.
+              I set up Antek Automation because I kept seeing local tradespeople and service businesses losing work to missed calls, slow follow-ups and admin overload. The big AI agencies don&rsquo;t care about a plumber in Alton or a cleaning company in Fareham. I do.
             </p>
             <p className="text-lg text-charcoal leading-relaxed mb-6">
-              Happy to meet for a coffee if you're nearby &mdash; I've done it with businesses across the county, from Petersfield to Aldershot. But honestly, everything works brilliantly over a video call too. Most of my Hampshire clients never need to meet in person, and their AI agents run just as well.
+              Happy to meet for a coffee if you&rsquo;re nearby &mdash; I&rsquo;ve done it with businesses across the county, from Petersfield to Aldershot. But everything works brilliantly over a video call too. Most of my Hampshire clients never need to meet in person, and their AI agents run just as well.
             </p>
             <p className="text-lg text-charcoal leading-relaxed">
-              The point is: you're not dealing with a faceless agency. You're dealing with a bloke who lives here, who picks up his own phone, and who actually gives a toss about whether this works for your business.
+              The point is: you&rsquo;re not dealing with a faceless agency. You&rsquo;re dealing with someone who lives here, picks up his own phone, and actually gives a toss about whether this works for your business.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── HAMPSHIRE BY THE NUMBERS ── */}
-      <section className="bg-peach border-y-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-12 text-center">
-            Hampshire by the Numbers
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
-              <div className="text-4xl font-black text-terracotta mb-2">72,000+</div>
-              <p className="text-charcoal font-bold">Registered businesses in Hampshire (ONS)</p>
-            </Card>
-            <Card>
-              <div className="text-4xl font-black text-terracotta mb-2">4,200+</div>
-              <p className="text-charcoal font-bold">Small businesses in Test Valley alone, with construction and trades representing 12% of the local economy</p>
-            </Card>
-            <Card>
-              <div className="text-4xl font-black text-terracotta mb-2">11.3%</div>
-              <p className="text-charcoal font-bold">Self-employment rate &mdash; one of the highest in the South East</p>
-            </Card>
-            <Card>
-              <div className="text-4xl font-black text-terracotta mb-2">78%</div>
-              <p className="text-charcoal font-bold">Of Hampshire's over-55 population &mdash; the demographic most likely to need home services &mdash; are regular internet users</p>
-            </Card>
           </div>
         </div>
       </section>
@@ -185,7 +206,7 @@ export default function Page() {
                 <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Absolutely &mdash; we're based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, so if you're anywhere in Hampshire we're happy to meet for a coffee. That said, most of our Hampshire clients prefer video calls because it's faster and more convenient. Either way works.
+                Absolutely &mdash; we&rsquo;re based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, so if you&rsquo;re anywhere in Hampshire we&rsquo;re happy to meet for a coffee. That said, most of our Hampshire clients prefer video calls because it&rsquo;s faster and more convenient. Either way works.
               </div>
             </details>
 
@@ -195,7 +216,7 @@ export default function Page() {
                 <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Yes. Some of our best-performing voice agents are for trades businesses covering rural areas &mdash; exactly the kind of businesses where you're most likely to miss calls because you're mid-job with no signal. The AI catches everything you can't.
+                Yes. Some of our best-performing voice agents are for trades businesses covering rural areas &mdash; exactly the kind of businesses where you&rsquo;re most likely to miss calls because you&rsquo;re mid-job with no signal. The AI catches everything you can&rsquo;t.
               </div>
             </details>
 
@@ -205,7 +226,7 @@ export default function Page() {
                 <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                All of it. From Basingstoke down to the New Forest, Winchester across to Farnborough, and everywhere in between. We've worked with businesses across Test Valley, Basingstoke &amp; Deane, Winchester, Eastleigh, Hart, Rushmoor and the New Forest. Our AI solutions work remotely so there are no geographic limitations.
+                All of it &mdash; we&rsquo;ve got dedicated pages for <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, <a href="/locations/basingstoke" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Basingstoke</a>, <a href="/locations/winchester" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Winchester</a> and <a href="/locations/southampton" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Southampton</a>, plus the border towns of <a href="/locations/salisbury" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Salisbury</a> and <a href="/locations/newbury" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Newbury</a>. Our AI solutions work remotely, so there are no geographic limitations.
               </div>
             </details>
 
@@ -215,7 +236,7 @@ export default function Page() {
                 <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Most voice agents are live within 5&ndash;7 working days from our first call. For Hampshire businesses, we can usually do a face-to-face kickoff meeting the same week if you prefer, which speeds things up even further.
+                Most voice agents and chatbots are live within 24&ndash;48 hours of you forwarding your number or giving us website access. For Hampshire businesses, we can usually do a face-to-face kickoff the same week if you prefer.
               </div>
             </details>
 
@@ -225,14 +246,14 @@ export default function Page() {
                 <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                AI voice agents start from &pound;97/month and chatbots from &pound;57/month, with setup from &pound;249. Most Hampshire businesses recover that within the first few captured calls. Book a free call for an exact quote.
+                AI voice agents and chatbots start from &pound;57/month. Most Hampshire businesses recover that within the first few captured calls. <a href="/pricing" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">See full pricing</a>, or book a free call for an exact quote.
               </div>
             </details>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* ── FINAL CTA ── */}
       <section className="bg-charcoal border-t-8 border-terracotta py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-lg text-off-white mb-6">
@@ -241,11 +262,14 @@ export default function Page() {
           <p className="text-lg md:text-xl text-off-white/90 leading-relaxed mb-10 max-w-2xl mx-auto">
             Book a free 30-minute discovery call with Andy. No pitch deck, no pressure &mdash; just a straight conversation about whether AI automation makes sense for your Hampshire business.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
-            <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <a href="/contact">
-              <Button variant="secondary">Book a free 30-min discovery call</Button>
+              <Button variant="primary">Book a free 30-min call</Button>
             </a>
+            <a href="tel:03330389960">
+              <Button variant="secondary">Call 0333 038 9960</Button>
+            </a>
+            <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
           </div>
         </div>
       </section>
@@ -264,7 +288,6 @@ export default function Page() {
           <CalBooking />
         </div>
       </section>
-
 
       {/* ── VOICE CHAT MODAL ── */}
       {isVoiceChatOpen && (

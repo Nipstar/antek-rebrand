@@ -1,307 +1,306 @@
+import { useState, Suspense, lazy } from 'react';
 import { Button } from '../../../src/components/Button';
-import { CalBooking } from '../../../src/components/CalBooking';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
-import { TrustStrip } from '../../../src/components/TrustStrip';
+import { CalBooking } from '../../../src/components/CalBooking';
+import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
+import { TrustBlock } from '../../../src/components/TrustBlock';
+import { QuickRecap } from '../../../src/components/QuickRecap';
+import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
+
+const VoiceChat = lazy(() => import('../../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
 
 export default function Page() {
+  const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false);
+
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-warm-beige border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6">
-            AI Automation for Newbury Businesses
-          </h1>
-          <p className="text-lg md:text-xl text-mid-gray max-w-3xl mb-8">
-            Andover-based AI agency serving Newbury and West Berkshire — 18 miles up the A34.
-            Voice agents, chatbots, and workflow automation built around your business. Same M4
-            corridor pace, same hands-on partnership our Hampshire clients get.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#contact"><Button variant="primary">Book a free 30-min call</Button></a>
-            <a href="tel:+443330389960"><Button variant="secondary">Call 0333 038 9960</Button></a>
+    <div className="bg-off-white">
+
+      {/* ── HERO (conversion-first: benefit H1 + town, subhead, primary CTA + click-to-call) ── */}
+      <section className="bg-warm-beige border-b-4 border-charcoal">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+          <div className="max-w-4xl">
+            <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
+              AI AUTOMATION &bull; NEWBURY
+            </p>
+            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
+              Never Miss Another Newbury Enquiry to a Missed Call
+            </h1>
+            <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
+              AI that answers your phone, captures the lead and handles the admin. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>, just up the A34 in Andover.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <a href="/contact">
+                <Button variant="primary" className="w-full sm:w-auto">Book a free 30-min call</Button>
+              </a>
+              <a href="tel:03330389960">
+                <Button variant="secondary" className="w-full sm:w-auto">Call 0333 038 9960</Button>
+              </a>
+            </div>
           </div>
-          <p className="mt-6 text-sm text-mid-gray">
-            Berkshire-focused work also covered at{' '}
-            <a className="underline hover:text-terracotta" href="https://aiservicesberkshire.co.uk" target="_blank" rel="noopener noreferrer">
-              aiservicesberkshire.co.uk
-            </a>{' '}— Antek's Berkshire satellite covering Reading, Slough, Maidenhead, Bracknell + the wider M4 corridor.
-          </p>
         </div>
       </section>
 
-      {/* Local credibility */}
+      <QuickRecap items={[
+        'AI voice agents, chatbots and workflow automation for Newbury businesses',
+        'Stop losing enquiries to missed calls — your phone answered 24/7, even mid-job',
+        'Built by a founder in Andover, just up the A34 over the Hampshire border',
+        'From £57/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
+        'Voice and chat products typically live within 24–48 hours',
+      ]} />
+
+      {/* ── PROBLEM (localised, before any proof) ── */}
       <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-10">
-            Why Newbury Businesses Pick Antek
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
-              <Icon letter="A" size="sm" />
-              <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-3">A34 corridor agency</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Andover to Newbury is 25 minutes up the A34, no slow B-roads. We meet Newbury
-                clients in person whenever it helps — discovery, kick-off, post-launch reviews —
-                and run the rest remote.
-              </p>
-            </Card>
-            <Card>
-              <Icon letter="3" size="sm" />
-              <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-3">30+ years in technology</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Antek was founded by Andy Norman after 30+ years in managed technology services.
-                Not a tech startup. A partner that understands enterprise-supplier dynamics
-                because we've lived them.
-              </p>
-            </Card>
-            <Card>
-              <Icon letter="R" size="sm" />
-              <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-3">Certified Retell AI Partner</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Same voice-agent stack we deploy for enterprise clients, priced for Newbury SMEs.
-                Voice agents from £97/month. Chatbots from £57/month. Workflow automation
-                project-priced.
-              </p>
-            </Card>
-            <Card>
-              <Icon letter="↻" size="sm" />
-              <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-3">Same-week visits</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Most Newbury enquiries answered within 1 hour Mon–Fri 9–6. In-person workshops in
-                Newbury, Thatcham, or Hungerford usually possible same-week.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="bg-soft-sage border-t-3 border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-10">
-            AI Services in Newbury
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
-              <h3 className="font-black text-lg uppercase text-charcoal mb-3">AI Voice Agents</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                24/7 phone receptionist that answers in your business name, books appointments,
-                qualifies leads, escalates urgent calls. Live in 7–10 working days.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-lg uppercase text-charcoal mb-3">AI Chatbots</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Website chat that qualifies enquiries, books appointments, integrates with your
-                CRM. Same agent stack as voice so handoffs stay consistent.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-lg uppercase text-charcoal mb-3">n8n Workflow Automation</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Lead intake to CRM, quote-to-invoice, supplier onboarding, document chase. We
-                integrate with Xero, QuickBooks, HubSpot, Pipedrive, Microsoft 365, Salesforce,
-                ServiceNow, and most UK + enterprise stacks.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-lg uppercase text-charcoal mb-3">GEO Audits</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Get your Newbury business cited by ChatGPT, Claude, Perplexity, and Google AI
-                Overviews. Citability scoring, schema audit, llms.txt, AI crawler analysis.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Local industries */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-6">
-            Newbury Industries We Work With
-          </h2>
-          <p className="text-mid-gray text-lg mb-10 max-w-3xl">
-            Newbury sits inside the M4 corridor's most concentrated tech and financial-services
-            cluster — Vodafone's UK HQ, telecoms + IT supply chains, financial advisers, racing,
-            and a vibrant SME town centre. We build AI for the suppliers, professional firms, and
-            independent businesses that orbit it.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Tech + telecoms supply chain</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Vodafone HQ in Newbury anchors a large supplier and contractor ecosystem. We
-                build AI for the SMEs feeding it — supplier qualification, document chase,
-                compliance-aware enquiry routing.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Financial + professional services</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Financial advisers, accountants, solicitors across Newbury and Thatcham business
-                parks. AI-powered intake, fee-quote workflows, MTD inbox triage.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Equestrian + racing</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Newbury Racecourse, Lambourn training yards, and the supporting trades. Voice
-                agents handle stable enquiries and racing-related bookings without missing a beat
-                on race days.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Retail + hospitality</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Town-centre independents, Parkway development tenants, hospitality businesses
-                serving racing-day visitors. AI booking and after-hours reservation handling.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Agriculture + rural enterprise</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                West Berkshire farms and estates. AI voice agents that catch the calls when
-                you're out on the land or in the yard, not in front of a phone.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="font-black text-base uppercase text-charcoal mb-2">Trades + service businesses</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Electricians, plumbers, builders, gas engineers across Newbury, Thatcham,
-                Hungerford, and the surrounding villages. After-hours emergency-call capture
-                pays for itself in week one.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Area covered */}
-      <section className="bg-warm-beige border-t-3 border-b-3 border-charcoal py-16 md:py-20">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-2xl md:text-3xl uppercase tracking-tight-lg text-charcoal mb-4">
-            Areas We Cover Around Newbury
-          </h2>
-          <p className="text-mid-gray leading-relaxed">
-            Newbury, Thatcham, Hungerford, Lambourn, Kintbury, Burghclere, Hermitage, Cold Ash,
-            plus the surrounding West Berkshire villages. The A34 puts every town within 40
-            minutes of our Hampshire base. For Reading, Slough, Maidenhead, Bracknell, and the
-            wider Berkshire county, see{' '}
-            <a className="underline hover:text-terracotta" href="https://aiservicesberkshire.co.uk" target="_blank" rel="noopener noreferrer">
-              aiservicesberkshire.co.uk
-            </a>.
-          </p>
-        </div>
-      </section>
-
-      {/* How we work / proof */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-10">
-            How a Newbury Project Starts
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card>
-              <Icon letter="1" size="sm" />
-              <h3 className="font-black text-base uppercase text-charcoal mt-4 mb-2">Discovery call</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                30 minutes by video. We listen first, ask about your real workflows, and tell you
-                what AI can realistically do for your Newbury business right now.
-              </p>
-            </Card>
-            <Card>
-              <Icon letter="2" size="sm" />
-              <h3 className="font-black text-base uppercase text-charcoal mt-4 mb-2">Costed proposal</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Within a week we send a fixed-price proposal — what we'll build, what it does,
-                what it costs, what's monthly. No consulting-by-the-hour.
-              </p>
-            </Card>
-            <Card>
-              <Icon letter="3" size="sm" />
-              <h3 className="font-black text-base uppercase text-charcoal mt-4 mb-2">Live in 7–10 days</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Standard voice agent or chatbot live in under two weeks. We handle the build,
-                hosting, monitoring, and ongoing tweaks under one monthly fee.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="bg-soft-sage border-t-3 border-b-3 border-charcoal py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-10">
-            FAQs — AI Automation in Newbury
+          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
+            The Missed Call That Costs You the Job
           </h2>
-          <div className="space-y-6">
-            <Card data-faq-item>
-              <h3 className="font-black text-base uppercase text-charcoal mb-3">Do you serve businesses in Newbury from your Hampshire base?</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Yes — Andover to Newbury is 18 miles straight up the A34, around 25 minutes. We
-                work with Newbury and wider West Berkshire businesses regularly and visit in
-                person whenever it adds value.
+          <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-6">
+            You&rsquo;re on a job in Thatcham or out near Hungerford. The phone rings and you can&rsquo;t answer. By the time you call back, they&rsquo;ve booked someone else.
+          </p>
+          <p className="text-lg md:text-xl text-charcoal leading-relaxed">
+            That&rsquo;s a job gone &mdash; whether you&rsquo;re a trade missing a quote or a professional firm missing an enquiry &mdash; because you were busy doing the work you&rsquo;re actually good at. Now multiply it across a week. Every missed call is a customer who needed you and found someone else instead.
+          </p>
+        </div>
+      </section>
+
+      {/* ── OFFER (three services framed as outcomes, single primary CTA) ── */}
+      <section className="border-y-3 border-charcoal py-20 md:py-28 bg-soft-sage">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-4">
+              AI Automation for Newbury Businesses
+            </h2>
+            <p className="text-lg text-charcoal max-w-2xl mx-auto">
+              Three things that stop the leaks &mdash; framed by the outcome, not the tech.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card hover>
+              <Icon letter="V" size="lg" />
+              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+                Your Phone, Answered 24/7
+              </h3>
+              <p className="text-charcoal leading-relaxed mb-6">
+                An AI voice agent picks up on the first ring &mdash; mid-job, after hours, weekends &mdash; takes the details, books the work and texts you the lead. No voicemail, no lost job.
               </p>
+              <a href="/services/ai-voice-assistants" aria-label="See how AI Voice Agents work">
+                <Button variant="primary" className="w-full">See Voice Agents</Button>
+              </a>
             </Card>
-            <Card data-faq-item>
-              <h3 className="font-black text-base uppercase text-charcoal mb-3">How quickly can you visit Newbury for in-person meetings?</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Usually same week, often same day for existing clients. Discovery calls are
-                remote by default to save time on both sides.
+
+            <Card hover>
+              <Icon letter="C" size="lg" />
+              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+                Your Website, Answered at 2am
+              </h3>
+              <p className="text-charcoal leading-relaxed mb-6">
+                A chatbot trained on your business answers questions, qualifies the enquiry and books the appointment while every competitor shows a &ldquo;we&rsquo;ll call you back&rdquo; form.
               </p>
+              <a href="/services/ai-chatbots" aria-label="See how AI Chatbots work">
+                <Button variant="primary" className="w-full">See Chatbots</Button>
+              </a>
             </Card>
-            <Card data-faq-item>
-              <h3 className="font-black text-base uppercase text-charcoal mb-3">What does an AI voice agent cost for a Newbury small business?</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Setup from £497, then £97/month for the voice agent on standard plans. Pricing
-                scales with call volume — full breakdown on our{' '}
-                <a className="underline hover:text-terracotta" href="/pricing">pricing page</a>.
+
+            <Card hover>
+              <Icon letter="A" size="lg" />
+              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+                Your Admin, Handled
+              </h3>
+              <p className="text-charcoal leading-relaxed mb-6">
+                Follow-ups, quotes, CRM updates and the repetitive jobs that eat your evenings &mdash; connected up and automated so a new enquiry gets handled without you lifting a finger.
               </p>
+              <a href="/services/workflow-automation" aria-label="See how Workflow Automation works">
+                <Button variant="primary" className="w-full">See Automation</Button>
+              </a>
             </Card>
-            <Card data-faq-item>
-              <h3 className="font-black text-base uppercase text-charcoal mb-3">Do you work with Newbury and Lambourn equestrian businesses?</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                Yes. Voice agents handling stable enquiries and chatbots for racing-related
-                bookings are both well-suited to the sector. We tailor the agent's voice and
-                knowledge base to the business.
-              </p>
-            </Card>
-            <Card data-faq-item>
-              <h3 className="font-black text-base uppercase text-charcoal mb-3">Are you used to working with larger Newbury employers and their supply chains?</h3>
-              <p className="text-mid-gray text-sm leading-relaxed">
-                We work with SME suppliers into larger Newbury employers including telecoms and
-                financial services. The AI agents and workflows we build can be tuned to
-                enterprise procurement and compliance requirements.
-              </p>
-            </Card>
+          </div>
+
+          <div className="text-center mt-14">
+            <a href="/contact">
+              <Button variant="primary">Book a free 30-min call</Button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section id="contact" className="bg-charcoal border-t-3 border-charcoal py-20 md:py-28">
+      {/* ── PROOF (reusable governed TrustBlock + local testimonial slot) ── */}
+      <TrustBlock>
+        {/* local testimonial slot — add a Newbury testimonial here once signed off in writing */}
+      </TrustBlock>
+
+      {/* ── LOCAL RELEVANCE — "Our Newbury patch" (entity layer sits UNDER the hook) ── */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6 md:px-12">
+          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
+            Our Newbury Patch
+          </h2>
+          <p className="text-lg text-charcoal leading-relaxed mb-6">
+            Newbury is a market town in West Berkshire, sitting on the{' '}
+            <a href="https://en.wikipedia.org/wiki/River_Kennet" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">River Kennet</a>{' '}
+            and the Kennet and Avon Canal in the county of{' '}
+            <a href="https://en.wikipedia.org/wiki/Berkshire" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Berkshire</a>. The A34 runs straight through it towards the M4, and it&rsquo;s perhaps best known for{' '}
+            <a href="https://en.wikipedia.org/wiki/Newbury_Racecourse" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Newbury Racecourse</a>. The trades and service firms work across Thatcham, Hungerford, Lambourn, Kintbury, Hermitage and the surrounding West Berkshire villages.
+          </p>
+          <p className="text-lg text-charcoal leading-relaxed mb-6">
+            Newbury sits just over the Hampshire border, an easy run down the A34 from our base in{' '}
+            <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a> &mdash; which makes us one of the closest AI automation agencies to Newbury, and one of the few that will actually meet you for a coffee.
+          </p>
+          <p className="text-lg text-charcoal leading-relaxed">
+            That said, you don&rsquo;t need us on your doorstep. Everything &mdash; setup, testing, ongoing support &mdash; runs over video call, which is how most of our{' '}
+            <a href="/locations/hampshire" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Hampshire</a>{' '}
+            clients prefer it. The AI doesn&rsquo;t care about geography. It just answers.
+          </p>
+        </div>
+      </section>
+
+      <ResourcesCompliance links={[
+        { text: 'West Berkshire Council — business support', url: 'https://www.westberks.gov.uk/business', context: 'Local authority business support and economic information' },
+        { text: 'ICO data protection guidance', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/', context: 'UK law governing customer data collected by AI systems' },
+      ]} />
+
+      {/* ── SIBLING / GEO LINKS ── */}
+      <section className="bg-warm-beige border-y-3 border-charcoal py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <h2 className="font-black text-2xl md:text-3xl uppercase tracking-tight-lg text-charcoal mb-8 text-center">
+            Nearby Towns We Cover
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/locations/andover" className="block group">
+              <Card hover>
+                <Icon letter="A" size="md" />
+                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Andover</h3>
+                <p className="text-charcoal text-sm leading-normal">Our HQ, just down the A34. Happy to meet for a coffee.</p>
+              </Card>
+            </a>
+            <a href="/locations/basingstoke" className="block group">
+              <Card hover>
+                <Icon letter="B" size="md" />
+                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Basingstoke</h3>
+                <p className="text-charcoal text-sm leading-normal">AI automation for Hampshire&rsquo;s largest town and its trades.</p>
+              </Card>
+            </a>
+            <a href="/locations/winchester" className="block group">
+              <Card hover>
+                <Icon letter="W" size="md" />
+                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Winchester</h3>
+                <p className="text-charcoal text-sm leading-normal">AI automation for the county town&rsquo;s professional firms and trades.</p>
+              </Card>
+            </a>
+            <a href="/locations/hampshire" className="block group">
+              <Card hover>
+                <Icon letter="H" size="md" />
+                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Hampshire</h3>
+                <p className="text-charcoal text-sm leading-normal">The county hub — every town we cover, in one place.</p>
+              </Card>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ (conversion + local) ── */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
+              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                You&rsquo;re in Andover — do you actually cover Newbury?
+                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+                Yes. Andover is our base, but we work with Newbury businesses every week &mdash; it&rsquo;s a quick run up the A34. The AI runs in the cloud, so your voice agent answers Newbury calls exactly the same whether we&rsquo;re next door or over the border.
+              </div>
+            </details>
+
+            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
+              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Do I need to be in Newbury for this to work?
+                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+                Not at all. The whole thing runs remotely &mdash; setup, testing and support all happen over video call. Your AI voice agent doesn&rsquo;t need a desk in Newbury to answer your phone. Most clients are set up without us ever stepping into their office.
+              </div>
+            </details>
+
+            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
+              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Newbury&rsquo;s in Berkshire, not Hampshire — does that matter?
+                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+                Not in the slightest. Newbury is a West Berkshire town, just over the Hampshire border, and it&rsquo;s one of our nearest neighbours up the A34. County lines don&rsquo;t change how the AI works or how we support you &mdash; we cover Newbury exactly the way we cover our Hampshire towns.
+              </div>
+            </details>
+
+            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
+              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What does it cost?
+                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+                AI voice agents and chatbots start from £57/month. There&rsquo;s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the <a href="/pricing" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">full pricing</a> for the detail.
+              </div>
+            </details>
+
+            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
+              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                How fast can it be set up?
+                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+                Most voice and chat products are live within 24&ndash;48 hours of you forwarding your number or giving us website access. We handle the build, testing and ongoing tweaks, so there&rsquo;s very little for you to do beyond the initial call.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FINAL CTA (booking + click-to-call) ── */}
+      <section className="bg-charcoal border-t-8 border-terracotta py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+          <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-lg text-off-white mb-6">
+            Stop Losing Newbury Enquiries
+          </h2>
+          <p className="text-lg md:text-xl text-off-white/90 leading-relaxed mb-10 max-w-2xl mx-auto">
+            Book a free 30-minute call with Andy. We&rsquo;re just down the A34 in Andover, we know the patch, and we&rsquo;ll give you a straight answer about whether AI automation is right for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <a href="/contact">
+              <Button variant="primary">Book a free 30-min call</Button>
+            </a>
+            <a href="tel:03330389960">
+              <Button variant="secondary">Call 0333 038 9960</Button>
+            </a>
+            <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
+          </div>
+        </div>
+      </section>
+
+      {/* ── BOOK A CALL (Cal.com) ── */}
+      <section className="bg-off-white border-t-3 border-charcoal py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="text-center mb-10">
-            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-off-white mb-6">
-              Book a free 30-minute call
+            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
+              Pick a Time That Works for You
             </h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              No sales pressure. We listen, scope, and tell you whether AI is the right answer for
-              your Newbury business right now.
+            <p className="text-charcoal max-w-2xl mx-auto">
+              Book a free 30-minute call below &mdash; or use the contact form if you prefer.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <a href="tel:03330389960"><Button variant="primary">Call 0333 038 9960</Button></a>
-              <a href="mailto:hello@antekautomation.com"><Button variant="secondary">Email hello@antekautomation.com</Button></a>
-            </div>
-            <TrustStrip className="justify-center mb-8" variant="light" />
           </div>
           <CalBooking />
         </div>
       </section>
-    </>
+
+      {/* ── VOICE CHAT MODAL ── */}
+      {isVoiceChatOpen && (
+        <Suspense fallback={null}>
+          <VoiceChat isOpen={isVoiceChatOpen} onClose={() => setIsVoiceChatOpen(false)} />
+        </Suspense>
+      )}
+    </div>
   );
 }

@@ -1,38 +1,21 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Newbury | Antek Automation</title>
-      <meta
-        name="description"
-        content="AI automation for Newbury businesses. Voice agents, chatbots, workflow automation. Andover-based AI agency 18 miles up the A34. Certified Retell AI Partner."
-      />
+      <title>AI Automation Newbury | Voice Agents &amp; Chatbots</title>
+      <meta name="description" content="Stop losing Newbury enquiries to missed calls. AI voice agents, chatbots and automation, built by a founder just up the A34 in Andover. Book a free call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/newbury" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Newbury | Antek Automation" />
-      <meta
-        property="og:description"
-        content="AI automation for Newbury businesses. Voice agents, chatbots, workflow automation. Andover-based agency 18 miles up the A34. Certified Retell AI Partner."
-      />
+      <meta property="og:title" content="AI Automation Newbury | Voice Agents & Chatbots" />
+      <meta property="og:description" content="Stop losing Newbury enquiries to missed calls. AI voice agents, chatbots and automation, built by a founder just up the A34 in Andover. Book a free call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/newbury" />
       <meta property="og:type" content="website" />
-      <meta property="og:locale" content="en_GB" />
 
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="AI Automation Newbury | Antek Automation" />
-      <meta
-        name="twitter:description"
-        content="AI voice agents, chatbots & workflow automation for Newbury and West Berkshire. Andover-based, 18 miles up the A34."
-      />
+      <meta name="twitter:title" content="AI Automation Newbury | Voice Agents & Chatbots" />
+      <meta name="twitter:description" content="Stop losing Newbury enquiries to missed calls. AI voice agents, chatbots and automation, built by a founder just up the A34 in Andover. Book a free call." />
 
-      {/* Geo */}
-      <meta name="geo.region" content="GB-WBK" />
-      <meta name="geo.placename" content="Newbury" />
-      <meta name="geo.position" content="51.4012;-1.3232" />
-      <meta name="ICBM" content="51.4012, -1.3232" />
-
-      {/* BreadcrumbList */}
+      {/* BreadcrumbList Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -48,7 +31,7 @@ export function Head() {
         }}
       />
 
-      {/* LocalBusiness */}
+      {/* LocalBusiness Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -58,51 +41,103 @@ export function Head() {
             name: 'Antek Automation Newbury',
             url: 'https://www.antekautomation.com/locations/newbury',
             telephone: '+44-3330-389960',
-            email: 'hello@antekautomation.com',
-            parentOrganization: {
-              '@type': 'Organization',
-              '@id': 'https://www.antekautomation.com/#organization',
-              name: 'Antek Automation',
-              url: 'https://www.antekautomation.com',
-              sameAs: ['https://aiservicesberkshire.co.uk'],
-            },
             founder: {
               '@type': 'Person',
               '@id': 'https://www.antekautomation.com/#founder',
               name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1', 'https://about.me/andynorman'],
+              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
             },
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Newbury',
-              addressRegion: 'West Berkshire',
+              addressLocality: 'Andover',
+              addressRegion: 'Hampshire',
               addressCountry: 'GB',
             },
-            geo: { '@type': 'GeoCoordinates', latitude: 51.4012, longitude: -1.3232 },
-            speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2', '.text-lg'] },
-            areaServed: [
-              { '@type': 'City', name: 'Newbury' },
-              { '@type': 'City', name: 'Thatcham' },
-              { '@type': 'City', name: 'Hungerford' },
-              { '@type': 'Place', name: 'Lambourn' },
-              { '@type': 'Place', name: 'Kintbury' },
-              { '@type': 'Place', name: 'Burghclere' },
-              { '@type': 'Place', name: 'Hermitage' },
-              { '@type': 'Place', name: 'Cold Ash' },
-              { '@type': 'AdministrativeArea', name: 'West Berkshire' },
-            ],
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 51.4014,
+              longitude: -1.3231,
+            },
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', 'h2', '.text-lg'],
+            },
+            areaServed: {
+              '@type': 'City',
+              name: 'Newbury',
+              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
+              containedInPlace: {
+                '@type': 'AdministrativeArea',
+                name: 'Berkshire',
+                sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
+              },
+            },
             makesOffer: [
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Voice Agents' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Chatbots' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Workflow Automation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GEO Audit' } },
             ],
-            priceRange: 'From £97/month',
           }),
         }}
       />
 
-      {/* FAQPage */}
+      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Newbury, Berkshire) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'AI Automation Newbury',
+            serviceType: 'AI automation',
+            url: 'https://www.antekautomation.com/locations/newbury',
+            provider: {
+              '@type': 'Organization',
+              name: 'Antek Automation',
+              url: 'https://www.antekautomation.com/',
+              knowsAbout: [
+                'AI voice agents',
+                'AI chatbots',
+                'Workflow automation',
+                'Business process automation',
+                'Lead capture',
+              ],
+              founder: { '@type': 'Person', name: 'Andy Norman' },
+            },
+            areaServed: {
+              '@type': 'City',
+              name: 'Newbury',
+              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
+              containedInPlace: {
+                '@type': 'AdministrativeArea',
+                name: 'Berkshire',
+                sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
+              },
+            },
+          }),
+        }}
+      />
+
+      {/* ImageObject Schema — with contentLocation */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ImageObject',
+            url: 'https://www.antekautomation.com/og-image.png',
+            contentUrl: 'https://www.antekautomation.com/og-image.png',
+            caption: 'Antek Automation — AI automation for Newbury businesses',
+            contentLocation: {
+              '@type': 'City',
+              name: 'Newbury',
+              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
+            },
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -112,42 +147,42 @@ export function Head() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'Do you serve businesses in Newbury from your Hampshire base?',
+                name: 'You’re in Andover — do you actually cover Newbury?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes — Andover to Newbury is 18 miles straight up the A34, around 25 minutes. We work with Newbury and wider West Berkshire businesses regularly and visit in person whenever it adds value.',
+                  text: 'Yes. Andover is our base, but we work with Newbury businesses every week — it’s a quick run up the A34. The AI runs in the cloud, so your voice agent answers Newbury calls exactly the same whether we’re next door or over the border.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'How quickly can you visit Newbury for in-person meetings?',
+                name: 'Do I need to be in Newbury for this to work?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Usually same week, often same day for existing clients. Discovery calls are remote by default to save time on both sides.',
+                  text: 'Not at all. The whole thing runs remotely — setup, testing and support all happen over video call. Your AI voice agent doesn’t need a desk in Newbury to answer your phone. Most clients are set up without us ever stepping into their office.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'What does an AI voice agent cost for a Newbury small business?',
+                name: 'Newbury’s in Berkshire, not Hampshire — does that matter?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Setup from £497, then £97/month for the voice agent on standard plans. Pricing scales with call volume — full breakdown on our pricing page.',
+                  text: 'Not in the slightest. Newbury is a West Berkshire town, just over the Hampshire border, and it’s one of our nearest neighbours up the A34. County lines don’t change how the AI works or how we support you — we cover Newbury exactly the way we cover our Hampshire towns.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'Do you work with Newbury and Lambourn equestrian businesses?',
+                name: 'What does it cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "Yes. Voice agents handling stable enquiries and chatbots for racing-related bookings are both well-suited to the sector. We tailor the agent's voice and knowledge base to the business.",
+                  text: 'AI voice agents and chatbots start from £57/month. There’s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the full pricing for the detail.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'Are you used to working with larger Newbury employers and their supply chains?',
+                name: 'How fast can it be set up?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We work with SME suppliers into larger employers including telecoms and financial services. The AI agents and workflows we build can be tuned to enterprise procurement and compliance requirements.',
+                  text: 'Most voice and chat products are live within 24–48 hours of you forwarding your number or giving us website access. We handle the build, testing and ongoing tweaks, so there’s very little for you to do beyond the initial call.',
                 },
               },
             ],

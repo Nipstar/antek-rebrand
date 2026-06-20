@@ -76,6 +76,7 @@ export function Head() {
             areaServed: {
               '@type': 'AdministrativeArea',
               name: 'Hampshire',
+              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
             },
             speakable: {
               '@type': 'SpeakableSpecification',
@@ -104,6 +105,62 @@ export function Head() {
                 },
               },
             ],
+          }),
+        }}
+      />
+
+      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Hampshire) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'AI Automation Hampshire',
+            serviceType: 'AI automation',
+            url: 'https://www.antekautomation.com/locations/hampshire',
+            provider: {
+              '@type': 'Organization',
+              name: 'Antek Automation',
+              url: 'https://www.antekautomation.com/',
+              knowsAbout: [
+                'AI voice agents',
+                'AI chatbots',
+                'Workflow automation',
+                'Business process automation',
+                'Lead capture',
+              ],
+              founder: { '@type': 'Person', name: 'Andy Norman' },
+            },
+            areaServed: {
+              '@type': 'AdministrativeArea',
+              name: 'Hampshire',
+              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
+              containedInPlace: {
+                '@type': 'Country',
+                name: 'United Kingdom',
+                sameAs: ['https://en.wikipedia.org/wiki/United_Kingdom', 'https://www.wikidata.org/wiki/Q145'],
+              },
+            },
+          }),
+        }}
+      />
+
+      {/* ImageObject Schema — with contentLocation */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ImageObject',
+            url: 'https://www.antekautomation.com/og-image.png',
+            contentUrl: 'https://www.antekautomation.com/og-image.png',
+            caption: 'Antek Automation — AI automation for Hampshire businesses',
+            contentLocation: {
+              '@type': 'AdministrativeArea',
+              name: 'Hampshire',
+              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
+            },
           }),
         }}
       />
@@ -137,7 +194,7 @@ export function Head() {
                 name: 'What areas of Hampshire do you cover?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'All of it. From Basingstoke down to the New Forest, Winchester across to Farnborough, and everywhere in between. We\'ve worked with businesses across Test Valley, Basingstoke & Deane, Winchester, Eastleigh, Hart, Rushmoor and the New Forest. Our AI solutions work remotely so there are no geographic limitations.',
+                  text: "All of it — we've got dedicated pages for Andover, Basingstoke, Winchester and Southampton, plus the border towns of Salisbury and Newbury. Our AI solutions work remotely, so there are no geographic limitations.",
                 },
               },
               {
@@ -145,7 +202,7 @@ export function Head() {
                 name: 'How quickly can you set up an AI voice agent for my Hampshire business?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Most voice agents are live within 5-7 working days from our first call. For Hampshire businesses, we can usually do a face-to-face kickoff meeting the same week if you prefer, which speeds things up even further.',
+                  text: 'Most voice agents and chatbots are live within 24–48 hours of you forwarding your number or giving us website access. For Hampshire businesses, we can usually do a face-to-face kickoff the same week if you prefer.',
                 },
               },
               {
@@ -153,7 +210,7 @@ export function Head() {
                 name: 'What does it cost for a Hampshire business?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'AI voice agents start from £97/month and chatbots from £57/month, with setup from £249. Most Hampshire businesses recover that within the first few captured calls. Book a free call for an exact quote.',
+                  text: 'AI voice agents and chatbots start from £57/month. Most Hampshire businesses recover that within the first few captured calls. See full pricing, or book a free call for an exact quote.',
                 },
               },
             ],
