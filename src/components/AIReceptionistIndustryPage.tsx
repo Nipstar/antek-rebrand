@@ -4,6 +4,7 @@ import { Card } from './Card'
 import { Icon } from './Icon'
 import { VoiceDemoButton } from './VoiceDemoButton'
 import { AIReceptionistDemoCards } from './AIReceptionistDemoCards'
+import { RetellDemoCards } from './RetellDemoCards'
 import { QuickRecap } from './QuickRecap'
 import { ResourcesCompliance } from './ResourcesCompliance'
 import type { IndustryData } from '../data/aiReceptionist'
@@ -11,12 +12,21 @@ import { getIndustryBySlug } from '../data/aiReceptionist'
 
 const VoiceChat = lazy(() => import('./VoiceChat').then((m) => ({ default: m.VoiceChat })))
 
+// Map an AI-receptionist industry slug to its matching Retell orb demo(s).
+const ORB_DEMOS: Record<string, string[]> = {
+  plumbers: ['heating'],
+  hvac: ['hvac'],
+  electricians: ['electrical'],
+  lawyers: ['lawyer', 'legal'],
+}
+
 interface Props {
   industry: IndustryData
 }
 
 export function AIReceptionistIndustryPage({ industry }: Props) {
   const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false)
+  const orbKeys = ORB_DEMOS[industry.slug]
 
   const related = industry.alsoPopularWith
     .map((slug) => getIndustryBySlug(slug))
@@ -179,6 +189,15 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ── BROWSER VOICE DEMO (Retell orb for this industry) ── */}
+      {orbKeys && (
+        <RetellDemoCards
+          industries={orbKeys}
+          heading="Talk to a Live AI Agent in Your Browser"
+          subhead={`No phone needed — tap below and speak to a demo built for ${industry.name.toLowerCase()}.`}
+        />
+      )}
 
       {/* ── ALSO POPULAR WITH ── */}
       {related.length > 0 && (

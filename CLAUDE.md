@@ -41,6 +41,7 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 - `src/data/retellDemos.ts` = the list of shareable Retell orb demos (industry, label, blurb, icon, orbUrl) + `LOCATION_DEMO_INDUSTRIES` (the curated subset shown on town pages). Add a new industry by pasting its Retell **Share** URL — every page updates automatically.
 - `src/components/RetellDemoCards.tsx` = pop-card grid → modal with the orb in an `<iframe allow="microphone; …">`, Esc/backdrop close, and an "open in a new tab" fallback. Orb tokens are public share links by design.
 - Placement: voice service page shows **all** demos; every **location page** shows `<RetellDemoCards curated />` (the curated set), placed right after `<TrustBlock>`. New town pages must include it.
+- AI-receptionist industry pages auto-show their matching orb via the `ORB_DEMOS` slug→industry map in `AIReceptionistIndustryPage.tsx` (plumbers→heating, hvac→hvac, electricians→electrical, lawyers→lawyer+legal). When you add an orb for a new industry (e.g. dental, accountants), add the mapping there too.
 
 ## Wiring checklist when adding a town (do all 7)
 1. `pages/locations/<town>/+Page.tsx` + `+Head.tsx`
