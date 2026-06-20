@@ -24,7 +24,7 @@ export default function Page() {
               AI AUTOMATION &bull; SOUTHAMPTON
             </p>
             <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              Stop Losing Southampton Enquiries to a Missed Call
+              Southampton Never Sleeps &mdash; Now Your Phone Doesn&rsquo;t Either
             </h1>
             <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
               AI that answers your phone, captures the lead and handles the admin &mdash; from Ocean Village to Bitterne, around the clock. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>, up the road in Andover.

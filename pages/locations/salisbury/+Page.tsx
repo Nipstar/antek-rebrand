@@ -24,7 +24,7 @@ export default function Page() {
               AI AUTOMATION &bull; SALISBURY
             </p>
             <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              Never Miss Another Salisbury Job to a Missed Call
+              Answer Every Salisbury Customer, Even at Your Busiest
             </h1>
             <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
               AI that answers your phone, captures the lead and handles the admin. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>, just down the A303 in Andover.

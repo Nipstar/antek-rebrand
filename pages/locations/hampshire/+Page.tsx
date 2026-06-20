@@ -34,7 +34,7 @@ export default function Page() {
               AI AGENCY &bull; HAMPSHIRE
             </p>
             <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              Never Miss Another Lead Across Hampshire
+              Your Hampshire Business, Answered Around the Clock
             </h1>
             <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
               We&rsquo;re a Hampshire AI agency based in <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a>, right in the middle of the county. From Basingstoke to Southampton, Winchester to the borders, we build the AI that keeps your phone answered and your leads captured while you&rsquo;re out doing the actual work. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>.
