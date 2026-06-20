@@ -5,6 +5,7 @@ import { Icon } from '../../../src/components/Icon';
 import { CalBooking } from '../../../src/components/CalBooking';
 import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
 import { TrustBlock } from '../../../src/components/TrustBlock';
+import { RetellDemoCards } from '../../../src/components/RetellDemoCards';
 import { QuickRecap } from '../../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 
@@ -129,6 +130,9 @@ export default function Page() {
       <TrustBlock>
         {/* local testimonial slot — add a Newbury testimonial here once signed off in writing */}
       </TrustBlock>
+
+      {/* ── RETELL INDUSTRY DEMOS (pop-card orbs) ── */}
+      <RetellDemoCards curated />
 
       {/* ── LOCAL RELEVANCE — "Our Newbury patch" (entity layer sits UNDER the hook) ── */}
       <section className="py-20 md:py-28">

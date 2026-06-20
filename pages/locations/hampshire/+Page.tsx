@@ -5,6 +5,7 @@ import { Icon } from '../../../src/components/Icon';
 import { CalBooking } from '../../../src/components/CalBooking';
 import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
 import { TrustBlock } from '../../../src/components/TrustBlock';
+import { RetellDemoCards } from '../../../src/components/RetellDemoCards';
 import { QuickRecap } from '../../../src/components/QuickRecap';
 
 const VoiceChat = lazy(() => import('../../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
@@ -124,6 +125,9 @@ export default function Page() {
       <TrustBlock>
         {/* local testimonial slot */}
       </TrustBlock>
+
+      {/* ── RETELL INDUSTRY DEMOS (pop-card orbs) ── */}
+      <RetellDemoCards curated />
 
       {/* ── TOWNS WE COVER (hub-and-spoke: links DOWN to every town page) ── */}
       <section className="py-20 md:py-28">

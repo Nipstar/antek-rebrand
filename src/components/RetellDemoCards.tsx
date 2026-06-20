@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { Card } from './Card';
 import { Icon } from './Icon';
-import { retellDemos, type RetellDemo } from '../data/retellDemos';
+import { retellDemos, LOCATION_DEMO_INDUSTRIES, type RetellDemo } from '../data/retellDemos';
 
 interface RetellDemoCardsProps {
   heading?: string;
   subhead?: string;
   /** optional filter by industry key (e.g. ['heating']); defaults to all demos */
   industries?: string[];
+  /** convenience: show the curated location-page set (LOCATION_DEMO_INDUSTRIES) */
+  curated?: boolean;
 }
 
 // Industry demo "orbs" from Retell. Each card pops a modal with the live orb in an
@@ -18,12 +20,12 @@ export function RetellDemoCards({
   heading = 'Hear It for Yourself',
   subhead = 'Tap an industry and talk to a live AI agent — the same kind we build for your business.',
   industries,
+  curated = false,
 }: RetellDemoCardsProps) {
   const [active, setActive] = useState<RetellDemo | null>(null);
 
-  const demos = industries?.length
-    ? retellDemos.filter((d) => industries.includes(d.industry))
-    : retellDemos;
+  const filter = industries?.length ? industries : curated ? LOCATION_DEMO_INDUSTRIES : null;
+  const demos = filter ? retellDemos.filter((d) => filter.includes(d.industry)) : retellDemos;
 
   // Close on Escape.
   useEffect(() => {
