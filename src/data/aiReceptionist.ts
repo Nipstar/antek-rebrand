@@ -1,39 +1,3 @@
-export interface DemoCall {
-  id: string
-  label: string
-  title: string
-  phoneDisplay: string
-  phoneTel: string
-  prompt: string
-}
-
-export const demoCalls: DemoCall[] = [
-  {
-    id: 'electrical',
-    label: 'Electrical Demo',
-    title: 'Bolt Electrical AI Reception',
-    phoneDisplay: '07782 214455',
-    phoneTel: '07782214455',
-    prompt: 'Try asking about a fuse board replacement',
-  },
-  {
-    id: 'plumbing',
-    label: 'Plumbing & Heating Demo',
-    title: 'Antek Plumbing & Heating AI Receptionist',
-    phoneDisplay: '0333 051 0944',
-    phoneTel: '03330510944',
-    prompt: 'Try booking a boiler service',
-  },
-  {
-    id: 'hospitality',
-    label: 'Hospitality Demo',
-    title: 'Ember & Oak Restaurant AI Host',
-    phoneDisplay: '07426 476540',
-    phoneTel: '07426476540',
-    prompt: 'Try booking a table for four',
-  },
-]
-
 export interface BeforeAfter {
   without: string
   with: string
