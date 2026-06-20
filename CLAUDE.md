@@ -48,9 +48,15 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 2. Hub grid: `towns[]` array in `pages/locations/hampshire/+Page.tsx`
 3. Hub list: `localLocations` in `pages/locations/index/+Page.tsx`
 4. Footer: `FOOTER_LOCATIONS` in `src/components/Footer.tsx`
-5. `public/sitemap.xml` (static — hand-edit; priority 0.7 for towns)
+5. `public/sitemap.xml` (static — hand-edit; priority 0.7 for towns) — also bump `lastmod` to today on the hub + `/locations` index (they gain a link to the new town, so crawlers should re-fetch)
 6. `scripts/audit/pages.ts` + one contextual `/services/*` link
 7. GEO: localised GEO cross-sell block + `/services/geo-audit` link + `GEO Audit` in `makesOffer` + `Generative Engine Optimization (GEO)` in `knowsAbout`
+8. `<RetellDemoCards curated />` after `<TrustBlock>` (see Voice demos)
+
+## Deploy & crawl (post-merge)
+- After merging to `main`, confirm production actually redeployed from `main` (Vercel → Deployments; Production Branch should be `main`). Correct code but stale live pages = a deploy/CDN-cache issue, not markup.
+- `vercel.json` doesn't long-cache HTML (only `/assets` + images), so a fresh deploy busts stale HTML at Vercel's edge. If a CDN sits in front (e.g. Cloudflare), purge HTML for `/` and `/locations`.
+- Freshen `lastmod` in `public/sitemap.xml` for every changed page (incl. the hub + `/locations` index when new towns are added), then resubmit the sitemap and Request Indexing in GSC. Internal-linking lists (hub `towns[]`, index `localLocations`, footer `FOOTER_LOCATIONS`) must be re-verified in the **built** output, not just source.
 
 ## Verified entity IDs (reuse; re-confirm at build time)
 - Hampshire `Q23204` · Basingstoke `Q810196` · Winchester `Q172157` (Univ of Winchester `Q3551690`, Winchester College `Q1059517`, Cathedral `Q476529`) · Andover, Hampshire `Q492805` (Test Valley `Q2116338`) · Southampton `Q79848` (Univ of Southampton `Q76473`) · Salisbury `Q160642` (Wiltshire `Q21694746`, Salisbury Cathedral `Q390150`) · Newbury, Berkshire `Q655874` (Berkshire `Q23220`).
@@ -59,6 +65,7 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 - **Prompt 1 — DONE:** `/locations/basingstoke`, `/locations/winchester` + `TrustBlock` component.
 - **Prompt 2 — DONE:** updated existing pages to the standard — `hampshire` (hub: benefit H1, links down to all 6 towns, AdministrativeArea sameAs, TrustBlock, dropped invented stats), `andover`, `southampton`, `salisbury` (Wiltshire), `newbury` (Berkshire).
 - **Post-Prompt-2 refinements — DONE:** (a) H1s differentiated per town and balanced across services (voice/chatbot/automation), subheads + metas aligned to each page's lead service; (b) GEO Audit added as the 4th offering on all 7 location pages (visible block + link + schema); (c) GEO block/link added to the 3 core `/services/*` pages.
+- **Retell demo orbs — DONE:** shareable orb pop-cards (`RetellDemoCards`) on the voice service page (all), every location page (curated set), and the ai-receptionist pages (mapped orb at `#demo`); replaced the old phone-dial demos. Repo lint is fully green; sitemap `lastmod` freshened for the changed pages.
 - **Andover cannibalisation:** resolved by *differentiate intent* (this page = founder-led brand/HQ hub). ⚠️ **External action still required:** 301-redirect or `rel=canonical` `aiautomationandover.co.uk` → `/locations/andover`. Can't be done from this repo — needs the EMD domain's DNS/host. See the comment at the top of `pages/locations/andover/+Page.tsx`.
 
 ## Remaining batches (one prompt per session; deploy + index between each)
