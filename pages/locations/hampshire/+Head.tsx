@@ -15,172 +15,46 @@ export function Head() {
       <meta name="twitter:title" content="AI Agency Hampshire | Voice Agents & Automation | Antek" />
       <meta name="twitter:description" content="Andover-based AI agency for Hampshire businesses. Voice agents, chatbots and automation that answer calls, reply online and chase follow-ups. Book a free call." />
 
-      {/* BreadcrumbList Schema */}
+      {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
+            '@graph': [
               {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://www.antekautomation.com/',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Locations',
-                item: 'https://www.antekautomation.com/locations',
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: 'Hampshire',
-                item: 'https://www.antekautomation.com/locations/hampshire',
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Antek Automation Hampshire',
-            url: 'https://www.antekautomation.com/locations/hampshire',
-            telephone: '+44-3330-389960',
-            founder: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Andover',
-              addressRegion: 'Hampshire',
-              addressCountry: 'GB',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 51.05,
-              longitude: -1.31,
-            },
-            areaServed: {
-              '@type': 'AdministrativeArea',
-              name: 'Hampshire',
-              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
-            },
-            speakable: {
-              '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'h2', '.text-lg'],
-            },
-            makesOffer: [
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'AI Voice Agents',
+                '@type': 'Service',
+                '@id': 'https://www.antekautomation.com/locations/hampshire#service',
+                name: 'AI Automation Services in Hampshire',
+                serviceType: 'AI automation',
+                url: 'https://www.antekautomation.com/locations/hampshire',
+                provider: { '@id': 'https://www.antekautomation.com/#organization' },
+                areaServed: {
+                  '@type': 'AdministrativeArea',
+                  name: 'Hampshire',
+                  sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
+                  containedInPlace: {
+                    '@type': 'Country',
+                    name: 'United Kingdom',
+                    sameAs: 'https://en.wikipedia.org/wiki/United_Kingdom',
+                  },
                 },
+                about: [
+                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
+                  { '@type': 'Place', name: 'New Forest', sameAs: 'https://en.wikipedia.org/wiki/New_Forest' },
+                ],
               },
               {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'AI Chatbots',
-                },
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
+                  { '@type': 'ListItem', position: 3, name: 'Hampshire', item: 'https://www.antekautomation.com/locations/hampshire' },
+                ],
               },
               {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'Workflow Automation',
-                },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: {
-                  '@type': 'Service',
-                  name: 'GEO Audit',
-                },
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Hampshire) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'AI Automation Hampshire',
-            serviceType: 'AI automation',
-            url: 'https://www.antekautomation.com/locations/hampshire',
-            provider: {
-              '@type': 'Organization',
-              name: 'Antek Automation',
-              url: 'https://www.antekautomation.com/',
-              knowsAbout: [
-                'AI voice agents',
-                'AI chatbots',
-                'Workflow automation',
-                'Business process automation',
-                'Lead capture',
-                'Generative Engine Optimization (GEO)',
-              ],
-              founder: { '@type': 'Person', name: 'Andy Norman' },
-            },
-            areaServed: {
-              '@type': 'AdministrativeArea',
-              name: 'Hampshire',
-              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
-              containedInPlace: {
-                '@type': 'Country',
-                name: 'United Kingdom',
-                sameAs: ['https://en.wikipedia.org/wiki/United_Kingdom', 'https://www.wikidata.org/wiki/Q145'],
-              },
-            },
-          }),
-        }}
-      />
-
-      {/* ImageObject Schema — with contentLocation */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ImageObject',
-            url: 'https://www.antekautomation.com/og-image.png',
-            contentUrl: 'https://www.antekautomation.com/og-image.png',
-            caption: 'Antek Automation — AI automation for Hampshire businesses',
-            contentLocation: {
-              '@type': 'AdministrativeArea',
-              name: 'Hampshire',
-              sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
-            },
-          }),
-        }}
-      />
-
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
+                '@type': 'FAQPage',
+                mainEntity: [
               {
                 '@type': 'Question',
                 name: 'Can I meet you in person?',
@@ -220,6 +94,8 @@ export function Head() {
                   '@type': 'Answer',
                   text: 'AI voice agents and chatbots start from £57/month. Most Hampshire businesses recover that within the first few captured calls. See full pricing, or book a free call for an exact quote.',
                 },
+              },
+                ],
               },
             ],
           }),

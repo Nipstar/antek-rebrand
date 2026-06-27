@@ -10,4 +10,8 @@ export const pages: string[] = [
   '/locations/southampton',
   '/locations/basingstoke',
   '/locations/winchester',
+  '/locations/berkshire',
+  '/locations/reading',
+  '/locations/portsmouth',
+  '/locations/bournemouth',
 ]

@@ -12,9 +12,11 @@ Do not restore the old contents. Update the root `CLAUDE.md` instead.
 
 # Location pages — rollout state & plan (memory)
 
-_Last updated: 2026-06-20. This is the working memory for the staggered location-page build. Read it before starting the next batch._
+_Last updated: 2026-06-27. Working memory for the location-page build. Read it before starting the next batch._
 
-> **Every town page ships FOUR services, not three.** AI Voice Agents + AI Chatbots + Workflow Automation + **GEO Audit**. GEO is an offering, not an afterthought — it must appear as a visible block, an internal link, and in the schema (see "Services & GEO" below). It was missed on the first build and had to be retrofitted; don't repeat that.
+> **GOVERNING SPEC v2 (27 Jun 2026) is in force.** Two non-negotiables changed the model: (1) **one canonical Organization node** — every location page's schema references `https://www.antekautomation.com/#organization` by `@id`; **never mint a per-page `Organization`/`LocalBusiness`** (it splits the entity). (2) **Local content is the moat, not schema** — every page needs substantial body copy that could only be about that place (≥6 real local proper nouns); if swapping the place name still reads fine, it fails. **Freeze the northern Hampshire/Wiltshire cluster** (Andover, Salisbury, Basingstoke, Newbury, Winchester) until the Salisbury↔Andover overlap clears — expand south + into new counties only. Quality over coverage: a few strong pages, then a GSC gate.
+
+> **Every page ships FOUR services:** AI Chatbots, AI Voice Assistants, Workflow Automation (n8n), **GEO (Generative Engine Optimisation)**. On v2 pages GEO is just the 4th service card (no separate upsell block); GEO has **no Wikipedia `sameAs`** (no stable article — describe in copy only).
 
 ## Stack reality (don't trust prompts that say "Next.js")
 - **Vite + Vike (`vike-react`)**, React 18, TypeScript, Tailwind. File-based routing: each route is a folder under `pages/` with `+Page.tsx` (body) and `+Head.tsx` (title/meta/JSON-LD). `prerender: true` in `pages/+config.ts` → every page is static SSR HTML (indexable).
@@ -24,8 +26,10 @@ _Last updated: 2026-06-20. This is the working memory for the staggered location
 - **Use the `location-page-builder` skill** (installed at `.claude/skills/location-page-builder/`).
 - **Gold standard to mirror exactly:** `pages/locations/basingstoke/+Page.tsx` and `+Head.tsx`. Copy its section order, components, and schema shape.
 - Reusable components: `Button`, `Card`, `Icon`, `CalBooking`, `VoiceDemoButton`, `VoiceChat` (lazy), `TrustBlock` (governed proof — no client name/town/mechanism), `QuickRecap`, `ResourcesCompliance`.
-- Visible order (conversion-first): HERO (benefit H1 incl. town + subhead + Book a free 30-min call + click-to-call `tel:03330389960`) → QuickRecap → PROBLEM → OFFER (3 core services as outcomes + single CTA, H2 = "AI automation for [Town] businesses") → TrustBlock → `<RetellDemoCards curated />` (industry voice-demo orbs) → "Our [Town] patch" entity layer → ResourcesCompliance → sibling/geo cards (up to hub + 3 siblings) → **GEO cross-sell block** ("Is AI Search Recommending Your [Town] Business?" → localised ChatGPT/Perplexity query → link to `/services/geo-audit`, from £247) → FAQ (5 inline `<details>`) → final CTA → CalBooking → VoiceChat modal.
-- Head schema per page: BreadcrumbList, LocalBusiness (geo + areaServed City sameAs + containedInPlace + **makesOffer = all 4 services incl. `GEO Audit`** + speakable), Service (**provider.knowsAbout incl. `Generative Engine Optimization (GEO)`** + areaServed sameAs/containedInPlace), ImageObject (contentLocation), FAQPage (matches the page's 5 Q&As verbatim).
+- **v2 page template** (`+Page.tsx`; gold standard `pages/locations/portsmouth/+Page.tsx`): HERO (H1 "AI Automation for [Place] Businesses" + local hook + Book a free 30-min call + click-to-call `tel:03330389960`) → direct-answer intro (40–60 words, snippet-friendly, names place + ≥1 neighbour) → LOCAL CONTEXT (entity-dense differentiator: real geography/transit/sectors; ≤4 visible Wikipedia links, new tab, first-mention) → SERVICES IN [PLACE] (4 service cards framed for local sectors, linking to the 4 `/services/*`) → AREAS WE COVER (genuine neighbours) → PROOF (`<TrustBlock>` + credibility line: Certified Retell AI Partner, 30+ yrs, Andover base) → `<RetellDemoCards curated />` → FAQ (4–6 inline `<details>`) → FINAL CTA + NAP (book + tel + exact address line) → CalBooking → VoiceChat modal. **No QuickRecap, no GEO upsell block** on v2 pages.
+- **v2 Head schema** (`@graph` of THREE nodes; gold standard `pages/locations/basingstoke/+Head.tsx`): one `<script>` `@graph:[ Service, BreadcrumbList, FAQPage ]`. Service: `@id` `<url>#service`, `provider:{'@id':'…/#organization'}` (REFERENCE — never inline org), `areaServed` City/AdministrativeArea + verified Wikipedia `sameAs` + `containedInPlace`, `about:[{Place,name,sameAs}]` co-entities. BreadcrumbList: Home > Locations > [County] > [Place] (add the county level where a hub exists; URL stays flat). FAQPage matches the `<details>` verbatim. **No `LocalBusiness`/`Organization`/`ImageObject` node.** Title ≤60 unique local-led; meta 150–160 local-led (count it).
+- **NAP identical sitewide:** Chantry House, 38 Chantry Way, Andover SP10 1LZ · 0333 038 9960 · hello@antekautomation.com.
+- The 7 original Hampshire-cluster pages predate v2: they keep their conversion-first bodies (QuickRecap/GEO-block) but their **Heads were retrofitted to the v2 `@graph`/#organization model**.
 - Guardrails: title ≤60 chars, meta 150–160 (count, don't eyeball); town pages never target "Hampshire" head term (hub owns it); ≤4 visible Wikipedia links, `target="_blank" rel="noopener noreferrer"`, first-mention only; **verify every Wikidata QID before embedding**; no invented stats (leave `{/* [VERIFY] */}`).
 - **Hook variety (no doorway templating):** vary the H1 angle per town AND spread it across the services — don't lead every page on "missed calls". Across the network, balance voice / chatbot / automation hooks (e.g. "website open at 2am" = chatbot, "back its evenings" = automation). Match each page's subhead AND meta description to its lead service. Titles stay keyword-led ("AI Automation [Town] | …").
 
@@ -61,18 +65,20 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 ## Verified entity IDs (reuse; re-confirm at build time)
 - Hampshire `Q23204` · Basingstoke `Q810196` · Winchester `Q172157` (Univ of Winchester `Q3551690`, Winchester College `Q1059517`, Cathedral `Q476529`) · Andover, Hampshire `Q492805` (Test Valley `Q2116338`) · Southampton `Q79848` (Univ of Southampton `Q76473`) · Salisbury `Q160642` (Wiltshire `Q21694746`, Salisbury Cathedral `Q390150`) · Newbury, Berkshire `Q655874` (Berkshire `Q23220`).
 
-## Progress
-- **Prompt 1 — DONE:** `/locations/basingstoke`, `/locations/winchester` + `TrustBlock` component.
-- **Prompt 2 — DONE:** updated existing pages to the standard — `hampshire` (hub: benefit H1, links down to all 6 towns, AdministrativeArea sameAs, TrustBlock, dropped invented stats), `andover`, `southampton`, `salisbury` (Wiltshire), `newbury` (Berkshire).
-- **Post-Prompt-2 refinements — DONE:** (a) H1s differentiated per town and balanced across services (voice/chatbot/automation), subheads + metas aligned to each page's lead service; (b) GEO Audit added as the 4th offering on all 7 location pages (visible block + link + schema); (c) GEO block/link added to the 3 core `/services/*` pages.
-- **Retell demo orbs — DONE:** shareable orb pop-cards (`RetellDemoCards`) on the voice service page (all), every location page (curated set), and the ai-receptionist pages (mapped orb at `#demo`); replaced the old phone-dial demos. Repo lint is fully green; sitemap `lastmod` freshened for the changed pages.
-- **Andover cannibalisation:** resolved by *differentiate intent* (this page = founder-led brand/HQ hub). ⚠️ **External action still required:** 301-redirect or `rel=canonical` `aiautomationandover.co.uk` → `/locations/andover`. Can't be done from this repo — needs the EMD domain's DNS/host. See the comment at the top of `pages/locations/andover/+Page.tsx`.
+## Verified Wikipedia sameAs — v2 batch (all confirmed resolving, 27 Jun 2026)
+Berkshire, Thames_Valley, River_Thames, Reading,_Berkshire, Newbury,_Berkshire, Portsmouth, Portsea_Island, The_Solent, Bournemouth, "Bournemouth,_Christchurch_and_Poole", Poole, Dorset. **GEO = no Wikipedia entity (do not force one).**
 
-## Remaining batches (one prompt per session; deploy + index between each)
-- **Prompt 3 — Eastleigh + Romsey.** Eastleigh (River Itchen, Southampton Airport, M3/M27, Chandler's Ford/Hedge End/Botley/Bishopstoke). Romsey (Test Valley, River Test, Romsey Abbey, Broadlands, M27).
-- **Prompt 4 — Fleet + Farnborough + Fareham.** Fleet (Hart, Fleet Pond, M3). Farnborough (Rushmoor, Farnborough Airport + Airshow, adjacent Aldershot, Blackwater Valley). Fareham (M27, Portchester Castle, between Southampton & Portsmouth).
-- **Prompt 5 — Petersfield + Totton** (Totton or coastal alt Lymington — build one). Petersfield (East Hampshire, South Downs, A3; secondary Alton). Totton (New Forest district, New Forest NP edge, River Test estuary, near Southampton/M27). Keep the in-person line honest (further from HQ — remote-first).
-- **GATE after Prompt 5:** STOP and review GSC/impression data before any coastal + BCP pages (Portsmouth, Gosport, Havant, Bournemouth, Poole). Build those only on a real impression signal.
+## Progress
+- **v1 (DONE):** Hampshire hub + Andover, Basingstoke, Winchester, Southampton, Salisbury, Newbury — conversion-first bodies, GEO as 4th offering, Retell demo orbs, lint green.
+- **v2 schema retrofit (DONE):** all 7 existing location Heads converted to the `@graph`/#organization model (per-page LocalBusiness + inline-org provider + ImageObject removed). Bodies unchanged (frozen north untouched). Town breadcrumbs gained the county level (Hampshire towns → Hampshire; Newbury → Berkshire; Salisbury stays flat — no Wiltshire hub).
+- **v2 batch (DONE):** built `/locations/berkshire` (county hub), `/locations/reading`, `/locations/portsmouth`, `/locations/bournemouth` on the v2 spec. Wired into the index (2 county-hub lead cards: Hampshire + Berkshire), footer, sitemap, audit registry. Reciprocal links: Berkshire↔Reading, Berkshire↔Newbury (Newbury's up-link repointed Hampshire→Berkshire); Portsmouth↔Southampton; Bournemouth→Southampton (light).
+- **Andover cannibalisation:** still "differentiate intent"; ⚠️ EMD `aiautomationandover.co.uk` 301/canonical → `/locations/andover` is an external (DNS/host) action, not in-repo.
+
+## GATE — review before building more (do NOT speculatively expand)
+STOP after this batch. Review a clean GSC week for Berkshire/Reading/Portsmouth/Bournemouth first.
+- **Bournemouth** is a cold-region probe (no Dorset signal yet). Build `/locations/dorset` + reparent ONLY if it pulls impressions. **No Dorset hub speculatively.**
+- **Northern freeze stays** until Salisbury↔Andover overlap resolves. The old v1 plan (Eastleigh/Romsey/Fleet/Farnborough/Fareham/Petersfield/Totton) is **PAUSED** — those are all northern Hampshire.
+- Reading gives Berkshire a real 2nd child (Newbury is the 1st); add more Berkshire towns only on demand.
 
 ## End state target
-12 town pages + Hampshire hub, all conversion-first, interlinked, carrying entity schema + the governed proof block.
+A small, high-quality network: Hampshire + Berkshire county hubs over real children, plus south-coast anchors (Southampton, Portsmouth) and the Bournemouth probe — all on the canonical-org model, expanded only on GSC evidence.

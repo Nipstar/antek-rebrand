@@ -15,177 +15,88 @@ export function Head() {
       <meta name="twitter:title" content="AI Automation Winchester | Voice Agents & Chatbots | Antek" />
       <meta name="twitter:description" content="Stop letting Winchester enquiries hit voicemail. AI voice agents and automation for firms, practices and trades, from a founder near Andover. Book a call." />
 
-      {/* BreadcrumbList Schema */}
+      {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Winchester', item: 'https://www.antekautomation.com/locations/winchester' },
-            ],
-          }),
-        }}
-      />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Antek Automation Winchester',
-            url: 'https://www.antekautomation.com/locations/winchester',
-            telephone: '+44-3330-389960',
-            founder: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Andover',
-              addressRegion: 'Hampshire',
-              addressCountry: 'GB',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 51.0632,
-              longitude: -1.3081,
-            },
-            speakable: {
-              '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'h2', '.text-lg'],
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Winchester',
-              sameAs: ['https://en.wikipedia.org/wiki/Winchester', 'https://www.wikidata.org/wiki/Q172157'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Hampshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
-              },
-            },
-            makesOffer: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Voice Agents' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Chatbots' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Workflow Automation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GEO Audit' } },
-            ],
-          }),
-        }}
-      />
-
-      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Winchester, Hampshire) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'AI Automation Winchester',
-            serviceType: 'AI automation',
-            url: 'https://www.antekautomation.com/locations/winchester',
-            provider: {
-              '@type': 'Organization',
-              name: 'Antek Automation',
-              url: 'https://www.antekautomation.com/',
-              knowsAbout: [
-                'AI voice agents',
-                'AI chatbots',
-                'Workflow automation',
-                'Business process automation',
-                'Lead capture',
-                'Generative Engine Optimization (GEO)',
-              ],
-              founder: { '@type': 'Person', name: 'Andy Norman' },
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Winchester',
-              sameAs: ['https://en.wikipedia.org/wiki/Winchester', 'https://www.wikidata.org/wiki/Q172157'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Hampshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
-              },
-            },
-          }),
-        }}
-      />
-
-      {/* ImageObject Schema — with contentLocation */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ImageObject',
-            url: 'https://www.antekautomation.com/og-image.png',
-            contentUrl: 'https://www.antekautomation.com/og-image.png',
-            caption: 'Antek Automation — AI automation for Winchester businesses',
-            contentLocation: {
-              '@type': 'City',
-              name: 'Winchester',
-              sameAs: ['https://en.wikipedia.org/wiki/Winchester', 'https://www.wikidata.org/wiki/Q172157'],
-            },
-          }),
-        }}
-      />
-
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
+            '@graph': [
               {
-                '@type': 'Question',
-                name: 'Do you work with Winchester law firms and accountants?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes — professional firms are a natural fit. An AI voice agent screens after-hours enquiries, captures the details and books the consultation, so a new client never hits voicemail. The same setup handles the year-end and onboarding admin that buries accountants.',
+                '@type': 'Service',
+                '@id': 'https://www.antekautomation.com/locations/winchester#service',
+                name: 'AI Automation Services in Winchester',
+                serviceType: 'AI automation',
+                url: 'https://www.antekautomation.com/locations/winchester',
+                provider: { '@id': 'https://www.antekautomation.com/#organization' },
+                areaServed: {
+                  '@type': 'City',
+                  name: 'Winchester',
+                  sameAs: ['https://en.wikipedia.org/wiki/Winchester', 'https://www.wikidata.org/wiki/Q172157'],
+                  containedInPlace: {
+                    '@type': 'AdministrativeArea',
+                    name: 'Hampshire',
+                    sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
+                  },
                 },
+                about: [
+                  { '@type': 'Place', name: 'Winchester Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Winchester_Cathedral' },
+                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
+                ],
               },
               {
-                '@type': 'Question',
-                name: 'Do I need to be in Winchester for this to work?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'No. Everything runs remotely — setup, testing and support all happen over video call. Your AI voice agent answers Winchester enquiries from the cloud, whether your office is on the High Street, in Winnall, or anywhere else.',
-                },
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
+                  { '@type': 'ListItem', position: 3, name: 'Hampshire', item: 'https://www.antekautomation.com/locations/hampshire' },
+                  { '@type': 'ListItem', position: 4, name: 'Winchester', item: 'https://www.antekautomation.com/locations/winchester' },
+                ],
               },
               {
-                '@type': 'Question',
-                name: 'Can you handle hospitality booking calls?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. A restaurant trying to take bookings between services is exactly the pattern voice agents are built for — the AI takes the booking, answers the common questions and handles the peaks so your staff can focus on the room.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can we meet in person?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'We’re 30 minutes away in Andover, so a face-to-face is straightforward if you’d prefer to start that way. Most Winchester clients are happy on video call, but the option’s there whenever it genuinely helps.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How much does it cost and how quickly can I start?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'AI voice agents and chatbots start from £57/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Winchester practice winning even one extra instruction a month, the return is usually clear quickly.',
-                },
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Do you work with Winchester law firms and accountants?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes — professional firms are a natural fit. An AI voice agent screens after-hours enquiries, captures the details and books the consultation, so a new client never hits voicemail. The same setup handles the year-end and onboarding admin that buries accountants.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Do I need to be in Winchester for this to work?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'No. Everything runs remotely — setup, testing and support all happen over video call. Your AI voice agent answers Winchester enquiries from the cloud, whether your office is on the High Street, in Winnall, or anywhere else.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can you handle hospitality booking calls?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. A restaurant trying to take bookings between services is exactly the pattern voice agents are built for — the AI takes the booking, answers the common questions and handles the peaks so your staff can focus on the room.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can we meet in person?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'We’re 30 minutes away in Andover, so a face-to-face is straightforward if you’d prefer to start that way. Most Winchester clients are happy on video call, but the option’s there whenever it genuinely helps.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How much does it cost and how quickly can I start?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'AI voice agents and chatbots start from £57/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Winchester practice winning even one extra instruction a month, the return is usually clear quickly.',
+                    },
+                  },
+                ],
               },
             ],
           }),

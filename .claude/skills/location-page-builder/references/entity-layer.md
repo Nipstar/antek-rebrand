@@ -6,6 +6,8 @@ The entity layer is what lets Google's semantic engine and AI search treat the p
 
 Modern search maps Subject–Predicate–Object relationships (entity associations), not just keyword strings. If two location pages read identically except for the place name, their semantic density is zero and they get flagged as unvalidated template copies. The fix is real, place-specific entity content, anchored to known knowledge-graph nodes.
 
+**Place entities belong in the schema as `sameAs` (on `areaServed`) and as `about[]` `Place` nodes — never as Wikipedia iframes or visible embeds.** An embed adds an exit point and passes no relevance signal; a verified `sameAs`/`about` link anchors the page to the knowledge-graph node. Confirm every Wikipedia URL actually resolves before shipping (never invent one). If a concept has no stable article (e.g. a brand-new category like GEO), describe it in copy and leave it without a `sameAs` rather than forcing a wrong one.
+
 ## 1. Semantic triples (WHO / WHAT / WHERE)
 
 For each page, write the core relationships as triples. Each triple should appear twice: once as a real sentence in the copy, once as a schema statement.

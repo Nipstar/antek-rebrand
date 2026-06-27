@@ -2,6 +2,8 @@
 
 Drop-in structured data for a location page. Adapt the bracketed values. Validate before shipping. Keep `sameAs` URIs verified (see `entity-layer.md`).
 
+> **Critical: one canonical Organization node, referenced — never re-minted per page.** Define the business's `Organization`/`LocalBusiness` ONCE (e.g. on the homepage, with `@id` `https://[domain]/#organization`), then on every location page set `"provider": { "@id": "https://[domain]/#organization" }`. Do NOT inline a fresh `Organization`/`LocalBusiness` per location — duplicate org nodes split the entity and weaken the whole site. Per page, carry a lean `@graph` of just `[ Service, BreadcrumbList, FAQPage ]`; the place identity lives in `Service.areaServed` (City/AdministrativeArea + verified Wikipedia `sameAs` + `containedInPlace`) and `Service.about[]` (`Place` co-entities + `sameAs`). No per-page `ImageObject` needed.
+
 ## Service + areaServed + provider
 
 ```json
@@ -10,13 +12,7 @@ Drop-in structured data for a location page. Adapt the bracketed values. Validat
   "@type": "Service",
   "name": "AI Automation in [Town]",
   "serviceType": "[service set, e.g. AI voice agents, chatbots and workflow automation]",
-  "provider": {
-    "@type": "Organization",
-    "name": "[Business Name]",
-    "url": "https://[domain]",
-    "telephone": "[phone]",
-    "knowsAbout": ["[service 1]", "[service 2]", "[service 3]"]
-  },
+  "provider": { "@id": "https://[domain]/#organization" },
   "areaServed": {
     "@type": "City",
     "name": "[Town]",

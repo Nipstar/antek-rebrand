@@ -4,12 +4,16 @@ import { SocialLinks } from './SocialLinks';
 // Hampshire-led location cluster — kept locations only (national city pages removed)
 const FOOTER_LOCATIONS = [
   { name: 'Hampshire', slug: 'hampshire' },
+  { name: 'Berkshire', slug: 'berkshire' },
   { name: 'Andover', slug: 'andover' },
   { name: 'Basingstoke', slug: 'basingstoke' },
   { name: 'Winchester', slug: 'winchester' },
   { name: 'Southampton', slug: 'southampton' },
   { name: 'Salisbury', slug: 'salisbury' },
   { name: 'Newbury', slug: 'newbury' },
+  { name: 'Reading', slug: 'reading' },
+  { name: 'Portsmouth', slug: 'portsmouth' },
+  { name: 'Bournemouth', slug: 'bournemouth' },
 ];
 
 export function Footer() {

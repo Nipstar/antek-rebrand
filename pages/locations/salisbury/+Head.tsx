@@ -15,138 +15,46 @@ export function Head() {
       <meta name="twitter:title" content="AI Automation Salisbury | Voice Agents & Chatbots" />
       <meta name="twitter:description" content="Stop drowning in Salisbury admin. AI that chases quotes and follow-ups, answers your calls and captures leads, built down the A303 in Andover. Book a free call." />
 
-      {/* BreadcrumbList Schema */}
+      {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Salisbury', item: 'https://www.antekautomation.com/locations/salisbury' },
-            ],
-          }),
-        }}
-      />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Antek Automation Salisbury',
-            url: 'https://www.antekautomation.com/locations/salisbury',
-            telephone: '+44-3330-389960',
-            founder: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Andover',
-              addressRegion: 'Hampshire',
-              addressCountry: 'GB',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 51.0688,
-              longitude: -1.7945,
-            },
-            speakable: {
-              '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'h2', '.text-lg'],
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Salisbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Salisbury', 'https://www.wikidata.org/wiki/Q160642'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Wiltshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Wiltshire', 'https://www.wikidata.org/wiki/Q21694746'],
+            '@graph': [
+              {
+                '@type': 'Service',
+                '@id': 'https://www.antekautomation.com/locations/salisbury#service',
+                name: 'AI Automation Services in Salisbury',
+                serviceType: 'AI automation',
+                url: 'https://www.antekautomation.com/locations/salisbury',
+                provider: { '@id': 'https://www.antekautomation.com/#organization' },
+                areaServed: {
+                  '@type': 'City',
+                  name: 'Salisbury',
+                  sameAs: ['https://en.wikipedia.org/wiki/Salisbury', 'https://www.wikidata.org/wiki/Q160642'],
+                  containedInPlace: {
+                    '@type': 'AdministrativeArea',
+                    name: 'Wiltshire',
+                    sameAs: ['https://en.wikipedia.org/wiki/Wiltshire', 'https://www.wikidata.org/wiki/Q21694746'],
+                  },
+                },
+                about: [
+                  { '@type': 'Place', name: 'Salisbury Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Salisbury_Cathedral' },
+                  { '@type': 'Place', name: 'Stonehenge', sameAs: 'https://en.wikipedia.org/wiki/Stonehenge' },
+                ],
               },
-            },
-            makesOffer: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Voice Agents' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Chatbots' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Workflow Automation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GEO Audit' } },
-            ],
-          }),
-        }}
-      />
-
-      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Salisbury, Wiltshire) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'AI Automation Salisbury',
-            serviceType: 'AI automation',
-            url: 'https://www.antekautomation.com/locations/salisbury',
-            provider: {
-              '@type': 'Organization',
-              name: 'Antek Automation',
-              url: 'https://www.antekautomation.com/',
-              knowsAbout: [
-                'AI voice agents',
-                'AI chatbots',
-                'Workflow automation',
-                'Business process automation',
-                'Lead capture',
-                'Generative Engine Optimization (GEO)',
-              ],
-              founder: { '@type': 'Person', name: 'Andy Norman' },
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Salisbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Salisbury', 'https://www.wikidata.org/wiki/Q160642'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Wiltshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Wiltshire', 'https://www.wikidata.org/wiki/Q21694746'],
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
+                  { '@type': 'ListItem', position: 3, name: 'Salisbury', item: 'https://www.antekautomation.com/locations/salisbury' },
+                ],
               },
-            },
-          }),
-        }}
-      />
-
-      {/* ImageObject Schema — with contentLocation */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ImageObject',
-            url: 'https://www.antekautomation.com/og-image.png',
-            contentUrl: 'https://www.antekautomation.com/og-image.png',
-            caption: 'Antek Automation — AI automation for Salisbury businesses',
-            contentLocation: {
-              '@type': 'City',
-              name: 'Salisbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Salisbury', 'https://www.wikidata.org/wiki/Q160642'],
-            },
-          }),
-        }}
-      />
-
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
+              {
+                '@type': 'FAQPage',
+                mainEntity: [
               {
                 '@type': 'Question',
                 name: 'You’re in Andover — do you cover Salisbury?',
@@ -186,6 +94,8 @@ export function Head() {
                   '@type': 'Answer',
                   text: 'Most voice agents and chatbots are live within 24–48 hours of you forwarding your number or giving us website access. We handle the build, testing and ongoing tweaks, so there’s very little for you to do at your end.',
                 },
+              },
+                ],
               },
             ],
           }),

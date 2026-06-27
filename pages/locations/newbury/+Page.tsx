@@ -153,7 +153,7 @@ export default function Page() {
           </p>
           <p className="text-lg text-charcoal leading-relaxed">
             That said, you don&rsquo;t need us on your doorstep. Everything &mdash; setup, testing, ongoing support &mdash; runs over video call, which is how most of our{' '}
-            <a href="/locations/hampshire" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Hampshire</a>{' '}
+            <a href="/locations/berkshire" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Berkshire</a>{' '}
             clients prefer it. The AI doesn&rsquo;t care about geography. It just answers.
           </p>
         </div>
@@ -192,10 +192,10 @@ export default function Page() {
                 <p className="text-charcoal text-sm leading-normal">AI automation for the county town&rsquo;s professional firms and trades.</p>
               </Card>
             </a>
-            <a href="/locations/hampshire" className="block group">
+            <a href="/locations/berkshire" className="block group">
               <Card hover>
-                <Icon letter="H" size="md" />
-                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Hampshire</h3>
+                <Icon letter="B" size="md" />
+                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Berkshire</h3>
                 <p className="text-charcoal text-sm leading-normal">The county hub — every town we cover, in one place.</p>
               </Card>
             </a>

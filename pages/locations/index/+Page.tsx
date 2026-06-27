@@ -3,11 +3,18 @@ import { CalBooking } from '../../../src/components/CalBooking';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 
-const hampshireHub = {
-  name: 'Hampshire',
-  slug: 'hampshire',
-  description: 'Our home county. Based in Andover, we work with businesses right across Hampshire — Basingstoke, Winchester, the New Forest and everywhere between — and serve the rest of the UK remotely.',
-};
+const countyHubs = [
+  {
+    name: 'Hampshire',
+    slug: 'hampshire',
+    description: 'Our home county. Based in Andover, we work with businesses right across Hampshire — Basingstoke, Winchester, the New Forest and everywhere between — and serve the rest of the UK remotely.',
+  },
+  {
+    name: 'Berkshire',
+    slug: 'berkshire',
+    description: 'Our Thames Valley county hub. AI automation for office-based firms across Reading, Newbury and the M4 corridor — technology, professional services, telecoms and finance.',
+  },
+];
 
 const localLocations = [
   { name: 'Andover', slug: 'andover', description: 'Our HQ. Chantry House, 38 Chantry Way. Happy to meet for a coffee if you\'re local.' },
@@ -16,6 +23,9 @@ const localLocations = [
   { name: 'Southampton', slug: 'southampton', description: 'Port city with 18,000+ businesses. Maritime economy, two major universities, and a hospitality sector that never sleeps.' },
   { name: 'Salisbury', slug: 'salisbury', description: 'Wiltshire cathedral city on Hampshire\'s western edge. Trades and service businesses across the Salisbury area.' },
   { name: 'Newbury', slug: 'newbury', description: 'Berkshire market town just up the A34. Close enough for a face-to-face, with the same 24/7 AI coverage.' },
+  { name: 'Reading', slug: 'reading', description: 'Thames Valley tech hub on the M4. AI automation for Reading\'s office-based and professional firms.' },
+  { name: 'Portsmouth', slug: 'portsmouth', description: 'South-coast island city on the Solent. AI for marine, defence, hospitality and professional firms.' },
+  { name: 'Bournemouth', slug: 'bournemouth', description: 'Dorset coastal city (BCP). AI for finance, tourism and creative firms, delivered remotely.' },
 ];
 
 export default function Page() {
@@ -49,23 +59,25 @@ export default function Page() {
             Hampshire is home. Face-to-face meetings available, same-day support, and a founder who actually lives here.
           </p>
 
-          {/* Hampshire — county hub (lead card) */}
-          <a href={`/locations/${hampshireHub.slug}`} className="block group mb-8">
-            <Card hover>
-              <div className="grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-center">
-                <Icon letter={hampshireHub.name[0]} size="lg" />
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-terracotta font-black mb-2">County Hub</p>
-                  <h3 className="font-black text-3xl md:text-4xl uppercase text-charcoal mb-4 group-hover:text-terracotta transition-colors">
-                    {hampshireHub.name}
-                  </h3>
-                  <p className="text-charcoal leading-relaxed text-lg max-w-3xl">
-                    {hampshireHub.description}
-                  </p>
+          {/* County hubs (lead cards) */}
+          {countyHubs.map((hub) => (
+            <a key={hub.slug} href={`/locations/${hub.slug}`} className="block group mb-8">
+              <Card hover>
+                <div className="grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-center">
+                  <Icon letter={hub.name[0]} size="lg" />
+                  <div>
+                    <p className="text-xs uppercase tracking-wide text-terracotta font-black mb-2">County Hub</p>
+                    <h3 className="font-black text-3xl md:text-4xl uppercase text-charcoal mb-4 group-hover:text-terracotta transition-colors">
+                      {hub.name}
+                    </h3>
+                    <p className="text-charcoal leading-relaxed text-lg max-w-3xl">
+                      {hub.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          </a>
+              </Card>
+            </a>
+          ))}
 
           {/* Local cluster */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

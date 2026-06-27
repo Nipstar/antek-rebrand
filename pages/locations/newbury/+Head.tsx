@@ -15,138 +15,47 @@ export function Head() {
       <meta name="twitter:title" content="AI Automation Newbury | Voice Agents & Chatbots" />
       <meta name="twitter:description" content="Get your Newbury evenings back. AI that handles admin and follow-ups, answers your calls and captures leads, built just up the A34 in Andover. Book a free call." />
 
-      {/* BreadcrumbList Schema */}
+      {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Newbury', item: 'https://www.antekautomation.com/locations/newbury' },
-            ],
-          }),
-        }}
-      />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Antek Automation Newbury',
-            url: 'https://www.antekautomation.com/locations/newbury',
-            telephone: '+44-3330-389960',
-            founder: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Andover',
-              addressRegion: 'Hampshire',
-              addressCountry: 'GB',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 51.4014,
-              longitude: -1.3231,
-            },
-            speakable: {
-              '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'h2', '.text-lg'],
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Newbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Berkshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
+            '@graph': [
+              {
+                '@type': 'Service',
+                '@id': 'https://www.antekautomation.com/locations/newbury#service',
+                name: 'AI Automation Services in Newbury',
+                serviceType: 'AI automation',
+                url: 'https://www.antekautomation.com/locations/newbury',
+                provider: { '@id': 'https://www.antekautomation.com/#organization' },
+                areaServed: {
+                  '@type': 'City',
+                  name: 'Newbury',
+                  sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
+                  containedInPlace: {
+                    '@type': 'AdministrativeArea',
+                    name: 'Berkshire',
+                    sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
+                  },
+                },
+                about: [
+                  { '@type': 'Place', name: 'River Kennet', sameAs: 'https://en.wikipedia.org/wiki/River_Kennet' },
+                  { '@type': 'Place', name: 'Newbury Racecourse', sameAs: 'https://en.wikipedia.org/wiki/Newbury_Racecourse' },
+                ],
               },
-            },
-            makesOffer: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Voice Agents' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Chatbots' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Workflow Automation' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'GEO Audit' } },
-            ],
-          }),
-        }}
-      />
-
-      {/* Service Schema — WHO (Antek/Andy) → WHAT (voice agents, chatbots, automation) → WHERE (Newbury, Berkshire) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'AI Automation Newbury',
-            serviceType: 'AI automation',
-            url: 'https://www.antekautomation.com/locations/newbury',
-            provider: {
-              '@type': 'Organization',
-              name: 'Antek Automation',
-              url: 'https://www.antekautomation.com/',
-              knowsAbout: [
-                'AI voice agents',
-                'AI chatbots',
-                'Workflow automation',
-                'Business process automation',
-                'Lead capture',
-                'Generative Engine Optimization (GEO)',
-              ],
-              founder: { '@type': 'Person', name: 'Andy Norman' },
-            },
-            areaServed: {
-              '@type': 'City',
-              name: 'Newbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
-              containedInPlace: {
-                '@type': 'AdministrativeArea',
-                name: 'Berkshire',
-                sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.antekautomation.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.antekautomation.com/locations' },
+                  { '@type': 'ListItem', position: 3, name: 'Berkshire', item: 'https://www.antekautomation.com/locations/berkshire' },
+                  { '@type': 'ListItem', position: 4, name: 'Newbury', item: 'https://www.antekautomation.com/locations/newbury' },
+                ],
               },
-            },
-          }),
-        }}
-      />
-
-      {/* ImageObject Schema — with contentLocation */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ImageObject',
-            url: 'https://www.antekautomation.com/og-image.png',
-            contentUrl: 'https://www.antekautomation.com/og-image.png',
-            caption: 'Antek Automation — AI automation for Newbury businesses',
-            contentLocation: {
-              '@type': 'City',
-              name: 'Newbury',
-              sameAs: ['https://en.wikipedia.org/wiki/Newbury,_Berkshire', 'https://www.wikidata.org/wiki/Q655874'],
-            },
-          }),
-        }}
-      />
-
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
+              {
+                '@type': 'FAQPage',
+                mainEntity: [
               {
                 '@type': 'Question',
                 name: 'You’re in Andover — do you actually cover Newbury?',
@@ -186,6 +95,8 @@ export function Head() {
                   '@type': 'Answer',
                   text: 'Most voice and chat products are live within 24–48 hours of you forwarding your number or giving us website access. We handle the build, testing and ongoing tweaks, so there’s very little for you to do beyond the initial call.',
                 },
+              },
+                ],
               },
             ],
           }),
