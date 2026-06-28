@@ -1,36 +1,37 @@
+import { Container } from '../../src/components/Container'
+import { HeadlineBlock } from '../../src/components/HeadlineBlock'
+
 export default function Page() {
   return (
-    <div className="bg-off-white">
+    <div>
 
       {/* ── HEADER ── */}
-      <div className="bg-warm-beige border-b-3 border-charcoal">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-          <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6">
-            Privacy Policy
-          </h1>
-          <p className="text-lg text-charcoal">
+      <div className="bg-ink border-b border-hairline">
+        <Container className="py-16">
+          <HeadlineBlock as="h1" className="mb-6">Privacy <span className="text-coral">Policy</span></HeadlineBlock>
+          <p className="text-lg text-body">
             Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
-        </div>
+        </Container>
       </div>
 
       {/* ── CONTENT ── */}
-      <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-        <div className="prose prose-sm max-w-none space-y-8 text-charcoal">
+      <Container className="py-16">
+        <div className="prose prose-sm max-w-[65ch] space-y-8 text-body">
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">1. Introduction</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">1. Introduction</h2>
             <p className="leading-relaxed">
               Antek Automation ("we", "us", "our") is a sole trader committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
             </p>
             <p className="leading-relaxed mt-2">
               Our trading address is Chantry House, 38 Chantry Way, Andover SP10 1LZ. ICO registration number: <strong>ZC133436</strong>. DUNS number: <strong>235593033</strong>. You can contact us at{' '}
-              <a href="mailto:hello@antekautomation.com" className="text-terracotta hover:underline font-bold">hello@antekautomation.com</a>.
+              <a href="mailto:hello@antekautomation.com" className="text-coral hover:underline font-bold">hello@antekautomation.com</a>.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">2. Information We Collect</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">2. Information We Collect</h2>
             <p className="font-bold mb-2">We collect information in the following ways:</p>
             <ul className="list-disc list-inside space-y-2 leading-relaxed">
               <li><strong>Contact Form Data:</strong> Name, business name, email, phone number, and messages when you submit a contact form</li>
@@ -43,7 +44,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">3. How We Use Your Information</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">3. How We Use Your Information</h2>
             <p className="font-bold mb-2">We use the information we collect for the following purposes:</p>
             <ul className="list-disc list-inside space-y-2 leading-relaxed">
               <li>To respond to your enquiries and provide requested services</li>
@@ -57,7 +58,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">4. Legal Basis for Processing</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">4. Legal Basis for Processing</h2>
             <p className="leading-relaxed">
               We process your personal data on the following legal bases under UK GDPR:
             </p>
@@ -70,7 +71,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">5. Data Sharing and Third Parties</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">5. Data Sharing and Third Parties</h2>
             <p className="leading-relaxed">
               We do not sell or rent your personal data to third parties. We may share your information with:
             </p>
@@ -85,14 +86,14 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">6. Data Residency and International Transfers</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">6. Data Residency and International Transfers</h2>
             <p className="leading-relaxed">
               Our primary data processing takes place within the UK and EU. We use third-party service providers — including Retell AI for voice agent infrastructure and Supabase for data storage — whose servers may be located within the EU or UK. Where data is processed outside the UK, we ensure appropriate safeguards are in place (standard contractual clauses or adequacy decisions) in accordance with UK GDPR.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">7. Data Retention</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">7. Data Retention</h2>
             <p className="leading-relaxed">
               We retain your personal data for as long as necessary to fulfil the purposes for which it was collected, typically:
             </p>
@@ -107,7 +108,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">8. Your Rights</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">8. Your Rights</h2>
             <p className="leading-relaxed">
               Under UK GDPR and the Data Protection Act 2018, you have the following rights:
             </p>
@@ -123,7 +124,7 @@ export default function Page() {
             </ul>
             <p className="mt-4 leading-relaxed">
               To exercise any of these rights, contact us at:{' '}
-              <a href="mailto:hello@antekautomation.com" className="text-terracotta hover:underline font-bold">
+              <a href="mailto:hello@antekautomation.com" className="text-coral hover:underline font-bold">
                 hello@antekautomation.com
               </a>
             </p>
@@ -133,7 +134,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">9. Cookies and Tracking</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">9. Cookies and Tracking</h2>
             <p className="leading-relaxed">
               Our website uses cookies to enhance your experience. Cookies are small files stored on your device. We use:
             </p>
@@ -149,67 +150,67 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">10. Security</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">10. Security</h2>
             <p className="leading-relaxed">
               We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. These measures include encryption in transit (HTTPS), access controls, and regular security reviews. However, no method of transmission over the internet is completely secure.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">11. Data Breaches</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">11. Data Breaches</h2>
             <p className="leading-relaxed">
               In the event of a personal data breach that poses a risk to your rights and freedoms, we will notify the Information Commissioner's Office (ICO) within 72 hours of becoming aware of the breach. Where the breach is likely to result in a high risk to you, we will notify you directly without undue delay.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">12. Children's Privacy</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">12. Children's Privacy</h2>
             <p className="leading-relaxed">
               Our services are not directed at children under 13 years of age. We do not knowingly collect personal data from children. If we become aware that a child has provided us with personal data, we will delete such information promptly.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">13. External Links</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">13. External Links</h2>
             <p className="leading-relaxed">
               Our website may contain links to third-party websites. We are not responsible for the privacy practices of external sites. We recommend reviewing their privacy policies before providing personal information.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">14. Changes to This Policy</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">14. Changes to This Policy</h2>
             <p className="leading-relaxed">
               We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. Your continued use of our website following the posting of changes constitutes your acceptance of such changes.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">15. Complaints</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">15. Complaints</h2>
             <p className="leading-relaxed">
               If you have concerns about our data protection practices, you can contact our team at:{' '}
-              <a href="mailto:hello@antekautomation.com" className="text-terracotta hover:underline font-bold">
+              <a href="mailto:hello@antekautomation.com" className="text-coral hover:underline font-bold">
                 hello@antekautomation.com
               </a>
             </p>
             <p className="mt-2 leading-relaxed">
               You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at{' '}
-              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-terracotta hover:underline font-bold">ico.org.uk</a>{' '}
+              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-coral hover:underline font-bold">ico.org.uk</a>{' '}
               or by calling 0303 123 1113.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">16. Contact Us</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">16. Contact Us</h2>
             <p className="leading-relaxed">
               For any questions about this Privacy Policy or your personal data:
             </p>
             <div className="mt-4 space-y-1 leading-relaxed">
               <p><strong>Antek Automation</strong> (sole trader)</p>
               <p><strong>Email:</strong>{' '}
-                <a href="mailto:hello@antekautomation.com" className="text-terracotta hover:underline font-bold">hello@antekautomation.com</a>
+                <a href="mailto:hello@antekautomation.com" className="text-coral hover:underline font-bold">hello@antekautomation.com</a>
               </p>
               <p><strong>Phone:</strong>{' '}
-                <a href="tel:03330389960" className="text-terracotta hover:underline font-bold">0333 038 9960</a>
+                <a href="tel:03330389960" className="text-coral hover:underline font-bold">0333 038 9960</a>
               </p>
               <p><strong>Address:</strong> Chantry House, 38 Chantry Way, Andover SP10 1LZ</p>
               <p><strong>ICO Registration:</strong> ZC133436</p>
@@ -218,7 +219,7 @@ export default function Page() {
           </section>
 
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

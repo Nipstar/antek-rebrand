@@ -76,7 +76,7 @@ export function Head() {
                 name: 'What areas of Hampshire do you cover?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "All of it — we've got dedicated pages for Andover, Basingstoke, Winchester and Southampton, plus the border towns of Salisbury and Newbury. Our AI solutions work remotely, so there are no geographic limitations.",
+                  text: "All of it — we've got dedicated pages for Andover, Basingstoke, Winchester, Southampton and Portsmouth. Our AI solutions work remotely, so there are no geographic limitations.",
                 },
               },
               {

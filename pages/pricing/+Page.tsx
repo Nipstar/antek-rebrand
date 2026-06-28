@@ -1,5 +1,8 @@
 import { Button } from '../../src/components/Button'
 import { CalBooking } from '../../src/components/CalBooking'
+import { Container } from '../../src/components/Container'
+import { Eyebrow } from '../../src/components/Eyebrow'
+import { HeadlineBlock } from '../../src/components/HeadlineBlock'
 import { PricingCard } from '../../src/components/PricingCard'
 import { PricingComparisonTable } from '../../src/components/PricingComparisonTable'
 import { TrustStrip } from '../../src/components/TrustStrip'
@@ -50,60 +53,62 @@ const faq = [
 
 export default function Page() {
   return (
-    <div className="bg-off-white">
+    <div>
 
       {/* Hero */}
-      <section className="bg-warm-beige border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <section className="bg-ink border-b border-hairline">
+        <Container className="py-20 md:py-28">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
-              Pricing &bull; No Contracts &bull; UK-Based
-            </p>
-            <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              Transparent Pricing for AI Automation
-            </h1>
-            <p className="text-xl text-charcoal leading-normal mb-8">
-              Fixed monthly plans for voice AI, chatbots, and AI receptionist. One-off projects for workflow automation and GEO audits. Voice plans start with 120 call minutes included. Chatbot conversations are unlimited. No hidden fees.
+            <HeadlineBlock
+              as="h1"
+              kicker={<>Pricing &bull; No Contracts &bull; UK-Based</>}
+            >
+              Transparent Pricing for <span className="text-coral">AI Automation</span>
+            </HeadlineBlock>
+            <p className="text-xl text-body leading-normal mb-8 mt-6 max-w-[60ch]">
+              Fixed monthly plans for voice AI and chatbots. One-off projects for workflow automation and GEO audits. Voice plans start with 120 call minutes included. Chatbot conversations are unlimited. No hidden fees.
             </p>
             <Button variant="primary" onClick={() => openBookingPopup('pricing-hero')}>
               Book a free 30-min discovery call
             </Button>
             <TrustStrip className="mt-6" />
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Comparison table */}
-      <section className="py-20 md:py-28 border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
-            Compare Products at a Glance
-          </h2>
-          <p className="text-lg text-charcoal mb-12 max-w-2xl">
-            Five products. All priced for UK small businesses. All ready to go live within days, not months.
+      <section className="py-20 md:py-28 border-b border-hairline">
+        <Container>
+          <HeadlineBlock className="mb-4"><span className="text-coral">Compare Products</span> at a Glance</HeadlineBlock>
+          <p className="text-lg text-body mb-12 max-w-[65ch]">
+            Four products. All priced for UK small businesses. All ready to go live within days, not months.
           </p>
           <PricingComparisonTable />
-        </div>
+        </Container>
       </section>
 
-      {/* AI Voice Assistant */}
-      <section id="ai-voice-assistant" className="py-20 md:py-28 border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      {/* AI Voice & Receptionist (combined — same pricing) */}
+      <section id="ai-voice-assistant" className="py-20 md:py-28 border-b border-hairline">
+        <span id="ai-receptionist" aria-hidden="true" className="block relative -top-24" />
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-sm uppercase tracking-wide text-charcoal mb-3 font-black">AI Voice Assistant</p>
-              <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-                Never Miss a Call Again
-              </h2>
-              <p className="text-lg text-charcoal leading-normal mb-6">
-                An AI agent that answers your phone within two rings, has a proper conversation, captures caller details, and books appointments directly into your calendar &mdash; 24/7, including evenings, weekends, and bank holidays.
+              <Eyebrow className="mb-3">AI Voice &amp; Receptionist</Eyebrow>
+              <HeadlineBlock className="mb-6"><span className="text-coral">Inbound and Outbound</span>, Around the Clock</HeadlineBlock>
+              <p className="text-lg text-body leading-normal mb-6 max-w-[60ch]">
+                Same pricing, whether you want the productised <strong className="font-bold text-cream">AI Receptionist</strong> &mdash; answering, screening and booking your inbound calls &mdash; or a broader <strong className="font-bold text-cream">AI voice agent</strong> that also calls new leads back, qualifies them and chases follow-ups. 24/7, including evenings, weekends, and bank holidays.
               </p>
-              <p className="text-charcoal leading-normal mb-8">
-                Every call ends with a summary sent to your phone or email: who called, what they wanted, what was booked. Built on <a href="https://www.retellai.com" target="_blank" rel="noopener" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Retell AI</a> &mdash; Antek Automation is a certified Retell AI partner.
+              <p className="text-body leading-normal mb-8 max-w-[60ch]">
+                Every call ends with a summary sent to your phone or email: who called, what they wanted, what was booked. Industry-specific receptionist setups available for plumbers, electricians, HVAC, accountants, lawyers, vets, dentists, and therapists. Built on <a href="https://www.retellai.com" target="_blank" rel="noopener" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Retell AI</a> &mdash; Antek Automation is a certified Retell AI partner.
               </p>
-              <a href="/services/ai-voice-assistants" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors font-bold text-charcoal">
-                Full details &rarr; AI Voice Assistants
-              </a>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                <a href="/services/ai-voice-assistants" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors font-bold text-cream">
+                  Full details &rarr; AI Voice Agents
+                </a>
+                <a href="/ai-receptionist" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors font-bold text-cream">
+                  Full details &rarr; AI Receptionist
+                </a>
+              </div>
             </div>
             <div className="space-y-4">
               {[
@@ -111,45 +116,43 @@ export default function Page() {
                 { name: 'Standard', price: '£198', mins: '240 mins/month', note: 'Starter + CRM & API integrations', featured: true },
                 { name: 'Pro', price: 'Contact us', mins: 'Custom minutes', note: 'Standard + workflow automations for complex voice agent workflows', featured: false },
               ].map((tier) => (
-                <div key={tier.name} className={`border-3 border-charcoal p-6 ${tier.featured ? 'bg-warm-beige shadow-brutal' : 'bg-white shadow-brutal-sm'}`}>
+                <div key={tier.name} className={`border-2 p-6 ${tier.featured ? 'bg-ink border-coral shadow-brutal-coral' : 'bg-ink border-hairline shadow-brutal-sm'}`}>
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-black text-lg uppercase text-charcoal">{tier.name}</h4>
-                    {tier.featured && <span className="text-xs font-black uppercase bg-terracotta text-off-white px-3 py-1 border-3 border-charcoal">Popular</span>}
+                    <h4 className="font-display font-extrabold text-lg uppercase text-cream">{tier.name}</h4>
+                    {tier.featured && <span className="text-xs font-sans font-bold uppercase bg-coral text-ink px-3 py-1 border-2 border-ink">Popular</span>}
                   </div>
                   <div className="flex items-baseline gap-3">
-                    <span className="font-black text-3xl text-terracotta">{tier.price}</span>
-                    {tier.price !== 'Contact us' && <span className="text-mid-gray text-sm">/month + £249 setup</span>}
+                    <span className="font-display font-extrabold text-3xl text-coral">{tier.price}</span>
+                    {tier.price !== 'Contact us' && <span className="text-muted text-sm">/month + £249 setup</span>}
                   </div>
-                  <p className="text-sm text-charcoal mt-1">{tier.mins}{tier.price !== 'Contact us' && ' · £0.18/min over'}</p>
-                  <p className="text-xs text-mid-gray mt-1">{tier.note}</p>
+                  <p className="text-sm text-body mt-1">{tier.mins}{tier.price !== 'Contact us' && ' · £0.18/min over'}</p>
+                  <p className="text-xs text-muted mt-1">{tier.note}</p>
                 </div>
               ))}
               <a href="/contact" className="block">
-                <button className="w-full font-black uppercase px-7 py-3 border-3 border-charcoal shadow-brutal-sm transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-brutal active:translate-x-[2px] active:translate-y-[2px] active:shadow-brutal-xs bg-terracotta text-off-white">
+                <Button variant="primary" className="w-full text-center">
                   Book a free 30-min discovery call about Voice AI
-                </button>
+                </Button>
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* AI Chatbot */}
-      <section id="ai-chatbot" className="bg-soft-sage border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <section id="ai-chatbot" className="bg-ink border-b border-hairline py-20 md:py-28">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-sm uppercase tracking-wide text-charcoal mb-3 font-black">AI Chatbot</p>
-              <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-                Capture Leads While You Sleep
-              </h2>
-              <p className="text-lg text-charcoal leading-normal mb-6">
+              <Eyebrow className="mb-3">AI Chatbot</Eyebrow>
+              <HeadlineBlock className="mb-6"><span className="text-coral">Capture Leads</span> While You Sleep</HeadlineBlock>
+              <p className="text-lg text-body leading-normal mb-6 max-w-[60ch]">
                 A chatbot trained on your business &mdash; your services, prices, availability, and tone of voice &mdash; that lives on your website and qualifies leads, answers questions, and books appointments around the clock.
               </p>
-              <p className="text-charcoal leading-normal mb-8">
+              <p className="text-body leading-normal mb-8 max-w-[60ch]">
                 Typically handles around 80% of conversations autonomously (exact rate depends on training quality and question complexity). The remaining 20% &mdash; edge cases, complaints, unusual requests &mdash; get flagged for your team to follow up. You get warm leads, not time-wasters.
               </p>
-              <a href="/services/ai-chatbots" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors font-bold text-charcoal">
+              <a href="/services/ai-chatbots" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors font-bold text-cream">
                 Full details &rarr; AI Chatbots
               </a>
             </div>
@@ -174,25 +177,23 @@ export default function Page() {
               ctaHref="/contact"
             />
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Workflow Automation */}
-      <section id="workflow-automation" className="py-20 md:py-28 border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <section id="workflow-automation" className="py-20 md:py-28 border-b border-hairline">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="text-sm uppercase tracking-wide text-charcoal mb-3 font-black">Workflow Automation</p>
-              <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-                Stop Doing Admin by Hand
-              </h2>
-              <p className="text-lg text-charcoal leading-normal mb-6">
+              <Eyebrow className="mb-3">Workflow Automation</Eyebrow>
+              <HeadlineBlock className="mb-6">Stop Doing <span className="text-coral">Admin by Hand</span></HeadlineBlock>
+              <p className="text-lg text-body leading-normal mb-6 max-w-[60ch]">
                 Every project starts with a discovery audit. We map what you're doing manually, identify what's automatable, and build it on n8n &mdash; open-source, so you own everything. No per-task pricing. No vendor lock-in.
               </p>
-              <p className="text-charcoal leading-normal mb-8">
+              <p className="text-body leading-normal mb-8 max-w-[60ch]">
                 Simple workflows go live in 1&ndash;2 days. Complex multi-system builds take 1&ndash;2 weeks. Clients typically save 10&ndash;20 hours per week from week one.
               </p>
-              <a href="/services/workflow-automation" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors font-bold text-charcoal">
+              <a href="/services/workflow-automation" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors font-bold text-cream">
                 Full details &rarr; Workflow Automation
               </a>
             </div>
@@ -215,27 +216,25 @@ export default function Page() {
               ctaHref="/contact"
             />
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* GEO Audit */}
-      <section id="geo-audit" className="bg-warm-beige border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section id="geo-audit" className="bg-ink border-b border-hairline py-20 md:py-28">
+        <Container>
           <div className="mb-12">
-            <p className="text-sm uppercase tracking-wide text-charcoal mb-3 font-black">GEO Audit (Generative Engine Optimisation)</p>
-            <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-              Show Up in AI Search Results
-            </h2>
-            <p className="text-lg text-charcoal leading-normal max-w-3xl">
+            <Eyebrow className="mb-3">GEO Audit (Generative Engine Optimisation)</Eyebrow>
+            <HeadlineBlock className="mb-6">Show Up in <span className="text-coral">AI Search Results</span></HeadlineBlock>
+            <p className="text-lg text-body leading-normal max-w-[65ch]">
               ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini now answer questions directly &mdash; without sending users to Google. A GEO audit shows you exactly where your business stands in those results and what to do about it.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {/* Quick Check */}
-            <div className="border-3 border-charcoal bg-white shadow-brutal-sm p-8">
-              <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Quick Check</h3>
-              <p className="font-black text-5xl text-terracotta mb-6">&pound;247</p>
-              <ul className="space-y-3 text-charcoal text-sm mb-8">
+            <div className="border-2 border-hairline bg-charcoal shadow-brutal-sm p-8 h-full">
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Quick Check</h3>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6">&pound;247</p>
+              <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'AI visibility test across 4 platforms',
                   '10 real customer prompts tested',
@@ -245,7 +244,7 @@ export default function Page() {
                   'Delivered within 24 hours',
                 ].map((b, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-terracotta font-black text-lg leading-none mt-0.5 shrink-0">&bull;</span>
+                    <span className="text-coral font-bold text-lg leading-none mt-0.5 shrink-0">&bull;</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -256,13 +255,13 @@ export default function Page() {
             </div>
 
             {/* Full Audit */}
-            <div className="border-3 border-charcoal bg-warm-beige shadow-brutal p-8">
-              <div className="inline-block border-3 border-charcoal bg-terracotta px-4 py-1 mb-4">
-                <span className="font-black uppercase text-xs text-off-white">Most Popular</span>
+            <div className="border-2 border-coral bg-charcoal shadow-brutal-coral p-8 h-full">
+              <div className="inline-block border-2 border-ink bg-coral px-4 py-1 mb-4">
+                <span className="font-sans font-bold uppercase text-xs text-ink">Most Popular</span>
               </div>
-              <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Full Audit</h3>
-              <p className="font-black text-5xl text-terracotta mb-6">&pound;497</p>
-              <ul className="space-y-3 text-charcoal text-sm mb-8">
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Full Audit</h3>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6">&pound;497</p>
+              <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'Everything in Quick Check',
                   'Full technical crawlability review',
@@ -275,7 +274,7 @@ export default function Page() {
                   'Delivered within 24 hours',
                 ].map((b, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-terracotta font-black text-lg leading-none mt-0.5 shrink-0">&bull;</span>
+                    <span className="text-coral font-bold text-lg leading-none mt-0.5 shrink-0">&bull;</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -286,10 +285,10 @@ export default function Page() {
             </div>
 
             {/* Audit + Fix */}
-            <div className="border-3 border-charcoal bg-white shadow-brutal-sm p-8">
-              <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Audit + Fix</h3>
-              <p className="font-black text-5xl text-terracotta mb-6"><span className="text-2xl mr-2">from</span>&pound;997</p>
-              <ul className="space-y-3 text-charcoal text-sm mb-8">
+            <div className="border-2 border-hairline bg-charcoal shadow-brutal-sm p-8 h-full">
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Audit + Fix</h3>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6"><span className="text-2xl mr-2">from</span>&pound;997</p>
+              <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'Full Audit included',
                   'We implement the priority fixes for you',
@@ -300,7 +299,7 @@ export default function Page() {
                   'Delivered within 24 hours — fixes via ongoing monthly retainer',
                 ].map((b, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-terracotta font-black text-lg leading-none mt-0.5 shrink-0">&bull;</span>
+                    <span className="text-coral font-bold text-lg leading-none mt-0.5 shrink-0">&bull;</span>
                     <span>{b}</span>
                   </li>
                 ))}
@@ -310,14 +309,14 @@ export default function Page() {
               </a>
             </div>
           </div>
-          <div className="mt-8 border-3 border-charcoal bg-peach p-8 shadow-brutal-sm">
+          <div className="mt-8 border-2 border-coral bg-charcoal p-8 shadow-brutal-coral">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
               <div className="max-w-xl">
-                <h3 className="font-black text-2xl uppercase text-charcoal mb-2">Monthly GEO Retainer</h3>
-                <p className="text-charcoal leading-normal mb-3">
+                <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Monthly <span className="text-coral">GEO Retainer</span></h3>
+                <p className="text-body leading-normal mb-3">
                   GEO isn&rsquo;t a one-time fix. AI models update, competitors improve, and citation patterns shift. The retainer keeps your visibility growing after the audit foundations are in place.
                 </p>
-                <ul className="space-y-2 text-charcoal text-sm">
+                <ul className="space-y-2 text-body text-sm">
                   {[
                     'Monthly AI citation monitoring across 5 platforms',
                     'Content updates as AI rewarding patterns evolve',
@@ -326,106 +325,56 @@ export default function Page() {
                     '3-month minimum, then rolling monthly',
                   ].map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-terracotta font-black shrink-0">&bull;</span>
+                      <span className="text-coral font-bold shrink-0">&bull;</span>
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="shrink-0 text-center md:text-right">
-                <p className="font-black text-5xl text-terracotta">&pound;497</p>
-                <p className="text-mid-gray text-sm mb-4">per month</p>
+                <p className="font-display font-extrabold text-5xl text-coral">&pound;497</p>
+                <p className="text-muted text-sm mb-4">per month</p>
                 <a href="/contact">
                   <Button variant="primary">Ask About the Retainer</Button>
                 </a>
               </div>
             </div>
           </div>
-          <p className="text-sm text-mid-gray mt-6">
-            <a href="/services/geo-audit" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors font-bold text-charcoal">
+          <p className="text-sm text-muted mt-6">
+            <a href="/services/geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors font-bold text-cream">
               Full details &rarr; GEO Audit
             </a>
           </p>
-        </div>
-      </section>
-
-      {/* AI Receptionist */}
-      <section id="ai-receptionist" className="py-20 md:py-28 border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-sm uppercase tracking-wide text-charcoal mb-3 font-black">AI Receptionist</p>
-              <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-                A Receptionist That Never Calls in Sick
-              </h2>
-              <p className="text-lg text-charcoal leading-normal mb-6">
-                The AI Receptionist is our productised call-answering service for service businesses. It screens callers against your criteria, books qualified enquiries into your calendar, and sends you a full summary after every call.
-              </p>
-              <p className="text-charcoal leading-normal mb-8">
-                Industry-specific setups available for plumbers, electricians, HVAC, accountants, lawyers, vets, dentists, and therapists. Live within 24&ndash;48 hours. 120 call minutes included per month, £0.18/min over.
-              </p>
-              <a href="/ai-receptionist" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors font-bold text-charcoal">
-                Full details &rarr; AI Receptionist
-              </a>
-            </div>
-            <div className="space-y-4" id="ai-receptionist-card">
-              {[
-                { name: 'Starter', price: '£97', mins: '120 mins/month', note: 'Call answering, screening, summaries', featured: false },
-                { name: 'Standard', price: '£198', mins: '240 mins/month', note: 'Starter + CRM & API integrations', featured: true },
-                { name: 'Pro', price: 'Contact us', mins: 'Custom minutes', note: 'Standard + workflow automations for complex voice agent workflows', featured: false },
-              ].map((tier) => (
-                <div key={tier.name} className={`border-3 border-charcoal p-6 ${tier.featured ? 'bg-warm-beige shadow-brutal' : 'bg-white shadow-brutal-sm'}`}>
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-black text-lg uppercase text-charcoal">{tier.name}</h4>
-                    {tier.featured && <span className="text-xs font-black uppercase bg-terracotta text-off-white px-3 py-1 border-3 border-charcoal">Popular</span>}
-                  </div>
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-black text-3xl text-terracotta">{tier.price}</span>
-                    {tier.price !== 'Contact us' && <span className="text-mid-gray text-sm">/month + £249 setup</span>}
-                  </div>
-                  <p className="text-sm text-charcoal mt-1">{tier.mins}{tier.price !== 'Contact us' && ' · £0.18/min over'}</p>
-                  <p className="text-xs text-mid-gray mt-1">{tier.note}</p>
-                </div>
-              ))}
-              <a href="/contact" className="block">
-                <button className="w-full font-black uppercase px-7 py-3 border-3 border-charcoal shadow-brutal-sm transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-brutal active:translate-x-[2px] active:translate-y-[2px] active:shadow-brutal-xs bg-terracotta text-off-white">
-                  Book a free 30-min discovery call about AI Receptionist
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+        </Container>
       </section>
 
       {/* Pricing FAQ */}
-      <section className="bg-soft-sage border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-12">
-            Pricing Questions
-          </h2>
+      <section className="bg-ink border-b border-hairline py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-12"><span className="text-coral">Pricing</span> Questions</HeadlineBlock>
           <div className="space-y-0">
             {faq.map((item, i) => (
               <details
                 key={i}
-                className="border-3 border-charcoal bg-white shadow-brutal-sm group -mt-[3px]"
+                className="border-2 border-hairline bg-charcoal shadow-brutal-sm group -mt-[2px]"
               >
-                <summary className="flex items-center justify-between p-6 cursor-pointer font-black uppercase text-charcoal list-none">
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-display font-extrabold uppercase text-cream list-none">
                   <span>{item.q}</span>
-                  <span className="text-2xl font-black text-terracotta ml-4 shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  <span className="text-2xl font-bold text-coral ml-4 shrink-0 group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div className="px-6 pb-6 text-charcoal leading-normal border-t-3 border-charcoal pt-4">
+                <div className="px-6 pb-6 text-body leading-normal border-t border-hairline pt-4">
                   {item.a}
                 </div>
               </details>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Resources & Compliance */}
-      <section className="py-16 border-b-3 border-charcoal">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h3 className="font-black text-xl uppercase tracking-tight-lg text-charcoal mb-6">Resources &amp; Compliance</h3>
+      <section className="py-16 border-b border-hairline">
+        <Container>
+          <HeadlineBlock as="h3" className="mb-6">Resources &amp; <span className="text-coral">Compliance</span></HeadlineBlock>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { text: 'ICO data protection for businesses', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/', context: 'How UK law governs customer data collected by AI systems' },
@@ -438,24 +387,22 @@ export default function Page() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border-3 border-charcoal bg-white p-5 shadow-brutal-xs hover:shadow-brutal-sm hover:-translate-y-0.5 transition-all"
+                className="block border-2 border-hairline bg-ink p-5 shadow-brutal-xs hover:shadow-brutal-sm hover:-translate-y-0.5 transition-all"
               >
-                <span className="font-black text-charcoal text-sm block mb-1 underline underline-offset-4 decoration-terracotta decoration-2">{link.text}</span>
-                <span className="text-mid-gray text-xs">{link.context}</span>
+                <span className="font-display font-extrabold text-cream text-sm block mb-1 underline underline-offset-4 decoration-coral decoration-2">{link.text}</span>
+                <span className="text-muted text-xs">{link.context}</span>
               </a>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-10">
-            <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6">
-              Not Sure Which Product?
-            </h2>
-            <p className="text-xl text-charcoal leading-normal mb-8 max-w-2xl mx-auto">
+      <section>
+        <Container className="py-20 md:py-28">
+          <div className="mb-10">
+            <HeadlineBlock className="mb-6">Not Sure <span className="text-coral">Which Product?</span></HeadlineBlock>
+            <p className="text-xl text-body leading-normal mb-8 max-w-[65ch]">
               Book a free 30-minute call below. We&rsquo;ll listen to what you&rsquo;re trying to fix and tell you honestly which product fits &mdash; or whether you need one at all.
             </p>
             <a href="/contact">
@@ -463,7 +410,7 @@ export default function Page() {
             </a>
           </div>
           <CalBooking />
-        </div>
+        </Container>
       </section>
 
     </div>

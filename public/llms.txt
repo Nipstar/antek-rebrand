@@ -1,43 +1,48 @@
 # Antek Automation
-> UK AI automation agency building AI voice agents, chatbots and workflow automation for service businesses. Based in Hampshire, serving UK-wide.
+
+> AI automation agency based in Andover, Hampshire providing AI voice agents, website chatbots, n8n workflow automation, and GEO (Generative Engine Optimisation) for UK businesses.
+
+## Services
+
+- [AI Voice Agents](https://www.antekautomation.com/services/ai-voice-assistants): Custom AI voice agents that work inbound and outbound — answer calls in a natural voice, and call new leads back in seconds, qualify them, confirm appointments and chase follow-ups. 24/7. From £97/month + £249 setup. Certified Retell AI partner.
+- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Custom-trained website chatbots that answer questions, capture leads, book appointments, and qualify prospects. Handles ~80% of conversations autonomously. From £57/month + £149 setup.
+- [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): Business process automation built on n8n (open source) connecting 400+ tools including Google Workspace, Xero, Stripe, HubSpot, Slack, and WhatsApp. One-off projects from £250. Saves 10-20 hours/week.
+- [GEO Audit](https://www.antekautomation.com/services/geo-audit): Generative Engine Optimisation — get your business cited in AI search answers (ChatGPT, Perplexity, Google AI Overviews, Gemini). Audit, fix and stay visible. From £247.
+- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised inbound call-answering service for UK SMBs — screens callers, captures details, and books appointments 24/7. From £97/month + £249 setup. Industry pages for electricians, plumbers, HVAC engineers, accountants, lawyers, veterinary practices, dentists, and therapists.
 
 ## About
-- Trading name: Antek Automation (sole trader)
-- Founded by: Andy Norman (30+ years in technology)
-- Location: Chantry House, 38 Chantry Way, Andover, Hampshire SP10 1LZ
-- Phone: 0333 038 9960
-- Email: hello@antekautomation.com
-- ICO Registration: ZC133436
-- DUNS Number: 235593033
-- Certified Retell AI Partner, FSB Member
-- Target market: UK businesses, tradespeople, SMEs and SMBs
 
-## Core Services
-- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised AI phone answering. Screens callers, captures details, books appointments 24/7. Starter £97/month (120 call minutes) + £249 setup. Standard £198/month (240 mins). Pro: contact sales. £0.18/min overage. CRM and API integrations from Standard tier.
-- [AI Voice Agents](https://www.antekautomation.com/services/ai-voice-assistants): Custom 24/7 AI call answering. Same tier structure as AI Receptionist. Workflow automations included on Pro tier.
-- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Website chat agents that qualify leads and book appointments. From £57/month + £149 setup. Unlimited conversations.
-- [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): n8n-based automation connecting 400+ tools. From £250 one-off. Clients typically save 10–20 hours/week on admin.
-- [GEO Audits](https://www.antekautomation.com/services/geo-audit): AI search visibility audit across ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini. Quick Check £247, Full Audit £497, Audit + Fix from £997. All delivered within 24 hours. Monthly retainer from £497/month.
-- [Pricing](https://www.antekautomation.com/pricing): Full pricing page with all tiers, comparison table, and FAQ.
+- [About](https://www.antekautomation.com/about): About Antek Automation and founder Andy Norman. 30+ years in technology, Certified Retell AI Partner, FSB member. Based in Andover, Hampshire.
+- [Homepage](https://www.antekautomation.com): AI automation agency overview — four services (voice, chat, automation, GEO) with illustrative case studies.
+- [Pricing](https://www.antekautomation.com/pricing): Transparent pricing for AI Voice & Receptionist, AI Chatbot, Workflow Automation and GEO Audit, with a side-by-side comparison table.
+- [Contact](https://www.antekautomation.com/contact): Contact form, Cal.com booking, phone (0333 038 9960), email (hello@antekautomation.com), office location in Andover, Hampshire.
+
+## Locations
+
+- [All Locations](https://www.antekautomation.com/locations): The Antek location network across Hampshire, Berkshire and the South Coast.
+- [Hampshire](https://www.antekautomation.com/locations/hampshire): County hub serving Andover, Basingstoke, Winchester, Southampton and Portsmouth.
+- [Andover](https://www.antekautomation.com/locations/andover): Local AI automation services from Antek Automation's Andover headquarters.
+- [Basingstoke](https://www.antekautomation.com/locations/basingstoke): AI automation for Basingstoke businesses.
+- [Winchester](https://www.antekautomation.com/locations/winchester): AI automation for Winchester's professional firms and trades.
+- [Southampton](https://www.antekautomation.com/locations/southampton): AI automation for Southampton businesses.
+- [Portsmouth](https://www.antekautomation.com/locations/portsmouth): AI automation for Portsmouth and the Solent area.
+- [Berkshire](https://www.antekautomation.com/locations/berkshire): County hub for the Thames Valley, serving Reading and Newbury.
+- [Reading](https://www.antekautomation.com/locations/reading): AI automation for Reading and the Thames Valley.
+- [Newbury](https://www.antekautomation.com/locations/newbury): AI automation for Newbury and West Berkshire.
+- [Salisbury](https://www.antekautomation.com/locations/salisbury): AI automation for Salisbury, Wiltshire.
+- [Bournemouth](https://www.antekautomation.com/locations/bournemouth): AI automation for Bournemouth, Christchurch and Poole.
 
 ## Key Facts
-- Support: 24-hour standard response, 4-hour critical incident response. Included on all plans.
-- Data: Call recordings retained 90 days, chat transcripts 12 months. UK/EU data residency. GDPR compliant. DPA available on request.
-- Setup: Voice and chat products live in 24–48 hours. Workflow automation 1–14 days.
-- No long-term contracts. All monthly plans roll month-to-month.
 
-## Key Content
-- /pricing - Full pricing page (all products, all tiers)
-- /ai-receptionist - AI Receptionist hub
-- /ai-receptionist/electricians, /plumbers, /hvac, /accountants, /lawyers, /veterinary-practices, /dentists, /therapists - Industry-specific pages
-- /services - Services hub
-- /services/ai-voice-assistants, /ai-chatbots, /workflow-automation, /geo-audit - Service pages
-- /locations/ - Location pages (Hampshire, Southampton, Andover, Salisbury, Newbury, London, Birmingham, Manchester, Leeds, Liverpool, Glasgow, Newcastle)
-- /about - About Andy Norman and Antek Automation
-- /contact - Contact and booking
+- Headquarters: Chantry House, 38 Chantry Way, Andover, Hampshire, SP10 1LZ
+- Phone: 0333 038 9960
+- Founder: Andy Norman (30+ years in technology)
+- Certified Retell AI Partner, FSB member
+- Pricing: AI Voice Agents & AI Receptionist from £97/month + £249 setup · AI Chatbots from £57/month + £149 setup · Workflow Automation from £250 (one-off) · GEO Audit from £247
+- Industries served: Hospitality, dental, legal, accounting, trades, cleaning, estate agents, restaurants, salons, fitness, property management, veterinary
 
 ## Contact
+
 - Website: https://www.antekautomation.com
 - Email: hello@antekautomation.com
 - Phone: 0333 038 9960
-- Book a call: https://www.antekautomation.com/contact

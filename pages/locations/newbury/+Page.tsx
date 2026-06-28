@@ -2,6 +2,8 @@ import { useState, Suspense, lazy } from 'react';
 import { Button } from '../../../src/components/Button';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
+import { Container } from '../../../src/components/Container';
+import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { CalBooking } from '../../../src/components/CalBooking';
 import { VoiceDemoButton } from '../../../src/components/VoiceDemoButton';
 import { TrustBlock } from '../../../src/components/TrustBlock';
@@ -15,20 +17,20 @@ export default function Page() {
   const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false);
 
   return (
-    <div className="bg-off-white">
+    <div>
 
       {/* ── HERO (conversion-first: benefit H1 + town, subhead, primary CTA + click-to-call) ── */}
-      <section className="bg-warm-beige border-b-4 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <section className="bg-ink border-b border-hairline">
+        <Container className="py-20 md:py-28">
           <div className="max-w-4xl">
-            <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
+            <p className="text-sm uppercase tracking-wide text-coral mb-4 font-sans font-bold">
               AI AUTOMATION &bull; NEWBURY
             </p>
-            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              Give Your Newbury Team Back Its Evenings
-            </h1>
-            <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-8 max-w-3xl">
-              AI that handles the admin and follow-ups, answers the phone and captures the lead. Built by <a href="/about" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andy Norman</a>, just up the A34 in Andover.
+            <HeadlineBlock as="h1" className="mb-6">
+              Give Your Newbury Team <span className="text-coral">Back Its Evenings</span>
+            </HeadlineBlock>
+            <p className="text-lg md:text-xl text-body leading-relaxed mb-8 max-w-3xl">
+              AI that handles the admin and follow-ups, answers the phone and captures the lead. Built by <a href="/about" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Andy Norman</a>, just up the A34 in Andover.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <a href="/contact">
@@ -39,51 +41,51 @@ export default function Page() {
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <QuickRecap items={[
         'AI voice agents, chatbots and workflow automation for Newbury businesses',
         'Stop losing enquiries to missed calls — your phone answered 24/7, even mid-job',
         'Built by a founder in Andover, just up the A34 over the Hampshire border',
-        'From £57/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
+        'From £57/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Voice and chat products typically live within 24–48 hours',
       ]} />
 
       {/* ── PROBLEM (localised, before any proof) ── */}
       <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
-            The Missed Call That Costs You the Job
-          </h2>
-          <p className="text-lg md:text-xl text-charcoal leading-relaxed mb-6">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            The <span className="text-coral">Missed Call</span> That Costs You the Job
+          </HeadlineBlock>
+          <p className="text-lg md:text-xl text-body leading-relaxed mb-6 max-w-[65ch]">
             You&rsquo;re on a job in Thatcham or out near Hungerford. The phone rings and you can&rsquo;t answer. By the time you call back, they&rsquo;ve booked someone else.
           </p>
-          <p className="text-lg md:text-xl text-charcoal leading-relaxed">
+          <p className="text-lg md:text-xl text-body leading-relaxed max-w-[65ch]">
             That&rsquo;s a job gone &mdash; whether you&rsquo;re a trade missing a quote or a professional firm missing an enquiry &mdash; because you were busy doing the work you&rsquo;re actually good at. Now multiply it across a week. Every missed call is a customer who needed you and found someone else instead.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* ── OFFER (three services framed as outcomes, single primary CTA) ── */}
-      <section className="border-y-3 border-charcoal py-20 md:py-28 bg-soft-sage">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-4">
-              AI Automation for Newbury Businesses
-            </h2>
-            <p className="text-lg text-charcoal max-w-2xl mx-auto">
+      <section className="border-y border-hairline py-20 md:py-28 bg-ink">
+        <Container>
+          <div className="mb-16">
+            <HeadlineBlock className="mb-4">
+              AI Automation for <span className="text-coral">Newbury Businesses</span>
+            </HeadlineBlock>
+            <p className="text-lg text-body max-w-[60ch]">
               Three things that stop the leaks &mdash; framed by the outcome, not the tech.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card hover>
-              <Icon letter="V" size="lg" />
-              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            <Card hover className="bg-charcoal h-full">
+              <Icon letter="01" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
                 Your Phone, Answered 24/7
               </h3>
-              <p className="text-charcoal leading-relaxed mb-6">
+              <p className="text-body leading-relaxed mb-6">
                 An AI voice agent picks up on the first ring &mdash; mid-job, after hours, weekends &mdash; takes the details, books the work and texts you the lead. No voicemail, no lost job.
               </p>
               <a href="/services/ai-voice-assistants" aria-label="See how AI Voice Agents work">
@@ -91,12 +93,12 @@ export default function Page() {
               </a>
             </Card>
 
-            <Card hover>
-              <Icon letter="C" size="lg" />
-              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+            <Card hover className="bg-charcoal h-full">
+              <Icon letter="02" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
                 Your Website, Answered at 2am
               </h3>
-              <p className="text-charcoal leading-relaxed mb-6">
+              <p className="text-body leading-relaxed mb-6">
                 A chatbot trained on your business answers questions, qualifies the enquiry and books the appointment while every competitor shows a &ldquo;we&rsquo;ll call you back&rdquo; form.
               </p>
               <a href="/services/ai-chatbots" aria-label="See how AI Chatbots work">
@@ -104,12 +106,12 @@ export default function Page() {
               </a>
             </Card>
 
-            <Card hover>
-              <Icon letter="A" size="lg" />
-              <h3 className="font-black text-2xl uppercase text-charcoal mt-6 mb-4">
+            <Card hover className="bg-charcoal h-full">
+              <Icon letter="03" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
                 Your Admin, Handled
               </h3>
-              <p className="text-charcoal leading-relaxed mb-6">
+              <p className="text-body leading-relaxed mb-6">
                 Follow-ups, quotes, CRM updates and the repetitive jobs that eat your evenings &mdash; connected up and automated so a new enquiry gets handled without you lifting a finger.
               </p>
               <a href="/services/workflow-automation" aria-label="See how Workflow Automation works">
@@ -118,12 +120,12 @@ export default function Page() {
             </Card>
           </div>
 
-          <div className="text-center mt-14">
+          <div className="mt-14">
             <a href="/contact">
               <Button variant="primary">Book a free 30-min call</Button>
             </a>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ── PROOF (reusable governed TrustBlock + local testimonial slot) ── */}
@@ -136,27 +138,26 @@ export default function Page() {
 
       {/* ── LOCAL RELEVANCE — "Our Newbury patch" (entity layer sits UNDER the hook) ── */}
       <section className="py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
-            Our Newbury Patch
-          </h2>
-          <p className="text-lg text-charcoal leading-relaxed mb-6">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            Our <span className="text-coral">Newbury Patch</span>
+          </HeadlineBlock>
+          <p className="text-lg text-body leading-relaxed mb-6 max-w-[65ch]">
             Newbury is a market town in West Berkshire, sitting on the{' '}
-            <a href="https://en.wikipedia.org/wiki/River_Kennet" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">River Kennet</a>{' '}
+            <a href="https://en.wikipedia.org/wiki/River_Kennet" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">River Kennet</a>{' '}
             and the Kennet and Avon Canal in the county of{' '}
-            <a href="https://en.wikipedia.org/wiki/Berkshire" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Berkshire</a>. The A34 runs straight through it towards the M4, and it&rsquo;s perhaps best known for{' '}
-            <a href="https://en.wikipedia.org/wiki/Newbury_Racecourse" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Newbury Racecourse</a>. The trades and service firms work across Thatcham, Hungerford, Lambourn, Kintbury, Hermitage and the surrounding West Berkshire villages.
+            <a href="https://en.wikipedia.org/wiki/Berkshire" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Berkshire</a>. The A34 runs straight through it towards the M4, and it&rsquo;s perhaps best known for{' '}
+            <a href="https://en.wikipedia.org/wiki/Newbury_Racecourse" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Newbury Racecourse</a>. The trades and service firms work across Thatcham, Hungerford, Lambourn, Kintbury, Hermitage and the surrounding West Berkshire villages.
           </p>
-          <p className="text-lg text-charcoal leading-relaxed mb-6">
-            Newbury sits just over the Hampshire border, an easy run down the A34 from our base in{' '}
-            <a href="/locations/andover" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Andover</a> &mdash; which makes us one of the closest AI automation agencies to Newbury, and one of the few that will actually meet you for a coffee.
+          <p className="text-lg text-body leading-relaxed mb-6 max-w-[65ch]">
+            Newbury sits just over the Hampshire border, an easy run down the A34 from our base in Andover &mdash; which makes us one of the closest AI automation agencies to Newbury, and one of the few that will actually meet you for a coffee.
           </p>
-          <p className="text-lg text-charcoal leading-relaxed">
+          <p className="text-lg text-body leading-relaxed max-w-[65ch]">
             That said, you don&rsquo;t need us on your doorstep. Everything &mdash; setup, testing, ongoing support &mdash; runs over video call, which is how most of our{' '}
-            <a href="/locations/berkshire" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Berkshire</a>{' '}
+            <a href="/locations/berkshire" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Berkshire</a>{' '}
             clients prefer it. The AI doesn&rsquo;t care about geography. It just answers.
           </p>
-        </div>
+        </Container>
       </section>
 
       <ResourcesCompliance links={[
@@ -165,129 +166,115 @@ export default function Page() {
       ]} />
 
       {/* ── SIBLING / GEO LINKS ── */}
-      <section className="bg-warm-beige border-y-3 border-charcoal py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-2xl md:text-3xl uppercase tracking-tight-lg text-charcoal mb-8 text-center">
-            Nearby Towns We Cover
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/locations/andover" className="block group">
-              <Card hover>
-                <Icon letter="A" size="md" />
-                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Andover</h3>
-                <p className="text-charcoal text-sm leading-normal">Our HQ, just down the A34. Happy to meet for a coffee.</p>
-              </Card>
-            </a>
-            <a href="/locations/basingstoke" className="block group">
-              <Card hover>
-                <Icon letter="B" size="md" />
-                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Basingstoke</h3>
-                <p className="text-charcoal text-sm leading-normal">AI automation for Hampshire&rsquo;s largest town and its trades.</p>
-              </Card>
-            </a>
-            <a href="/locations/winchester" className="block group">
-              <Card hover>
-                <Icon letter="W" size="md" />
-                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Winchester</h3>
-                <p className="text-charcoal text-sm leading-normal">AI automation for the county town&rsquo;s professional firms and trades.</p>
+      <section className="bg-ink border-y border-hairline py-16 md:py-20">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            <span className="text-coral">Nearby Towns</span> We Cover
+          </HeadlineBlock>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <a href="/locations/reading" className="block group">
+              <Card hover className="bg-charcoal h-full">
+                <Icon letter="01" size="md" mono />
+                <h3 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2 group-hover:text-coral transition-colors">Reading</h3>
+                <p className="text-body text-sm leading-normal">AI automation for the Thames Valley&rsquo;s biggest commercial centre.</p>
               </Card>
             </a>
             <a href="/locations/berkshire" className="block group">
-              <Card hover>
-                <Icon letter="B" size="md" />
-                <h3 className="font-black text-lg uppercase text-charcoal mt-4 mb-2 group-hover:text-terracotta transition-colors">Berkshire</h3>
-                <p className="text-charcoal text-sm leading-normal">The county hub — every town we cover, in one place.</p>
+              <Card hover className="bg-charcoal h-full">
+                <Icon letter="02" size="md" mono />
+                <h3 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2 group-hover:text-coral transition-colors">Berkshire</h3>
+                <p className="text-body text-sm leading-normal">The county hub — every town we cover, in one place.</p>
               </Card>
             </a>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ── GEO CROSS-SELL (we also offer GEO — AI-search visibility) ── */}
-      <section className="bg-warm-beige border-y-3 border-charcoal py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-6">
-            Is AI Search Recommending Your Newbury Business?
-          </h2>
-          <p className="text-lg text-charcoal leading-relaxed mb-6">
-            When someone asks ChatGPT for &ldquo;the best plumber in Newbury&rdquo; or tells Perplexity to find &ldquo;a tradesperson near Newbury&rdquo;, is your business in the answer? Our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">GEO Audit</a> checks your visibility across ChatGPT, Perplexity, Google AI Overviews and Claude &mdash; and gives you a clear plan to get cited. From &pound;247.
+      <section className="bg-ink border-y border-hairline py-16 md:py-20">
+        <Container>
+          <HeadlineBlock className="mb-6">
+            Is <span className="text-coral">AI Search</span> Recommending Your Newbury Business?
+          </HeadlineBlock>
+          <p className="text-lg text-body leading-relaxed mb-6 max-w-[60ch]">
+            When someone asks ChatGPT for &ldquo;the best plumber in Newbury&rdquo; or tells Perplexity to find &ldquo;a tradesperson near Newbury&rdquo;, is your business in the answer? Our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">GEO Audit</a> checks your visibility across ChatGPT, Perplexity, Google AI Overviews and Claude &mdash; and gives you a clear plan to get cited. From &pound;247.
           </p>
           <a href="/services/geo-audit">
             <Button variant="primary">Check Your AI Visibility &rarr;</Button>
           </a>
-        </div>
+        </Container>
       </section>
 
       {/* ── FAQ (conversion + local) ── */}
       <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+        <Container>
+          <HeadlineBlock className="mb-12">
+            Frequently Asked <span className="text-coral">Questions</span>
+          </HeadlineBlock>
+          <div className="space-y-4 max-w-[65ch]">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 You&rsquo;re in Andover — do you actually cover Newbury?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 Yes. Andover is our base, but we work with Newbury businesses every week &mdash; it&rsquo;s a quick run up the A34. The AI runs in the cloud, so your voice agent answers Newbury calls exactly the same whether we&rsquo;re next door or over the border.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 Do I need to be in Newbury for this to work?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 Not at all. The whole thing runs remotely &mdash; setup, testing and support all happen over video call. Your AI voice agent doesn&rsquo;t need a desk in Newbury to answer your phone. Most clients are set up without us ever stepping into their office.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 Newbury&rsquo;s in Berkshire, not Hampshire — does that matter?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 Not in the slightest. Newbury is a West Berkshire town, just over the Hampshire border, and it&rsquo;s one of our nearest neighbours up the A34. County lines don&rsquo;t change how the AI works or how we support you &mdash; we cover Newbury exactly the way we cover our Hampshire towns.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 What does it cost?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                AI voice agents and chatbots start from £57/month. There&rsquo;s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the <a href="/pricing" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">full pricing</a> for the detail.
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                AI voice agents and chatbots start from £57/month. There&rsquo;s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">full pricing</a> for the detail.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 How fast can it be set up?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 Most voice and chat products are live within 24&ndash;48 hours of you forwarding your number or giving us website access. We handle the build, testing and ongoing tweaks, so there&rsquo;s very little for you to do beyond the initial call.
               </div>
             </details>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ── FINAL CTA (booking + click-to-call) ── */}
-      <section className="bg-charcoal border-t-8 border-terracotta py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight-lg text-off-white mb-6">
-            Stop Losing Newbury Enquiries
-          </h2>
-          <p className="text-lg md:text-xl text-off-white/90 leading-relaxed mb-10 max-w-2xl mx-auto">
+      <section className="bg-charcoal border-t border-coral py-24 md:py-32">
+        <Container>
+          <HeadlineBlock className="mb-6">
+            Stop Losing <span className="text-coral">Newbury Enquiries</span>
+          </HeadlineBlock>
+          <p className="text-lg md:text-xl text-body leading-relaxed mb-10 max-w-[65ch]">
             Book a free 30-minute call with Andy. We&rsquo;re just down the A34 in Andover, we know the patch, and we&rsquo;ll give you a straight answer about whether AI automation is right for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <a href="/contact">
               <Button variant="primary">Book a free 30-min call</Button>
             </a>
@@ -296,22 +283,22 @@ export default function Page() {
             </a>
             <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ── BOOK A CALL (Cal.com) ── */}
-      <section className="bg-off-white border-t-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="text-center mb-10">
-            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
-              Pick a Time That Works for You
-            </h2>
-            <p className="text-charcoal max-w-2xl mx-auto">
+      <section className="border-t border-hairline py-20 md:py-28">
+        <Container>
+          <div className="mb-10">
+            <HeadlineBlock className="mb-4">
+              Pick a Time That <span className="text-coral">Works for You</span>
+            </HeadlineBlock>
+            <p className="text-body max-w-[60ch]">
               Book a free 30-minute call below &mdash; or use the contact form if you prefer.
             </p>
           </div>
           <CalBooking />
-        </div>
+        </Container>
       </section>
 
       {/* ── VOICE CHAT MODAL ── */}

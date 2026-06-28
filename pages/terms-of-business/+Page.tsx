@@ -1,25 +1,26 @@
+import { Container } from '../../src/components/Container'
+import { HeadlineBlock } from '../../src/components/HeadlineBlock'
+
 export default function Page() {
   return (
-    <div className="bg-off-white">
+    <div>
 
       {/* ── HEADER ── */}
-      <div className="bg-warm-beige border-b-3 border-charcoal">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-          <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6">
-            Terms of Business
-          </h1>
-          <p className="text-lg text-charcoal">
+      <div className="bg-ink border-b border-hairline">
+        <Container className="py-16">
+          <HeadlineBlock as="h1" className="mb-6">Terms of <span className="text-coral">Business</span></HeadlineBlock>
+          <p className="text-lg text-body">
             Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
-        </div>
+        </Container>
       </div>
 
       {/* ── CONTENT ── */}
-      <div className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-        <div className="prose prose-sm max-w-none space-y-8 text-charcoal">
+      <Container className="py-16">
+        <div className="prose prose-sm max-w-[65ch] space-y-8 text-body">
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">1. Agreement</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">1. Agreement</h2>
             <p className="leading-relaxed">
               These Terms of Business ("Terms") set out the terms and conditions under which Antek Automation ("We", "Us", "Our"), a sole trader based at Chantry House, 38 Chantry Way, Andover SP10 1LZ, provides services to you ("Client", "You", "Your"). By engaging our services, you agree to be bound by these Terms.
             </p>
@@ -29,7 +30,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">2. Scope of Services</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">2. Scope of Services</h2>
             <p className="leading-relaxed">
               We provide AI automation solutions including but not limited to:
             </p>
@@ -45,7 +46,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">3. Client Obligations</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">3. Client Obligations</h2>
             <p className="leading-relaxed">
               To enable us to deliver our services effectively, you agree to:
             </p>
@@ -61,7 +62,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">4. Fees and Payment</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">4. Fees and Payment</h2>
             <ul className="list-disc list-inside space-y-2 leading-relaxed">
               <li>Fees will be quoted in advance and confirmed in writing prior to commencement of work</li>
               <li>Payment terms are typically 50% deposit on agreement, with the remaining 50% due on completion, unless otherwise agreed</li>
@@ -74,7 +75,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">5. Intellectual Property</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">5. Intellectual Property</h2>
             <p className="leading-relaxed">
               All intellectual property rights in the services, software, systems, and deliverables created by us shall remain the property of Antek Automation unless otherwise agreed in writing. Upon full payment of all fees, you are granted a non-exclusive, non-transferable licence to use the deliverables for your business purposes.
             </p>
@@ -87,7 +88,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">6. Confidentiality</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">6. Confidentiality</h2>
             <p className="leading-relaxed">
               Both parties agree to maintain the confidentiality of any proprietary, commercial, or sensitive information shared during the course of the engagement ("Confidential Information"). This obligation shall survive the termination of the agreement for a period of two years.
             </p>
@@ -103,7 +104,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">7. Limitation of Liability</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">7. Limitation of Liability</h2>
             <p className="leading-relaxed">
               To the maximum extent permitted by law, our total aggregate liability arising out of or in connection with these Terms shall not exceed the total fees paid by you to us in the 12 months preceding the event giving rise to the claim.
             </p>
@@ -116,7 +117,7 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">8. Warranties and Disclaimers</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">8. Warranties and Disclaimers</h2>
             <p className="leading-relaxed">
               We warrant that our services will be provided with reasonable care and skill, in a professional and workmanlike manner, and in accordance with the agreed specification.
             </p>
@@ -134,14 +135,14 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">9. Force Majeure</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">9. Force Majeure</h2>
             <p className="leading-relaxed">
               Neither party shall be liable for any failure or delay in performing its obligations where such failure or delay results from circumstances beyond the reasonable control of that party, including but not limited to acts of God, natural disasters, pandemic, war, terrorism, riots, governmental action, power failure, internet or telecommunications failure, or actions of third-party service providers.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">10. Termination</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">10. Termination</h2>
             <p className="leading-relaxed">
               Either party may terminate this agreement by providing 30 days' written notice to the other party.
             </p>
@@ -159,57 +160,57 @@ export default function Page() {
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">11. Data Protection</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">11. Data Protection</h2>
             <p className="leading-relaxed">
               We comply with all applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Where we process personal data on your behalf, we will do so only in accordance with your documented instructions and will enter into a data processing agreement as required.
             </p>
             <p className="leading-relaxed mt-2">
               Our{' '}
-              <a href="/privacy-policy" className="text-terracotta hover:underline font-bold">Privacy Policy</a>{' '}
+              <a href="/privacy-policy" className="text-coral hover:underline font-bold">Privacy Policy</a>{' '}
               sets out how we process personal data. Please refer to it for further information.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">12. Indemnification</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">12. Indemnification</h2>
             <p className="leading-relaxed">
               You agree to indemnify and hold harmless Antek Automation (sole trader), its proprietor, employees, contractors, and agents from and against any claims, losses, damages, liabilities, and expenses (including reasonable legal fees) arising from your breach of these Terms, your use of the services, or your provision of inaccurate or unlawful content or data.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">13. Dispute Resolution</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">13. Dispute Resolution</h2>
             <p className="leading-relaxed">
               In the event of any dispute arising out of or in connection with these Terms, the parties will first attempt to resolve the matter through good-faith negotiation. If the dispute cannot be resolved within 30 days, either party may refer the matter to mediation before commencing court proceedings.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">14. Governing Law</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">14. Governing Law</h2>
             <p className="leading-relaxed">
               These Terms of Business shall be governed by and construed in accordance with the laws of England and Wales. Both parties submit to the exclusive jurisdiction of the courts of England and Wales.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">15. Severability</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">15. Severability</h2>
             <p className="leading-relaxed">
               If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect.
             </p>
           </section>
 
           <section>
-            <h2 className="font-black text-2xl uppercase tracking-tight-lg mb-4 text-charcoal">16. Contact</h2>
+            <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">16. Contact</h2>
             <p className="leading-relaxed">
               If you have any questions about these Terms of Business, please contact us:
             </p>
             <div className="mt-4 space-y-1 leading-relaxed">
               <p><strong>Antek Automation</strong> (sole trader)</p>
               <p><strong>Email:</strong>{' '}
-                <a href="mailto:hello@antekautomation.com" className="text-terracotta hover:underline font-bold">hello@antekautomation.com</a>
+                <a href="mailto:hello@antekautomation.com" className="text-coral hover:underline font-bold">hello@antekautomation.com</a>
               </p>
               <p><strong>Phone:</strong>{' '}
-                <a href="tel:03330389960" className="text-terracotta hover:underline font-bold">0333 038 9960</a>
+                <a href="tel:03330389960" className="text-coral hover:underline font-bold">0333 038 9960</a>
               </p>
               <p><strong>Address:</strong> Chantry House, 38 Chantry Way, Andover SP10 1LZ</p>
               <p><strong>ICO Registration:</strong> ZC133436</p>
@@ -218,7 +219,7 @@ export default function Page() {
           </section>
 
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

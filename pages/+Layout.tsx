@@ -7,6 +7,15 @@ import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsen
 import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
 import { getStoredConsent } from '../src/utils/consent'
+// Self-hosted brand fonts (no third-party CDN). Outfit display, DM Sans body,
+// JetBrains Mono labels. See docs/ANTEK-BRAND-GUIDELINES.md §3.
+import '@fontsource/outfit/700.css'
+import '@fontsource/outfit/800.css'
+import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/500.css'
+import '@fontsource/dm-sans/700.css'
+import '@fontsource/jetbrains-mono/400.css'
+import '@fontsource/jetbrains-mono/700.css'
 import '../src/index.css'
 
 const ChatbotWidget = lazy(() =>
@@ -96,7 +105,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <div className="min-h-screen bg-off-white">
+    <div className="min-h-screen bg-charcoal">
       <Navigation />
       <main className="pb-20 md:pb-0">{children}</main>
       <Footer />

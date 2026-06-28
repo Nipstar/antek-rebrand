@@ -75,48 +75,48 @@ export const caseStudies: CaseStudy[] = [
     },
   },
   {
-    id: 'financial-services',
-    industry: 'FINANCE',
-    headline: '9% CONTAINMENT INCREASE = MILLIONS SAVED',
-    meta: 'Leading UK Financial Institution',
+    id: 'chatbot-website-leads',
+    industry: 'PROFESSIONAL SERVICES',
+    headline: 'AFTER-HOURS WEBSITE VISITORS TURNED INTO BOOKED CALLS',
+    meta: 'Professional Services Firm | UK',
     illustrative: true,
     challenge: {
       title: 'The Challenge:',
-      description: 'Legacy IVR (interactive voice response) frustrating customers. Long wait times. Limited self-service capabilities. 15 years of tuning hit a ceiling.'
+      description: 'Plenty of website traffic, but visitors arriving in the evenings and at weekends hit a static contact form and left. Most never came back.'
     },
     solution: {
       title: 'The Solution:',
-      description: 'Conversational AI platform replacing DTMF (keypad tone) menus with natural language understanding across phone banking services.'
+      description: 'AI chatbot trained on the firm’s services and pricing — it answers questions instantly, qualifies the visitor, and books a call straight into the calendar.'
     },
     results: {
       title: 'ILLUSTRATIVE RESULTS',
       metrics: [
         {
-          number: '9%',
-          label: 'INCREASED IVR\nCONTAINMENT',
-          detail: 'Significant cost savings'
+          number: '38%',
+          label: 'OF ENQUIRIES\nCAPTURED OUT OF HOURS',
+          detail: 'Evenings & weekends'
         },
         {
-          number: '97%',
-          label: 'ANSWER\nACCURACY',
-          detail: 'Intent recognition'
+          number: '24/7',
+          label: 'INSTANT RESPONSE\nTO VISITORS',
+          detail: 'No contact-form wait'
         },
         {
-          number: '92%',
-          label: 'TASK COMPLETION\nRATE',
-          detail: 'First-call resolution'
+          number: '2x',
+          label: 'QUALIFIED CALLS\nBOOKED',
+          detail: 'Vs. form-only baseline'
         }
       ],
       benefits: [
-        'Improved customer satisfaction',
-        'New self-service capabilities deployed independently',
-        'Broke 15-year self-service ceiling'
+        'Captures leads that used to leave at 10pm',
+        'Qualifies visitors before they reach your inbox',
+        'Books straight into the calendar, no back-and-forth'
       ]
     },
     testimonial: {
-      quote: 'Natural language gave us opportunities we never thought possible. We broke the glass ceiling on self-service and improved customer experience simultaneously.',
-      author: 'Operations Director',
-      business: 'UK Financial Institution'
+      quote: 'Visitors used to land after hours, see a form, and bounce. Now they get answers there and then — and the good ones are booked in before we’re back at our desks.',
+      author: 'Managing Director',
+      business: 'Professional Services Firm, UK'
     },
   },
   {
@@ -162,6 +162,51 @@ export const caseStudies: CaseStudy[] = [
       quote: 'We were spending 20+ hours every week on admin—invoice chasing, booking emails, calendar updates. The workflows eliminated 90% of it. Now data flows between systems automatically.',
       author: 'Operations Manager',
       business: 'Commercial Cleaning Company, South East England'
+    },
+  },
+  {
+    id: 'geo-visibility',
+    industry: 'GEO',
+    headline: 'FROM INVISIBLE TO CITED IN AI ANSWERS',
+    meta: 'Local Service Firm | UK',
+    illustrative: true,
+    challenge: {
+      title: 'The Challenge:',
+      description: 'When buyers asked ChatGPT, Perplexity or Google’s AI Overviews for a business like this one, a competitor got named every time. The firm wasn’t in the conversation at all.'
+    },
+    solution: {
+      title: 'The Solution:',
+      description: 'A GEO audit followed by fixes — structured data, entity and content work — so AI search engines can understand, trust and cite the business for its core services.'
+    },
+    results: {
+      title: 'ILLUSTRATIVE RESULTS',
+      metrics: [
+        {
+          number: 'Cited',
+          label: 'NAMED IN AI\nANSWERS',
+          detail: 'From zero to cited'
+        },
+        {
+          number: '4',
+          label: 'AI ENGINES\nCOVERED',
+          detail: 'ChatGPT, Perplexity, Google, Gemini'
+        },
+        {
+          number: '90d',
+          label: 'TO ESTABLISH\nVISIBILITY',
+          detail: 'Audit, fix, monitor'
+        }
+      ],
+      benefits: [
+        'Cited instead of a competitor in AI answers',
+        'Structured data and entity signals AI engines trust',
+        'Ongoing monitoring as AI search shifts'
+      ]
+    },
+    testimonial: {
+      quote: 'Customers kept saying they’d “asked AI” and ended up elsewhere. Now we’re the name that comes back for what we do.',
+      author: 'Founder',
+      business: 'Local Service Firm, UK'
     },
   }
 ];

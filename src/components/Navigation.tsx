@@ -32,7 +32,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-0 z-40 bg-off-white border-b-3 border-charcoal">
+    <nav className="sticky top-0 z-40 bg-charcoal border-b border-hairline">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20">
           <a
@@ -40,7 +40,7 @@ export function Navigation() {
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
             <img src="/logo.svg" alt="Antek Automation Logo" width={56} height={56} decoding="async" className="w-14 h-14" />
-            <span className="font-black text-2xl uppercase text-charcoal">
+            <span className="font-display font-extrabold text-2xl uppercase text-cream">
               Antek Automation
             </span>
           </a>
@@ -50,7 +50,7 @@ export function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-bold uppercase text-sm text-charcoal hover:text-terracotta transition-colors"
+                className="font-mono font-bold uppercase text-xs tracking-eyebrow text-body hover:text-coral transition-colors"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export function Navigation() {
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 onMouseEnter={() => setIsServicesOpen(true)}
-                className="font-bold uppercase text-sm text-charcoal hover:text-terracotta transition-colors flex items-center space-x-1"
+                className="font-mono font-bold uppercase text-xs tracking-eyebrow text-body hover:text-coral transition-colors flex items-center space-x-1"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -67,13 +67,13 @@ export function Navigation() {
                 />
               </button>
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-off-white border-3 border-charcoal shadow-brutal min-w-[260px] z-50">
+                <div className="absolute top-full left-0 mt-2 bg-ink border-2 border-coral shadow-brutal min-w-[260px] z-50">
                   {serviceLinks.map((link) => (
                     <a
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsServicesOpen(false)}
-                      className="block w-full text-left px-6 py-4 font-bold uppercase text-sm text-charcoal hover:bg-warm-beige transition-colors border-b-3 border-charcoal last:border-b-0"
+                      className="block w-full text-left px-6 py-4 font-mono font-bold uppercase text-xs tracking-eyebrow text-body hover:bg-charcoal hover:text-coral transition-colors border-b border-hairline last:border-b-0"
                     >
                       {link.label}
                     </a>
@@ -83,14 +83,14 @@ export function Navigation() {
             </div>
             <a
               href="/contact"
-              className="px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 bg-terracotta border-3 border-charcoal ring-1 ring-white ring-inset shadow-brutal font-black uppercase text-off-white text-xs md:text-sm hover:shadow-brutal-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
+              className="px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 bg-coral border-2 border-ink shadow-brutal-sm font-sans font-bold uppercase text-ink text-xs md:text-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150 whitespace-nowrap"
             >
               Book a free 30-min discovery call
             </a>
           </div>
 
           <button
-            className="xl:hidden p-2"
+            className="xl:hidden p-2 text-cream"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
@@ -100,26 +100,26 @@ export function Navigation() {
         </div>
 
         {isOpen && (
-          <div className="xl:hidden border-t-3 border-charcoal bg-warm-beige">
+          <div className="xl:hidden border-t border-hairline bg-ink">
             <div className="flex flex-col space-y-4 p-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="font-bold uppercase text-sm text-charcoal hover:text-terracotta transition-colors text-left"
+                  className="font-mono font-bold uppercase text-xs tracking-eyebrow text-body hover:text-coral transition-colors text-left"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="border-t-3 border-charcoal pt-4">
-                <p className="font-black uppercase text-xs text-charcoal mb-3">Services</p>
+              <div className="border-t border-hairline pt-4">
+                <p className="font-mono font-bold uppercase text-xs tracking-eyebrow text-muted mb-3">Services</p>
                 {serviceLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block font-bold uppercase text-sm text-charcoal hover:text-terracotta transition-colors mb-3 text-left w-full"
+                    className="block font-mono font-bold uppercase text-xs tracking-eyebrow text-body hover:text-coral transition-colors mb-3 text-left w-full"
                   >
                     {link.label}
                   </a>
@@ -128,7 +128,7 @@ export function Navigation() {
               <a
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="w-full px-6 py-3 bg-terracotta border-3 border-charcoal ring-1 ring-white ring-inset shadow-brutal font-black uppercase text-off-white text-sm hover:shadow-brutal-lg hover:scale-105 transition-all duration-300 text-center block"
+                className="w-full px-6 py-3 bg-coral border-2 border-ink shadow-brutal-sm font-sans font-bold uppercase text-ink text-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150 text-center block"
               >
                 Book a free 30-min discovery call
               </a>

@@ -1,4 +1,5 @@
-import { useEffect, useId } from 'react'
+import { useEffect, useState } from 'react'
+import Cal, { getCalApi } from '@calcom/embed-react'
 
 interface CalBookingProps {
   calLink?: string
@@ -6,69 +7,39 @@ interface CalBookingProps {
   className?: string
 }
 
-type CalApi = ((...args: unknown[]) => void) & {
-  ns: Record<string, (...args: unknown[]) => void>
-  loaded?: boolean
-  q?: unknown[]
-}
-
-declare global {
-  interface Window {
-    Cal?: CalApi
-  }
-}
-
+// Official Cal.com React embed. Dark theme + coral brand to match the site.
 export function CalBooking({
   calLink = 'antek-automation/30min',
   namespace = '30min',
-  className = 'w-full min-h-[600px] border-3 border-charcoal shadow-brutal bg-white',
+  className = 'w-full min-h-[600px] border-2 border-coral shadow-brutal bg-ink overflow-hidden',
 }: CalBookingProps) {
-  const reactId = useId()
-  const elementId = `cal-inline-${reactId.replace(/:/g, '')}`
+  // Gate render to the client — the embed touches browser APIs, and the page is
+  // pre-rendered (SSR) by Vike.
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    setMounted(true)
+    ;(async () => {
+      const cal = await getCalApi({ namespace })
+      cal('ui', {
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+        theme: 'dark',
+        cssVarsPerTheme: { light: { 'cal-brand': '#CD5C3C' }, dark: { 'cal-brand': '#CD5C3C' } },
+      })
+    })()
+  }, [namespace])
 
-    /* eslint-disable */
-    ;(function (C: any, A: string, L: string) {
-      const p = function (a: any, ar: any) { a.q.push(ar) }
-      const d = C.document
-      C.Cal = C.Cal || function () {
-        const cal = C.Cal
-        const ar = arguments
-        if (!cal.loaded) {
-          cal.ns = {}
-          cal.q = cal.q || []
-          d.head.appendChild(d.createElement('script')).src = A
-          cal.loaded = true
-        }
-        if (ar[0] === L) {
-          const api: any = function () { p(api, arguments) }
-          const ns = ar[1]
-          api.q = api.q || []
-          if (typeof ns === 'string') {
-            cal.ns[ns] = cal.ns[ns] || api
-            p(cal.ns[ns], ar)
-            p(cal, ['initNamespace', ns])
-          } else {
-            p(cal, ar)
-          }
-          return
-        }
-        p(cal, ar)
-      }
-    })(window, 'https://app.cal.com/embed/embed.js', 'init')
-    /* eslint-enable */
+  if (!mounted) return <div className={className} aria-hidden="true" />
 
-    const Cal = window.Cal!
-    Cal('init', namespace, { origin: 'https://app.cal.com' })
-    Cal.ns[namespace]('inline', {
-      elementOrSelector: `#${elementId}`,
-      config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true', theme: 'light' },
-      calLink,
-    })
-    Cal.ns[namespace]('ui', { theme: 'light', hideEventTypeDetails: false, layout: 'month_view' })
-  }, [calLink, namespace, elementId])
-
-  return <div id={elementId} className={className} />
+  return (
+    <div className={className}>
+      <Cal
+        namespace={namespace}
+        calLink={calLink}
+        style={{ width: '100%', height: '100%', overflow: 'scroll' }}
+        config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true' }}
+      />
+    </div>
+  )
 }

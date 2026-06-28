@@ -57,13 +57,13 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-off-white border-3 border-charcoal shadow-brutal-chat rounded-sm w-full max-w-sm max-h-[600px] flex flex-col overflow-hidden">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[60] p-4">
+      <div className="bg-ink border-2 border-coral shadow-brutal-chat w-full max-w-sm max-h-[600px] flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="bg-warm-beige border-b-3 border-charcoal p-4 flex items-center justify-between">
+        <div className="bg-charcoal border-b-2 border-coral p-4 flex items-center justify-between">
           <div>
-            <h3 className="font-black text-xl uppercase">Voice Demo</h3>
-            <p className="text-xs text-charcoal">
+            <h3 className="font-display font-extrabold text-xl uppercase text-cream">Voice Demo</h3>
+            <p className="text-xs text-muted">
               {displayStatus === 'idle' && 'Ready to start'}
               {displayStatus === 'connecting' && 'Connecting...'}
               {displayStatus === 'connected' && 'Connected'}
@@ -74,7 +74,7 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center hover:bg-charcoal hover:text-off-white transition-colors rounded-sm border-2 border-charcoal"
+            className="w-8 h-8 flex items-center justify-center text-cream hover:bg-coral hover:text-ink transition-colors border-2 border-coral"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -90,18 +90,18 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
               {/* Background circles for animation */}
               {displayStatus === 'speaking' && (
                 <>
-                  <div className="absolute inset-0 border-3 border-terracotta rounded-full animate-pulse" />
+                  <div className="absolute inset-0 border-2 border-coral rounded-full animate-pulse" />
                   <div
-                    className="absolute inset-2 border-3 border-terracotta rounded-full animate-pulse"
+                    className="absolute inset-2 border-2 border-coral rounded-full animate-pulse"
                     style={{ animationDelay: '0.2s' }}
                   />
                 </>
               )}
               {displayStatus === 'listening' && (
                 <>
-                  <div className="absolute inset-0 border-3 border-soft-sage rounded-full animate-pulse" />
+                  <div className="absolute inset-0 border-2 border-sage rounded-full animate-pulse" />
                   <div
-                    className="absolute inset-2 border-3 border-soft-sage rounded-full animate-pulse"
+                    className="absolute inset-2 border-2 border-sage rounded-full animate-pulse"
                     style={{ animationDelay: '0.2s' }}
                   />
                 </>
@@ -109,29 +109,29 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
 
               {/* Center Circle */}
               <div
-                className={`relative z-10 w-16 h-16 rounded-full border-3 border-charcoal flex items-center justify-center ${
+                className={`relative z-10 w-16 h-16 rounded-full border-2 border-ink flex items-center justify-center ${
                   displayStatus === 'speaking'
-                    ? 'bg-terracotta'
+                    ? 'bg-coral'
                     : displayStatus === 'listening'
-                    ? 'bg-soft-sage'
+                    ? 'bg-sage'
                     : displayStatus === 'connecting'
-                    ? 'bg-muted-taupe'
+                    ? 'bg-muted'
                     : displayStatus === 'error'
-                    ? 'bg-peach'
-                    : 'bg-warm-beige'
+                    ? 'bg-coral'
+                    : 'bg-cream'
                 }`}
               >
                 {displayStatus === 'error' ? (
-                  <span className="text-2xl font-black">!</span>
+                  <span className="text-2xl font-display font-extrabold text-ink">!</span>
                 ) : (
-                  <Mic className="w-8 h-8 text-charcoal" />
+                  <Mic className="w-8 h-8 text-ink" />
                 )}
               </div>
             </div>
 
             {/* Status Text */}
             <div className="text-center">
-              <p className="font-black text-charcoal uppercase text-sm">
+              <p className="font-display font-extrabold text-cream uppercase text-sm">
                 {displayStatus === 'idle' && 'Ready'}
                 {displayStatus === 'connecting' && 'Connecting...'}
                 {displayStatus === 'connected' && 'Connected - Speak Now'}
@@ -139,7 +139,7 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
                 {displayStatus === 'listening' && 'Listening to You'}
                 {displayStatus === 'error' && 'Connection Error'}
               </p>
-              <p className="text-xs text-charcoal mt-1">
+              <p className="text-xs text-muted mt-1">
                 {displayStatus === 'listening' && 'Your microphone is active'}
                 {displayStatus === 'speaking' && 'The agent is speaking'}
               </p>
@@ -148,11 +148,11 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
         </div>
 
         {/* Controls */}
-        <div className="border-t-3 border-charcoal bg-off-white p-4 flex gap-3">
+        <div className="border-t-2 border-hairline bg-ink p-4 flex gap-3">
           {/* End Call Button */}
           <button
             onClick={handleEndCall}
-            className="w-full bg-peach text-charcoal px-4 py-3 border-3 border-charcoal shadow-brutal-xs font-black uppercase text-sm hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-brutal-sm transition-all duration-200 flex items-center justify-center gap-2 rounded-sm"
+            className="w-full bg-coral text-ink px-4 py-3 border-2 border-ink shadow-brutal-xs font-sans font-bold uppercase text-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150 flex items-center justify-center gap-2"
           >
             <Phone className="w-4 h-4" />
             <span>End Call</span>

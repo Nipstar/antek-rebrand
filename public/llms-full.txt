@@ -94,18 +94,18 @@ Full transparent pricing for all five products with comparison table, per-produc
 ## Service Areas
 Headquartered in Andover, Hampshire. UK-wide remote delivery.
 
-- [Hampshire](https://www.antekautomation.com/locations/hampshire)
-- [Southampton](https://www.antekautomation.com/locations/southampton)
+- [All Locations](https://www.antekautomation.com/locations)
+- [Hampshire (county hub)](https://www.antekautomation.com/locations/hampshire)
 - [Andover](https://www.antekautomation.com/locations/andover)
-- [Salisbury](https://www.antekautomation.com/locations/salisbury)
+- [Basingstoke](https://www.antekautomation.com/locations/basingstoke)
+- [Winchester](https://www.antekautomation.com/locations/winchester)
+- [Southampton](https://www.antekautomation.com/locations/southampton)
+- [Portsmouth](https://www.antekautomation.com/locations/portsmouth)
+- [Berkshire (county hub)](https://www.antekautomation.com/locations/berkshire)
+- [Reading](https://www.antekautomation.com/locations/reading)
 - [Newbury](https://www.antekautomation.com/locations/newbury)
-- [London](https://www.antekautomation.com/locations/london)
-- [Birmingham](https://www.antekautomation.com/locations/birmingham)
-- [Manchester](https://www.antekautomation.com/locations/manchester)
-- [Leeds](https://www.antekautomation.com/locations/leeds)
-- [Liverpool](https://www.antekautomation.com/locations/liverpool)
-- [Glasgow](https://www.antekautomation.com/locations/glasgow)
-- [Newcastle](https://www.antekautomation.com/locations/newcastle)
+- [Salisbury](https://www.antekautomation.com/locations/salisbury)
+- [Bournemouth](https://www.antekautomation.com/locations/bournemouth)
 
 ## Industries Served
 Hospitality, dental practices, legal firms, accounting practices, trades (plumbers, electricians, HVAC, builders, roofers), cleaning companies, estate agents, salons, fitness and wellness, property management, veterinary practices, professional services, IT and MSPs.
