@@ -7,13 +7,14 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function Card({ children, className = '', hover = false, ...rest }: CardProps) {
+  // Ink panel, 2px coral border, hard offset shadow, zero radius.
   const hoverClasses = hover
-    ? 'hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-brutal-lg transition-all duration-200'
+    ? 'hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-150'
     : '';
 
   return (
     <div
-      className={`bg-white border-3 border-charcoal shadow-brutal rounded-none p-10 md:p-12 ${hoverClasses} ${className}`}
+      className={`bg-ink border-2 border-coral shadow-brutal-coral rounded-none p-10 md:p-12 ${hoverClasses} ${className}`}
       {...rest}
     >
       {children}

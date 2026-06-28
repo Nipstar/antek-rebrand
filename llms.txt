@@ -1,40 +1,44 @@
 # Antek Automation
 
-> AI automation company based in Andover, Hampshire providing AI voice assistants, chatbots, and workflow automation for UK businesses.
+> AI automation agency based in Andover, Hampshire providing AI voice agents, website chatbots, n8n workflow automation, and GEO (Generative Engine Optimisation) for UK businesses.
 
 ## Services
 
-- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised AI phone answering service for UK SMBs. Screens callers, captures details, and books appointments 24/7. From £97/month with setup from £249. Industry pages for electricians, plumbers, HVAC engineers, accountants, lawyers, veterinary practices, dentists, and therapists.
-- [AI Voice Assistants](https://www.antekautomation.com/services/ai-voice-assistants): 24/7 AI phone agents that answer calls, book appointments, capture details, and transfer urgent calls for UK businesses across hospitality, trades, dental, and legal sectors.
-- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Custom-trained website chatbots that answer questions, capture leads, book appointments, and qualify prospects. Handles ~80% of conversations autonomously.
-- [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): Business process automation built on n8n (open source) connecting 400+ tools including Google Workspace, Xero, Stripe, HubSpot, Slack, and WhatsApp. Saves 10-20 hours/week.
+- [AI Voice Agents](https://www.antekautomation.com/services/ai-voice-assistants): Custom AI voice agents that work inbound and outbound — answer calls in a natural voice, and call new leads back in seconds, qualify them, confirm appointments and chase follow-ups. 24/7. From £97/month + £249 setup. Certified Retell AI partner.
+- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Custom-trained website chatbots that answer questions, capture leads, book appointments, and qualify prospects. Handles ~80% of conversations autonomously. From £57/month + £149 setup.
+- [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): Business process automation built on n8n (open source) connecting 400+ tools including Google Workspace, Xero, Stripe, HubSpot, Slack, and WhatsApp. One-off projects from £250. Saves 10-20 hours/week.
+- [GEO Audit](https://www.antekautomation.com/services/geo-audit): Generative Engine Optimisation — get your business cited in AI search answers (ChatGPT, Perplexity, Google AI Overviews, Gemini). Audit, fix and stay visible. From £247.
+- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised inbound call-answering service for UK SMBs — screens callers, captures details, and books appointments 24/7. From £97/month + £249 setup. Industry pages for electricians, plumbers, HVAC engineers, accountants, lawyers, veterinary practices, dentists, and therapists.
 
 ## About
 
 - [About](https://www.antekautomation.com/about): About Antek Automation and founder Andy Norman. 30+ years in technology, Certified Retell AI Partner, FSB member. Based in Andover, Hampshire.
-- [Homepage](https://www.antekautomation.com): Overview of AI automation services with case studies showing 95% reduction in missed calls, 3-day ROI payback, and £5K/month admin savings.
-- [Contact](https://www.antekautomation.com/contact): Contact form, phone (0333 038 9960), email (hello@antekautomation.com), office location in Andover, Hampshire.
+- [Homepage](https://www.antekautomation.com): AI automation agency overview — four services (voice, chat, automation, GEO) with illustrative case studies.
+- [Pricing](https://www.antekautomation.com/pricing): Transparent pricing for AI Voice & Receptionist, AI Chatbot, Workflow Automation and GEO Audit, with a side-by-side comparison table.
+- [Contact](https://www.antekautomation.com/contact): Contact form, Cal.com booking, phone (0333 038 9960), email (hello@antekautomation.com), office location in Andover, Hampshire.
 
 ## Locations
 
-- [London](https://www.antekautomation.com/locations/london): AI automation services for London businesses.
-- [Hampshire](https://www.antekautomation.com/locations/hampshire): Headquarters in Andover serving Hampshire businesses including Southampton, Winchester, Basingstoke.
-- [Birmingham](https://www.antekautomation.com/locations/birmingham): AI automation services for Birmingham and West Midlands businesses.
-- [Manchester](https://www.antekautomation.com/locations/manchester): AI automation services for Manchester and Greater Manchester businesses.
-- [Glasgow](https://www.antekautomation.com/locations/glasgow): AI automation services for Glasgow and Scottish businesses.
-- [Leeds](https://www.antekautomation.com/locations/leeds): AI automation services for Leeds and West Yorkshire businesses.
-- [Liverpool](https://www.antekautomation.com/locations/liverpool): AI automation services for Liverpool and Merseyside businesses.
-- [Newcastle](https://www.antekautomation.com/locations/newcastle): AI automation services for Newcastle and North East businesses.
-- [Southampton](https://www.antekautomation.com/locations/southampton): AI automation services for Southampton businesses.
-- [Andover](https://www.antekautomation.com/locations/andover): Local AI automation services from Antek Automation's headquarters.
+- [All Locations](https://www.antekautomation.com/locations): The Antek location network across Hampshire, Berkshire and the South Coast.
+- [Hampshire](https://www.antekautomation.com/locations/hampshire): County hub serving Andover, Basingstoke, Winchester, Southampton and Portsmouth.
+- [Andover](https://www.antekautomation.com/locations/andover): Local AI automation services from Antek Automation's Andover headquarters.
+- [Basingstoke](https://www.antekautomation.com/locations/basingstoke): AI automation for Basingstoke businesses.
+- [Winchester](https://www.antekautomation.com/locations/winchester): AI automation for Winchester's professional firms and trades.
+- [Southampton](https://www.antekautomation.com/locations/southampton): AI automation for Southampton businesses.
+- [Portsmouth](https://www.antekautomation.com/locations/portsmouth): AI automation for Portsmouth and the Solent area.
+- [Berkshire](https://www.antekautomation.com/locations/berkshire): County hub for the Thames Valley, serving Reading and Newbury.
+- [Reading](https://www.antekautomation.com/locations/reading): AI automation for Reading and the Thames Valley.
+- [Newbury](https://www.antekautomation.com/locations/newbury): AI automation for Newbury and West Berkshire.
+- [Salisbury](https://www.antekautomation.com/locations/salisbury): AI automation for Salisbury, Wiltshire.
+- [Bournemouth](https://www.antekautomation.com/locations/bournemouth): AI automation for Bournemouth, Christchurch and Poole.
 
 ## Key Facts
 
 - Headquarters: Chantry House, 38 Chantry Way, Andover, Hampshire, SP10 1LZ
 - Phone: 0333 038 9960
 - Founder: Andy Norman (30+ years in technology)
-- Certified Retell AI Partner
-- AI Receptionist from £249 setup + £97/month, AI Chatbots from £149 setup + £57/month, AI Voice Agents from £249 setup + £97/month, Workflow Automation from £250
+- Certified Retell AI Partner, FSB member
+- Pricing: AI Voice Agents & AI Receptionist from £97/month + £249 setup · AI Chatbots from £57/month + £149 setup · Workflow Automation from £250 (one-off) · GEO Audit from £247
 - Industries served: Hospitality, dental, legal, accounting, trades, cleaning, estate agents, restaurants, salons, fitness, property management, veterinary
 
 ## Contact

@@ -1,27 +1,33 @@
 # Antek Automation Website
 
-A production-ready marketing website for Antek Automation — a UK-based AI automation company serving service businesses. Built with React, TypeScript, Tailwind CSS, and featuring a neo-brutalist design with an earth-tone palette.
+A production-ready marketing website for Antek Automation — a UK-based AI automation agency serving service businesses. Built with Vite + Vike (file-based SSR/pre-render), React 18, TypeScript and Tailwind CSS, featuring the **neo-brutalist dark brand system (v2.0)**.
 
 ## Features
 
-- **Neo-Brutalist Design**: 3px borders, hard shadows, geometric layouts, no rounded corners
-- **Earth-Tone Palette**: Warm beige, soft sage, terracotta, charcoal, off-white
-- **AI Chatbot Widget**: Persistent chat widget with n8n webhook integration (auto-opens on first visit)
-- **ElevenLabs Voice Agent**: Voice AI demo integration on the Voice Assistants service page
-- **Contact Form**: Lead capture form with n8n webhook
-- **Location Pages**: Dynamic city-specific landing pages (London, Birmingham, Manchester, etc.)
-- **SEO Optimised**: JSON-LD schema, Open Graph tags, sitemap, meta descriptions per page
-- **Code Splitting**: Lazy-loaded pages via React.lazy() for fast initial load
-- **Analytics**: Google Analytics + Meta Pixel tracking
+- **Neo-Brutalist Dark Design**: charcoal base, 2px borders, hard offset shadows, zero border-radius, fixed background grid
+- **Coral Brand Palette**: coral accent, cream display text, ink panels (see Design System below)
+- **Self-hosted Fonts**: Outfit (display), DM Sans (body), JetBrains Mono (labels) via `@fontsource` — no third-party CDN
+- **Section-heading system**: `HeadlineBlock` — Outfit 800 uppercase, 5px coral left bar, cream with one coral phrase
+- **Four services**: AI Voice Agents, AI Chatbots, Workflow Automation, GEO (Generative Engine Optimisation), plus the productised AI Receptionist
+- **Live Voice Demos**: Retell AI orb demos (`RetellDemoCards`) + ElevenLabs `VoiceChat` modal
+- **Cal.com booking**: official `@calcom/embed-react` embed (dark + coral brand)
+- **AI Chatbot Widget**: persistent widget with n8n webhook integration (auto-opens on first visit, consent-gated)
+- **Contact Form**: lead capture form with n8n webhook
+- **Location Network**: Hampshire + Berkshire county hubs over town pages (Andover, Basingstoke, Winchester, Southampton, Portsmouth, Reading, Newbury, Salisbury, Bournemouth) — anti-cannibalisation, one canonical Organization node
+- **SEO/GEO Optimised**: JSON-LD schema, Open Graph, canonical, FAQPage matching visible content, per-page meta (title ≤60, description ~150–160)
+- **Code Splitting**: lazy-loaded widgets/modals; Vike pre-renders every route to static HTML
+- **Analytics**: Google Analytics + Microsoft Clarity + Meta Pixel (Consent Mode v2, default-denied until accept)
 
 ## Tech Stack
 
+- Vike (`vike-react`) — file-based routing + SSR/pre-render (every route → static HTML)
 - React 18 + TypeScript
 - Vite (build tool & dev server)
-- Tailwind CSS
+- Tailwind CSS (v3)
+- `@fontsource` — self-hosted Outfit / DM Sans / JetBrains Mono
 - Lucide React (icons)
-- @elevenlabs/react (voice chat)
-- @supabase/supabase-js (optional backend)
+- `@elevenlabs/react` (voice chat) · `@calcom/embed-react` (booking)
+- `@supabase/supabase-js` (optional backend)
 
 ## Getting Started
 
@@ -48,14 +54,16 @@ A production-ready marketing website for Antek Automation — a UK-based AI auto
 
 ## Pages
 
-- `/` — Home (hero, services overview, industries, CTAs)
-- `/services/ai-chatbots` — AI Chatbots service page
-- `/services/ai-voice-assistants` — AI Voice Assistants service page (with ElevenLabs demo)
-- `/services/workflow-automation` — Workflow Automation service page
-- `/contact` — Contact form with webhook integration
-- `/locations/:slug` — Dynamic location pages (e.g., `/locations/london`)
-- `/terms-of-business` — Terms of business
-- `/privacy-policy` — Privacy policy
+- `/` — Home (agency hero, four services equal-weight, problem, case studies, CTAs)
+- `/services/ai-chatbots` — AI Chatbots
+- `/services/ai-voice-assistants` — AI Voice Agents (speed-to-lead / inbound + outbound; Retell + ElevenLabs demo)
+- `/services/workflow-automation` — Workflow Automation (n8n)
+- `/services/geo-audit` — GEO Audit (Generative Engine Optimisation)
+- `/ai-receptionist` + 8 industry subpages — productised inbound call answering
+- `/pricing` — pricing (AI Voice & Receptionist combined, Chatbot, Workflow, GEO) + comparison table
+- `/about` · `/contact` (Cal.com booking + form)
+- `/locations/*` — county hubs (Hampshire, Berkshire) + town pages (Andover, Basingstoke, Winchester, Southampton, Portsmouth, Reading, Newbury, Salisbury, Bournemouth)
+- `/terms-of-business` · `/privacy-policy`
 
 ## Webhook Integration
 
@@ -74,18 +82,27 @@ ngrok http 5678
 ```
 Then update `.env` with the ngrok URLs and restart the dev server.
 
-## Design System
+## Design System (Brand Guidelines v2.0)
 
-| Token | Value |
-|-------|-------|
-| Charcoal | `#1A1A1A` — Borders and text |
-| Warm Beige | `#E8DFD0` — Headers and accents |
-| Soft Sage | `#C5D8CC` — Secondary sections |
-| Terracotta | `#D97757` — CTA buttons |
-| Off-White | `#FAF8F5` — Backgrounds |
-| Borders | 3px solid (`border-3`) |
-| Shadows | Hard box shadows (`shadow-brutal`, `shadow-brutal-sm`, etc.) |
-| Typography | System font stack, uppercase headings/buttons |
+Single source of truth: `docs/ANTEK-BRAND-GUIDELINES.md` + `docs/Antek-Brand-System.pdf`. Tokens in `tailwind.config.js`, CSS vars + grid in `src/index.css`.
+
+| Token | Value | Role |
+|-------|-------|------|
+| Coral | `#CD5C3C` | Primary accent — headline phrase, bars, numerals, CTAs |
+| Cream | `#E8DCC8` | Display headings, high-contrast text on dark |
+| Charcoal | `#2C2C2C` | Base background |
+| Ink | `#1A1A1A` | Panels, cards, text on coral |
+| Sage | `#C8D8D0` | Rare secondary accent |
+| Body | `#CFC6B6` | Body text on dark (warm grey) |
+| Muted | `#8C8880` | Mono labels, captions |
+| Hairline | `rgba(232,220,200,0.10)` | Dividers / borders |
+
+- **Borders** 2px · **Shadows** hard offset only (`shadow-brutal*`, `shadow-brutal-coral`) · **Zero border-radius** · flat colour, no gradients
+- **Type**: Outfit 700/800 (display, uppercase H1/H2) · DM Sans 400/500/700 (body/UI/buttons) · JetBrains Mono 700 (eyebrows/labels)
+- **Headline rule**: cream by default, one coral phrase per heading, 5px coral left bar (via `HeadlineBlock`). Coral bands invert: ink text + one cream phrase.
+
+### Key brand components (`src/components/`)
+`HeadlineBlock` (coral-bar heading) · `Eyebrow` · `Container` (1200px, clamp padding) · `Button` (primary coral/ink, secondary cream-outline, ink-on-coral) · `Card` · `Icon` (coral chip / mono number badge) · `PricingCard` (price box) · `RetellDemoCards` · `VoiceChat` · `CalBooking` · `TrustBlock`.
 
 ## Development
 

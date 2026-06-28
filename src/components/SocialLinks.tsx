@@ -73,10 +73,10 @@ export function SocialLinks({ variant = 'footer', showLabels = true }: SocialLin
           rel="noopener noreferrer"
           className={`
             flex items-center space-x-2 px-4 py-2.5
-            ${isFooter ? 'bg-charcoal text-off-white hover:bg-off-white hover:text-charcoal' : 'bg-off-white text-charcoal hover:bg-charcoal hover:text-off-white'}
-            border-3 border-charcoal shadow-brutal-xs
+            bg-ink text-cream hover:bg-coral hover:text-ink
+            border-2 border-hairline shadow-brutal-xs
             hover:shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5
-            transition-all duration-200 font-bold text-sm uppercase
+            transition-all duration-200 font-sans font-bold text-sm uppercase
           `}
           aria-label={link.name}
         >

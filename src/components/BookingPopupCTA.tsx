@@ -59,23 +59,23 @@ export function BookingPopupCTA() {
         if (e.target === e.currentTarget) dismiss('backdrop')
       }}
     >
-      <div className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto bg-warm-beige border-3 border-charcoal shadow-brutal">
+      <div className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto bg-ink border-2 border-coral shadow-brutal-coral">
         <button
           type="button"
           aria-label="Close booking popup"
           onClick={() => dismiss('close')}
-          className="absolute top-3 right-3 z-10 w-10 h-10 flex items-center justify-center font-black text-charcoal bg-off-white border-3 border-charcoal hover:bg-terracotta hover:text-off-white transition-colors"
+          className="absolute top-3 right-3 z-10 w-10 h-10 flex items-center justify-center font-sans font-bold text-cream bg-charcoal border-2 border-hairline hover:bg-coral hover:text-ink transition-colors"
         >
           &times;
         </button>
         <div className="px-6 pt-8 pb-2 md:px-10 md:pt-10">
-          <p className="text-xs uppercase tracking-wide text-terracotta font-black mb-2">
+          <p className="text-xs uppercase tracking-wide text-coral font-sans font-bold mb-2">
             Free 30-min discovery call
           </p>
-          <h2 className="font-black text-2xl md:text-3xl uppercase tracking-tight-lg text-charcoal mb-3 pr-12">
+          <h2 className="font-display font-extrabold text-2xl md:text-3xl uppercase tracking-tight-lg text-cream mb-3 pr-12">
             Pick a time that works
           </h2>
-          <p className="text-sm md:text-base text-charcoal/80 mb-5">
+          <p className="text-sm md:text-base text-body mb-5">
             We&rsquo;ll review where AI can save you time + win you more business. No sales pitch.
             Replies within 1 hour Mon&ndash;Fri.
           </p>
@@ -83,7 +83,7 @@ export function BookingPopupCTA() {
         <div className="px-3 pb-3 md:px-6 md:pb-6">
           <CalBooking
             namespace="popup"
-            className="w-full min-h-[520px] border-3 border-charcoal bg-white"
+            className="w-full min-h-[520px] border-2 border-hairline bg-charcoal"
           />
         </div>
       </div>

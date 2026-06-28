@@ -29,3 +29,6 @@ audit-output/*
 
 # Pre-build/post-build GSC + GA4 baselines (commercial data — public repo)
 baselines/
+
+# Throwaway review screenshots
+docs/untitled folder/

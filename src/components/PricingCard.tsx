@@ -30,38 +30,38 @@ export function PricingCard({
   return (
     <div
       id={id}
-      className={`border-3 border-charcoal p-8 md:p-10 ${featured ? 'bg-warm-beige shadow-brutal' : 'bg-white shadow-brutal-sm'}`}
+      className={`border-2 border-coral p-8 md:p-10 bg-ink ${featured ? 'shadow-brutal-coral' : 'shadow-brutal-sm'}`}
     >
       {featured && (
-        <div className="inline-block border-3 border-charcoal bg-terracotta px-4 py-1 mb-6">
-          <span className="font-black uppercase text-xs text-off-white">Most Popular</span>
+        <div className="inline-block border-2 border-coral bg-coral px-4 py-1 mb-6">
+          <span className="font-sans font-bold uppercase text-xs text-ink">Most Popular</span>
         </div>
       )}
-      <h3 className="font-black text-2xl uppercase tracking-tight-lg text-charcoal mb-2">{name}</h3>
-      <p className="text-charcoal text-base leading-normal mb-6">{tagline}</p>
+      <h3 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg text-cream mb-2">{name}</h3>
+      <p className="text-body text-base leading-normal mb-6">{tagline}</p>
 
       <div className="mb-6">
-        <span className="font-black text-5xl text-terracotta">{price}</span>
+        <span className="font-display font-extrabold text-5xl text-coral">{price}</span>
         {billingLabel && (
-          <span className="text-mid-gray text-sm ml-1">{billingLabel}</span>
+          <span className="text-muted text-sm ml-1">{billingLabel}</span>
         )}
         {setupNote && (
-          <p className="text-mid-gray text-sm mt-1">{setupNote}</p>
+          <p className="text-muted text-sm mt-1">{setupNote}</p>
         )}
       </div>
 
       <ul className="space-y-3 mb-8">
         {bullets.map((b, i) => (
-          <li key={i} className="flex items-start gap-3 text-charcoal text-sm leading-normal">
-            <span className="text-terracotta font-black text-lg leading-none mt-0.5 shrink-0">&bull;</span>
+          <li key={i} className="flex items-start gap-3 text-body text-sm leading-normal">
+            <span className="text-coral font-sans font-bold text-lg leading-none mt-0.5 shrink-0">&bull;</span>
             <span>{b}</span>
           </li>
         ))}
       </ul>
 
       {integrations && (
-        <p className="text-xs text-mid-gray border-t-3 border-charcoal pt-4 mb-6">
-          <span className="font-black uppercase">Integrations: </span>{integrations}
+        <p className="text-xs text-muted border-t border-hairline pt-4 mb-6">
+          <span className="font-sans font-bold uppercase">Integrations: </span>{integrations}
         </p>
       )}
 

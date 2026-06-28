@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getStoredConsent, setStoredConsent } from '../utils/consent'
+import { Button } from './Button'
 
 export function CookieConsent() {
   const [visible, setVisible] = useState(false)
@@ -33,36 +34,28 @@ export function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie consent"
-      className="fixed bottom-28 left-4 right-4 xl:left-auto xl:right-6 xl:bottom-6 xl:max-w-md z-50 bg-charcoal border-3 border-charcoal shadow-brutal text-off-white p-5 md:p-6"
+      className="fixed bottom-28 left-4 right-4 xl:left-auto xl:right-6 xl:bottom-6 xl:max-w-md z-50 bg-ink border-2 border-coral shadow-brutal text-body p-5 md:p-6"
     >
-      <h2 className="font-black uppercase tracking-tight-lg text-lg mb-2">
+      <h2 className="font-display font-extrabold uppercase tracking-tight-lg text-lg text-cream mb-2">
         Cookies
       </h2>
       <p className="text-sm leading-relaxed mb-4">
         We use Google Analytics and Meta Pixel to understand how visitors use this site. Nothing is shared for third-party advertising. You can change your mind any time &mdash; see our{' '}
         <a
           href="/privacy-policy"
-          className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors"
+          className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors"
         >
           privacy policy
         </a>
         .
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
-        <button
-          type="button"
-          onClick={accept}
-          className="bg-terracotta border-3 border-off-white text-off-white font-black uppercase text-sm px-4 py-2 shadow-brutal-xs hover:-translate-y-0.5 hover:shadow-brutal-sm active:translate-y-0 active:shadow-none transition-all"
-        >
+        <Button type="button" variant="primary" onClick={accept} className="text-sm px-4 py-2">
           Accept
-        </button>
-        <button
-          type="button"
-          onClick={reject}
-          className="bg-off-white border-3 border-off-white text-charcoal font-black uppercase text-sm px-4 py-2 shadow-brutal-xs hover:-translate-y-0.5 hover:shadow-brutal-sm active:translate-y-0 active:shadow-none transition-all"
-        >
-          Reject
-        </button>
+        </Button>
+        <Button type="button" variant="secondary" onClick={reject} className="text-sm px-4 py-2">
+          Decline
+        </Button>
       </div>
     </div>
   )

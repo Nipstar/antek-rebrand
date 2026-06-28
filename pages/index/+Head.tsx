@@ -182,7 +182,9 @@ export function Head() {
         "Lead qualification",
         "Appointment booking",
         "Workflow automation",
-        "Business process automation"
+        "Business process automation",
+        "Generative Engine Optimisation (GEO)",
+        "AI search visibility"
       ],
       "sameAs": [
         "https://x.com/AntekAutomation",
@@ -333,6 +335,21 @@ export function Head() {
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
               "audience": { "@type": "BusinessAudience", "name": "Service businesses" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://www.antekautomation.com/#offer-geo",
+            "url": "https://www.antekautomation.com/services/geo-audit",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://www.antekautomation.com/#service-geo",
+              "name": "Generative Engine Optimisation (GEO)",
+              "description": "Make sure AI search engines like ChatGPT, Perplexity and Google's AI Overviews recommend your business. Audit, fix and stay visible in AI-generated answers.",
+              "serviceType": "Generative Engine Optimisation",
+              "provider": { "@id": "https://www.antekautomation.com/#organization" },
+              "areaServed": "GB",
+              "audience": { "@type": "BusinessAudience", "name": "UK businesses" }
             }
           }
         ]
@@ -668,19 +685,19 @@ export function Head() {
 
   return (
     <>
-      <title>AI Automation Agency UK | Stop Missing Calls | Antek</title>
-      <meta name="description" content="Andover-based AI automation agency. Voice agents, chatbots and automation that answer every call and capture every lead 24/7. Certified Retell partner." />
+      <title>AI Automation Agency UK | Voice, Chat, Automation &amp; GEO</title>
+      <meta name="description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
       <link rel="canonical" href="https://www.antekautomation.com/" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Agency UK | Stop Missing Calls | Antek" />
-      <meta property="og:description" content="Andover-based AI automation agency. Voice agents, chatbots and automation that answer every call and capture every lead 24/7. Certified Retell partner." />
+      <meta property="og:title" content="AI Automation Agency UK | Voice, Chat, Automation &amp; GEO" />
+      <meta property="og:description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
       <meta property="og:url" content="https://www.antekautomation.com/" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Agency UK | Stop Missing Calls | Antek" />
-      <meta name="twitter:description" content="Andover-based AI automation agency. Voice agents, chatbots and automation that answer every call and capture every lead 24/7. Certified Retell partner." />
+      <meta name="twitter:title" content="AI Automation Agency UK | Voice, Chat, Automation &amp; GEO" />
+      <meta name="twitter:description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
 
       {/* JSON-LD: WebPage + Organization schema */}
       <script

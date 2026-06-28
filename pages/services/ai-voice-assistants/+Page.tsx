@@ -2,6 +2,8 @@ import { useState, lazy, Suspense } from 'react'
 import { Button } from '../../../src/components/Button'
 import { Card } from '../../../src/components/Card'
 import { Icon } from '../../../src/components/Icon'
+import { Container } from '../../../src/components/Container'
+import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { RetellDemoCards } from '../../../src/components/RetellDemoCards'
@@ -10,336 +12,331 @@ const VoiceChat = lazy(() =>
   import('../../../src/components/VoiceChat').then((m) => ({ default: m.VoiceChat }))
 )
 
+// What our voice agents do — six jobs, one agent.
+const JOBS = [
+  {
+    title: 'Speed to lead',
+    body: 'The moment a lead comes in — web form, missed call, ad click — the AI calls them back. In seconds, not the next morning. The faster you respond, the more you win, and most businesses respond far too slowly. This is the single biggest thing voice AI can do for your revenue.',
+  },
+  {
+    title: 'Qualify and book',
+    body: 'It asks your qualifying questions, scores the lead, and only books the ones worth your time. Budget, timeline, job type, location. You get warm, qualified appointments in your calendar, not a diary full of tyre-kickers.',
+  },
+  {
+    title: 'Confirm and remind',
+    body: "Outbound calls that confirm tomorrow's bookings, cut your no-show rate, and offer a rebook if they can't make it. Your diary stays full and accurate without anyone lifting the phone.",
+  },
+  {
+    title: 'Customer service',
+    body: 'It handles the routine inbound — opening hours, job status, account questions, the same five FAQs you answer every day. Your team stops getting interrupted and deals with the work that actually needs a human.',
+  },
+  {
+    title: 'Follow up and reactivate',
+    body: 'It chases quotes that went quiet, follows up after a job, asks for a review, and wins back lapsed customers. The calls you know you should make and never get round to.',
+  },
+  {
+    title: 'Overflow and after-hours',
+    body: "It sits alongside your existing phone team and picks up the overflow at peak and the calls after everyone's gone home. You stop paying for round-the-clock cover you don't need.",
+  },
+]
+
 export default function Page() {
   const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false)
 
   return (
-    <div className="bg-off-white">
+    <div>
       {/* Hero Section */}
-      <section className="bg-warm-beige border-b-3 border-charcoal">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <section className="border-b border-hairline">
+        <Container className="py-20 md:py-28">
           <div className="max-w-4xl">
-            <p className="text-sm uppercase tracking-wide text-charcoal mb-4 font-black">
-              AI VOICE AGENTS &bull; UK
+            <HeadlineBlock as="h1" kicker="AI VOICE AGENTS • UK">
+              Your leads go cold in minutes. <span className="text-coral">Your AI calls them back in seconds.</span>
+            </HeadlineBlock>
+            <p className="text-xl text-body leading-normal mb-4 mt-6 max-w-[60ch]">
+              Speed-to-lead callbacks, lead qualifying, appointment reminders and customer service. Inbound and outbound, around the clock. This is voice AI doing the whole job, not just answering the phone.
             </p>
-            <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6 leading-tight">
-              An AI Receptionist That Actually Sounds Like a Real Person
-            </h1>
-            <p className="text-xl text-charcoal leading-normal mb-4">
-              Our AI voice agents answer every call, book appointments, qualify leads and send you the details. They work 24/7 and cost less than a part-time hire.
-            </p>
-            <p className="text-sm text-mid-gray mb-8">By <a href="/about" className="underline hover:text-terracotta transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Last updated March 2026</p>
+            <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Certified Retell AI Partner</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <Button variant="primary" onClick={() => setIsVoiceChatOpen(true)}>
                 Try the Demo Now
               </Button>
               <a href="/contact">
                 <Button variant="secondary">
-                  Get Your Voice Agent
+                  Book a Free 30-Min Discovery Call
                 </Button>
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <QuickRecap items={[
-        'An AI agent answers your calls 24/7, books appointments directly into your calendar, and sends you a call summary',
-        'For UK businesses missing calls when they\'re on the job, in a meeting, or out of hours',
-        'From £97/month + £249 one-off setup — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">see full pricing</a>',
-        'Live in 24–48 hours — we configure everything from your website, no long setup',
-        '~80% of incoming calls handled without you picking up; the rest are transferred or messaged to you',
+        'An AI voice agent that calls new leads back in seconds, qualifies them, books the good ones, confirms appointments and handles routine customer calls',
+        "Works inbound and outbound — the calls you can't get to, and the calls you never get round to making",
+        'For UK businesses losing leads to slow follow-up, no-shows and a phone that never stops',
+        'From £97/month + £249 setup — bespoke outbound and multi-step builds scoped on a call — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see pricing</a>',
+        'Live in 24–48 hours, configured from your website and your tools',
       ]} />
 
-      {/* Problem Section */}
+      {/* The real problem */}
       <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
-            How Many Calls Did You Miss Last Week?
-          </h2>
-          <div className="space-y-6 text-lg text-charcoal leading-normal">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            You don't lose work to a ringing phone. You lose it in the <span className="text-coral">gaps around it.</span>
+          </HeadlineBlock>
+          <div className="space-y-6 text-lg text-body leading-normal max-w-[65ch]">
             <p>
-              Be honest. You were on a job. In a meeting. Having dinner with your family. The phone rang, you couldn't get to it, and whoever was calling hung up and rang someone else.
+              Most businesses don't lose work because the phone rings out. They lose it in the gaps around the phone.
             </p>
             <p>
-              It happens to every business owner. You're busy doing the actual work, and the phone just keeps ringing. You can't answer it when you're elbow-deep in a project, mid-conversation with a client, or trying to have five minutes of peace.
+              A lead fills in your form at 9pm and you call back at 11am the next day. They've already booked someone else. A customer rings to ask where their job is, and your engineer picks up mid-task to answer it. Tomorrow's appointments don't get confirmed, so two of them no-show. The quote you sent last week goes quiet, and you never chase it.
             </p>
-            <div className="bg-peach border-3 border-charcoal p-6">
-              <p className="font-black text-charcoal text-xl mb-2">
-                Many UK small businesses miss a significant portion of incoming calls — especially during busy periods, out of hours, and when owners are on other jobs.
-              </p>
-              <p className="text-charcoal">
-                That's not a guess. That's real data. Every one of those missed calls is lost revenue — straight to the competitor who picked up.
-              </p>
-            </div>
             <p>
-              Voicemail? Nobody leaves voicemails anymore. They just call the next number on Google. You'll never even know they tried.
+              None of that is a missed call. It's slow follow-up, wasted time on routine questions, and the jobs you meant to chase but didn't. A voice agent closes those gaps — both directions, day and night.
             </p>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* How It Works */}
-      <section className="bg-soft-sage border-y-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-6 text-center">
-            Here's What Happens When Someone Rings You
-          </h2>
-          <p className="text-lg text-charcoal text-center mb-16 max-w-3xl mx-auto">
-            From the moment the phone rings to the moment you get a summary in your pocket. The whole thing takes about two minutes.
+      {/* What our voice agents do — numbered rows */}
+      <section className="bg-ink border-y border-hairline py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-6">
+            What Our <span className="text-coral">Voice Agents</span> Do
+          </HeadlineBlock>
+          <p className="text-lg text-body mb-12 max-w-[60ch]">
+            Six jobs, one agent. Built around how your business actually runs.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                1
+          <div className="border-t border-hairline">
+            {JOBS.map((job, i) => (
+              <div key={job.title} className="grid md:grid-cols-[auto_1fr] gap-x-6 gap-y-2 py-6 border-b border-hairline">
+                <span className="font-mono font-bold text-coral text-lg">{String(i + 1).padStart(2, '0')}</span>
+                <div className="max-w-[65ch]">
+                  <h3 className="font-display font-extrabold text-xl uppercase text-cream mb-2">{job.title}</h3>
+                  <p className="text-body leading-normal">{job.body}</p>
+                </div>
               </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                The Phone Rings
-              </h3>
-              <p className="text-charcoal leading-normal">
-                Someone calls your business number. Your AI agent picks up within two rings. No hold music. No "press 1 for sales." Just a friendly, natural-sounding voice.
-              </p>
-            </Card>
-
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                2
-              </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                It Has a Proper Conversation
-              </h3>
-              <p className="text-charcoal leading-normal">
-                The AI asks what they need, answers questions about your services, pricing, and availability. It's trained on your business, so it actually knows what it's talking about.
-              </p>
-            </Card>
-
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                3
-              </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                It Captures Their Details
-              </h3>
-              <p className="text-charcoal leading-normal">
-                Name, number, email, what they need, when they need it. All collected naturally during the conversation, not through some robotic questionnaire.
-              </p>
-            </Card>
-
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                4
-              </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                It Books the Appointment
-              </h3>
-              <p className="text-charcoal leading-normal">
-                Connected to your calendar, so it checks your real availability and books them in. They get a confirmation text or email straight away.
-              </p>
-            </Card>
-
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                5
-              </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                You Get a Summary
-              </h3>
-              <p className="text-charcoal leading-normal">
-                Within seconds, you get a text or email with everything: who called, what they want, their contact details, and when they're booked in. Check it when you're ready.
-              </p>
-            </Card>
-
-            <Card hover>
-              <div className="w-16 h-16 bg-terracotta text-off-white flex items-center justify-center font-black text-3xl border-3 border-charcoal shadow-brutal-sm mb-6">
-                6
-              </div>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-3">
-                Urgent? It Puts Them Through
-              </h3>
-              <p className="text-charcoal leading-normal">
-                If something's genuinely urgent, or it's a high-value caller, the AI recognises that and transfers the call to your mobile straight away. You decide the rules.
-              </p>
-            </Card>
+            ))}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Comparison Table */}
+      {/* Spotlight: speed to lead */}
       <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-4">
-            How Does an AI Voice Agent Compare to Other Options?
-          </h2>
-          <p className="text-lg text-charcoal leading-normal mb-10">
-            An AI voice agent handles calls autonomously using natural conversation, unlike voicemail which callers ignore or answering services that cost significantly more per hour. Here's how the options stack up for a typical UK small business.
+        <Container>
+          <HeadlineBlock className="mb-8">
+            Spotlight: <span className="text-coral">speed to lead.</span>
+          </HeadlineBlock>
+          <div className="space-y-6 text-lg text-body leading-normal max-w-[65ch]">
+            <p className="font-bold text-cream">If you do one thing with voice AI, do this.</p>
+            <p>
+              The data on lead response time is brutal. Contact a lead within the first minute and you're far more likely to convert them than if you wait even half an hour. Wait until the next day, which is what most busy businesses do, and the lead has usually gone cold or gone elsewhere.
+            </p>
+            <p>
+              Your AI voice agent removes the wait entirely. A form hits your website, a caller hangs up, an ad generates an enquiry — and the agent rings them straight back while your business is still the one they were looking at. It qualifies them, books them if they're ready, and hands you a hot lead instead of a cold one.
+            </p>
+            <p>
+              You can't sit by the phone 24/7. It can.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* How it compares */}
+      <section className="bg-ink border-y border-hairline py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-4">
+            How It <span className="text-coral">Compares</span>
+          </HeadlineBlock>
+          <p className="text-lg text-body leading-normal mb-10 max-w-[65ch]">
+            A voice agent isn't another inbox or another hire. Here's how it stacks up against doing it yourself and against a traditional call centre.
           </p>
 
           <div className="overflow-x-auto">
-            <table className="w-full border-3 border-charcoal text-left text-sm">
+            <table className="w-full border-2 border-hairline text-left text-sm">
               <thead>
-                <tr className="bg-charcoal text-off-white">
-                  <th className="p-4 font-black uppercase border-r-3 border-off-white/20"></th>
-                  <th className="p-4 font-black uppercase border-r-3 border-off-white/20">AI Voice Agent</th>
-                  <th className="p-4 font-black uppercase border-r-3 border-off-white/20">Answering Service</th>
-                  <th className="p-4 font-black uppercase">Voicemail</th>
+                <tr className="bg-coral text-ink">
+                  <th className="p-4 font-display font-extrabold uppercase border-r border-ink/20"></th>
+                  <th className="p-4 font-display font-extrabold uppercase border-r border-ink/20">AI Voice Agent</th>
+                  <th className="p-4 font-display font-extrabold uppercase border-r border-ink/20">You &amp; Your Team</th>
+                  <th className="p-4 font-display font-extrabold uppercase">Call Centre</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t-3 border-charcoal bg-white">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Availability</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">24/7/365</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Business hours only (usually)</td>
-                  <td className="p-4 text-charcoal">24/7 but callers rarely leave messages</td>
+                <tr className="border-t border-hairline bg-charcoal">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Speed to lead</td>
+                  <td className="p-4 text-body border-r border-hairline">Calls back in seconds</td>
+                  <td className="p-4 text-body border-r border-hairline">When you get a minute</td>
+                  <td className="p-4 text-body">Inbound only, usually</td>
                 </tr>
-                <tr className="border-t-3 border-charcoal bg-peach">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Monthly Cost</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal"><a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">From £97/month — see pricing</a></td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">£200-£800/month</td>
-                  <td className="p-4 text-charcoal">Free</td>
+                <tr className="border-t border-hairline bg-ink">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Outbound follow-up</td>
+                  <td className="p-4 text-body border-r border-hairline">Automatic, every time</td>
+                  <td className="p-4 text-body border-r border-hairline">When you remember</td>
+                  <td className="p-4 text-body">Extra cost per campaign</td>
                 </tr>
-                <tr className="border-t-3 border-charcoal bg-white">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Books Appointments</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Yes, directly into your calendar</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Sometimes, depends on provider</td>
-                  <td className="p-4 text-charcoal">No</td>
+                <tr className="border-t border-hairline bg-charcoal">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Availability</td>
+                  <td className="p-4 text-body border-r border-hairline">24/7/365</td>
+                  <td className="p-4 text-body border-r border-hairline">Working hours</td>
+                  <td className="p-4 text-body">Set hours, premium for more</td>
                 </tr>
-                <tr className="border-t-3 border-charcoal bg-peach">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Knows Your Business</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Trained on your services, pricing, FAQs</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Basic script only</td>
-                  <td className="p-4 text-charcoal">N/A</td>
+                <tr className="border-t border-hairline bg-ink">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Consistency</td>
+                  <td className="p-4 text-body border-r border-hairline">Same every call</td>
+                  <td className="p-4 text-body border-r border-hairline">Varies with the day</td>
+                  <td className="p-4 text-body">Script-bound</td>
                 </tr>
-                <tr className="border-t-3 border-charcoal bg-white">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Caller Experience</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Natural conversation, answers questions</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Takes a message</td>
-                  <td className="p-4 text-charcoal">Recorded greeting</td>
+                <tr className="border-t border-hairline bg-charcoal">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Knows your business</td>
+                  <td className="p-4 text-body border-r border-hairline">Trained on it</td>
+                  <td className="p-4 text-body border-r border-hairline">Yes</td>
+                  <td className="p-4 text-body">Basic script</td>
                 </tr>
-                <tr className="border-t-3 border-charcoal bg-peach">
-                  <td className="p-4 font-bold text-charcoal border-r-3 border-charcoal">Scales With You</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Handles unlimited concurrent calls</td>
-                  <td className="p-4 text-charcoal border-r-3 border-charcoal">Cost increases with volume</td>
-                  <td className="p-4 text-charcoal">One at a time</td>
+                <tr className="border-t border-hairline bg-ink">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Cost</td>
+                  <td className="p-4 text-body border-r border-hairline"><a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">From £97/month</a></td>
+                  <td className="p-4 text-body border-r border-hairline">Your time</td>
+                  <td className="p-4 text-body">£200–£800+/month</td>
+                </tr>
+                <tr className="border-t border-hairline bg-charcoal">
+                  <td className="p-4 font-bold text-cream border-r border-hairline">Scales</td>
+                  <td className="p-4 text-body border-r border-hairline">Unlimited concurrent calls</td>
+                  <td className="p-4 text-body border-r border-hairline">One call at a time</td>
+                  <td className="p-4 text-body">Cost rises with volume</td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* What It Won't Do */}
-      <section className="bg-warm-beige border-b-3 border-charcoal py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-8">
-            What Are the Limits of an AI Voice Agent?
-          </h2>
-          <p className="text-lg text-charcoal leading-normal mb-10">
-            We're not going to pretend this is magic. It's brilliant technology, but it has limits. Here's what you should know:
-          </p>
-
-          <div className="space-y-8">
-            <Card>
-              <Icon letter="1" size="md" />
-              <h3 className="font-black text-xl uppercase text-charcoal mt-4 mb-3">
+      {/* What it can't do */}
+      <section className="py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            What It <span className="text-coral">Can't Do</span>
+          </HeadlineBlock>
+          <div className="space-y-8 max-w-[65ch]">
+            <Card className="bg-ink">
+              <Icon letter="01" size="md" mono />
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">
                 It's Not a Human
               </h3>
-              <p className="text-charcoal leading-normal">
-                About 1 in 20 callers will realise they're talking to AI. Most won't. But some will, and a few of them might prefer to speak to a real person. That's fine -- the AI can transfer them to you or take a message.
+              <p className="text-body leading-normal">
+                About 1 in 20 callers clock that it's AI. If someone wants a person, it transfers them or takes a message.
               </p>
             </Card>
 
-            <Card>
-              <Icon letter="2" size="md" />
-              <h3 className="font-black text-xl uppercase text-charcoal mt-4 mb-3">
-                It Can't Handle Truly Complex Issues
+            <Card className="bg-ink">
+              <Icon letter="02" size="md" mono />
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">
+                It Won't Blag Complex Issues
               </h3>
-              <p className="text-charcoal leading-normal">
-                If someone rings with a complicated complaint or a situation that needs real judgement, the AI will take their details and flag it for you. It's not going to try to blag its way through something it shouldn't.
+              <p className="text-body leading-normal">
+                A complicated complaint or a judgement call gets captured and flagged for you, not bluffed through.
               </p>
             </Card>
 
-            <Card>
-              <Icon letter="3" size="md" />
-              <h3 className="font-black text-xl uppercase text-charcoal mt-4 mb-3">
-                It Needs Setting Up Properly
+            <Card className="bg-ink">
+              <Icon letter="03" size="md" mono />
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">
+                It's Only as Good as Its Setup
               </h3>
-              <p className="text-charcoal leading-normal">
-                The quality depends on how well it's trained on your business. That's why we spend time getting your services, prices, FAQs, and processes right. Answer accuracy depends on training data — which is why onboarding is thorough.
+              <p className="text-body leading-normal">
+                Quality depends on how well it's trained on your business, which is why onboarding is thorough.
               </p>
             </Card>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* FAQ Section */}
+      {/* Cross-link block — prevents overlap with the AI Receptionist page */}
+      <section className="py-12 md:py-16">
+        <Container>
+          <div className="border-l-[5px] border-coral bg-ink p-6 md:p-8 max-w-[65ch]">
+            <p className="font-display font-extrabold text-xl uppercase text-cream mb-2">
+              Just want your inbound calls <span className="text-coral">answered and screened?</span>
+            </p>
+            <p className="text-body leading-normal mb-4">
+              That's our productised AI Receptionist — answer, screen and book, from £97/month.
+            </p>
+            <a href="/ai-receptionist" className="font-sans font-bold uppercase text-sm text-coral hover:underline">
+              See the AI Receptionist &rarr;
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* FAQ Section — six questions, must match the FAQPage schema in +Head */}
       <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-charcoal mb-10">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
-                How much does an AI voice agent cost?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+        <Container>
+          <HeadlineBlock className="mb-10">
+            Frequently Asked <span className="text-coral">Questions</span>
+          </HeadlineBlock>
+          <div className="space-y-4 max-w-[65ch]">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                What's the difference between a voice agent and your AI Receptionist?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                From £97/month with a £249 one-off setup fee. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">See full pricing</a> — no hidden fees.
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                The AI Receptionist is our productised inbound product — it answers, screens and books your incoming calls. A voice agent is the broader, bespoke build: it does that plus outbound work like speed-to-lead callbacks, appointment reminders, follow-ups and customer service. If you just need calls answered, start with the Receptionist.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                Can it make outbound calls, not just answer them?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Yes. That's the main thing that sets it apart. It calls leads back, confirms appointments, chases quotes and follows up after jobs — triggered by your forms, your CRM or a schedule.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                How fast can it call a new lead back?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Within seconds of the lead coming in. The moment a form is submitted or a call is missed, the agent rings them back, while they're still interested.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
                 Will callers know they're talking to AI?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                About 1 in 20 callers notice. The voice sounds natural and conversational — most people assume they're speaking to a receptionist. If someone does ask for a real person, the AI can transfer them to you or take a message.
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                About 1 in 20 notice. The voice is natural. If someone wants a person, it transfers or takes a message.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
-                Can it book appointments into my calendar?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                What does it integrate with?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Yes. It connects to Google Calendar, Outlook, Calendly, and other scheduling tools. It checks your real availability, books the caller in, and sends them a confirmation automatically.
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Google Calendar, Outlook, Calendly, and most CRMs and field-service tools via API or webhook. Outbound calls can be triggered straight from your existing systems.
               </div>
             </details>
 
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
-                What happens if the AI can't answer a question?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                How much does it cost?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                It takes the caller's details and flags it for you to follow up. It won't make things up or try to blag its way through something it shouldn't. You get a notification with the caller's name, number, and what they asked about.
-              </div>
-            </details>
-
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
-                How long does it take to set up?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Typically 24–48 hours from kickoff. We pull your services, pricing, and FAQs from your website, configure the screening logic, and forward your number. Most clients are live the same day or next day.
-              </div>
-            </details>
-
-            <details className="border-3 border-charcoal bg-white shadow-brutal-sm group">
-              <summary className="font-black text-lg text-charcoal px-6 py-5 cursor-pointer list-none flex justify-between items-center">
-                What support is included?
-                <span className="text-terracotta text-2xl group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <div className="px-6 pb-6 text-charcoal leading-relaxed border-t-3 border-charcoal pt-4">
-                Standard queries are responded to within 24 hours. Critical incidents — such as the agent going offline during business hours — are responded to within 4 hours. Included across all plans.
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                From £97/month with a £249 setup. Bespoke outbound and multi-step builds are scoped on a quick call. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>.
               </div>
             </details>
           </div>
-        </div>
+        </Container>
       </section>
 
       <ResourcesCompliance links={[
@@ -350,17 +347,17 @@ export default function Page() {
 
       {/* CTA Section */}
       <section className="bg-charcoal py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="font-black text-4xl md:text-5xl uppercase tracking-tight-lg text-off-white mb-6">
-            Try It Right Now
-          </h2>
-          <p className="text-lg text-off-white leading-normal mb-4">
+        <Container>
+          <HeadlineBlock className="mb-6">
+            Try It <span className="text-coral">Right Now</span>
+          </HeadlineBlock>
+          <p className="text-lg text-body leading-normal mb-4 max-w-[65ch]">
             Seriously. Hit the button below and have a chat with our demo agent. Ask it anything. See how natural it sounds. No signup, no credit card, no sales pitch. Just the tech, doing its thing.
           </p>
-          <p className="text-off-white leading-normal mb-10">
+          <p className="text-body leading-normal mb-10 max-w-[65ch]">
             If you like what you hear, get in touch and we'll build one for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="primary" className="text-lg px-10" onClick={() => setIsVoiceChatOpen(true)}>
               Talk to the AI Agent
             </Button>
@@ -370,70 +367,61 @@ export default function Page() {
               </Button>
             </a>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* ── RETELL INDUSTRY DEMOS (pop-card orbs) ── */}
+      {/* ── RETELL DEMOS — reframed around use-case scenarios ── */}
       <RetellDemoCards
-        heading="Hear a Voice Agent in Action"
-        subhead="Tap an industry and talk to a live AI agent — the same kind we build for businesses like yours."
+        heading={<>Hear a <span className="text-coral">Voice Agent</span> in Action</>}
+        subhead="Speed-to-lead callback, qualifying call, reminder and rebook — tap a scenario and talk to a live AI agent, the same kind we build for businesses like yours."
       />
 
       {/* ── GEO CROSS-SELL (our 4th service — AI-search visibility) ── */}
-      <section className="bg-warm-beige border-y-3 border-charcoal py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-lg text-charcoal mb-6">
-            Your Phone&rsquo;s Covered. Is AI Search Covering You?
+      <section className="bg-coral py-16 md:py-20">
+        <Container>
+          <h2 className="font-display font-extrabold text-3xl md:text-4xl uppercase tracking-tight-lg text-ink mb-6">
+            Your Phone&rsquo;s Covered. Is <span className="text-cream">AI Search Covering You?</span>
           </h2>
-          <p className="text-lg text-charcoal leading-relaxed mb-6">
-            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From &pound;247.
+          <p className="text-lg text-ink leading-relaxed mb-6 max-w-[60ch]">
+            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From &pound;247.
           </p>
           <a href="/services/geo-audit">
-            <Button variant="primary">Check Your AI Visibility &rarr;</Button>
+            <Button variant="ink">Check Your AI Visibility &rarr;</Button>
           </a>
-        </div>
+        </Container>
       </section>
 
       {/* Internal Links */}
       <section className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h3 className="font-black text-2xl uppercase tracking-tight-lg text-charcoal mb-8 text-center">
-            Related Services
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        <Container>
+          <HeadlineBlock as="h3" className="mb-8">
+            Related <span className="text-coral">Services</span>
+          </HeadlineBlock>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             <a href="/services/ai-chatbots" className="block">
-              <Card hover>
-                <Icon letter="C" size="md" />
-                <h4 className="font-black text-lg uppercase text-charcoal mt-4 mb-2">AI Chatbots</h4>
-                <p className="text-charcoal text-sm leading-normal">
+              <Card hover className="h-full">
+                <Icon letter="01" size="md" mono />
+                <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">AI Chatbots</h4>
+                <p className="text-body text-sm leading-normal">
                   Capture leads on your website 24/7 with a chatbot trained on your business.
                 </p>
               </Card>
             </a>
             <a href="/services/workflow-automation" className="block">
-              <Card hover>
-                <Icon letter="W" size="md" />
-                <h4 className="font-black text-lg uppercase text-charcoal mt-4 mb-2">Workflow Automation</h4>
-                <p className="text-charcoal text-sm leading-normal">
+              <Card hover className="h-full">
+                <Icon letter="02" size="md" mono />
+                <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">Workflow Automation</h4>
+                <p className="text-body text-sm leading-normal">
                   Automate the admin that's burying you. CRM updates, invoicing, follow-ups.
                 </p>
               </Card>
             </a>
-            <a href="/locations/hampshire" className="block">
-              <Card hover>
-                <Icon letter="H" size="md" />
-                <h4 className="font-black text-lg uppercase text-charcoal mt-4 mb-2">Hampshire</h4>
-                <p className="text-charcoal text-sm leading-normal">
-                  AI automation services for businesses across Hampshire and the South Coast.
-                </p>
-              </Card>
-            </a>
           </div>
-          <p className="text-center text-charcoal mt-8">
+          <p className="text-body mt-8">
             Local to us? See AI voice agents for{' '}
-            <a href="/locations/basingstoke" className="underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors">Basingstoke businesses</a>.
+            <a href="/locations/basingstoke" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Basingstoke businesses</a>.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* Voice Chat Modal */}

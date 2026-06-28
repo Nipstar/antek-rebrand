@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '../../src/components/Button';
 import { Card } from '../../src/components/Card';
+import { Container } from '../../src/components/Container';
+import { HeadlineBlock } from '../../src/components/HeadlineBlock';
 import { CalBooking } from '../../src/components/CalBooking';
 import { CONSTANTS } from '../../src/constants';
 import { SocialLinks } from '../../src/components/SocialLinks';
@@ -209,31 +211,31 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-soft-sage py-20 md:py-28" data-contact-region>
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-12">
-          <h1 className="font-black text-5xl md:text-6xl uppercase tracking-tight-xl text-charcoal mb-6">
-            Let's Build Your AI Automation Solution
-          </h1>
-          <p className="text-lg text-charcoal leading-normal max-w-2xl mx-auto">
+    <div className="py-20 md:py-28" data-contact-region>
+      <Container>
+        <div className="mb-12">
+          <HeadlineBlock as="h1" className="mb-6">
+            Let's Build Your <span className="text-coral">AI Automation Solution</span>
+          </HeadlineBlock>
+          <p className="text-lg text-body leading-normal max-w-[60ch]">
             Whether you're a restaurant, consultancy, retailer, or healthcare provider&mdash;tell us your challenges and we'll show you exactly how AI automation can transform your business
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <Card>
-            <div className="mb-6 border-l-4 border-terracotta bg-warm-beige/60 px-4 py-3 text-charcoal">
+            <div className="mb-6 border-l-4 border-coral bg-charcoal px-4 py-3 text-body">
               <p className="font-bold text-sm md:text-base">
                 Free 30-min discovery call. No sales pitch.
               </p>
-              <p className="text-sm text-charcoal/80 mt-1">
+              <p className="text-sm text-muted mt-1">
                 We reply within 1 hour Mon&ndash;Fri 9&ndash;6. No long-term contracts.
               </p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Name *
                 </label>
                 <input
@@ -241,20 +243,20 @@ export default function Page() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                  className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                   placeholder="John Smith"
                 />
               </div>
 
               <div>
-                <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Business Name
                 </label>
                 <input
                   type="text"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                  className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                  className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                   placeholder="Your Business Name Ltd"
                 />
               </div>
@@ -262,7 +264,7 @@ export default function Page() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Phone *
                 </label>
                 <input
@@ -270,13 +272,13 @@ export default function Page() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                  className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                   placeholder="+44 7123 456789"
                 />
               </div>
 
               <div>
-                <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Email *
                 </label>
                 <input
@@ -284,14 +286,14 @@ export default function Page() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                  className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                   placeholder="john@yourbusiness.co.uk"
                 />
               </div>
             </div>
 
             <div>
-              <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+              <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                 Industry / Business Type *
               </label>
               <input
@@ -299,13 +301,13 @@ export default function Page() {
                 required
                 value={formData.serviceType}
                 onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                 placeholder="e.g., Restaurant, Law Firm, E-commerce, Healthcare, Retail"
               />
             </div>
 
             <div>
-              <label className="font-black text-charcoal mb-3 block uppercase text-sm">
+              <label className="font-sans font-bold text-cream mb-3 block uppercase text-sm">
                 What interests you? *
               </label>
               <div className="space-y-3">
@@ -321,9 +323,9 @@ export default function Page() {
                       type="checkbox"
                       checked={formData.interests.includes(option.value)}
                       onChange={() => handleCheckboxChange(option.value)}
-                      className="accent-terracotta w-5 h-5 border-3 border-charcoal"
+                      className="accent-coral w-5 h-5 border-2 border-coral"
                     />
-                    <span className="text-charcoal">{option.label}</span>
+                    <span className="text-body">{option.label}</span>
                   </label>
                 ))}
               </div>
@@ -331,7 +333,7 @@ export default function Page() {
 
             {formData.interests.includes('geo_audit') && (
               <div>
-                <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Website URL *
                 </label>
                 <input
@@ -339,28 +341,28 @@ export default function Page() {
                   required={formData.interests.includes('geo_audit')}
                   value={formData.websiteUrl}
                   onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
-                  className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal"
+                  className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
                   placeholder="https://www.yourbusiness.co.uk"
                 />
-                <p className="text-sm text-mid-gray mt-1">The website we'll audit for AI search visibility</p>
+                <p className="text-sm text-muted mt-1">The website we'll audit for AI search visibility</p>
               </div>
             )}
 
             <div>
-              <label className="font-black text-charcoal mb-2 block uppercase text-sm">
+              <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                 Tell us about your needs
               </label>
               <textarea
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={5}
-                className="w-full border-3 border-charcoal bg-white px-4 py-3 focus:border-terracotta focus:outline-none text-charcoal resize-none"
+                className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream resize-none"
                 placeholder="What challenges are you facing? How can we help?"
               />
             </div>
 
             <div>
-              <label className="font-black text-charcoal mb-3 block uppercase text-sm">
+              <label className="font-sans font-bold text-cream mb-3 block uppercase text-sm">
                 Preferred Contact Method *
               </label>
               <div className="flex flex-wrap gap-4">
@@ -376,9 +378,9 @@ export default function Page() {
                       value={option.value}
                       checked={formData.preferredContact === option.value}
                       onChange={(e) => setFormData({ ...formData, preferredContact: e.target.value as 'phone' | 'email' | 'either' })}
-                      className="accent-terracotta w-5 h-5"
+                      className="accent-coral w-5 h-5"
                     />
-                    <span className="text-charcoal font-bold">{option.label}</span>
+                    <span className="text-cream font-bold">{option.label}</span>
                   </label>
                 ))}
               </div>
@@ -390,11 +392,11 @@ export default function Page() {
 
             {submitStatus.type && (
               <div
-                className={`p-4 border-3 border-charcoal ${
-                  submitStatus.type === 'success' ? 'bg-success-green' : 'bg-peach'
+                className={`p-4 border-2 ${
+                  submitStatus.type === 'success' ? 'bg-sage border-sage' : 'bg-ink border-coral'
                 }`}
               >
-                <p className={`font-bold ${submitStatus.type === 'success' ? 'text-off-white' : 'text-charcoal'}`}>
+                <p className={`font-bold ${submitStatus.type === 'success' ? 'text-ink' : 'text-cream'}`}>
                   {submitStatus.message}
                 </p>
               </div>
@@ -409,7 +411,7 @@ export default function Page() {
               {isSubmitting ? 'Sending...' : 'Send Enquiry'}
             </Button>
 
-              <p className="text-sm text-charcoal text-center">
+              <p className="text-sm text-muted text-center">
                 We typically respond within 2 hours during business hours
               </p>
             </form>
@@ -418,11 +420,11 @@ export default function Page() {
 
         {/* Book a Call (Cal.com inline) */}
         <div className="max-w-5xl mx-auto mt-16">
-          <div className="text-center mb-8">
-            <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-xl text-charcoal mb-4">
-              Or Book a Free 30-Minute Call
-            </h2>
-            <p className="text-charcoal max-w-2xl mx-auto">
+          <div className="mb-8">
+            <HeadlineBlock className="mb-4">
+              Or Book a <span className="text-coral">Free 30-Minute Call</span>
+            </HeadlineBlock>
+            <p className="text-body max-w-[60ch]">
               Pick a slot that works for you. We&rsquo;ll talk through what you&rsquo;re trying to fix and where AI can actually help.
             </p>
           </div>
@@ -431,22 +433,22 @@ export default function Page() {
 
         {/* Contact Information Section */}
         <div className="mt-20 mb-16">
-          <h2 className="font-black text-3xl md:text-4xl uppercase tracking-tight-xl text-charcoal mb-10 text-center">
-            Other Ways to Reach Us
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-2">Email</h3>
-              <p className="text-charcoal break-words"><a href={`mailto:${CONSTANTS.CONTACT_EMAIL}`} className="hover:text-terracotta transition-colors font-bold break-words">{CONSTANTS.CONTACT_EMAIL}</a></p>
+          <HeadlineBlock className="mb-10">
+            Other Ways to <span className="text-coral">Reach Us</span>
+          </HeadlineBlock>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+            <Card className="h-full">
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mb-2">Email</h3>
+              <p className="text-body break-words"><a href={`mailto:${CONSTANTS.CONTACT_EMAIL}`} className="hover:text-coral transition-colors font-bold break-words">{CONSTANTS.CONTACT_EMAIL}</a></p>
             </Card>
-            <Card>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-2">Phone</h3>
-              <p className="text-charcoal"><a href="tel:03330389960" className="hover:text-terracotta transition-colors font-bold">0333 038 9960</a></p>
+            <Card className="h-full">
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mb-2">Phone</h3>
+              <p className="text-body"><a href="tel:03330389960" className="hover:text-coral transition-colors font-bold">0333 038 9960</a></p>
             </Card>
-            <Card>
-              <h3 className="font-black text-xl uppercase text-charcoal mb-2">Location</h3>
-              <p className="text-charcoal">
-                <a href="https://maps.google.com/?q=Chantry+House,+38+Chantry+Way,+Andover,+SP10+1LZ" target="_blank" rel="noopener noreferrer" className="hover:text-terracotta transition-colors font-bold">
+            <Card className="h-full">
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream mb-2">Location</h3>
+              <p className="text-body">
+                <a href="https://maps.google.com/?q=Chantry+House,+38+Chantry+Way,+Andover,+SP10+1LZ" target="_blank" rel="noopener noreferrer" className="hover:text-coral transition-colors font-bold">
                   Chantry House<br />
                   38 Chantry Way<br />
                   Andover, SP10 1LZ
@@ -459,18 +461,18 @@ export default function Page() {
         {/* Connect With Us Section */}
         <div className="max-w-3xl mx-auto">
           <Card>
-          <div className="text-center mb-8">
-            <h2 className="font-black text-3xl uppercase tracking-tight-xl text-charcoal mb-4">
-              Connect With Us
-            </h2>
-            <p className="text-charcoal text-lg">
+          <div className="mb-8">
+            <HeadlineBlock className="mb-4">
+              <span className="text-coral">Connect</span> With Us
+            </HeadlineBlock>
+            <p className="text-body text-lg">
               Follow us on social media and stay updated with the latest AI automation insights
             </p>
           </div>
           <SocialLinks variant="page" showLabels={true} />
         </Card>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

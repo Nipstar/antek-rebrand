@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 import { X } from 'lucide-react';
 import { Card } from './Card';
 import { Icon } from './Icon';
+import { Container } from './Container';
+import { HeadlineBlock } from './HeadlineBlock';
 import { retellDemos, LOCATION_DEMO_INDUSTRIES, type RetellDemo } from '../data/retellDemos';
 
 interface RetellDemoCardsProps {
-  heading?: string;
+  heading?: ReactNode;
   subhead?: string;
   /** optional filter by industry key (e.g. ['heating']); defaults to all demos */
   industries?: string[];
@@ -19,7 +21,7 @@ interface RetellDemoCardsProps {
 // iframe (asks for mic, then you can talk to the agent). If Retell ever blocks framing
 // on this domain, the "open in a new tab" fallback below the iframe always works.
 export function RetellDemoCards({
-  heading = 'Talk to a Live AI Agent',
+  heading = <>Talk to a <span className="text-coral">Live AI Agent</span></>,
   subhead = 'Tap an industry and talk to a live AI voice agent right in your browser — the same kind we build for your business.',
   industries,
   curated = false,
@@ -51,13 +53,13 @@ export function RetellDemoCards({
           className="block text-left group"
           aria-label={`Try the ${demo.label} voice demo`}
         >
-          <Card hover>
+          <Card hover className="h-full">
             <Icon letter={demo.icon} size="md" />
-            <h3 className="font-black text-xl uppercase text-charcoal mt-4 mb-3 group-hover:text-terracotta transition-colors">
+            <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3 group-hover:text-coral transition-colors">
               {demo.label}
             </h3>
-            <p className="text-charcoal leading-relaxed text-sm mb-4">{demo.blurb}</p>
-            <span className="inline-block font-black uppercase text-sm text-terracotta">
+            <p className="text-body leading-relaxed text-sm mb-4">{demo.blurb}</p>
+            <span className="inline-block font-sans font-bold uppercase text-sm text-coral">
               Try the live demo &rarr;
             </span>
           </Card>
@@ -73,20 +75,20 @@ export function RetellDemoCards({
       onClick={() => setActive(null)}
     >
       <div
-        className="bg-off-white border-3 border-charcoal shadow-brutal-chat w-full max-w-md h-[80vh] max-h-[680px] flex flex-col overflow-hidden"
+        className="bg-ink border-2 border-coral shadow-brutal-chat w-full max-w-md h-[80vh] max-h-[680px] flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
         aria-label={`${active.label} voice demo`}
       >
-        <div className="bg-warm-beige border-b-3 border-charcoal p-4 flex items-center justify-between gap-3">
+        <div className="bg-charcoal border-b-2 border-coral p-4 flex items-center justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="font-black text-lg uppercase truncate">{active.label} Demo</h3>
-            <p className="text-xs text-charcoal">Allow microphone access, then talk to the agent.</p>
+            <h3 className="font-display font-extrabold text-lg uppercase text-cream truncate">{active.label} Demo</h3>
+            <p className="text-xs text-muted">Allow microphone access, then talk to the agent.</p>
           </div>
           <button
             onClick={() => setActive(null)}
-            className="shrink-0 w-8 h-8 flex items-center justify-center hover:bg-charcoal hover:text-off-white transition-colors border-2 border-charcoal"
+            className="shrink-0 w-8 h-8 flex items-center justify-center text-cream hover:bg-coral hover:text-ink transition-colors border-2 border-coral"
             aria-label="Close demo"
           >
             <X className="w-5 h-5" />
@@ -97,16 +99,16 @@ export function RetellDemoCards({
           key={active.industry}
           src={active.orbUrl}
           title={`${active.label} AI voice demo`}
-          className="flex-1 w-full bg-off-white"
+          className="flex-1 w-full bg-ink"
           allow="microphone; autoplay; clipboard-write; encrypted-media"
         />
 
-        <div className="border-t-3 border-charcoal bg-off-white p-3 text-center">
+        <div className="border-t-2 border-hairline bg-ink p-3 text-center">
           <a
             href={active.orbUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-black uppercase text-xs underline underline-offset-4 decoration-terracotta decoration-2 hover:text-terracotta transition-colors"
+            className="font-sans font-bold uppercase text-xs text-cream underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors"
           >
             Demo not loading? Open in a new tab &rarr;
           </a>
@@ -126,16 +128,14 @@ export function RetellDemoCards({
   }
 
   return (
-    <section className="bg-soft-sage border-y-3 border-charcoal py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="bg-ink border-y border-hairline py-20 md:py-28">
+      <Container>
         <div className="max-w-3xl mb-12">
-          <h2 className="font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight-lg text-charcoal mb-4">
-            {heading}
-          </h2>
-          {subhead && <p className="text-lg text-charcoal leading-relaxed">{subhead}</p>}
+          <HeadlineBlock className="mb-4">{heading}</HeadlineBlock>
+          {subhead && <p className="text-lg text-body leading-relaxed mt-4">{subhead}</p>}
         </div>
         {grid}
-      </div>
+      </Container>
       {modal}
     </section>
   );

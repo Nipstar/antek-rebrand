@@ -1,6 +1,6 @@
 interface TrustStripProps {
   className?: string
-  /** Visual variant: 'dark' (charcoal text on light bg) or 'light' (off-white text on dark bg) */
+  /** Visual variant: 'dark' (body text) or 'light' (cream text) — both on the dark base */
   variant?: 'dark' | 'light'
 }
 
@@ -12,8 +12,8 @@ const PILLS = [
 ]
 
 export function TrustStrip({ className = '', variant = 'dark' }: TrustStripProps) {
-  const textCls = variant === 'dark' ? 'text-charcoal' : 'text-off-white'
-  const checkCls = 'text-terracotta'
+  const textCls = variant === 'dark' ? 'text-body' : 'text-cream'
+  const checkCls = 'text-coral'
   return (
     <ul
       aria-label="Why work with us"

@@ -6,7 +6,7 @@ export const CONSTANTS = {
   // Chatbot behavior
   CHATBOT_AUTO_OPEN_DELAY_MS: 5000,
   CHATBOT_VISITED_KEY: 'chatbot_visited',
-  CHATBOT_WELCOME_MESSAGE: "Hi there! I'm Antek AI. Whether you need help with missed calls, lead capture, or automating busywork—I'm here to help. What brings you here today?",
+  CHATBOT_WELCOME_MESSAGE: "Hi there! I'm Antek AI. Whether you need help with missed calls, lead capture, or automating busywork — I'm here to help. What brings you here today?",
 
   // Contact information
   CONTACT_EMAIL: 'hello@antekautomation.com',

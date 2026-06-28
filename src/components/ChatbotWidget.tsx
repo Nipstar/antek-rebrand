@@ -208,63 +208,63 @@ export function ChatbotWidget() {
             setMessages([welcomeMessage])
           }
         }}
-        className="fixed bottom-8 right-8 w-16 h-16 bg-terracotta border-3 border-charcoal shadow-brutal rounded-full flex items-center justify-center hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal-lg transition-all duration-200 z-50 group"
-        style={{ bottom: 'calc(2rem + env(safe-area-inset-bottom))' }}
+        className="fixed bottom-8 right-8 w-16 h-16 bg-coral border-2 border-ink shadow-brutal flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-150 z-[60] group"
+        style={{ bottom: 'calc(5rem + env(safe-area-inset-bottom))' }}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
         title={isOpen ? 'Close chat' : 'Chat with us'}
       >
         <div className="relative flex items-center justify-center">
           {isOpen ? (
-            <X className="w-8 h-8 text-off-white" />
+            <X className="w-8 h-8 text-ink" />
           ) : (
             <>
-              <MessageCircle className="w-8 h-8 text-off-white" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-off-white rounded-full animate-pulse"></span>
+              <MessageCircle className="w-8 h-8 text-ink" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-ink animate-pulse"></span>
             </>
           )}
         </div>
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-24 left-4 right-4 xl:bottom-24 xl:right-6 xl:left-auto w-auto xl:w-[400px] max-h-[calc(100vh-150px)] xl:h-[600px] bg-off-white border-3 border-charcoal shadow-brutal-chat flex flex-col z-50">
-          <div className="bg-warm-beige border-b-3 border-charcoal p-4 flex items-center justify-between">
+        <div className="fixed bottom-28 left-4 right-4 xl:bottom-28 xl:right-6 xl:left-auto w-auto xl:w-[400px] max-h-[calc(100vh-170px)] xl:h-[600px] bg-ink border-2 border-coral shadow-brutal-chat flex flex-col z-[60]">
+          <div className="bg-charcoal border-b-2 border-coral p-4 flex items-center justify-between">
             <div>
-              <h3 className="font-black text-xl uppercase">Antek AI</h3>
-              <p className="text-xs text-charcoal">Always here to help</p>
+              <h3 className="font-display font-extrabold text-xl uppercase text-cream">Antek AI</h3>
+              <p className="text-xs text-muted">Always here to help</p>
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-off-white">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-ink">
             {messages.map((msg) => (
               <div
                 key={msg.id}
                 className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}
               >
                 <div
-                  className={`max-w-[70%] ${
+                  className={`max-w-[70%] p-3 border-2 ${
                     msg.isBot
-                      ? 'bg-white border-2 border-charcoal shadow-brutal-msg'
-                      : 'bg-warm-beige border-2 border-charcoal shadow-brutal-msg'
-                  } p-3 rounded-sm`}
+                      ? 'bg-charcoal border-coral'
+                      : 'bg-coral border-ink'
+                  }`}
                 >
-                  <p className="text-charcoal text-sm leading-normal">{msg.message}</p>
+                  <p className={`text-sm leading-normal ${msg.isBot ? 'text-cream' : 'text-ink'}`}>{msg.message}</p>
                 </div>
               </div>
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-white border-2 border-charcoal shadow-brutal-msg p-3 rounded-sm">
+                <div className="bg-charcoal border-2 border-coral p-3">
                   <div className="flex space-x-2">
-                    <div className="w-2 h-2 bg-charcoal rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-charcoal rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-charcoal rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                    <div className="w-2 h-2 bg-coral rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-coral rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-coral rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                   </div>
                 </div>
               </div>
             )}
             {!startersUsed && !isLoading && (
               <div className="pt-1">
-                <p className="text-[11px] uppercase tracking-wide text-charcoal/60 font-bold mb-2">
+                <p className="text-[11px] uppercase tracking-wide text-muted font-bold mb-2">
                   Quick questions
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -273,7 +273,7 @@ export function ChatbotWidget() {
                       key={s}
                       type="button"
                       onClick={() => handleStarter(s)}
-                      className="text-left text-xs bg-white border-2 border-charcoal text-charcoal px-3 py-2 hover:bg-warm-beige hover:-translate-y-0.5 hover:shadow-brutal-xs transition-all"
+                      className="text-left text-xs bg-transparent border-2 border-[rgba(232,220,200,0.18)] text-cream px-3 py-2 hover:border-coral transition-colors"
                     >
                       {s}
                     </button>
@@ -284,20 +284,20 @@ export function ChatbotWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          <form onSubmit={handleSubmit} className="border-t-3 border-charcoal p-4 flex gap-2 bg-off-white">
+          <form onSubmit={handleSubmit} className="border-t-2 border-hairline p-4 flex gap-2 bg-ink">
             <input
               ref={inputRef}
               type="text"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="Type message..."
-              className="flex-1 border-3 border-charcoal px-3 py-2 focus:border-terracotta focus:outline-none bg-white text-charcoal"
+              className="flex-1 border-2 border-coral px-3 py-2 bg-ink text-cream placeholder:text-muted focus:border-coral"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={isLoading || !inputMessage.trim()}
-              className="bg-terracotta text-off-white px-4 py-2 border-3 border-charcoal shadow-brutal-xs font-black hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-brutal-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-coral text-ink px-4 py-2 border-2 border-ink shadow-brutal-xs hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150 disabled:cursor-not-allowed"
             >
               <Send className="w-5 h-5" />
             </button>
