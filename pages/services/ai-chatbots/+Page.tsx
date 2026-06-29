@@ -357,7 +357,7 @@ export default function Page() {
           <HeadlineBlock as="h3" className="mb-8">
             Related <span className="text-coral">Services</span>
           </HeadlineBlock>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             <a href="/ai-receptionist" className="block">
               <Card hover className="h-full">
                 <Icon letter="01" size="md" mono />
@@ -382,15 +382,6 @@ export default function Page() {
                 <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">Workflow Automation</h4>
                 <p className="text-body text-sm leading-normal">
                   Automate the admin that's burying you. CRM updates, invoicing, follow-ups.
-                </p>
-              </Card>
-            </a>
-            <a href="/locations/hampshire" className="block">
-              <Card hover className="h-full">
-                <Icon letter="04" size="md" mono />
-                <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">Hampshire</h4>
-                <p className="text-body text-sm leading-normal">
-                  AI automation services for businesses across Hampshire and the South Coast.
                 </p>
               </Card>
             </a>
