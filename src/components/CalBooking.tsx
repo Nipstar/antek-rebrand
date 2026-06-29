@@ -11,7 +11,7 @@ interface CalBookingProps {
 export function CalBooking({
   calLink = 'antek-automation/30min',
   namespace = '30min',
-  className = 'w-full min-h-[600px] border-2 border-coral shadow-brutal bg-ink overflow-hidden',
+  className = 'w-full min-h-[600px] border-2 border-coral shadow-brutal bg-ink overflow-hidden p-4 md:p-6',
 }: CalBookingProps) {
   // Gate render to the client — the embed touches browser APIs, and the page is
   // pre-rendered (SSR) by Vike.
@@ -38,7 +38,7 @@ export function CalBooking({
         namespace={namespace}
         calLink={calLink}
         style={{ width: '100%', height: '100%', overflow: 'scroll' }}
-        config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true' }}
+        config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true', theme: 'dark' }}
       />
     </div>
   )
