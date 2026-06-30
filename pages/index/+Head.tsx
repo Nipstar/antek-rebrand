@@ -113,7 +113,7 @@ export function Head() {
           "areaServed": "GB"
         }
       ],
-      "priceRange": "From \u00a3149",
+      "priceRange": "From \u00a357/mo",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -233,6 +233,14 @@ export function Head() {
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
               "audience": { "@type": "BusinessAudience", "name": "UK businesses" },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "AI Chatbot Pricing",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "AI Chatbot Setup", "price": "149", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitText": "one-time" } },
+                  { "@type": "Offer", "name": "AI Chatbot Subscription", "price": "57", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "57", "priceCurrency": "GBP", "unitText": "month", "billingIncrement": 1, "billingDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } } }
+                ]
+              },
               "category": [
                 {
                   "@type": "DefinedTerm",
@@ -270,12 +278,20 @@ export function Head() {
             "itemOffered": {
               "@type": "Service",
               "@id": "https://www.antekautomation.com/#service-voice-ai",
-              "name": "AI Voice Assistants",
+              "name": "AI Voice Agents",
               "description": "Phone agents that answer calls, take bookings, and handle customer questions with natural conversation 24/7.",
               "serviceType": "AI voice agent call handling and booking automation",
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
               "audience": { "@type": "BusinessAudience", "name": "UK businesses" },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "AI Voice Agent Pricing",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "AI Voice Agent Setup", "price": "249", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "249", "priceCurrency": "GBP", "unitText": "one-time" } },
+                  { "@type": "Offer", "name": "AI Voice Agent Retainer", "price": "97", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "97", "priceCurrency": "GBP", "unitText": "month", "billingIncrement": 1, "billingDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } } }
+                ]
+              },
               "category": [
                 {
                   "@type": "DefinedTerm",
@@ -334,7 +350,14 @@ export function Head() {
               "serviceType": "Workflow automation and system integrations",
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
-              "audience": { "@type": "BusinessAudience", "name": "Service businesses" }
+              "audience": { "@type": "BusinessAudience", "name": "Service businesses" },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Workflow Automation Pricing",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "Workflow Automation Project", "description": "One-off project, from", "price": "250", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "250", "priceCurrency": "GBP", "unitText": "one-time" } }
+                ]
+              }
             }
           },
           {
@@ -349,7 +372,14 @@ export function Head() {
               "serviceType": "Generative Engine Optimisation",
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
-              "audience": { "@type": "BusinessAudience", "name": "UK businesses" }
+              "audience": { "@type": "BusinessAudience", "name": "UK businesses" },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "GEO Pricing",
+                "itemListElement": [
+                  { "@type": "Offer", "name": "GEO Audit", "description": "From — entry-level GEO audit", "price": "247", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "247", "priceCurrency": "GBP", "unitText": "one-time" } }
+                ]
+              }
             }
           }
         ]
@@ -604,56 +634,6 @@ export function Head() {
     ]
   };
 
-  const voiceAgentServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://www.antekautomation.com/#service-voice-agents",
-    "name": "AI Voice Agents",
-    "description": "AI-powered voice agents that answer calls, book appointments, qualify leads, and handle customer enquiries 24/7 for UK businesses.",
-    "provider": { "@id": "https://www.antekautomation.com/#organization" },
-    "serviceType": "AI Voice Agent Development",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "AI Voice Agent Pricing",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "AI Voice Agent Setup",
-          "price": "2997",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2997",
-            "priceCurrency": "GBP",
-            "unitText": "one-time"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "AI Voice Agent Retainer",
-          "price": "297",
-          "priceCurrency": "GBP",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "297",
-            "priceCurrency": "GBP",
-            "unitText": "month",
-            "billingIncrement": 1,
-            "billingDuration": {
-              "@type": "QuantitativeValue",
-              "value": 1,
-              "unitCode": "MON"
-            }
-          }
-        }
-      ]
-    }
-  };
-
   const workflowAutomationServiceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -667,21 +647,6 @@ export function Head() {
       "name": "United Kingdom"
     }
   };
-
-  const geoServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://www.antekautomation.com/#service-geo",
-    "name": "Generative Engine Optimisation (GEO)",
-    "description": "Generative Engine Optimisation ensures your business appears in AI-generated search results from ChatGPT, Claude, Gemini, and Perplexity \u2014 not just traditional Google results.",
-    "provider": { "@id": "https://www.antekautomation.com/#organization" },
-    "serviceType": "Generative Engine Optimisation",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    }
-  };
-
 
   return (
     <>
@@ -711,22 +676,10 @@ export function Head() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* JSON-LD: Service schema — AI Voice Agents */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(voiceAgentServiceSchema) }}
-      />
-
-      {/* JSON-LD: Service schema — n8n Workflow Automation */}
+      {/* JSON-LD: Service schema — n8n Workflow Automation (standalone; distinct from the org-catalog "Automation" service) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(workflowAutomationServiceSchema) }}
-      />
-
-      {/* JSON-LD: Service schema — GEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(geoServiceSchema) }}
       />
 
     </>
