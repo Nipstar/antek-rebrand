@@ -262,6 +262,86 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* ── FAQ ── */}
+      <section className="border-b border-hairline py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-12">
+            Questions We Get <span className="text-coral">Asked</span>
+          </HeadlineBlock>
+          <div className="space-y-4 max-w-[65ch]">
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What does Antek Automation do?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                We build AI voice agents, website chatbots, workflow automation and GEO for UK businesses. Capture the leads you miss, cut the admin that eats your evenings, and get named when buyers ask AI search for a business like yours.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                How much does it cost?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Voice agents from &pound;97/month, chatbots from &pound;57/month, workflow automation projects from &pound;250, and GEO audits from &pound;247. Setup fees are one-off and quoted up front. No long-term contracts.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                How quickly can you go live?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Voice and chat products are usually live within 24 to 48 hours. Larger automation builds take one to two weeks, depending on the integrations involved.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Do I need to be in Hampshire?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                No. We&rsquo;re based in Andover and happy to meet locally, but everything runs in the cloud. Most clients across the UK work with us entirely over video call and screen share.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Will callers know they&rsquo;re talking to AI?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                About 1 in 20 do. The voice is natural and the agent handles routine calls end to end. When a conversation needs a human, it takes a message or routes it on. If automation isn&rsquo;t right for the job, we tell you.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What is GEO and do I need it?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                GEO is Generative Engine Optimisation: making sure ChatGPT, Perplexity, Claude and Google&rsquo;s AI Overviews recommend you instead of a competitor. If buyers ask AI for a business like yours and you&rsquo;re not in the answer, you need it. We audit, fix and monitor.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink shadow-brutal-sm group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Are you tied into a contract?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                No long-term contracts and no lock-in. Monthly products are month to month.
+              </div>
+            </details>
+          </div>
+        </Container>
+      </section>
+
       {/* ── FINAL CTA ── */}
       <QuickRecap items={[
         'We build AI voice agents, chatbots, workflow automation and GEO for UK businesses',

@@ -444,6 +444,70 @@ export function Head() {
             { "@type": "ListItem", "position": 4, "name": "Beauty", "description": "Salons, spas, wellness centers" }
           ]
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.antekautomation.com/#faq",
+        "isPartOf": { "@id": "https://www.antekautomation.com/#webpage" },
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Antek Automation do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build AI voice agents, website chatbots, workflow automation and GEO for UK businesses. Capture the leads you miss, cut the admin that eats your evenings, and get named when buyers ask AI search for a business like yours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voice agents from £97/month, chatbots from £57/month, workflow automation projects from £250, and GEO audits from £247. Setup fees are one-off and quoted up front. No long-term contracts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can you go live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voice and chat products are usually live within 24 to 48 hours. Larger automation builds take one to two weeks, depending on the integrations involved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to be in Hampshire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We’re based in Andover and happy to meet locally, but everything runs in the cloud. Most clients across the UK work with us entirely over video call and screen share."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will callers know they’re talking to AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 1 in 20 do. The voice is natural and the agent handles routine calls end to end. When a conversation needs a human, it takes a message or routes it on. If automation isn’t right for the job, we tell you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO and do I need it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GEO is Generative Engine Optimisation: making sure ChatGPT, Perplexity, Claude and Google’s AI Overviews recommend you instead of a competitor. If buyers ask AI for a business like yours and you’re not in the answer, you need it. We audit, fix and monitor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you tied into a contract?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No long-term contracts and no lock-in. Monthly products are month to month."
+            }
+          }
+        ]
       }
     ],
     "citation": [
@@ -500,123 +564,6 @@ export function Head() {
         "headline": "Antek Automation Achieves Certified Retell AI Partnership Status, Expanding Advanced Voice AI Solutions for UK Service Businesses",
         "url": "https://lifestyle.middletownlifemagazine.com/story/214412/antek-automation-achieves-certified-retell-ai-partnership-status-expanding-advanced-voice-ai-solutions-for-uk-service-businesses/",
         "creator": { "@type": "Organization", "name": "Middletown Life", "url": "https://lifestyle.middletownlifemagazine.com/"}
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Automation Datasets",
-        "description": "Collection of datasets related to AI automation technologies, including machine learning models, workflow tools, and automation processes from various research sources.",
-        "headline": "AI Automation Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=ai%20automation&docid=L2cvMTFtejR2ZncwYw%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Chatbots Datasets",
-        "description": "Curated datasets for AI chatbots covering conversational models, training corpora, dialogue systems, and natural language processing applications.",
-        "headline": "AI Chatbots Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20chatbots%20&docid=L2cvMTF2eXJ0XzVmMQ%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Appointment Datasets",
-        "description": "Datasets focused on AI-driven appointment scheduling, booking systems, calendar automation, and intelligent scheduling agents.",
-        "headline": "AI Appointment Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20appointment&docid=L2cvMTFta2tiOW10MQ%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Workflow Automation Datasets",
-        "description": "Datasets exploring AI workflow automation including process optimisation, task orchestration, enterprise automation pipelines, and intelligent workflows.",
-        "headline": "AI Workflow Automation Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20Workflow%20automation&docid=L2cvMTF2d2psX2MzbQ%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Business Process Automation Datasets",
-        "description": "Comprehensive datasets on AI business process automation featuring robotic process automation, intelligent workflows, and operational efficiency tools.",
-        "headline": "AI Business Process Automation Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20Business%20process%20automation&docid=L2cvMTFtZDZobXhkdA%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "Conversational AI Datasets",
-        "description": "Datasets for conversational AI systems including multi-turn dialogues, intent recognition, context-aware response generation, and dialogue training data.",
-        "headline": "Conversational AI Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=Conversational%20AI&docid=L2cvMTF5bnZndG45MQ%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Voice Assistants Datasets",
-        "description": "Datasets specialized in AI voice assistants including speech-to-text models, voice command processing, audio interaction data, and voice recognition training sets.",
-        "headline": "AI Voice Assistants Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20voice%20assistants&docid=L2cvMTF3MWgyOWRqeQ%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "AI Receptionist Datasets",
-        "description": "Datasets covering AI receptionist systems, virtual reception automation, visitor management, call handling, and automated front desk operations.",
-        "headline": "AI Receptionist Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=AI%20receptionist&docid=L2cvMTF4NzBydG5iOA%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "Lead Capture Automation Datasets",
-        "description": "Datasets focused on lead capture automation technologies, form processing, customer acquisition workflows, CRM integration, and lead generation systems.",
-        "headline": "Lead Capture Automation Datasets",
-        "url": "https://datasetsearch.research.google.com/search?src=0&query=lead%20capture%20automation&docid=L2cvMTF5ZHR6cDYxZA%3D%3D",
-        "license": "https://schema.org/license",
-        "creator": {
-          "@type": "Organization",
-          "name": "Google Dataset Search",
-          "url": "https://datasetsearch.research.google.com/"
-        }
       }
     ]
   };
