@@ -153,6 +153,25 @@ export default function Page() {
             </p>
           </div>
 
+          {/* Free entry point — most visible offer, funnels to enquiry */}
+          <div className="bg-ink border-2 border-coral shadow-brutal-coral p-6 md:p-8 mb-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="font-mono text-xs uppercase tracking-widest bg-coral text-ink px-3 py-1 font-bold">Start Here</span>
+                <span className="font-display font-extrabold text-4xl md:text-5xl text-coral uppercase leading-none">&pound;0</span>
+              </div>
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Free AI Visibility Check</h3>
+              <p className="text-body leading-relaxed max-w-[60ch]">
+                A free 30-minute call where we run your business through ChatGPT and Perplexity live and show you whether AI is recommending you &mdash; or your competitors. No pitch, no obligation, just a straight answer on where you stand.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <a href="/contact">
+                <Button variant="primary" className="w-full md:w-auto">Book Your Free Check</Button>
+              </a>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {/* Quick Check */}
             <Card className="h-full">
