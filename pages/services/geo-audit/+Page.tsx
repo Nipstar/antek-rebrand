@@ -162,12 +162,12 @@ export default function Page() {
               </div>
               <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Free AI Visibility Check</h3>
               <p className="text-body leading-relaxed max-w-[60ch]">
-                A free 30-minute call where we run your business through ChatGPT and Perplexity live and show you whether AI is recommending you &mdash; or your competitors. No pitch, no obligation, just a straight answer on where you stand.
+                Send us your contact and website details and we&rsquo;ll run your business through ChatGPT and Perplexity, then email you a free teaser report showing whether AI is recommending you &mdash; or your competitors. No pitch, no obligation. Like what you see? Book a call and we&rsquo;ll go deeper.
               </p>
             </div>
             <div className="shrink-0">
               <a href="/contact">
-                <Button variant="primary" className="w-full md:w-auto">Book Your Free Check</Button>
+                <Button variant="primary" className="w-full md:w-auto">Get My Free Report</Button>
               </a>
             </div>
           </div>
