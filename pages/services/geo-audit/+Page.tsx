@@ -5,6 +5,7 @@ import { Container } from '../../../src/components/Container';
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { QuickRecap } from '../../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
+import { AICitationProof } from '../../../src/components/AICitationProof';
 
 export default function Page() {
   return (
@@ -69,6 +70,9 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      {/* ── AI CITATION PROOF ── */}
+      <AICitationProof />
 
       {/* ── WHAT OUR GEO AUDIT COVERS ── */}
       <section className="bg-ink border-y border-hairline py-20 md:py-28">
