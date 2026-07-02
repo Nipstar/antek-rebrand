@@ -162,7 +162,7 @@ export default function Page() {
               </div>
               <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Free AI Visibility Check</h3>
               <p className="text-body leading-relaxed max-w-[60ch]">
-                Send us your contact and website details and we&rsquo;ll run your business through ChatGPT and Perplexity, then email you a free teaser report showing whether AI is recommending you &mdash; or your competitors. No pitch, no obligation. Like what you see? Book a call and we&rsquo;ll go deeper.
+                Send us your contact and website details and we&rsquo;ll run your business through ChatGPT and Perplexity, then email you a free report showing whether AI is recommending you &mdash; or your competitors. No pitch, no obligation. Like what you see? Book a call and we&rsquo;ll go deeper.
               </p>
             </div>
             <div className="shrink-0">
