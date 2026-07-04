@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Cal, { getCalApi } from '@calcom/embed-react'
+import { trackLead } from '../utils/metaPixel'
 
 interface CalBookingProps {
   calLink?: string
@@ -26,6 +27,12 @@ export function CalBooking({
         layout: 'month_view',
         theme: 'dark',
         cssVarsPerTheme: { light: { 'cal-brand': '#CD5C3C' }, dark: { 'cal-brand': '#CD5C3C' } },
+      })
+      // A completed booking is a lead — report it to the Meta Pixel.
+      // trackLead is a no-op unless the visitor has accepted cookies.
+      cal('on', {
+        action: 'bookingSuccessful',
+        callback: () => trackLead({ content_name: 'cal_booking' }),
       })
     })()
   }, [namespace])
