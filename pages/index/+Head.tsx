@@ -92,7 +92,7 @@ export function Head() {
         }
       ],
       "url": "https://www.antekautomation.com/",
-      "description": "AI automation agency providing AI chatbots, voice AI phone agents, and workflow automation to businesses across all industries\u2014helping restaurants, consultancies, healthcare, and retail capture leads, book appointments, and handle customer queries 24/7.",
+      "description": "Antek Automation is a UK-based AI automation company specialising in AI voice agents, chatbots, n8n workflow automation, and Generative Engine Optimisation (GEO). Based in Andover, Hampshire, we help UK SMBs automate calls, leads, and workflows. Transparent pricing, no offshore handoffs, and a certified Retell AI partnership.",
       "email": "hello@antekautomation.com",
       "telephone": "+44-3330-389960",
       "address": {

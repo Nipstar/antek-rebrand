@@ -229,7 +229,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                Yes. Andover is our base, but we work with Salisbury businesses regularly &mdash; it&rsquo;s an easy run down the A303. The AI runs in the cloud, so your voice agent answers Salisbury calls exactly the same whether we&rsquo;re next door or up the road.
+                Yes. Andover is our base, and as an AI automation company 18 miles up the A303, we can be in Salisbury same-week for face-to-face work. The AI runs in the cloud, so your voice agent answers Salisbury calls exactly the same whether we&rsquo;re next door or up the road.
               </div>
             </details>
 

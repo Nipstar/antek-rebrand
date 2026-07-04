@@ -60,7 +60,7 @@ export function Head() {
                 name: 'You’re in Andover — do you cover Salisbury?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. Andover is our base, but we work with Salisbury businesses regularly — it’s an easy run down the A303. The AI runs in the cloud, so your voice agent answers Salisbury calls exactly the same whether we’re next door or up the road.',
+                  text: 'Yes. Andover is our base, and as an AI automation company 18 miles up the A303, we can be in Salisbury same-week for face-to-face work. The AI runs in the cloud, so your voice agent answers Salisbury calls exactly the same whether we’re next door or up the road.',
                 },
               },
               {

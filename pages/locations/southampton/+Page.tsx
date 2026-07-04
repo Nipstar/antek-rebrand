@@ -266,7 +266,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                We&rsquo;re 30 minutes up the A3057 &mdash; closer than most London agencies that target Southampton businesses. More importantly, AI automation runs on cloud infrastructure. Your voice agent doesn&rsquo;t need a local office. What matters is the quality of the build and the speed of support, and we deliver both.
+                We&rsquo;re an AI automation company about 30 minutes up the A3057, closer than most London agencies that target Southampton businesses. More importantly, AI automation runs on cloud infrastructure. Your voice agent doesn&rsquo;t need a local office. What matters is the quality of the build and the speed of support, and we deliver both.
               </div>
             </details>
 

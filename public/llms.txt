@@ -1,6 +1,6 @@
 # Antek Automation
 
-> AI automation agency based in Andover, Hampshire providing AI voice agents, website chatbots, n8n workflow automation, and GEO (Generative Engine Optimisation) for UK businesses.
+> AI automation company based in Andover, Hampshire providing AI voice agents, website chatbots, n8n workflow automation, and GEO (Generative Engine Optimisation) for UK businesses.
 
 ## Services
 
