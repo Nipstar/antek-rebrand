@@ -61,7 +61,7 @@ export function Head() {
                     name: 'You’re based in Andover — why should I choose you over a Southampton agency?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'We’re 30 minutes up the A3057 — closer than most London agencies that target Southampton businesses. More importantly, AI automation runs on cloud infrastructure. Your voice agent doesn’t need a local office. What matters is the quality of the build and the speed of support, and we deliver both.',
+                      text: 'We’re an AI automation company about 30 minutes up the A3057, closer than most London agencies that target Southampton businesses. More importantly, AI automation runs on cloud infrastructure. Your voice agent doesn’t need a local office. What matters is the quality of the build and the speed of support, and we deliver both.',
                     },
                   },
                   {

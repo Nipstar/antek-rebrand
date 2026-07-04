@@ -129,7 +129,7 @@ export function Head() {
 
   return (
     <>
-      <title>About Antek Automation | AI Automation Agency UK</title>
+      <title>About Antek Automation | AI Automation Company UK</title>
       <meta
         name="description"
         content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."
@@ -137,7 +137,7 @@ export function Head() {
       <link rel="canonical" href="https://www.antekautomation.com/about" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="About Antek Automation | AI Automation Agency UK" />
+      <meta property="og:title" content="About Antek Automation | AI Automation Company UK" />
       <meta
         property="og:description"
         content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."
@@ -151,7 +151,7 @@ export function Head() {
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="About Antek Automation | AI Automation Agency UK" />
+      <meta name="twitter:title" content="About Antek Automation | AI Automation Company UK" />
       <meta
         name="twitter:description"
         content="Meet Andy Norman, founder of Antek Automation. 30+ years in tech, Certified Retell AI Partner, building AI voice agents and chatbots for UK businesses."

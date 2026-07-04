@@ -20,7 +20,7 @@ export default function Page() {
               Stop Doing the Same <span className="text-coral">Admin Tasks Every Day</span>. Automate Them.
             </HeadlineBlock>
             <p className="text-xl text-body leading-normal mb-4 mt-6 max-w-[60ch]">
-              We connect your tools, automate your processes, and give you back the hours you're currently wasting on repetitive work. Built with n8n -- no lock-in, you own everything.
+              As an AI automation company that builds bespoke n8n workflows, we connect your tools, automate your processes, and give you back the hours you're currently wasting on repetitive work. No lock-in, you own everything.
             </p>
             <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Last updated March 2026</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">

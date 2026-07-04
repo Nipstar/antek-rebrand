@@ -66,7 +66,7 @@ export default function Page() {
               AI Automation for <span className="text-coral">Hampshire Businesses</span>
             </HeadlineBlock>
             <p className="text-lg text-body max-w-[60ch]">
-              Three services, all designed to stop you losing money to missed calls, slow follow-ups, and admin that eats your evenings.
+              We&rsquo;re an AI automation company based in Andover, serving businesses across Hampshire. Three services, all designed to stop you losing money to missed calls, slow follow-ups, and admin that eats your evenings.
             </p>
           </div>
 

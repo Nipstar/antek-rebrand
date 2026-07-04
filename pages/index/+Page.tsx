@@ -68,7 +68,7 @@ export default function Page() {
             What Is <span className="text-coral">Antek Automation?</span>
           </HeadlineBlock>
           <p className="snippet-bait text-lg text-body leading-relaxed max-w-[65ch]">
-            Antek Automation is a UK-based AI automation agency specialising in AI voice agents, chatbots, n8n workflow automation, and Generative Engine Optimisation (GEO). Based in Andover, Hampshire, we help UK SMBs and businesses automate calls, leads, and workflows &mdash; with transparent pricing, no offshore handoffs, and a certified Retell AI partnership.
+            Antek Automation is a UK-based AI automation company specialising in AI voice agents, chatbots, n8n workflow automation, and Generative Engine Optimisation (GEO). Based in Andover, Hampshire, we help UK SMBs automate calls, leads, and workflows. Transparent pricing, no offshore handoffs, and a certified Retell AI partnership.
           </p>
         </Container>
       </section>

@@ -44,7 +44,7 @@ export default function Page() {
             </HeadlineBlock>
             <div className="space-y-4 text-body leading-relaxed text-lg max-w-[65ch]">
               <p>
-                Antek Automation is an AI automation agency based in Andover, Hampshire, founded by Andy Norman. We build AI voice agents, chatbots, and workflow automation that help UK businesses stop missing calls, respond to customers faster, and eliminate hours of manual admin every week. Andy spent 30+ years in managed technology services before founding Antek — he's not guessing what businesses need, he's lived it.
+                Antek Automation is an AI automation company based in Andover, Hampshire, founded by Andy Norman. We build AI voice agents, chatbots, and workflow automation that help UK businesses stop missing calls, respond to customers faster, and eliminate hours of manual admin every week. Andy spent 30+ years in managed technology services before founding Antek — he's not guessing what businesses need, he's lived it.
               </p>
             </div>
           </Card>

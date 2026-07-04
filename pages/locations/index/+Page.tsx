@@ -45,7 +45,7 @@ export default function Page() {
               AI Automation in Hampshire &amp; <span className="text-coral">Across the UK</span>
             </HeadlineBlock>
             <p className="text-lg md:text-xl text-body leading-relaxed mb-8 mt-6 max-w-[65ch]">
-              We&rsquo;re a Hampshire automation agency, based in Andover. Everything we build runs in the cloud &mdash; so your AI voice agent, chatbot or automation workflow works identically whether you&rsquo;re down the road in Southampton or anywhere else in the UK. Here&rsquo;s our local patch, and yes, we cover the rest of the country remotely.
+              We&rsquo;re a Hampshire AI automation company, based in Andover. Everything we build runs in the cloud &mdash; so your AI voice agent, chatbot or automation workflow works identically whether you&rsquo;re down the road in Southampton or anywhere else in the UK. Here&rsquo;s our local patch, and yes, we cover the rest of the country remotely.
             </p>
           </div>
         </Container>
