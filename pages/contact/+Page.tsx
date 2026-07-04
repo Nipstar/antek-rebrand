@@ -7,6 +7,7 @@ import { CalBooking } from '../../src/components/CalBooking';
 import { CONSTANTS } from '../../src/constants';
 import { SocialLinks } from '../../src/components/SocialLinks';
 import { trackEvent } from '../../src/utils/analytics';
+import { trackLead } from '../../src/utils/metaPixel';
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID || '';
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '';
@@ -179,6 +180,8 @@ export default function Page() {
           preferred_contact: formData.preferredContact,
           interests_count: formData.interests.length,
         });
+        // Meta Pixel conversion (consent-gated inside trackLead).
+        trackLead({ content_name: 'contact_form' });
         setSubmitStatus({
           type: 'success',
           message: "Thank you! We'll contact you within 2 hours.",

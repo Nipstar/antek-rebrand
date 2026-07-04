@@ -39,6 +39,19 @@ export function initializeMetaPixel() {
   }
 }
 
+/**
+ * Fire a Meta Pixel standard `Lead` event.
+ *
+ * This is a no-op until the pixel has been initialised — i.e. until the
+ * visitor has accepted cookies — so it inherits the same consent gating as
+ * the pixel itself. If a call happens after consent but before fbevents.js
+ * has finished loading, the pixel snippet queues it and flushes on load.
+ */
+export function trackLead(params?: Record<string, unknown>) {
+  if (typeof window === 'undefined' || !window.fbq) return
+  window.fbq('track', 'Lead', params ?? {})
+}
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void
