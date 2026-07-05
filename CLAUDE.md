@@ -27,7 +27,7 @@ _Last updated: 2026-06-27. Working memory for the location-page build. Read it b
 - **Gold standard to mirror exactly:** `pages/locations/basingstoke/+Page.tsx` and `+Head.tsx`. Copy its section order, components, and schema shape.
 - Reusable components: `Button`, `Card`, `Icon`, `CalBooking`, `VoiceDemoButton`, `VoiceChat` (lazy), `TrustBlock` (governed proof — no client name/town/mechanism), `QuickRecap`, `ResourcesCompliance`.
 - **v2 page template** (`+Page.tsx`; gold standard `pages/locations/portsmouth/+Page.tsx`): HERO (H1 "AI Automation for [Place] Businesses" + local hook + Book a free 30-min call + click-to-call `tel:03330389960`) → direct-answer intro (40–60 words, snippet-friendly, names place + ≥1 neighbour) → LOCAL CONTEXT (entity-dense differentiator: real geography/transit/sectors; ≤4 visible Wikipedia links, new tab, first-mention) → SERVICES IN [PLACE] (4 service cards framed for local sectors, linking to the 4 `/services/*`) → AREAS WE COVER (genuine neighbours) → PROOF (`<TrustBlock>` + credibility line: Certified Retell AI Partner, 30+ yrs, Andover base) → `<RetellDemoCards curated />` → FAQ (4–6 inline `<details>`) → FINAL CTA + NAP (book + tel + exact address line) → CalBooking → VoiceChat modal. **No QuickRecap, no GEO upsell block** on v2 pages.
-- **v2 Head schema** (`@graph` of THREE nodes; gold standard `pages/locations/basingstoke/+Head.tsx`): one `<script>` `@graph:[ Service, BreadcrumbList, FAQPage ]`. Service: `@id` `<url>#service`, `provider:{'@id':'…/#organization'}` (REFERENCE — never inline org), `areaServed` City/AdministrativeArea + verified Wikipedia `sameAs` + `containedInPlace`, `about:[{Place,name,sameAs}]` co-entities. BreadcrumbList: Home > Locations > [County] > [Place] (add the county level where a hub exists; URL stays flat). FAQPage matches the `<details>` verbatim. **No `LocalBusiness`/`Organization`/`ImageObject` node.** Title ≤60 unique local-led; meta 150–160 local-led (count it).
+- **v2 Head schema** (`@graph` of THREE nodes; gold standard `pages/locations/basingstoke/+Head.tsx`): one `<script>` `@graph:[ Service, BreadcrumbList, FAQPage ]`. Service: `@id` `<url>#service`, `provider:{'@id':'…/#organization'}` (REFERENCE — never inline org), `areaServed` City/AdministrativeArea + verified Wikipedia `sameAs` + `containedInPlace`. **`about:[{Place,name,sameAs}]` co-entities go on the `FAQPage` node, NOT `Service`** (`about` is invalid on `Service`; valid on FAQPage/WebPage — fixed 2026-07-05). BreadcrumbList: Home > Locations > [County] > [Place] (add the county level where a hub exists; URL stays flat). FAQPage matches the `<details>` verbatim. **No `LocalBusiness`/`Organization`/`ImageObject` node.** Title ≤60 unique local-led; meta 150–160 local-led (count it).
 - **NAP identical sitewide:** Chantry House, 38 Chantry Way, Andover SP10 1LZ · 0333 038 9960 · hello@antekautomation.com.
 - The 7 original Hampshire-cluster pages predate v2: they keep their conversion-first bodies (QuickRecap/GEO-block) but their **Heads were retrofitted to the v2 `@graph`/#organization model**.
 - Guardrails: title ≤60 chars, meta 150–160 (count, don't eyeball); town pages never target "Hampshire" head term (hub owns it); ≤4 visible Wikipedia links, `target="_blank" rel="noopener noreferrer"`, first-mention only; **verify every Wikidata QID before embedding**; no invented stats (leave `{/* [VERIFY] */}`).
@@ -38,7 +38,7 @@ We sell FOUR services; every location page must represent all four:
 1. AI Voice Agents → `/services/ai-voice-assistants`
 2. AI Chatbots → `/services/ai-chatbots`
 3. Workflow Automation → `/services/workflow-automation`
-4. **GEO Audit** → `/services/geo-audit` (entry tier from £247). Surfaced via the GEO cross-sell block (visible), an internal link, and the schema (`makesOffer` + `knowsAbout`).
+4. **GEO Audit** → `/services/geo-audit` (entry tier from £247). Surfaced via the GEO cross-sell block (visible) + an internal link. **Do NOT add `makesOffer`/`knowsAbout` to the location `Service` node** — neither is a valid schema.org `Service` property (see the schema-conventions section); the gold standard just references `#organization` as `provider`.
 Reference implementation: any current location page (e.g. `pages/locations/winchester/`). Service pages also cross-link the GEO Audit (the 3 core `/services/*` pages carry a GEO block/link).
 
 ## Voice demos (Retell orbs)
@@ -54,7 +54,7 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 4. Footer: `FOOTER_LOCATIONS` in `src/components/Footer.tsx`
 5. `public/sitemap.xml` (static — hand-edit; priority 0.7 for towns) — also bump `lastmod` to today on the hub + `/locations` index (they gain a link to the new town, so crawlers should re-fetch)
 6. `scripts/audit/pages.ts` + one contextual `/services/*` link
-7. GEO: localised GEO cross-sell block + `/services/geo-audit` link + `GEO Audit` in `makesOffer` + `Generative Engine Optimization (GEO)` in `knowsAbout`
+7. GEO: localised GEO cross-sell block + `/services/geo-audit` link. (Do NOT put `makesOffer`/`knowsAbout` on the `Service` node — invalid, not in the gold standard. Co-entities go in `about` on the `FAQPage` node.)
 8. `<RetellDemoCards curated />` after `<TrustBlock>` (see Voice demos)
 
 ## Deploy & crawl (post-merge)
