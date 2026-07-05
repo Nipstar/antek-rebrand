@@ -167,7 +167,7 @@ export function Head() {
               "SO14", "SO15", "SO16", "SO17", "SO18", "SO19", "SO30", "SO31", "SO32", "SO40", "SO50",
               "PO1", "PO2", "PO3", "PO4", "PO5", "PO6",
               "PO12", "PO13", "PO14", "PO15", "PO16", "PO17",
-              "GU11", "GU12", "GU14"
+              "GU11", "GU12", "GU14", "GU31", "GU32", "GU51", "GU52"
             ],
             "addressCountry": "GB"
           }
