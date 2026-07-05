@@ -68,9 +68,13 @@ export async function POST(request: Request): Promise<Response> {
     return json({ error: 'Server misconfigured', reason: 'missing RECAPTCHA_SECRET_KEY' }, 500)
   }
 
-  const webhook = process.env.CONTACT_WEBHOOK_URL
+  // Canonical name is CONTACT_WEBHOOK_URL (server-side secret — no VITE_ prefix,
+  // which would mark it browser-exposable). Fall back to VITE_CONTACT_WEBHOOK_URL
+  // for deployments configured with the prefixed name. Read server-side only
+  // (process.env, never import.meta.env) so it is never bundled into client JS.
+  const webhook = process.env.CONTACT_WEBHOOK_URL || process.env.VITE_CONTACT_WEBHOOK_URL
   if (!webhook) {
-    console.error('CONTACT_WEBHOOK_URL is not set')
+    console.error('CONTACT_WEBHOOK_URL / VITE_CONTACT_WEBHOOK_URL is not set')
     return json({ error: 'Server misconfigured', reason: 'missing CONTACT_WEBHOOK_URL' }, 500)
   }
 
