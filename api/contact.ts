@@ -43,29 +43,35 @@ export async function POST(request: Request): Promise<Response> {
     const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
     if (clientIp) params.append('remoteip', clientIp)
 
-    let verification: { success?: boolean }
+    let verification: { success?: boolean; 'error-codes'?: string[]; hostname?: string }
     try {
       const res = await fetch(SITEVERIFY_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params,
       })
-      verification = (await res.json()) as { success?: boolean }
+      verification = (await res.json()) as { success?: boolean; 'error-codes'?: string[]; hostname?: string }
     } catch {
       return json({ error: 'reCAPTCHA verification unavailable' }, 502)
     }
 
     if (!verification.success) {
-      return json({ error: 'reCAPTCHA challenge failed' }, 403)
+      const codes = verification['error-codes'] ?? []
+      // Surfaces the real reason (e.g. invalid-input-secret = wrong/missing secret;
+      // hostname mismatch = domain not allow-listed). Non-sensitive; aids debugging.
+      console.error('reCAPTCHA verification failed', { codes, hostname: verification.hostname })
+      return json({ error: 'reCAPTCHA challenge failed', codes }, 403)
     }
   } else if (process.env.VERCEL_ENV === 'production') {
     // Fail closed: never accept an unverified submission in production.
-    return json({ error: 'Server misconfigured' }, 500)
+    console.error('RECAPTCHA_SECRET_KEY is not set in production')
+    return json({ error: 'Server misconfigured', reason: 'missing RECAPTCHA_SECRET_KEY' }, 500)
   }
 
   const webhook = process.env.CONTACT_WEBHOOK_URL
   if (!webhook) {
-    return json({ error: 'Server misconfigured' }, 500)
+    console.error('CONTACT_WEBHOOK_URL is not set')
+    return json({ error: 'Server misconfigured', reason: 'missing CONTACT_WEBHOOK_URL' }, 500)
   }
 
   try {
@@ -75,7 +81,8 @@ export async function POST(request: Request): Promise<Response> {
       body: JSON.stringify(formData),
     })
     if (!forwarded.ok) {
-      return json({ error: 'Upstream webhook error' }, 502)
+      console.error('Upstream webhook returned non-OK', forwarded.status)
+      return json({ error: 'Upstream webhook error', status: forwarded.status }, 502)
     }
   } catch {
     return json({ error: 'Failed to reach webhook' }, 502)
