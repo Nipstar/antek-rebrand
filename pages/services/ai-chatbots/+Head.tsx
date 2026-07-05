@@ -172,6 +172,12 @@ export function Head() {
               'Appointment booking chatbots',
               'Customer service automation',
             ],
+            about: [
+              { '@type': 'Thing', name: 'Chatbot', sameAs: 'https://en.wikipedia.org/wiki/Chatbot' },
+              { '@type': 'Thing', name: 'Virtual assistant', sameAs: 'https://en.wikipedia.org/wiki/Virtual_assistant' },
+              { '@type': 'Thing', name: 'Natural language processing', sameAs: 'https://en.wikipedia.org/wiki/Natural_language_processing' },
+              { '@type': 'Thing', name: 'Large language model', sameAs: 'https://en.wikipedia.org/wiki/Large_language_model' },
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],

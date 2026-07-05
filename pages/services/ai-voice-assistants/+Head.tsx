@@ -158,6 +158,12 @@ export function Head() {
             '@type': 'WebPage',
             name: 'AI Voice Agents for UK Businesses',
             url: 'https://www.antekautomation.com/services/ai-voice-assistants',
+            about: [
+              { '@type': 'Thing', name: 'Virtual assistant', sameAs: 'https://en.wikipedia.org/wiki/Virtual_assistant' },
+              { '@type': 'Thing', name: 'Speech recognition', sameAs: 'https://en.wikipedia.org/wiki/Speech_recognition' },
+              { '@type': 'Thing', name: 'Interactive voice response', sameAs: 'https://en.wikipedia.org/wiki/Interactive_voice_response' },
+              { '@type': 'Thing', name: 'Natural language processing', sameAs: 'https://en.wikipedia.org/wiki/Natural_language_processing' },
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],

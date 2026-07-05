@@ -172,6 +172,12 @@ export function Head() {
               'CRM automation',
               'Invoice automation',
             ],
+            about: [
+              { '@type': 'Thing', name: 'Business process automation', sameAs: 'https://en.wikipedia.org/wiki/Business_process_automation' },
+              { '@type': 'Thing', name: 'Robotic process automation', sameAs: 'https://en.wikipedia.org/wiki/Robotic_process_automation' },
+              { '@type': 'Thing', name: 'n8n', sameAs: 'https://en.wikipedia.org/wiki/N8n' },
+              { '@type': 'Thing', name: 'Workflow management system', sameAs: 'https://en.wikipedia.org/wiki/Workflow_management_system' },
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],
