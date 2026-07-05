@@ -238,12 +238,15 @@ export default function Page() {
             <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                <label htmlFor="contact-name" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Name *
                 </label>
                 <input
+                  id="contact-name"
+                  name="name"
                   type="text"
                   required
+                  autoComplete="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -252,11 +255,14 @@ export default function Page() {
               </div>
 
               <div>
-                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                <label htmlFor="contact-business-name" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Business Name
                 </label>
                 <input
+                  id="contact-business-name"
+                  name="businessName"
                   type="text"
+                  autoComplete="organization"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                   className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -267,12 +273,15 @@ export default function Page() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                <label htmlFor="contact-phone" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Phone *
                 </label>
                 <input
+                  id="contact-phone"
+                  name="phone"
                   type="tel"
                   required
+                  autoComplete="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -281,12 +290,15 @@ export default function Page() {
               </div>
 
               <div>
-                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                <label htmlFor="contact-email" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Email *
                 </label>
                 <input
+                  id="contact-email"
+                  name="email"
                   type="email"
                   required
+                  autoComplete="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -296,12 +308,15 @@ export default function Page() {
             </div>
 
             <div>
-              <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+              <label htmlFor="contact-service-type" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                 Industry / Business Type *
               </label>
               <input
+                id="contact-service-type"
+                name="serviceType"
                 type="text"
                 required
+                autoComplete="organization-title"
                 value={formData.serviceType}
                 onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                 className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -321,9 +336,12 @@ export default function Page() {
                   { value: 'geo_audit', label: 'GEO Audit (AI Search Visibility)' },
                   { value: 'not_sure', label: "Not Sure - Need Guidance" },
                 ].map((option) => (
-                  <label key={option.value} className="flex items-center space-x-3 cursor-pointer">
+                  <label key={option.value} htmlFor={`contact-interest-${option.value}`} className="flex items-center space-x-3 cursor-pointer">
                     <input
+                      id={`contact-interest-${option.value}`}
+                      name="interests"
                       type="checkbox"
+                      value={option.value}
                       checked={formData.interests.includes(option.value)}
                       onChange={() => handleCheckboxChange(option.value)}
                       className="accent-coral w-5 h-5 border-2 border-coral"
@@ -336,12 +354,15 @@ export default function Page() {
 
             {formData.interests.includes('geo_audit') && (
               <div>
-                <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                <label htmlFor="contact-website-url" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                   Website URL *
                 </label>
                 <input
+                  id="contact-website-url"
+                  name="websiteUrl"
                   type="url"
                   required={formData.interests.includes('geo_audit')}
+                  autoComplete="url"
                   value={formData.websiteUrl}
                   onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
                   className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -352,10 +373,12 @@ export default function Page() {
             )}
 
             <div>
-              <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+              <label htmlFor="contact-message" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                 Tell us about your needs
               </label>
               <textarea
+                id="contact-message"
+                name="message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={5}

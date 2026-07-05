@@ -167,12 +167,15 @@ export function AIVisibilityCheckForm() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                    <label htmlFor="avc-name" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                       Name *
                     </label>
                     <input
+                      id="avc-name"
+                      name="name"
                       type="text"
                       required
+                      autoComplete="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -181,12 +184,15 @@ export function AIVisibilityCheckForm() {
                   </div>
 
                   <div>
-                    <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                    <label htmlFor="avc-email" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                       Email *
                     </label>
                     <input
+                      id="avc-email"
+                      name="email"
                       type="email"
                       required
+                      autoComplete="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -196,13 +202,16 @@ export function AIVisibilityCheckForm() {
                 </div>
 
                 <div>
-                  <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                  <label htmlFor="avc-website" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                     Business website *
                   </label>
                   <input
+                    id="avc-website"
+                    name="website"
                     type="text"
                     required
                     inputMode="url"
+                    autoComplete="url"
                     value={formData.website}
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                     className="w-full border-2 border-coral bg-ink px-4 py-3 text-cream placeholder:text-muted focus:border-cream"
@@ -211,10 +220,12 @@ export function AIVisibilityCheckForm() {
                 </div>
 
                 <div>
-                  <label className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
+                  <label htmlFor="avc-business-type" className="font-sans font-bold text-cream mb-2 block uppercase text-sm">
                     Business type *
                   </label>
                   <select
+                    id="avc-business-type"
+                    name="businessType"
                     required
                     value={formData.businessType}
                     onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
