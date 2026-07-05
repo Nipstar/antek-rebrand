@@ -6,6 +6,7 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { QuickRecap } from '../../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 import { AICitationProof } from '../../../src/components/AICitationProof';
+import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
 
 export default function Page() {
   return (
@@ -32,7 +33,7 @@ export default function Page() {
             </p>
             <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-              <a href="/contact">
+              <a href="#visibility-check">
                 <Button variant="primary">Book Your Free AI Visibility Check</Button>
               </a>
               <a href="tel:03330389960">
@@ -170,7 +171,7 @@ export default function Page() {
               </p>
             </div>
             <div className="shrink-0">
-              <a href="/contact">
+              <a href="#visibility-check">
                 <Button variant="primary" className="w-full md:w-auto">Get My Free Report</Button>
               </a>
             </div>
@@ -309,6 +310,9 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      {/* ── AI VISIBILITY CHECK FORM ── */}
+      <AIVisibilityCheckForm />
 
       {/* ── WHY ONGOING ── */}
       <section className="bg-ink border-y border-hairline py-20 md:py-28">
