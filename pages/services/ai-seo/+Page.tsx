@@ -4,6 +4,7 @@ import { Icon } from '../../../src/components/Icon';
 import { Container } from '../../../src/components/Container';
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
+import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 
 const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors';
 
@@ -330,6 +331,13 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ResourcesCompliance links={[
+        { text: 'Search engine optimisation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Search_engine_optimization', context: 'The classic discipline AI SEO builds on' },
+        { text: 'Generative engine optimisation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Generative_engine_optimization', context: 'The AI-answer half of the job — our focused GEO service' },
+        { text: 'Generative artificial intelligence (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence', context: 'The systems now answering searches before the blue links' },
+        { text: 'ChatGPT (Wikipedia)', url: 'https://en.wikipedia.org/wiki/ChatGPT', context: 'One of the AI assistants your customers now ask directly' },
+      ]} />
 
       {/* ── CLOSING CTA ── */}
       <section className="bg-charcoal border-t-2 border-coral py-24 md:py-32">

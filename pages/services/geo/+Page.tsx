@@ -4,6 +4,7 @@ import { Icon } from '../../../src/components/Icon';
 import { Container } from '../../../src/components/Container';
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
+import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 
 const SERVICES = [
   {
@@ -363,6 +364,13 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ResourcesCompliance links={[
+        { text: 'Generative engine optimisation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Generative_engine_optimization', context: 'The discipline this page delivers — structuring content so AI engines cite you' },
+        { text: 'Generative artificial intelligence (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence', context: 'The AI systems GEO optimises for — ChatGPT, Claude, Perplexity, Gemini' },
+        { text: 'Large language model (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Large_language_model', context: 'How AI engines generate the answers your business needs to appear in' },
+        { text: 'Search engine optimisation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Search_engine_optimization', context: 'The sibling discipline GEO complements, rather than replaces' },
+      ]} />
 
       {/* ── CLOSING CTA ── */}
       <section className="bg-charcoal border-t-2 border-coral py-24 md:py-32">

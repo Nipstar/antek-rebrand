@@ -98,6 +98,12 @@ export function Head() {
               'Content structure for AI',
               'AI crawler optimisation',
             ],
+            about: [
+              { '@type': 'Thing', name: 'Generative engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Generative_engine_optimization' },
+              { '@type': 'Thing', name: 'Generative artificial intelligence', sameAs: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence' },
+              { '@type': 'Thing', name: 'Search engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Search_engine_optimization' },
+              { '@type': 'Thing', name: 'ChatGPT', sameAs: 'https://en.wikipedia.org/wiki/ChatGPT' },
+            ],
             offers: [
               {
                 '@type': 'Offer',

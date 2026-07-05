@@ -76,6 +76,13 @@ export function Head() {
               'Content strategy',
               'Generative Engine Optimisation',
             ],
+            about: [
+              { '@type': 'Thing', name: 'Search engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Search_engine_optimization' },
+              { '@type': 'Thing', name: 'Generative engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Generative_engine_optimization' },
+              { '@type': 'Thing', name: 'Generative artificial intelligence', sameAs: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence' },
+              { '@type': 'Thing', name: 'Large language model', sameAs: 'https://en.wikipedia.org/wiki/Large_language_model' },
+              { '@type': 'Thing', name: 'ChatGPT', sameAs: 'https://en.wikipedia.org/wiki/ChatGPT' },
+            ],
             potentialAction: {
               '@type': 'ScheduleAction',
               target: {
