@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { Navigation } from '../src/components/Navigation'
 import { Footer } from '../src/components/Footer'
 import { CookieConsent } from '../src/components/CookieConsent'
@@ -124,6 +125,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       )}
       <StickyMobileCTA />
       <CookieConsent />
+      <Analytics />
     </div>
   )
 }
