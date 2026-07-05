@@ -5,6 +5,7 @@ import { Container } from '../../../src/components/Container';
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
+import { AICitationProof } from '../../../src/components/AICitationProof';
 
 const SERVICES = [
   {
@@ -27,12 +28,6 @@ const SERVICES = [
     title: 'AI answer monitoring',
     body: 'Monthly checks across ChatGPT, Claude, Perplexity, Gemini and AI Overviews. You see exactly where you’re mentioned, where you’re not, and the trend.',
   },
-];
-
-const PROOF_SLOTS = [
-  { slot: 'chatgpt', alt: 'ChatGPT citing Antek Automation in its answer about UK AI automation agencies' },
-  { slot: 'perplexity', alt: 'Perplexity citing Antek Automation as a source' },
-  { slot: 'google-ai-overview', alt: 'Google AI Overview referencing Antek Automation, Andover' },
 ];
 
 const FAQS = [
@@ -174,39 +169,8 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* ── PROOF ── */}
-      <section className="py-20 md:py-28">
-        <Container>
-          <HeadlineBlock className="mb-8">
-            We don&rsquo;t ask you to <span className="text-coral">take our word for it</span>
-          </HeadlineBlock>
-          <p className="text-lg text-body leading-relaxed mb-10 max-w-[65ch]">
-            We use our own service on ourselves. Ask an AI assistant about UK AI automation agencies and see who comes up &mdash; a small agency in Andover, Hampshire, competing with London firms ten times our size. That&rsquo;s not luck. It&rsquo;s the exact process we&rsquo;ll run on your business.
-          </p>
-
-          {/* Real AI-citation screenshots from /public/proof (shared with the homepage proof grid). */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {PROOF_SLOTS.map((p) => (
-              <div key={p.slot} className="bg-charcoal border-2 border-hairline shadow-brutal p-3">
-                <img
-                  src={`/proof/${p.slot}.webp`}
-                  alt={p.alt}
-                  width={960}
-                  height={540}
-                  loading="lazy"
-                  className="aspect-video w-full object-cover object-top border-2 border-hairline"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="border-t border-hairline pt-6">
-            <p className="font-mono uppercase text-sm text-body tracking-wider">
-              Certified Retell AI Partner &middot; 30+ years in service management &middot; Based in Andover, serving the UK &middot; Transparent pricing, no lock-in
-            </p>
-          </div>
-        </Container>
-      </section>
+      {/* ── PROOF (shared component — same grid + lightbox as the GEO Audit page) ── */}
+      <AICitationProof />
 
       {/* ── AEO ── */}
       <section className="bg-ink border-y border-hairline py-20 md:py-28">
@@ -300,7 +264,7 @@ export default function Page() {
             </div>
 
             <div className="bg-charcoal border-2 border-hairline p-6 md:p-8">
-              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Retainer &mdash; from &pound;297/month</h3>
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Retainer &mdash; from &pound;497/month</h3>
               <p className="text-body leading-relaxed max-w-[60ch]">
                 We do the fixes, build the citations and monitor the engines monthly. Projects from &pound;997. No long contracts.
               </p>

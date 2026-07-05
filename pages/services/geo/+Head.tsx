@@ -89,6 +89,11 @@ export function Head() {
               { '@type': 'Thing', name: 'Search engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Search_engine_optimization' },
               { '@type': 'Thing', name: 'ChatGPT', sameAs: 'https://en.wikipedia.org/wiki/ChatGPT' },
             ],
+            offers: [
+              { '@type': 'Offer', name: 'AI Visibility Check', price: '0', priceCurrency: 'GBP', description: 'Free AI Visibility Check — where you stand across the engines, in plain English, within 48 hours. No call, no obligation.' },
+              { '@type': 'Offer', name: 'GEO Audit', price: '247', priceCurrency: 'GBP', description: 'One-off scored GEO audit: citability, schema, llms.txt, crawler access, entity consistency, competitor citations, and a prioritised fix list.' },
+              { '@type': 'Offer', name: 'GEO Retainer', price: '497', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '497', priceCurrency: 'GBP', unitText: 'MONTH' }, description: 'Monthly GEO retainer — fixes, citation building and engine monitoring. Projects from £997. No long contracts.' },
+            ],
             potentialAction: {
               '@type': 'ScheduleAction',
               target: {
