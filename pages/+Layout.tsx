@@ -5,6 +5,7 @@ import { CookieConsent } from '../src/components/CookieConsent'
 import { StickyMobileCTA } from '../src/components/StickyMobileCTA'
 import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsent, trackPageView } from '../src/utils/analytics'
 import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
+import { initializeCloudflareAnalytics } from '../src/utils/cloudflareAnalytics'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
 import { getStoredConsent } from '../src/utils/consent'
 // Self-hosted brand fonts (no third-party CDN). Outfit display, DM Sans body,
@@ -42,6 +43,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       initializeClarity(clarityId)
       tagClarityPage({ page_path: window.location.pathname || '/' })
     }
+
+    // Cloudflare Web Analytics — cookieless, so no consent gate. Token is public
+    // (env override supported); defaults to the site's live beacon token.
+    initializeCloudflareAnalytics(
+      import.meta.env.VITE_CLOUDFLARE_BEACON_TOKEN || '592ae16e49154776a0b77845c013f32a'
+    )
 
     // If the user already accepted on a prior visit, load Meta Pixel now.
     if (getStoredConsent() === 'accepted') {
