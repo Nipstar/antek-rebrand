@@ -512,6 +512,7 @@ export default function Page() {
       </section>
 
       <ResourcesCompliance links={[
+        { text: 'Generative engine optimisation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Generative_engine_optimization', context: 'The discipline a GEO audit measures — being cited in AI-generated answers' },
         { text: 'Generative AI overview', url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence', context: 'Background on the AI systems GEO optimises for' },
         { text: 'Google structured data documentation', url: 'https://developers.google.com/search/docs/appearance/structured-data', context: 'Official guidance on schema markup that improves AI citation readiness' },
         { text: 'schema.org', url: 'https://schema.org/', context: 'The structured data vocabulary used in GEO audit recommendations' },
