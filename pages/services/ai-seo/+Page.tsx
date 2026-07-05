@@ -60,8 +60,8 @@ const AUDIENCES = [
 ];
 
 const PROOF_SLOTS = [
-  { slot: 'ai-seo-proof-1', alt: 'Screenshot of an AI assistant naming Antek Automation among UK automation agencies' },
-  { slot: 'ai-seo-proof-2', alt: 'Screenshot of an AI search answer citing Antek Automation as a source on AI search' },
+  { slot: 'gemini', alt: 'Google Gemini naming Antek Automation among UK automation agencies' },
+  { slot: 'claude', alt: 'Claude citing Antek Automation as a source on AI search' },
 ];
 
 export default function Page() {
@@ -202,7 +202,7 @@ export default function Page() {
             We&rsquo;re a small Hampshire agency competing against London firms with fifty times our budget &mdash; on exactly these terms. Ask an AI assistant about UK automation agencies, or check who&rsquo;s writing the guides on AI search that other agencies quote. This page is the method, in use, on us.
           </p>
 
-          {/* Screenshot slots — drop real AI-citation screenshots into /public/proof/<slot>.webp */}
+          {/* Real AI-citation screenshots from /public/proof (shared with the homepage proof grid). */}
           <div className="grid sm:grid-cols-2 gap-6 mb-10">
             {PROOF_SLOTS.map((p) => (
               <div key={p.slot} className="bg-charcoal border-2 border-hairline shadow-brutal p-3">

@@ -30,9 +30,9 @@ const SERVICES = [
 ];
 
 const PROOF_SLOTS = [
-  { slot: 'geo-proof-1', alt: 'Screenshot of an AI engine response citing Antek Automation among UK AI automation agencies' },
-  { slot: 'geo-proof-2', alt: 'Screenshot of an AI engine naming Antek Automation in a recommendation answer' },
-  { slot: 'geo-proof-3', alt: 'Screenshot of an AI Overview referencing Antek Automation, Andover' },
+  { slot: 'chatgpt', alt: 'ChatGPT citing Antek Automation in its answer about UK AI automation agencies' },
+  { slot: 'perplexity', alt: 'Perplexity citing Antek Automation as a source' },
+  { slot: 'google-ai-overview', alt: 'Google AI Overview referencing Antek Automation, Andover' },
 ];
 
 const FAQS = [
@@ -184,7 +184,7 @@ export default function Page() {
             We use our own service on ourselves. Ask an AI assistant about UK AI automation agencies and see who comes up &mdash; a small agency in Andover, Hampshire, competing with London firms ten times our size. That&rsquo;s not luck. It&rsquo;s the exact process we&rsquo;ll run on your business.
           </p>
 
-          {/* Screenshot slots — drop real AI-citation screenshots into /public/proof/<slot>.webp */}
+          {/* Real AI-citation screenshots from /public/proof (shared with the homepage proof grid). */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {PROOF_SLOTS.map((p) => (
               <div key={p.slot} className="bg-charcoal border-2 border-hairline shadow-brutal p-3">

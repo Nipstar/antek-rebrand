@@ -16,7 +16,7 @@ _Last updated: 2026-06-27. Working memory for the location-page build. Read it b
 
 > **GOVERNING SPEC v2 (27 Jun 2026) is in force.** Two non-negotiables changed the model: (1) **one canonical Organization node** — every location page's schema references `https://www.antekautomation.com/#organization` by `@id`; **never mint a per-page `Organization`/`LocalBusiness`** (it splits the entity). (2) **Local content is the moat, not schema** — every page needs substantial body copy that could only be about that place (≥6 real local proper nouns); if swapping the place name still reads fine, it fails. **Freeze the northern Hampshire/Wiltshire cluster** (Andover, Salisbury, Basingstoke, Newbury, Winchester) until the Salisbury↔Andover overlap clears — expand south + into new counties only. Quality over coverage: a few strong pages, then a GSC gate.
 
-> **Every page ships FOUR services:** AI Chatbots, AI Voice Assistants, Workflow Automation (n8n), **GEO (Generative Engine Optimisation)**. On v2 pages GEO is just the 4th service card (no separate upsell block); GEO has **no Wikipedia `sameAs`** (no stable article — describe in copy only).
+> **Every page ships FOUR services:** AI Chatbots, AI Voice Assistants, Workflow Automation (n8n), **GEO (Generative Engine Optimisation)**. On v2 pages GEO is just the 4th service card (no separate upsell block). **UPDATE (2026-07-05): GEO now HAS a Wikipedia entity** — `Generative_engine_optimization` (article created ~2026; confirmed live HTTP 200 via Apify). Use it as GEO's `sameAs`/`about`. Supersedes the old "no stable article" note.
 
 ## Stack reality (don't trust prompts that say "Next.js")
 - **Vite + Vike (`vike-react`)**, React 18, TypeScript, Tailwind. File-based routing: each route is a folder under `pages/` with `+Page.tsx` (body) and `+Head.tsx` (title/meta/JSON-LD). `prerender: true` in `pages/+config.ts` → every page is static SSR HTML (indexable).
@@ -66,7 +66,7 @@ Reference implementation: any current location page (e.g. `pages/locations/winch
 - Hampshire `Q23204` · Basingstoke `Q810196` · Winchester `Q172157` (Univ of Winchester `Q3551690`, Winchester College `Q1059517`, Cathedral `Q476529`) · Andover, Hampshire `Q492805` (Test Valley `Q2116338`) · Southampton `Q79848` (Univ of Southampton `Q76473`) · Salisbury `Q160642` (Wiltshire `Q21694746`, Salisbury Cathedral `Q390150`) · Newbury, Berkshire `Q655874` (Berkshire `Q23220`).
 
 ## Verified Wikipedia sameAs — v2 batch (all confirmed resolving, 27 Jun 2026)
-Berkshire, Thames_Valley, River_Thames, Reading,_Berkshire, Newbury,_Berkshire, Portsmouth, Portsea_Island, The_Solent, Bournemouth, "Bournemouth,_Christchurch_and_Poole", Poole, Dorset. **GEO = no Wikipedia entity (do not force one).**
+Berkshire, Thames_Valley, River_Thames, Reading,_Berkshire, Newbury,_Berkshire, Portsmouth, Portsea_Island, The_Solent, Bournemouth, "Bournemouth,_Christchurch_and_Poole", Poole, Dorset. **GEO now HAS a Wikipedia entity: `Generative_engine_optimization` (verified live 2026-07-05) — use it in `sameAs`/`about`. Also verified live that day: `Large_language_model`, `Search_engine_optimization`, `ChatGPT`, `Generative_artificial_intelligence`.**
 
 ## Progress
 - **v1 (DONE):** Hampshire hub + Andover, Basingstoke, Winchester, Southampton, Salisbury, Newbury — conversion-first bodies, GEO as 4th offering, Retell demo orbs, lint green.
