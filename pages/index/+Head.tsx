@@ -444,70 +444,6 @@ export function Head() {
             { "@type": "ListItem", "position": 4, "name": "Beauty", "description": "Salons, spas, wellness centers" }
           ]
         }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.antekautomation.com/#faq",
-        "isPartOf": { "@id": "https://www.antekautomation.com/#webpage" },
-        "inLanguage": "en-GB",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What does Antek Automation do?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We build AI voice agents, website chatbots, workflow automation and GEO for UK businesses. Capture the leads you miss, cut the admin that eats your evenings, and get named when buyers ask AI search for a business like yours."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does it cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Voice agents from £97/month, chatbots from £57/month, workflow automation projects from £250, and GEO audits from £247. Setup fees are one-off and quoted up front. No long-term contracts."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How quickly can you go live?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Voice and chat products are usually live within 24 to 48 hours. Larger automation builds take one to two weeks, depending on the integrations involved."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need to be in Hampshire?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We’re based in Andover and happy to meet locally, but everything runs in the cloud. Most clients across the UK work with us entirely over video call and screen share."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will callers know they’re talking to AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "About 1 in 20 do. The voice is natural and the agent handles routine calls end to end. When a conversation needs a human, it takes a message or routes it on. If automation isn’t right for the job, we tell you."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is GEO and do I need it?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GEO is Generative Engine Optimisation: making sure ChatGPT, Perplexity, Claude and Google’s AI Overviews recommend you instead of a competitor. If buyers ask AI for a business like yours and you’re not in the answer, you need it. We audit, fix and monitor."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you tied into a contract?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No long-term contracts and no lock-in. Monthly products are month to month."
-            }
-          }
-        ]
       }
     ],
     "citation": [
@@ -595,6 +531,73 @@ export function Head() {
     }
   };
 
+  // Top-level FAQPage so validators/engines surface it (mirrors the visible FAQ section verbatim).
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.antekautomation.com/#faq",
+    "isPartOf": { "@id": "https://www.antekautomation.com/#webpage" },
+    "inLanguage": "en-GB",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Antek Automation do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We build AI voice agents, website chatbots, workflow automation and GEO for UK businesses. Capture the leads you miss, cut the admin that eats your evenings, and get named when buyers ask AI search for a business like yours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voice agents from £97/month, chatbots from £57/month, workflow automation projects from £250, and GEO audits from £247. Setup fees are one-off and quoted up front. No long-term contracts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you go live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voice and chat products are usually live within 24 to 48 hours. Larger automation builds take one to two weeks, depending on the integrations involved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to be in Hampshire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We’re based in Andover and happy to meet locally, but everything runs in the cloud. Most clients across the UK work with us entirely over video call and screen share."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will callers know they’re talking to AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "About 1 in 20 do. The voice is natural and the agent handles routine calls end to end. When a conversation needs a human, it takes a message or routes it on. If automation isn’t right for the job, we tell you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is GEO and do I need it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO is Generative Engine Optimisation: making sure ChatGPT, Perplexity, Claude and Google’s AI Overviews recommend you instead of a competitor. If buyers ask AI for a business like yours and you’re not in the answer, you need it. We audit, fix and monitor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you tied into a contract?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No long-term contracts and no lock-in. Monthly products are month to month."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <title>AI Automation Agency UK | Voice, Chat, Automation &amp; GEO</title>
@@ -627,6 +630,12 @@ export function Head() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(workflowAutomationServiceSchema) }}
+      />
+
+      {/* JSON-LD: FAQPage schema (top-level; mirrors the visible FAQ section) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
 
     </>
