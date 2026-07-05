@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Dorset'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'Bournemouth, Christchurch and Poole', sameAs: 'https://en.wikipedia.org/wiki/Bournemouth,_Christchurch_and_Poole' },
-                  { '@type': 'Place', name: 'Poole', sameAs: 'https://en.wikipedia.org/wiki/Poole' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -54,6 +50,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'Bournemouth, Christchurch and Poole', sameAs: 'https://en.wikipedia.org/wiki/Bournemouth,_Christchurch_and_Poole' },
+                  { '@type': 'Place', name: 'Poole', sameAs: 'https://en.wikipedia.org/wiki/Poole' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

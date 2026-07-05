@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'Winchester Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Winchester_Cathedral' },
-                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'Winchester Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Winchester_Cathedral' },
+                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

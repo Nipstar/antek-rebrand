@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'River Kennet', sameAs: 'https://en.wikipedia.org/wiki/River_Kennet' },
-                  { '@type': 'Place', name: 'Newbury Racecourse', sameAs: 'https://en.wikipedia.org/wiki/Newbury_Racecourse' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'River Kennet', sameAs: 'https://en.wikipedia.org/wiki/River_Kennet' },
+                  { '@type': 'Place', name: 'Newbury Racecourse', sameAs: 'https://en.wikipedia.org/wiki/Newbury_Racecourse' },
+                ],
                 mainEntity: [
               {
                 '@type': 'Question',

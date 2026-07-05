@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Berkshire', 'https://www.wikidata.org/wiki/Q23220'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'Thames Valley', sameAs: 'https://en.wikipedia.org/wiki/Thames_Valley' },
-                  { '@type': 'Place', name: 'River Thames', sameAs: 'https://en.wikipedia.org/wiki/River_Thames' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'Thames Valley', sameAs: 'https://en.wikipedia.org/wiki/Thames_Valley' },
+                  { '@type': 'Place', name: 'River Thames', sameAs: 'https://en.wikipedia.org/wiki/River_Thames' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

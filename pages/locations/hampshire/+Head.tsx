@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: 'https://en.wikipedia.org/wiki/United_Kingdom',
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
-                  { '@type': 'Place', name: 'New Forest', sameAs: 'https://en.wikipedia.org/wiki/New_Forest' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -54,6 +50,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'South Downs', sameAs: 'https://en.wikipedia.org/wiki/South_Downs' },
+                  { '@type': 'Place', name: 'New Forest', sameAs: 'https://en.wikipedia.org/wiki/New_Forest' },
+                ],
                 mainEntity: [
               {
                 '@type': 'Question',

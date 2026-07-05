@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Wiltshire', 'https://www.wikidata.org/wiki/Q21694746'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'Salisbury Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Salisbury_Cathedral' },
-                  { '@type': 'Place', name: 'Stonehenge', sameAs: 'https://en.wikipedia.org/wiki/Stonehenge' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -54,6 +50,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'Salisbury Cathedral', sameAs: 'https://en.wikipedia.org/wiki/Salisbury_Cathedral' },
+                  { '@type': 'Place', name: 'Stonehenge', sameAs: 'https://en.wikipedia.org/wiki/Stonehenge' },
+                ],
                 mainEntity: [
               {
                 '@type': 'Question',

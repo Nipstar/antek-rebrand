@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'Test Valley', sameAs: 'https://en.wikipedia.org/wiki/Test_Valley' },
-                  { '@type': 'Place', name: 'River Anton', sameAs: 'https://en.wikipedia.org/wiki/River_Anton' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'Test Valley', sameAs: 'https://en.wikipedia.org/wiki/Test_Valley' },
+                  { '@type': 'Place', name: 'River Anton', sameAs: 'https://en.wikipedia.org/wiki/River_Anton' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

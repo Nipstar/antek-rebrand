@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'University of Southampton', sameAs: 'https://en.wikipedia.org/wiki/University_of_Southampton' },
-                  { '@type': 'Place', name: 'River Itchen', sameAs: 'https://en.wikipedia.org/wiki/River_Itchen,_Hampshire' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'University of Southampton', sameAs: 'https://en.wikipedia.org/wiki/University_of_Southampton' },
+                  { '@type': 'Place', name: 'River Itchen', sameAs: 'https://en.wikipedia.org/wiki/River_Itchen,_Hampshire' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

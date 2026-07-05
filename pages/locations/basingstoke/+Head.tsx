@@ -39,10 +39,6 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
                   },
                 },
-                about: [
-                  { '@type': 'Place', name: 'River Loddon', sameAs: 'https://en.wikipedia.org/wiki/River_Loddon' },
-                  { '@type': 'Place', name: 'M3 motorway', sameAs: 'https://en.wikipedia.org/wiki/M3_motorway' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -55,6 +51,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'River Loddon', sameAs: 'https://en.wikipedia.org/wiki/River_Loddon' },
+                  { '@type': 'Place', name: 'M3 motorway', sameAs: 'https://en.wikipedia.org/wiki/M3_motorway' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',

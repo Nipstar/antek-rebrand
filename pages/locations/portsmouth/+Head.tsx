@@ -34,10 +34,6 @@ export function Head() {
                   name: 'Portsmouth',
                   sameAs: ['https://en.wikipedia.org/wiki/Portsmouth'],
                 },
-                about: [
-                  { '@type': 'Place', name: 'The Solent', sameAs: 'https://en.wikipedia.org/wiki/The_Solent' },
-                  { '@type': 'Place', name: 'Portsea Island', sameAs: 'https://en.wikipedia.org/wiki/Portsea_Island' },
-                ],
               },
               {
                 '@type': 'BreadcrumbList',
@@ -49,6 +45,10 @@ export function Head() {
               },
               {
                 '@type': 'FAQPage',
+                about: [
+                  { '@type': 'Place', name: 'The Solent', sameAs: 'https://en.wikipedia.org/wiki/The_Solent' },
+                  { '@type': 'Place', name: 'Portsea Island', sameAs: 'https://en.wikipedia.org/wiki/Portsea_Island' },
+                ],
                 mainEntity: [
                   {
                     '@type': 'Question',
