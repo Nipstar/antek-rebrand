@@ -15,6 +15,14 @@ const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '';
 // reCAPTCHA token and forwards to n8n — the webhook URL stays server-side.
 const CONTACT_ENDPOINT = '/api/contact';
 
+// Accept bare domains (e.g. "example.co.uk") — prepend https:// on submit so we
+// never reject a valid site just because the visitor left off the scheme.
+function normaliseUrl(raw: string): string {
+  const trimmed = raw.trim();
+  if (!trimmed) return '';
+  return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+}
+
 function getUtmAndContext() {
   if (typeof window === 'undefined') return {} as Record<string, string>;
   const params = new URLSearchParams(window.location.search);
@@ -156,6 +164,7 @@ export default function Page() {
     const ctx = getUtmAndContext();
     const payload = {
       ...formData,
+      websiteUrl: normaliseUrl(formData.websiteUrl),
       timestamp: new Date().toISOString(),
       source: CONSTANTS.WEBHOOK_SOURCE_CONTACT_FORM,
       page_town: 'brand-hub',
@@ -360,7 +369,8 @@ export default function Page() {
                 <input
                   id="contact-website-url"
                   name="websiteUrl"
-                  type="url"
+                  type="text"
+                  inputMode="url"
                   required={formData.interests.includes('geo_audit')}
                   autoComplete="url"
                   value={formData.websiteUrl}
