@@ -83,21 +83,6 @@ export function Head() {
             },
             serviceType: 'AI Chatbot',
             url: 'https://www.antekautomation.com/services/ai-chatbots',
-            author: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              jobTitle: 'Founder',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            knowsAbout: [
-              'AI chatbots',
-              'Website lead capture',
-              'Conversational AI',
-              'Live chat automation',
-              'Appointment booking chatbots',
-              'Customer service automation',
-            ],
             potentialAction: {
               '@type': 'ScheduleAction',
               target: {
@@ -172,6 +157,21 @@ export function Head() {
             '@type': 'WebPage',
             name: 'AI Chatbots for UK Businesses',
             url: 'https://www.antekautomation.com/services/ai-chatbots',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://www.antekautomation.com/#founder',
+              name: 'Andy Norman',
+              jobTitle: 'Founder',
+              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
+            },
+            keywords: [
+              'AI chatbots',
+              'Website lead capture',
+              'Conversational AI',
+              'Live chat automation',
+              'Appointment booking chatbots',
+              'Customer service automation',
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],

@@ -83,21 +83,6 @@ export function Head() {
             },
             serviceType: 'Workflow Automation',
             url: 'https://www.antekautomation.com/services/workflow-automation',
-            author: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              jobTitle: 'Founder',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            knowsAbout: [
-              'Workflow automation',
-              'n8n automation',
-              'Business process automation',
-              'API integration',
-              'CRM automation',
-              'Invoice automation',
-            ],
             potentialAction: {
               '@type': 'ScheduleAction',
               target: {
@@ -172,6 +157,21 @@ export function Head() {
             '@type': 'WebPage',
             name: 'Workflow Automation for UK Businesses',
             url: 'https://www.antekautomation.com/services/workflow-automation',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://www.antekautomation.com/#founder',
+              name: 'Andy Norman',
+              jobTitle: 'Founder',
+              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
+            },
+            keywords: [
+              'Workflow automation',
+              'n8n automation',
+              'Business process automation',
+              'API integration',
+              'CRM automation',
+              'Invoice automation',
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
               cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],
