@@ -83,27 +83,6 @@ export function Head() {
             },
             serviceType: 'GEO Audit',
             url: 'https://www.antekautomation.com/services/geo-audit',
-            author: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              jobTitle: 'Founder',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            knowsAbout: [
-              'Generative Engine Optimisation',
-              'AI search visibility',
-              'ChatGPT citations',
-              'Schema markup',
-              'Content structure for AI',
-              'AI crawler optimisation',
-            ],
-            about: [
-              { '@type': 'Thing', name: 'Generative engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Generative_engine_optimization' },
-              { '@type': 'Thing', name: 'Generative artificial intelligence', sameAs: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence' },
-              { '@type': 'Thing', name: 'Search engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Search_engine_optimization' },
-              { '@type': 'Thing', name: 'ChatGPT', sameAs: 'https://en.wikipedia.org/wiki/ChatGPT' },
-            ],
             offers: [
               {
                 '@type': 'Offer',
@@ -210,9 +189,30 @@ export function Head() {
             '@type': 'WebPage',
             name: 'GEO Audit — AI Search Visibility for UK Businesses',
             url: 'https://www.antekautomation.com/services/geo-audit',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://www.antekautomation.com/#founder',
+              name: 'Andy Norman',
+              jobTitle: 'Founder',
+              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
+            },
+            keywords: [
+              'Generative Engine Optimisation',
+              'AI search visibility',
+              'ChatGPT citations',
+              'Schema markup',
+              'Content structure for AI',
+              'AI crawler optimisation',
+            ],
+            about: [
+              { '@type': 'Thing', name: 'Generative engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Generative_engine_optimization' },
+              { '@type': 'Thing', name: 'Generative artificial intelligence', sameAs: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence' },
+              { '@type': 'Thing', name: 'Search engine optimization', sameAs: 'https://en.wikipedia.org/wiki/Search_engine_optimization' },
+              { '@type': 'Thing', name: 'ChatGPT', sameAs: 'https://en.wikipedia.org/wiki/ChatGPT' },
+            ],
             speakable: {
               '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],
+              cssSelector: ['h1', 'section p.text-lg'],
             },
           }),
         }}
