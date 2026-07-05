@@ -4,6 +4,8 @@ export const pages: string[] = [
   '/services/ai-voice-assistants',
   '/services/ai-chatbots',
   '/services/workflow-automation',
+  '/services/geo',
+  '/services/ai-seo',
   '/services/geo-audit',
   '/ai-receptionist',
   '/ai-receptionist/plumbers',
