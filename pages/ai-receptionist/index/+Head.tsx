@@ -216,7 +216,7 @@ export function Head() {
             url: 'https://www.antekautomation.com/ai-receptionist',
             speakable: {
               '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'section p.text-xl', 'section p.text-lg'],
+              cssSelector: ['h1', 'section p.text-lg'],
             },
           }),
         }}
