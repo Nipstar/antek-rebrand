@@ -255,11 +255,7 @@ export default function Page() {
             </table>
           </div>
           <p className="text-lg text-body leading-relaxed max-w-[65ch]">
-            Most businesses need both, weighted by where their customers ask. Full breakdown:{' '}
-            <a href="/blog/what-is-generative-engine-optimisation-uk-guide" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">
-              what is generative engine optimisation
-            </a>
-            . If you want the SEO side handled too, that&rsquo;s our{' '}
+            Most businesses need both, weighted by where their customers ask. If you want the SEO side handled too, that&rsquo;s our{' '}
             <a href="/services/ai-seo" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">
               AI SEO service
             </a>
