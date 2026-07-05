@@ -340,9 +340,11 @@ export default function Page() {
       </section>
 
       <ResourcesCompliance links={[
+        { text: 'Virtual assistant (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Virtual_assistant', context: 'The class of AI software agents our voice agents belong to' },
+        { text: 'Speech recognition (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Speech_recognition', context: 'How voice agents turn caller speech into text they can act on' },
+        { text: 'Interactive voice response (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Interactive_voice_response', context: 'Background on automated call answering technology' },
+        { text: 'Natural language processing (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Natural_language_processing', context: 'How voice agents work out what a caller actually means' },
         { text: 'ICO call recording guidance', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/', context: 'UK law on call recording and caller data handling' },
-        { text: 'Ofcom UK call statistics', url: 'https://www.ofcom.org.uk/', context: 'UK regulator for business telephone services' },
-        { text: 'Interactive voice response (IVR) overview', url: 'https://en.wikipedia.org/wiki/Interactive_voice_response', context: 'Background on automated call answering technology' },
       ]} />
 
       {/* CTA Section */}

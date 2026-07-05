@@ -346,8 +346,10 @@ export default function Page() {
       </section>
 
       <ResourcesCompliance links={[
+        { text: 'Business process automation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Business_process_automation', context: 'The discipline workflow automation delivers for your business' },
+        { text: 'Robotic process automation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Robotic_process_automation', context: 'Related automation approach for repetitive, rule-based tasks' },
         { text: 'n8n workflow automation (Wikipedia)', url: 'https://en.wikipedia.org/wiki/N8n', context: 'Open-source automation platform used for all Antek workflow builds' },
-        { text: 'Webhook overview (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Webhook', context: 'Technical explanation of webhooks — the backbone of automation integrations' },
+        { text: 'Workflow management system (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Workflow_management_system', context: 'The software category that coordinates automated task sequences' },
         { text: 'ICO data protection for businesses', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/', context: 'UK law on data handling within automated workflows' },
       ]} />
 

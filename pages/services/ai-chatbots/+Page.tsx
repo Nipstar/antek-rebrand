@@ -306,9 +306,11 @@ export default function Page() {
       </section>
 
       <ResourcesCompliance links={[
+        { text: 'Chatbot (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Chatbot', context: 'Background on conversational AI and chatbot technology' },
+        { text: 'Virtual assistant (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Virtual_assistant', context: 'The broader class of software agents our chatbots belong to' },
+        { text: 'Natural language processing (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Natural_language_processing', context: 'How chatbots understand and respond to human language' },
+        { text: 'Large language model (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Large_language_model', context: 'The model type powering modern conversational AI' },
         { text: 'ICO data protection for businesses', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/', context: 'UK law on handling lead data collected via chatbot conversations' },
-        { text: 'Chatbot overview', url: 'https://en.wikipedia.org/wiki/Chatbot', context: 'Background on conversational AI and chatbot technology' },
-        { text: 'Chatbot technology overview', url: 'https://en.wikipedia.org/wiki/Chatbot', context: 'Background on the technology behind AI website chatbots' },
       ]} />
 
       {/* CTA Section */}
