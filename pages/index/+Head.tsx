@@ -149,13 +149,25 @@ export function Head() {
       "areaServed": [
         {
           "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.2091906,
+            "longitude": -1.4803777
+          },
+          "geoRadius": "60000",
+          "description": "Hampshire service area centred on the Andover HQ",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Southampton",
+            "addressLocality": "Andover",
             "addressRegion": "Hampshire",
             "postalCode": [
-              "SO14", "SO15", "SO16", "SO17", "SO18",
-              "SO19", "SO30", "SO31", "SO32", "SO40", "SO50"
+              "SP10", "SP11",
+              "RG21", "RG22", "RG23", "RG24", "RG25", "RG26", "RG27", "RG28", "RG29",
+              "SO21", "SO22", "SO23",
+              "SO14", "SO15", "SO16", "SO17", "SO18", "SO19", "SO30", "SO31", "SO32", "SO40", "SO50",
+              "PO1", "PO2", "PO3", "PO4", "PO5", "PO6",
+              "PO12", "PO13", "PO14", "PO15", "PO16", "PO17",
+              "GU11", "GU12", "GU14"
             ],
             "addressCountry": "GB"
           }
@@ -351,6 +363,46 @@ export function Head() {
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
               "audience": { "@type": "BusinessAudience", "name": "Service businesses" },
+              "category": [
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-business-process-automation",
+                  "name": "Business process automation",
+                  "alternateName": ["BPA"],
+                  "url": "https://en.wikipedia.org/wiki/Business_process_automation",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Business_process_automation"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-robotic-process-automation",
+                  "name": "Robotic process automation",
+                  "alternateName": ["RPA"],
+                  "url": "https://en.wikipedia.org/wiki/Robotic_process_automation",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Robotic_process_automation"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-workflow-management-system",
+                  "name": "Workflow management system",
+                  "url": "https://en.wikipedia.org/wiki/Workflow_management_system",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Workflow_management_system"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                }
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Workflow Automation Pricing",
@@ -373,6 +425,47 @@ export function Head() {
               "provider": { "@id": "https://www.antekautomation.com/#organization" },
               "areaServed": "GB",
               "audience": { "@type": "BusinessAudience", "name": "UK businesses" },
+              "category": [
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-geo",
+                  "name": "Generative engine optimization",
+                  "alternateName": ["GEO", "Generative Engine Optimisation"],
+                  "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Generative_engine_optimization"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-generative-ai",
+                  "name": "Generative artificial intelligence",
+                  "alternateName": ["Generative AI"],
+                  "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Generative_artificial_intelligence"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "@id": "https://www.antekautomation.com/#term-seo",
+                  "name": "Search engine optimization",
+                  "alternateName": ["SEO"],
+                  "url": "https://en.wikipedia.org/wiki/Search_engine_optimization",
+                  "sameAs": ["https://en.wikipedia.org/wiki/Search_engine_optimization"],
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/"
+                  }
+                }
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "GEO Pricing",
