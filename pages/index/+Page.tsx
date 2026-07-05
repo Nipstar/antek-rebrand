@@ -158,7 +158,7 @@ export default function Page() {
               <p className="text-body leading-relaxed mb-6">
                 When buyers ask ChatGPT, Perplexity or Google's AI Overviews for a business like yours, we make sure you're the one it names. Audit, fix, stay visible.
               </p>
-              <a href="/services/geo-audit" aria-label="See how GEO works" className="mt-auto block">
+              <a href="/services/geo" aria-label="See how GEO works" className="mt-auto block">
                 <Button variant="primary" className="text-sm !px-4">See GEO</Button>
               </a>
             </Card>
