@@ -324,10 +324,10 @@ export default function Page() {
               </figcaption>
             </figure>
 
-            <a href="/services/geo-audit">
-              <Button variant="primary">Check Your Hampshire AI Visibility &rarr;</Button>
+            <a href="/services/geo-audit#visibility-check">
+              <Button variant="primary">Get Your Free AI Visibility Check &rarr;</Button>
             </a>
-            <p className="font-mono text-sm text-muted mt-3">From &pound;247. Delivered in 24 hours.</p>
+            <p className="font-mono text-sm text-muted mt-3">Free check, results in 48 hours. <a href="/services/geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Full GEO audit</a> from &pound;247, delivered in 24 hours.</p>
           </div>
         </Container>
       </section>

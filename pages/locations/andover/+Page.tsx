@@ -249,10 +249,10 @@ export default function Page() {
             </figcaption>
           </figure>
 
-          <a href="/services/geo-audit">
-            <Button variant="ink">Check Your Andover AI Visibility &rarr;</Button>
+          <a href="/services/geo-audit#visibility-check">
+            <Button variant="ink">Get Your Free AI Visibility Check &rarr;</Button>
           </a>
-          <p className="font-mono text-sm text-ink/70 mt-3">From &pound;247. Delivered in 24 hours.</p>
+          <p className="font-mono text-sm text-ink/70 mt-3">Free check, results in 48 hours. <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">Full GEO audit</a> from &pound;247, delivered in 24 hours.</p>
         </Container>
       </section>
 
