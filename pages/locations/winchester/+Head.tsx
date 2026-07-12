@@ -93,7 +93,7 @@ export function Head() {
                     name: 'How much does it cost and how quickly can I start?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'AI voice agents and chatbots start from £57/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Winchester practice winning even one extra instruction a month, the return is usually clear quickly.',
+                      text: 'AI chatbots start from £57/month, AI voice agents from £97/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Winchester practice winning even one extra instruction a month, the return is usually clear quickly.',
                     },
                   },
                 ],

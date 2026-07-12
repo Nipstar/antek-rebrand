@@ -93,7 +93,7 @@ export function Head() {
                     name: 'How much does it cost and how quickly can I start?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'AI voice agents and chatbots start from £57/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Basingstoke trade missing even a few calls a week, it usually pays for itself almost immediately.',
+                      text: 'AI chatbots start from £57/month, AI voice agents from £97/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Basingstoke trade missing even a few calls a week, it usually pays for itself almost immediately.',
                     },
                   },
                 ],

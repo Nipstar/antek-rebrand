@@ -48,7 +48,7 @@ export default function Page() {
         'AI voice agents, chatbots and workflow automation for Basingstoke businesses',
         'Stop losing jobs to missed calls — your phone answered 24/7, even mid-job',
         'Built by a Hampshire founder in Andover, about 20 minutes up the A303',
-        'From £57/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'Chatbots from £57/month, voice agents from £97/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Voice and chat products typically live within 24–48 hours',
       ]} />
 
@@ -275,7 +275,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from £57/month, and most are live within 24&ndash;48 hours of you forwarding your number or giving us website access. For a Basingstoke trade missing even a few calls a week, it usually pays for itself almost immediately.
+                AI chatbots start from £57/month, AI voice agents from £97/month, and most are live within 24&ndash;48 hours of you forwarding your number or giving us website access. For a Basingstoke trade missing even a few calls a week, it usually pays for itself almost immediately.
               </div>
             </details>
           </div>

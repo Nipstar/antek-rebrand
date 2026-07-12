@@ -229,7 +229,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from &pound;57/month, and most are live within 24&ndash;48 hours of you forwarding your number or giving us website access. For a busy Portsmouth firm missing even a few enquiries a week, it usually pays for itself almost immediately.
+                AI chatbots start from &pound;57/month, AI voice agents from &pound;97/month, and most are live within 24&ndash;48 hours of you forwarding your number or giving us website access. For a busy Portsmouth firm missing even a few enquiries a week, it usually pays for itself almost immediately.
               </div>
             </details>
           </div>

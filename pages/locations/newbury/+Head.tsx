@@ -85,7 +85,7 @@ export function Head() {
                 name: 'What does it cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'AI voice agents and chatbots start from £57/month. There’s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the full pricing for the detail.',
+                  text: 'AI chatbots start from £57/month, AI voice agents from £97/month. There’s no long tie-in, and for a Newbury business missing even a few calls a week it usually pays for itself almost immediately. See the full pricing for the detail.',
                 },
               },
               {

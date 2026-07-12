@@ -125,7 +125,7 @@ export function Head() {
                 name: 'What does it cost for a Hampshire business?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'AI voice agents and chatbots start from £57/month. Most Hampshire businesses recover that within the first few captured calls. See full pricing, or book a free call for an exact quote.',
+                  text: 'AI chatbots start from £57/month, AI voice agents from £97/month, plus a one-off setup fee. Most Hampshire businesses recover that within the first few captured calls. See full pricing, or book a free call for an exact quote.',
                 },
               },
               {
@@ -133,7 +133,7 @@ export function Head() {
                 name: 'What is AI as a service (AIaaS)?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'You rent the outcome rather than buying the technology. We build, host and maintain the AI agent, and you pay monthly from £57. No developers to hire, no platform licences, no long build.',
+                  text: 'You rent the outcome rather than buying the technology. We build, host and maintain the AI system, and you pay monthly, from £57 for a chatbot or £97 for a voice agent. No developers to hire, no platform licences, no long build.',
                 },
               },
               {

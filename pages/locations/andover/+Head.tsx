@@ -85,7 +85,7 @@ export function Head() {
                     name: 'How much does it cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'AI voice agents and chatbots start from £57/month. For an Andover tradesperson missing even a few calls a week, the return on investment is usually clear within the first couple of weeks.',
+                      text: 'AI chatbots start from £57/month, AI voice agents from £97/month, plus a one-off setup fee. For an Andover tradesperson missing even a few calls a week, the return is usually clear within the first couple of weeks.',
                     },
                   },
                   {

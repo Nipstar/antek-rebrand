@@ -54,7 +54,7 @@ export default function Page() {
         'AI voice agents, chatbots and workflow automation for businesses right across Hampshire',
         'Based in Andover — founder-led, with face-to-face available across the county',
         'Stop losing work to missed calls, slow follow-ups and admin overload',
-        'From £57/month, live within 24–48 hours — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'Chatbots from £57/month, voice agents from £97/month, live within 24–48 hours — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Everything runs remotely — same quality whether you’re in Winchester or anywhere else in the UK',
       ]} />
 
@@ -144,7 +144,7 @@ export default function Page() {
                 We build the agent, host it, monitor it and fix it when it breaks. You pay monthly and you get a working system, not a project plan and an invoice. No developers to hire, no platform licences to negotiate, no six-month build.
               </p>
               <p className="text-body leading-relaxed">
-                That&rsquo;s what AIaaS means when a Hampshire business buys it. From &pound;57/month.
+                That&rsquo;s what AIaaS means when a Hampshire business buys it. Chatbots from &pound;57/month, voice agents from &pound;97/month.
               </p>
             </Card>
 
@@ -214,7 +214,7 @@ export default function Page() {
               You can book a free 30-minute call and we&rsquo;ll scope what&rsquo;s worth automating and what isn&rsquo;t. No pitch deck. If the honest answer is that AI won&rsquo;t help you, we&rsquo;ll say so.
             </p>
             <p className="text-lg text-body leading-relaxed mb-8">
-              Or if you already know what you want, pricing starts at <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">&pound;57/month</a> and most systems are live in 24 to 48 hours.
+              Or if you already know what you want, pricing starts at <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">&pound;57/month</a> for chatbots and &pound;97/month for voice agents, and most systems are live in 24 to 48 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <a href="/contact">
@@ -359,7 +359,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from &pound;57/month. Most Hampshire businesses recover that within the first few captured calls. <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a>, or book a free call for an exact quote.
+                AI chatbots start from &pound;57/month, AI voice agents from &pound;97/month, plus a one-off setup fee. Most Hampshire businesses recover that within the first few captured calls. <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a>, or book a free call for an exact quote.
               </div>
             </details>
 
@@ -369,7 +369,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                You rent the outcome rather than buying the technology. We build, host and maintain the AI agent, and you pay monthly from &pound;57. No developers to hire, no platform licences, no long build.
+                You rent the outcome rather than buying the technology. We build, host and maintain the AI system, and you pay monthly, from &pound;57 for a chatbot or &pound;97 for a voice agent. No developers to hire, no platform licences, no long build.
               </div>
             </details>
 

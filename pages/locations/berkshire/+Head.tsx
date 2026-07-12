@@ -92,7 +92,7 @@ export function Head() {
                     name: 'How much does it cost and how quickly can we start?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'AI voice agents and chatbots start from £57/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Berkshire firm fielding a steady stream of enquiries across the M4 corridor, it usually pays for itself quickly.',
+                      text: 'AI chatbots start from £57/month, AI voice agents from £97/month, and most are live within 24–48 hours of you forwarding your number or giving us website access. For a Berkshire firm fielding a steady stream of enquiries across the M4 corridor, it usually pays for itself quickly.',
                     },
                   },
                 ],

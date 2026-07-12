@@ -84,7 +84,7 @@ export function Head() {
                 name: 'What does it cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'AI voice agents and chatbots start from £57/month. For a Salisbury trade missing even a few calls a week, it usually pays for itself almost immediately. Full numbers are on our pricing page.',
+                  text: 'AI chatbots start from £57/month, AI voice agents from £97/month. For a Salisbury trade missing even a few calls a week, it usually pays for itself almost immediately. Full numbers are on our pricing page.',
                 },
               },
               {
