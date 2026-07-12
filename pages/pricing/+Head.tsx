@@ -171,6 +171,22 @@ export function Head() {
       },
       {
         '@type': 'Question',
+        name: 'What support is included?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Standard support is responded to within 24 hours. Critical incidents, such as a voice agent going down during business hours, are responded to within 4 hours. Support is included across all monthly plans.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How is caller data handled under GDPR?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Call recordings are retained for 90 days then permanently deleted. Chat transcripts are retained for up to 12 months. Data is processed within the UK and EU. A Data Processing Agreement is available on request, and we are registered with the ICO as required under UK GDPR.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'Are there contracts or minimum terms?',
         acceptedAnswer: {
           '@type': 'Answer',

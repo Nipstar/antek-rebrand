@@ -216,7 +216,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from £57/month, and most go live within 24&ndash;48 hours of you forwarding your number or giving us website access &mdash;{' '}
+                AI chatbots start from £57/month, AI voice agents from £97/month, and most go live within 24&ndash;48 hours of you forwarding your number or giving us website access &mdash;{' '}
                 <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>. For a Bournemouth business losing even a few enquiries a week, it tends to pay for itself fast.
               </div>
             </details>

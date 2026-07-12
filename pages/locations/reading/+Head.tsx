@@ -85,7 +85,7 @@ export function Head() {
                     name: 'How much does it cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'AI voice agents and chatbots start from £57/month. For a Reading firm that wins work on response time, recovering even a handful of missed enquiries a week usually covers the cost several times over. Book a free 30-minute call and we’ll give you a straight figure for your setup.',
+                      text: 'AI chatbots start from £57/month, AI voice agents from £97/month. For a Reading firm that wins work on response time, recovering even a handful of missed enquiries a week usually covers the cost several times over. Book a free 30-minute call and we’ll give you a straight figure for your setup.',
                     },
                   },
                   {

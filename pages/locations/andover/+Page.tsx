@@ -50,7 +50,7 @@ export default function Page() {
         'AI voice agents, chatbots and workflow automation for Andover businesses',
         'Stop losing jobs to missed calls — your phone answered 24/7, even out on a job in Weyhill or Thruxton',
         'Founder-led from our Andover HQ at Chantry House, 38 Chantry Way — meet us in person if you want',
-        'From £57/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'Chatbots from £57/month, voice agents from £97/month — everything delivered remotely, with face-to-face if you want it — <a href="/pricing" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Voice and chat products typically live within 24–48 hours',
       ]} />
 
@@ -274,7 +274,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from &pound;57/month. For an Andover tradesperson missing even a few calls a week, the return on investment is usually clear within the first couple of weeks.
+                AI chatbots start from &pound;57/month, AI voice agents from &pound;97/month, plus a one-off setup fee. For an Andover tradesperson missing even a few calls a week, the return is usually clear within the first couple of weeks.
               </div>
             </details>
 

@@ -232,7 +232,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI voice agents and chatbots start from &pound;57/month. For a Reading firm that wins work on response time, recovering even a handful of missed enquiries a week usually covers the cost several times over. Book a free 30-minute call and we&rsquo;ll give you a straight figure for your setup.
+                AI chatbots start from &pound;57/month, AI voice agents from &pound;97/month. For a Reading firm that wins work on response time, recovering even a handful of missed enquiries a week usually covers the cost several times over. Book a free 30-minute call and we&rsquo;ll give you a straight figure for your setup.
               </div>
             </details>
 
