@@ -289,19 +289,45 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* ── GEO CROSS-SELL ── */}
+      {/* ── GEO PROOF (local authority → up to /services/geo-audit; no GEO definition here) ── */}
       <section className="bg-ink border-y border-hairline py-16 md:py-20">
         <Container>
           <div className="max-w-4xl">
             <HeadlineBlock className="mb-6">
               Is <span className="text-coral">AI Search</span> Recommending Your Hampshire Business?
             </HeadlineBlock>
-            <p className="text-lg text-body leading-relaxed mb-6">
-              When someone asks ChatGPT &ldquo;Who&rsquo;s the best plumber in Winchester?&rdquo; or tells Perplexity to &ldquo;find me an electrician near Basingstoke&rdquo;, is your business in the answer? Our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">GEO Audit</a> checks your visibility across ChatGPT, Perplexity, Google AI Overviews and Claude &mdash; and gives you a clear plan to get cited. Starting from &pound;247.
+            <p className="text-lg text-body leading-relaxed mb-4">
+              When someone asks ChatGPT for the best plumber in Winchester, or tells Perplexity to find an electrician near Basingstoke, one business gets named. Usually it isn&rsquo;t the one with the best website.
             </p>
+            <p className="text-lg text-body leading-relaxed mb-4">
+              We know this works because we did it to ourselves. Antek is cited by name in Google&rsquo;s AI Overview for AI automation in Andover, and holds 100% Share of AI Voice across the Andover grid. Same county, same search engines, same methods we&rsquo;d use on you.
+            </p>
+            <p className="text-lg text-body leading-relaxed mb-8">
+              A GEO audit shows you exactly where your business currently stands across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, and what it takes to get cited.
+            </p>
+
+            {/* Proof images. Two-up when the Local Falcon grid (slot A) is supplied; the
+                AI Overview citation (slot B) ships now. Grid strip goes alongside as
+                <figure> #1 when available. */}
+            <figure className="mb-8 max-w-2xl border-2 border-hairline bg-charcoal">
+              <img
+                src="/geo-proof-aio-andover.webp"
+                alt="Google AI Overview citing Antek Automation as an AI automation provider in Andover"
+                width={800}
+                height={143}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto"
+              />
+              <figcaption className="font-mono text-xs text-muted px-3 py-2 border-t border-hairline">
+                Google AI Overview &mdash; &ldquo;AI automation in Andover&rdquo;
+              </figcaption>
+            </figure>
+
             <a href="/services/geo-audit">
-              <Button variant="primary">Check Your AI Visibility &rarr;</Button>
+              <Button variant="primary">Check Your Hampshire AI Visibility &rarr;</Button>
             </a>
+            <p className="font-mono text-sm text-muted mt-3">From &pound;247. Delivered in 24 hours.</p>
           </div>
         </Container>
       </section>
@@ -390,6 +416,16 @@ export default function Page() {
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 Yes. Calls, web chat and follow-ups handled in one place, without running a contact centre. Suited to firms taking roughly fifty calls a week or more.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Can you get my Hampshire business cited in ChatGPT and Google AI Overviews?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                That&rsquo;s what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google&rsquo;s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.
               </div>
             </details>
           </div>

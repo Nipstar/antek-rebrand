@@ -39,6 +39,10 @@ export function Head() {
                     sameAs: ['https://en.wikipedia.org/wiki/Hampshire', 'https://www.wikidata.org/wiki/Q23204'],
                   },
                 },
+                serviceOutput: {
+                  '@type': 'Service',
+                  '@id': 'https://www.antekautomation.com/services/geo-audit#service',
+                },
               },
               {
                 '@type': 'BreadcrumbList',
@@ -94,6 +98,14 @@ export function Head() {
                     acceptedAnswer: {
                       '@type': 'Answer',
                       text: 'Most voice and chat products are live within 24–48 hours of you forwarding your number or giving us website access. If you’d rather kick off in person, we’re at Chantry House in town and can usually meet the same week — being on your doorstep keeps things quick.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can you get my Andover business cited in ChatGPT and Google AI Overviews?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'That is what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.',
                     },
                   },
                 ],

@@ -64,6 +64,7 @@ export function Head() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
+            '@id': 'https://www.antekautomation.com/services/geo-audit#service',
             name: 'GEO Audit',
             description:
               'Generative Engine Optimisation audit assessing your business visibility in AI-generated search results from ChatGPT, Perplexity, Google AI Overviews and Claude. Includes technical setup review, content structure analysis, citation readiness scoring and prioritised action plan.',

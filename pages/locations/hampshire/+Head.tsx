@@ -39,6 +39,10 @@ export function Head() {
                     sameAs: 'https://en.wikipedia.org/wiki/United_Kingdom',
                   },
                 },
+                serviceOutput: {
+                  '@type': 'Service',
+                  '@id': 'https://www.antekautomation.com/services/geo-audit#service',
+                },
                 hasOfferCatalog: {
                   '@type': 'OfferCatalog',
                   name: 'AI Services in Hampshire',
@@ -150,6 +154,14 @@ export function Head() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Yes. Calls, web chat and follow-ups handled in one place, without running a contact centre. Suited to firms taking roughly fifty calls a week or more.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can you get my Hampshire business cited in ChatGPT and Google AI Overviews?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'That is what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.',
                 },
               },
                 ],
