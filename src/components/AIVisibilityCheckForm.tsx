@@ -28,6 +28,7 @@ const EMPTY = {
   business_name: '',
   website: '',
   location: '',
+  trade: '',
   consent: false,
   company_size: '', // honeypot — real users never see or fill this
 };
@@ -129,6 +130,7 @@ export function AIVisibilityCheckForm() {
       business_name: formData.business_name.trim(),
       website_url: website,
       location: formData.location.trim(),
+      trade: formData.trade.trim(),
       consent: formData.consent,
       company_size: formData.company_size, // honeypot
       source: 'ai-visibility-check',
@@ -248,23 +250,33 @@ export function AIVisibilityCheckForm() {
                   </div>
                 </div>
 
+                <div>
+                  <label htmlFor="avc-website" className={labelClass}>Business website *</label>
+                  <input
+                    id="avc-website" name="website_url" type="text" required inputMode="url" autoComplete="url"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    className={inputClass} placeholder="yourbusiness.co.uk"
+                  />
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="avc-website" className={labelClass}>Business website *</label>
-                    <input
-                      id="avc-website" name="website_url" type="text" required inputMode="url" autoComplete="url"
-                      value={formData.website}
-                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      className={inputClass} placeholder="yourbusiness.co.uk"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="avc-location" className={labelClass}>Town or postcode *</label>
+                    <label htmlFor="avc-location" className={labelClass}>Town *</label>
                     <input
                       id="avc-location" name="location" type="text" required autoComplete="address-level2"
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       className={inputClass} placeholder="Basingstoke"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="avc-trade" className={labelClass}>Trade or business type *</label>
+                    <input
+                      id="avc-trade" name="trade" type="text" required
+                      value={formData.trade}
+                      onChange={(e) => setFormData({ ...formData, trade: e.target.value })}
+                      className={inputClass} placeholder="e.g. lawyer, accountant, plumber"
                     />
                   </div>
                 </div>
