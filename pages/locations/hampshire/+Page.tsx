@@ -119,6 +119,115 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* ── AIaaS / AGENTIC AI / CCaaS (maps buyer jargon onto the services above) ── */}
+      <section className="bg-ink border-y border-hairline">
+        <Container className="py-20 md:py-28">
+          <div className="max-w-3xl mb-14">
+            <HeadlineBlock className="mb-6">
+              Agentic AI and AI as a Service in <span className="text-coral">Hampshire</span>
+            </HeadlineBlock>
+            <p className="text-lg text-body leading-relaxed max-w-[60ch]">
+              Half the agencies in Hampshire will sell you &ldquo;agentic AI&rdquo; without telling you what it is. Here&rsquo;s the plain version, and what you actually get for your money.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            <Card className="h-full bg-charcoal">
+              <Icon letter="01" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
+                AI as a Service (AIaaS)
+              </h3>
+              <p className="text-body leading-relaxed mb-4">
+                You don&rsquo;t buy the technology. You rent the outcome.
+              </p>
+              <p className="text-body leading-relaxed mb-4">
+                We build the agent, host it, monitor it and fix it when it breaks. You pay monthly and you get a working system, not a project plan and an invoice. No developers to hire, no platform licences to negotiate, no six-month build.
+              </p>
+              <p className="text-body leading-relaxed">
+                That&rsquo;s what AIaaS means when a Hampshire business buys it. From &pound;57/month.
+              </p>
+            </Card>
+
+            <Card className="h-full bg-charcoal">
+              <Icon letter="02" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
+                Agentic AI
+              </h3>
+              <p className="text-body leading-relaxed mb-4">
+                An <a href="/services/ai-voice-assistants" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">agent</a> doesn&rsquo;t just answer. It does.
+              </p>
+              <p className="text-body leading-relaxed mb-4">
+                A chatbot tells your customer you&rsquo;re open until five. An agent takes the booking, puts it in your calendar, texts you the details and chases them the day before if they don&rsquo;t confirm.
+              </p>
+              <p className="text-body leading-relaxed">
+                The difference is whether anything actually happens at the end of the conversation. If a provider can&rsquo;t tell you what their AI <em>does</em> after it stops talking, it isn&rsquo;t agentic.
+              </p>
+            </Card>
+
+            <Card className="h-full bg-charcoal">
+              <Icon letter="03" size="lg" mono />
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mt-6 mb-4">
+                AI Contact Centre
+              </h3>
+              <p className="text-body leading-relaxed mb-4">
+                Calls, <a href="/services/ai-chatbots" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">web chat</a> and follow-ups handled in one place, without a contact centre.
+              </p>
+              <p className="text-body leading-relaxed">
+                For a Hampshire firm taking fifty calls a week, you don&rsquo;t need a call centre. You need one agent that never goes to lunch, never leaves a voicemail and <a href="/services/workflow-automation" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">puts everything in the same system</a>.
+              </p>
+            </Card>
+          </div>
+
+          {/* Honesty block */}
+          <div className="mt-8 border-2 border-coral bg-charcoal p-8 md:p-10 max-w-4xl">
+            <h3 className="font-display font-extrabold text-xl md:text-2xl uppercase text-cream mb-4">
+              What It Won&rsquo;t Do
+            </h3>
+            <p className="text-body leading-relaxed mb-6 max-w-[60ch]">
+              Straight answer, because you&rsquo;re comparing providers and everyone else will tell you it does everything.
+            </p>
+            <ul className="space-y-4 mb-6">
+              <li className="flex gap-4 text-body leading-relaxed">
+                <span className="text-coral font-mono font-bold shrink-0">&rarr;</span>
+                <span>It won&rsquo;t replace your team. It removes the work they hate.</span>
+              </li>
+              <li className="flex gap-4 text-body leading-relaxed">
+                <span className="text-coral font-mono font-bold shrink-0">&rarr;</span>
+                <span>It won&rsquo;t fix a broken process. Automate a mess and you get a faster mess.</span>
+              </li>
+              <li className="flex gap-4 text-body leading-relaxed">
+                <span className="text-coral font-mono font-bold shrink-0">&rarr;</span>
+                <span>It won&rsquo;t handle every call perfectly on day one. It gets tuned over the first fortnight, with you.</span>
+              </li>
+            </ul>
+            <p className="text-body leading-relaxed font-bold text-cream">
+              If someone tells you otherwise, they&rsquo;re selling.
+            </p>
+          </div>
+
+          {/* Conversion close */}
+          <div className="mt-14 max-w-[65ch]">
+            <HeadlineBlock className="mb-6">
+              Two ways <span className="text-coral">in</span>.
+            </HeadlineBlock>
+            <p className="text-lg text-body leading-relaxed mb-4">
+              You can book a free 30-minute call and we&rsquo;ll scope what&rsquo;s worth automating and what isn&rsquo;t. No pitch deck. If the honest answer is that AI won&rsquo;t help you, we&rsquo;ll say so.
+            </p>
+            <p className="text-lg text-body leading-relaxed mb-8">
+              Or if you already know what you want, pricing starts at <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">&pound;57/month</a> and most systems are live in 24 to 48 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <a href="/contact">
+                <Button variant="primary" className="w-full sm:w-auto">Book a free 30-min call</Button>
+              </a>
+              <a href="/pricing">
+                <Button variant="secondary" className="w-full sm:w-auto">See pricing</Button>
+              </a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* ── PROOF ── */}
       <TrustBlock>
         {/* local testimonial slot */}
@@ -251,6 +360,36 @@ export default function Page() {
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 AI voice agents and chatbots start from &pound;57/month. Most Hampshire businesses recover that within the first few captured calls. <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a>, or book a free call for an exact quote.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What is AI as a service (AIaaS)?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                You rent the outcome rather than buying the technology. We build, host and maintain the AI agent, and you pay monthly from &pound;57. No developers to hire, no platform licences, no long build.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What is agentic AI, and do you provide it in Hampshire?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Yes. An agentic AI does something after the conversation ends: books the job, updates your CRM, chases the confirmation. A chatbot that only answers questions is not agentic.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                Do you provide AI contact centre services in Hampshire?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                Yes. Calls, web chat and follow-ups handled in one place, without running a contact centre. Suited to firms taking roughly fifty calls a week or more.
               </div>
             </details>
           </div>

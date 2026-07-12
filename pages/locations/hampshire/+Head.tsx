@@ -39,6 +39,39 @@ export function Head() {
                     sameAs: 'https://en.wikipedia.org/wiki/United_Kingdom',
                   },
                 },
+                hasOfferCatalog: {
+                  '@type': 'OfferCatalog',
+                  name: 'AI Services in Hampshire',
+                  itemListElement: [
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'AI as a Service (AIaaS)',
+                        alternateName: ['AIaaS', 'Artificial Intelligence as a Service'],
+                        description: 'Fully managed AI voice agents, chatbots and workflow automation delivered as a monthly subscription for Hampshire businesses.',
+                      },
+                    },
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Agentic AI Deployment',
+                        alternateName: ['Agentic AI'],
+                        description: 'AI agents that take action after the conversation: booking appointments, updating CRM records and triggering follow-ups.',
+                      },
+                    },
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'AI Contact Centre',
+                        alternateName: ['CCaaS', 'Contact Centre as a Service'],
+                        description: 'Unified AI handling of inbound calls, web chat and follow-up for Hampshire service businesses.',
+                      },
+                    },
+                  ],
+                },
               },
               {
                 '@type': 'BreadcrumbList',
@@ -93,6 +126,30 @@ export function Head() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'AI voice agents and chatbots start from £57/month. Most Hampshire businesses recover that within the first few captured calls. See full pricing, or book a free call for an exact quote.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is AI as a service (AIaaS)?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'You rent the outcome rather than buying the technology. We build, host and maintain the AI agent, and you pay monthly from £57. No developers to hire, no platform licences, no long build.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is agentic AI, and do you provide it in Hampshire?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. An agentic AI does something after the conversation ends: books the job, updates your CRM, chases the confirmation. A chatbot that only answers questions is not agentic.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you provide AI contact centre services in Hampshire?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Calls, web chat and follow-ups handled in one place, without running a contact centre. Suited to firms taking roughly fifty calls a week or more.',
                 },
               },
                 ],
