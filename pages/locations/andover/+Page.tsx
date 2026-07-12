@@ -226,7 +226,7 @@ export default function Page() {
             When someone asks ChatGPT for the best electrician in Andover, or tells Perplexity to find a reliable builder near Andover, one business gets named. Usually it isn&rsquo;t the one with the best website.
           </p>
           <p className="text-lg text-ink leading-relaxed mb-4 max-w-[60ch]">
-            We know this works because we did it to ourselves. Antek is cited by name in Google&rsquo;s AI Overview for AI automation in Andover, and holds 100% Share of AI Voice across the Andover grid. Same town, same search engines, same methods we&rsquo;d use on you.
+            We know this works because we did it to ourselves. Antek is cited by name in Google&rsquo;s AI Overview for AI automation in Andover, and ranks in the top three across the Andover map grid. Same town, same search engines, same methods we&rsquo;d use on you.
           </p>
           <p className="text-lg text-ink leading-relaxed mb-8 max-w-[60ch]">
             A GEO audit shows you exactly where your business currently stands across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, and what it takes to get cited.

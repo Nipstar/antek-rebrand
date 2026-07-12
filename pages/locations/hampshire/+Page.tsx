@@ -300,7 +300,7 @@ export default function Page() {
               When someone asks ChatGPT for the best plumber in Winchester, or tells Perplexity to find an electrician near Basingstoke, one business gets named. Usually it isn&rsquo;t the one with the best website.
             </p>
             <p className="text-lg text-body leading-relaxed mb-4">
-              We know this works because we did it to ourselves. Antek is cited by name in Google&rsquo;s AI Overview for AI automation in Andover, and holds 100% Share of AI Voice across the Andover grid. Same county, same search engines, same methods we&rsquo;d use on you.
+              We know this works because we did it to ourselves. Antek is cited by name in Google&rsquo;s AI Overview for AI automation in Andover, and ranks in the top three across the Andover map grid. Same county, same search engines, same methods we&rsquo;d use on you.
             </p>
             <p className="text-lg text-body leading-relaxed mb-8">
               A GEO audit shows you exactly where your business currently stands across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, and what it takes to get cited.
