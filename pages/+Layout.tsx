@@ -8,6 +8,7 @@ import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsen
 import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
 import { initializeCloudflareAnalytics } from '../src/utils/cloudflareAnalytics'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
+import { initializePlerdy } from '../src/utils/plerdy'
 import { getStoredConsent } from '../src/utils/consent'
 // Self-hosted brand fonts (no third-party CDN). Outfit display, DM Sans body,
 // JetBrains Mono labels. See docs/ANTEK-BRAND-GUIDELINES.md §3.
@@ -57,9 +58,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       import.meta.env.VITE_CLOUDFLARE_BEACON_TOKEN || '592ae16e49154776a0b77845c013f32a'
     )
 
-    // If the user already accepted on a prior visit, load Meta Pixel now.
+    // If the user already accepted on a prior visit, load consent-gated trackers now.
     if (getStoredConsent() === 'accepted') {
       initializeMetaPixel()
+      initializePlerdy()
     }
 
     // React to consent decisions made later in the session.
@@ -69,6 +71,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         grantAnalyticsConsent()
         grantClarityConsent()
         initializeMetaPixel()
+        initializePlerdy()
       } else if (detail === 'rejected') {
         revokeAnalyticsConsent()
       }
