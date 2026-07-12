@@ -140,7 +140,7 @@ export default function Page() {
             </p>
             <ul className="list-disc list-inside space-y-2 leading-relaxed">
               <li><strong>Essential Cookies:</strong> Required for website functionality (e.g., session management, chatbot state). These do not require consent.</li>
-              <li><strong>Analytics Cookies:</strong> To measure website performance (Google Analytics, with IP anonymisation). Loaded only after you click <em>Accept</em> on the cookie banner.</li>
+              <li><strong>Analytics Cookies:</strong> To measure website performance (Google Analytics, with IP anonymisation; Plerdy for heatmaps and click analytics). Loaded only after you click <em>Accept</em> on the cookie banner.</li>
               <li><strong>Marketing Cookies:</strong> Meta Pixel, used to measure marketing campaign performance. Loaded only after you click <em>Accept</em>.</li>
               <li><strong>Functional Cookies:</strong> To remember your preferences (including your cookie choice itself, stored in your browser&rsquo;s localStorage under the key <code>antek_cookie_consent</code>).</li>
             </ul>

@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
+import { usePageContext } from 'vike-react/usePageContext'
 import { Navigation } from '../src/components/Navigation'
 import { Footer } from '../src/components/Footer'
 import { CookieConsent } from '../src/components/CookieConsent'
@@ -7,6 +8,7 @@ import { grantAnalyticsConsent, initializeGoogleAnalytics, revokeAnalyticsConsen
 import { grantClarityConsent, initializeClarity, tagClarityPage } from '../src/utils/clarity'
 import { initializeCloudflareAnalytics } from '../src/utils/cloudflareAnalytics'
 import { initializeMetaPixel } from '../src/utils/metaPixel'
+import { initializePlerdy } from '../src/utils/plerdy'
 import { getStoredConsent } from '../src/utils/consent'
 // Self-hosted brand fonts (no third-party CDN). Outfit display, DM Sans body,
 // JetBrains Mono labels. See docs/ANTEK-BRAND-GUIDELINES.md §3.
@@ -26,7 +28,13 @@ const BookingPopupCTA = lazy(() =>
   import('../src/components/BookingPopupCTA').then((m) => ({ default: m.BookingPopupCTA }))
 )
 
+// Landing pages that use logo-only chrome (no nav/footer/chatbot) to cut exit
+// paths for paid traffic. Analytics + consent still run (they live in Layout).
+const BARE_ROUTES = new Set(['/free-ai-visibility-check'])
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const pageContext = usePageContext()
+  const bare = BARE_ROUTES.has(pageContext.urlPathname)
   const [chatbotReady, setChatbotReady] = useState(false)
 
   useEffect(() => {
@@ -50,9 +58,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       import.meta.env.VITE_CLOUDFLARE_BEACON_TOKEN || '592ae16e49154776a0b77845c013f32a'
     )
 
-    // If the user already accepted on a prior visit, load Meta Pixel now.
+    // If the user already accepted on a prior visit, load consent-gated trackers now.
     if (getStoredConsent() === 'accepted') {
       initializeMetaPixel()
+      initializePlerdy()
     }
 
     // React to consent decisions made later in the session.
@@ -62,6 +71,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         grantAnalyticsConsent()
         grantClarityConsent()
         initializeMetaPixel()
+        initializePlerdy()
       } else if (detail === 'rejected') {
         revokeAnalyticsConsent()
       }
@@ -110,6 +120,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
       if (timeoutId !== undefined) window.clearTimeout(timeoutId)
     }
   }, [])
+
+  if (bare) {
+    return (
+      <div className="min-h-screen bg-charcoal">
+        <header className="border-b border-hairline">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="flex items-center h-20">
+              <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="/logo.svg" alt="Antek Automation Logo" width={56} height={56} decoding="async" className="w-14 h-14" />
+                <span className="font-display font-extrabold text-2xl uppercase text-cream">Antek Automation</span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <main>{children}</main>
+        <footer className="border-t border-hairline py-10">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-body text-sm">
+            <p>
+              Antek Automation · Chantry House, 38 Chantry Way, Andover SP10 1LZ ·{' '}
+              <a href="tel:03330389960" className="hover:text-coral">0333 038 9960</a>
+            </p>
+            <p className="flex gap-6">
+              <a href="/privacy-policy" className="hover:text-coral">Privacy Policy</a>
+              <a href="/terms-of-business" className="hover:text-coral">Terms of Business</a>
+            </p>
+          </div>
+        </footer>
+        <CookieConsent />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-charcoal">

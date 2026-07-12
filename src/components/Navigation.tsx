@@ -30,6 +30,7 @@ export function Navigation() {
     { label: 'GEO', href: '/services/geo' },
     { label: 'GEO Audit', href: '/services/geo-audit' },
     { label: 'AI SEO', href: '/services/ai-seo' },
+    { label: 'Free AI Visibility Check', href: '/free-ai-visibility-check' },
     { label: 'Pricing', href: '/pricing' },
   ]
 
