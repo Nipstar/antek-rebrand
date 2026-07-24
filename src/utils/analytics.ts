@@ -17,20 +17,19 @@ export const initializeGoogleAnalytics = (gtagId: string) => {
     }
     window.gtag = gtag as (...args: unknown[]) => void
 
-    // Google Consent Mode v2 — default denied. GA script can still load but
-    // won't store identifiers or send personal data until consent is granted.
+    // Consent Mode v2. analytics_storage defaults to GRANTED so GA tracks every
+    // visitor (full data) — ad_* stay denied (we run no ads product). A visitor
+    // who clicks "Reject" flips analytics_storage to denied for the rest of the
+    // session (see revokeAnalyticsConsent). Implied-consent for analytics: gives
+    // full visibility; slightly looser than strict opt-in GDPR.
     gtag('consent', 'default', {
       ad_storage: 'denied',
-      analytics_storage: 'denied',
+      analytics_storage: getStoredConsent() === 'rejected' ? 'denied' : 'granted',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
       wait_for_update: 500,
     })
-
-    // If user previously accepted, grant immediately
-    if (getStoredConsent() === 'accepted') {
-      gtag('consent', 'update', { analytics_storage: 'granted' })
-    }
+    gtag('set', 'url_passthrough', true)
 
     const s = document.createElement('script')
     s.async = true
