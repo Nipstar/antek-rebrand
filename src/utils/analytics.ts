@@ -27,6 +27,13 @@ export const initializeGoogleAnalytics = (gtagId: string) => {
       wait_for_update: 500,
     })
 
+    // Consent Mode v2 modelling helpers: pass ad-click/session info through the
+    // URL (not cookies) and redact ad data while consent is denied. These let
+    // GA4 send cookieless "consent pings" and model the traffic that hasn't
+    // accepted cookies — recovering the data lost when the banner went live.
+    gtag('set', 'url_passthrough', true)
+    gtag('set', 'ads_data_redaction', true)
+
     // If user previously accepted, grant immediately
     if (getStoredConsent() === 'accepted') {
       gtag('consent', 'update', { analytics_storage: 'granted' })
