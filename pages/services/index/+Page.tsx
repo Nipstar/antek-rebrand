@@ -4,6 +4,7 @@ import { Icon } from '../../../src/components/Icon'
 import { Container } from '../../../src/components/Container'
 import { Eyebrow } from '../../../src/components/Eyebrow'
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 
 const services = [
   {
@@ -68,6 +69,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       {/* ── SERVICES GRID ── */}
       <section className="py-20 md:py-28">

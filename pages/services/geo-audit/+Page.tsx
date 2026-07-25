@@ -1,4 +1,5 @@
 import { Button } from '../../../src/components/Button';
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 import { Container } from '../../../src/components/Container';
@@ -43,6 +44,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       <QuickRecap items={[
         'A GEO audit (Generative Engine Optimisation) measures how visible your business is in AI-generated answers — ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini',

@@ -5,6 +5,7 @@ import { Container } from '../../../src/components/Container'
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 
 export default function Page() {
   const openChatbot = () => {
@@ -40,6 +41,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       <QuickRecap items={[
         'An AI chatbot trained on your business — answers questions, captures leads, and books appointments 24/7',
