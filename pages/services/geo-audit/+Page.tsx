@@ -504,6 +504,16 @@ export default function Page() {
 
             <details className="border-2 border-hairline bg-ink group">
               <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
+                What&rsquo;s included in a GEO retainer?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                AI citation monitoring across 5 platforms, content updates based on what AI is currently rewarding, schema maintenance as standards evolve, new Q&amp;A content for emerging search prompts, a monthly citation report, and a quarterly strategy call. &pound;497/month, rolling monthly, typically starting after a 3-month foundation period.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center">
                 What size business is this for?
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>

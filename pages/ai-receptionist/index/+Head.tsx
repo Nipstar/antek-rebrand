@@ -120,6 +120,46 @@ export function Head() {
       },
       {
         '@type': 'Question',
+        name: 'Who provides no-code AI call agents in the UK?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24–48 hours. Plans from £97/month, setup from £249.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Who offers an AI receptionist that answers calls when my team is unavailable?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We do. It covers calls around the clock, including evenings, weekends, and bank holidays, or whenever your team is busy or unreachable. Every call gets answered on the first ring, and anything urgent gets flagged straight away.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How many concurrent conversations can voice agents handle?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Up to 20 calls at once on our Retell setup, each running as its own separate conversation rather than queuing behind a single line. Still miles ahead of a human receptionist, who can only take one call at a time.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does an AI receptionist work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'It answers the phone using a natural-sounding voice, follows the screening questions you set to work out what the caller needs, captures their details, and either books them straight into your calendar or takes a message and flags it for you.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is an AI receptionist and how does it work for a business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'It’s a voice agent that answers incoming calls in place of, or alongside, a human receptionist. For a business that means no missed calls, consistent screening every time, and a summary of every call whether you were free to take it or not.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'How much does it cost?',
         acceptedAnswer: {
           '@type': 'Answer',
