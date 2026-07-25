@@ -32,3 +32,4 @@ baselines/
 
 # Throwaway review screenshots
 docs/untitled folder/
+*.tsbuildinfo

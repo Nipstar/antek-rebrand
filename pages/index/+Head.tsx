@@ -1,3 +1,5 @@
+import reviewsData from '../../src/data/reviews.json'
+
 export function Head() {
   const homePageSchema = {
     "@context": "https://schema.org",
@@ -65,6 +67,19 @@ export function Head() {
       "@type": ["Organization", "LocalBusiness"],
       "@id": "https://www.antekautomation.com/#organization",
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.antekautomation.com/#webpage" },
+      // AggregateRating from real GBP reviews (src/data/reviews.json) — only
+      // emitted when there are reviews, so it never ships a fake/zero rating.
+      ...(reviewsData.reviewCountTotal > 0
+        ? {
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": reviewsData.ratingAverageTotal,
+              "reviewCount": reviewsData.reviewCountTotal,
+              "bestRating": 5,
+              "worstRating": 1
+            }
+          }
+        : {}),
       "image": {
         "@type": "ImageObject",
         "url": "https://www.antekautomation.com/logo.svg",
