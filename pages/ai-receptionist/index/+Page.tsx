@@ -64,6 +64,26 @@ const faqs = [
     a: 'You\u2019ll wonder why you kept it this long. Voicemail captures maybe 20% of callers. An answering service takes a message. This qualifies the lead, captures details, and books the appointment. Different league.',
   },
   {
+    q: 'Who provides no-code AI call agents in the UK?',
+    a: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24\u201348 hours. Plans from \u00a397/month, setup from \u00a3249.',
+  },
+  {
+    q: 'Who offers an AI receptionist that answers calls when my team is unavailable?',
+    a: 'We do. It covers calls around the clock, including evenings, weekends, and bank holidays, or whenever your team is busy or unreachable. Every call gets answered on the first ring, and anything urgent gets flagged straight away.',
+  },
+  {
+    q: 'How many concurrent conversations can voice agents handle?',
+    a: 'Up to 20 calls at once on our Retell setup, each running as its own separate conversation rather than queuing behind a single line. Still miles ahead of a human receptionist, who can only take one call at a time.',
+  },
+  {
+    q: 'How does an AI receptionist work?',
+    a: 'It answers the phone using a natural-sounding voice, follows the screening questions you set to work out what the caller needs, captures their details, and either books them straight into your calendar or takes a message and flags it for you.',
+  },
+  {
+    q: 'What is an AI receptionist and how does it work for a business?',
+    a: 'It\u2019s a voice agent that answers incoming calls in place of, or alongside, a human receptionist. For a business that means no missed calls, consistent screening every time, and a summary of every call whether you were free to take it or not.',
+  },
+  {
     q: 'How much does it cost?',
     a: 'Plans start from \u00a397/month with setup from \u00a3249. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
   },
