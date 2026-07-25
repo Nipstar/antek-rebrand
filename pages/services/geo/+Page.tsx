@@ -1,4 +1,5 @@
 import { Button } from '../../../src/components/Button';
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 import { Container } from '../../../src/components/Container';
@@ -80,6 +81,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       {/* ── PROBLEM ── */}
       <section className="py-20 md:py-28">

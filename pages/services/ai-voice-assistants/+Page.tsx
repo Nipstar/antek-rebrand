@@ -7,6 +7,7 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { RetellDemoCards } from '../../../src/components/RetellDemoCards'
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip'
 
 const VoiceChat = lazy(() =>
   import('../../../src/components/VoiceChat').then((m) => ({ default: m.VoiceChat }))
@@ -69,6 +70,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       <QuickRecap items={[
         'An AI voice agent that calls new leads back in seconds, qualifies them, books the good ones, confirms appointments and handles routine customer calls',

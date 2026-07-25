@@ -5,6 +5,7 @@ import { Container } from '../../../src/components/Container'
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 
 export default function Page() {
   return (
@@ -38,6 +39,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={3} />
 
       <QuickRecap items={[
         'We automate your repetitive admin using n8n (open-source) — you own the workflows outright, no vendor lock-in',
