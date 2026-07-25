@@ -23,7 +23,7 @@ from datetime import datetime
 from apify_client import ApifyClient
 
 APIFY_TOKEN = os.environ["APIFY_TOKEN"]           # shell env — never hardcode
-GBP_PLACE_ID = "PASTE_YOUR_PLACE_ID_HERE"          # from Google Business Profile dashboard
+GBP_PLACE_ID = "ChIJf6wpo4wHdEgRbRqC845lL_I"        # Antek Automation, Andover (Google Place ID)
 OUTPUT_PATH = "src/data/reviews.json"              # where the site build reads it
 
 client = ApifyClient(APIFY_TOKEN)
