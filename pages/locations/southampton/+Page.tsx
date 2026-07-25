@@ -1,5 +1,6 @@
 import { useState, Suspense, lazy } from 'react';
 import { Button } from '../../../src/components/Button';
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
 import { Card } from '../../../src/components/Card';
 import { Icon } from '../../../src/components/Icon';
 import { Container } from '../../../src/components/Container';
@@ -333,6 +334,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip town="Southampton" />
 
       {/* ── BOOK A CALL (Cal.com) ── */}
       <section className="border-t border-hairline py-20 md:py-28">

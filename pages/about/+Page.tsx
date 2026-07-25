@@ -4,6 +4,7 @@ import { Card } from '../../src/components/Card';
 import { Icon } from '../../src/components/Icon';
 import { Container } from '../../src/components/Container';
 import { HeadlineBlock } from '../../src/components/HeadlineBlock';
+import { ReviewsStrip } from '../../src/components/ReviewsStrip';
 
 export default function Page() {
   return (
@@ -285,6 +286,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip limit={6} />
 
       {/* CTA */}
       <section className="bg-charcoal py-20 md:py-28">

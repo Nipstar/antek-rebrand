@@ -10,6 +10,7 @@ import { CaseStudyCard } from '../../src/components/CaseStudyCard';
 import { QuickRecap } from '../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../src/components/ResourcesCompliance';
 import { TestimonialsStrip } from '../../src/components/TestimonialsStrip';
+import { ReviewsStrip } from '../../src/components/ReviewsStrip';
 import { TrustStrip } from '../../src/components/TrustStrip';
 import { openBookingPopup } from '../../src/utils/bookingPopup';
 import { caseStudies } from '../../src/data/caseStudies';
@@ -60,6 +61,8 @@ export default function Page() {
 
       {/* ── TESTIMONIALS STRIP (illustrative case studies) ── */}
       <TestimonialsStrip limit={3} />
+
+      <ReviewsStrip limit={4} />
 
       {/* ── SNIPPET BAIT ── */}
       <section className="border-b border-hairline py-16 md:py-20">
