@@ -50,62 +50,6 @@ export function Head() {
           }),
         }}
       />
-
-      {/* LocalBusiness Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Antek Automation',
-            url: 'https://www.antekautomation.com',
-            telephone: '+44-3330-389960',
-            email: 'hello@antekautomation.com',
-            founder: {
-              '@type': 'Person',
-              '@id': 'https://www.antekautomation.com/#founder',
-              name: 'Andy Norman',
-              sameAs: ['https://www.linkedin.com/in/andy-norman-ab78443a1'],
-            },
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'Chantry House, 38 Chantry Way',
-              addressLocality: 'Andover',
-              addressRegion: 'Hampshire',
-              postalCode: 'SP10 1LZ',
-              addressCountry: 'GB',
-            },
-            areaServed: [
-              { '@type': 'AdministrativeArea', name: 'Hampshire' },
-              { '@type': 'AdministrativeArea', name: 'Southampton' },
-              { '@type': 'AdministrativeArea', name: 'Andover' },
-              { '@type': 'AdministrativeArea', name: 'Salisbury' },
-              { '@type': 'AdministrativeArea', name: 'Newbury' },
-              { '@type': 'Country', name: 'United Kingdom' },
-            ],
-            priceRange: '££',
-            makesOffer: [
-              {
-                '@type': 'Offer',
-                itemOffered: { '@type': 'Service', name: 'AI Voice Agents' },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: { '@type': 'Service', name: 'AI Chatbots' },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: { '@type': 'Service', name: 'Workflow Automation' },
-              },
-              {
-                '@type': 'Offer',
-                itemOffered: { '@type': 'Service', name: 'GEO Audit' },
-              },
-            ],
-          }),
-        }}
-      />
     </>
   );
 }
