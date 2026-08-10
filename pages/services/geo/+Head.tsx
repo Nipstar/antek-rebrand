@@ -1,18 +1,18 @@
 export function Head() {
   return (
     <>
-      <title>Generative Engine Optimisation Agency UK | GEO Services — Antek</title>
+      <title>GEO Agency UK | Generative Engine Optimisation — Antek</title>
       <meta
         name="description"
-        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt, entity building. From a £247 audit to full retainer."
+        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt and entity building. From £247."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/geo" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="Generative Engine Optimisation Agency UK | GEO Services — Antek" />
+      <meta property="og:title" content="GEO Agency UK | Generative Engine Optimisation — Antek" />
       <meta
         property="og:description"
-        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt, entity building. From a £247 audit to full retainer."
+        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt and entity building. From £247."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/geo" />
       <meta property="og:type" content="website" />
@@ -20,10 +20,10 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Generative Engine Optimisation Agency UK | GEO Services — Antek" />
+      <meta name="twitter:title" content="GEO Agency UK | Generative Engine Optimisation — Antek" />
       <meta
         name="twitter:description"
-        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt, entity building. From a £247 audit to full retainer."
+        content="UK GEO agency getting businesses cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Citability, schema, llms.txt and entity building. From £247."
       />
 
       {/* BreadcrumbList Schema */}

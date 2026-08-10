@@ -4,7 +4,7 @@ export function Head() {
       <title>AI Chatbots for UK Business | Antek Automation</title>
       <meta
         name="description"
-        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."
+        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a live demo."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/ai-chatbots" />
 
@@ -12,7 +12,7 @@ export function Head() {
       <meta property="og:title" content="AI Chatbots for UK Business | Antek Automation" />
       <meta
         property="og:description"
-        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."
+        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a live demo."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/ai-chatbots" />
       <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@ export function Head() {
       <meta name="twitter:title" content="AI Chatbots for UK Business | Antek Automation" />
       <meta
         name="twitter:description"
-        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a demo."
+        content="Custom-trained AI chatbots that answer customer questions, capture leads & book appointments on your website 24/7. Works on any platform. Try a live demo."
       />
 
       {/* BreadcrumbList Schema */}

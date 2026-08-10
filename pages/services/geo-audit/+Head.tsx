@@ -4,7 +4,7 @@ export function Head() {
       <title>GEO Audit | Cited by ChatGPT &amp; AI Search | Antek Automation</title>
       <meta
         name="description"
-        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide, fast."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/geo-audit" />
 
@@ -12,7 +12,7 @@ export function Head() {
       <meta property="og:title" content="GEO Audit | Cited by ChatGPT & AI Search | Antek Automation" />
       <meta
         property="og:description"
-        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide, fast."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/geo-audit" />
       <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@ export function Head() {
       <meta name="twitter:title" content="GEO Audit | Cited by ChatGPT & AI Search | Antek Automation" />
       <meta
         name="twitter:description"
-        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide."
+        content="Is AI recommending you or your competitors? Our GEO audit checks your visibility in ChatGPT, Perplexity & Google AI Overviews. From £247, UK-wide, fast."
       />
 
       {/* BreadcrumbList Schema */}
@@ -69,14 +69,10 @@ export function Head() {
             description:
               'Generative Engine Optimisation audit assessing your business visibility in AI-generated search results from ChatGPT, Perplexity, Google AI Overviews and Claude. Includes technical setup review, content structure analysis, citation readiness scoring and prioritised action plan.',
             provider: {
-              '@type': 'LocalBusiness',
+              '@type': 'Organization',
+              '@id': 'https://www.antekautomation.com/#organization',
               name: 'Antek Automation',
               url: 'https://www.antekautomation.com',
-              address: {
-                '@type': 'PostalAddress',
-                addressRegion: 'Hampshire',
-                addressCountry: 'GB',
-              },
             },
             areaServed: {
               '@type': 'Country',

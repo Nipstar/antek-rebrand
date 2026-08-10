@@ -4,7 +4,7 @@ export function Head() {
       <title>AI SEO Agency UK | AI Search Optimisation — Antek Automation</title>
       <meta
         name="description"
-        content="AI SEO agency for UK businesses. Rank in Google and get cited in AI answers. AI-assisted content strategy, technical SEO and AI Overview optimisation. Free visibility check."
+        content="AI SEO agency for UK businesses. Rank in Google, get cited in AI answers. Content strategy, technical SEO and AI Overview optimisation. Free visibility check."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/ai-seo" />
 
@@ -12,7 +12,7 @@ export function Head() {
       <meta property="og:title" content="AI SEO Agency UK | AI Search Optimisation — Antek Automation" />
       <meta
         property="og:description"
-        content="AI SEO agency for UK businesses. Rank in Google and get cited in AI answers. AI-assisted content strategy, technical SEO and AI Overview optimisation. Free visibility check."
+        content="AI SEO agency for UK businesses. Rank in Google, get cited in AI answers. Content strategy, technical SEO and AI Overview optimisation. Free visibility check."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/ai-seo" />
       <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@ export function Head() {
       <meta name="twitter:title" content="AI SEO Agency UK | AI Search Optimisation — Antek Automation" />
       <meta
         name="twitter:description"
-        content="AI SEO agency for UK businesses. Rank in Google and get cited in AI answers. AI-assisted content strategy, technical SEO and AI Overview optimisation. Free visibility check."
+        content="AI SEO agency for UK businesses. Rank in Google, get cited in AI answers. Content strategy, technical SEO and AI Overview optimisation. Free visibility check."
       />
 
       {/* BreadcrumbList Schema */}
