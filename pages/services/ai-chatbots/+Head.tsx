@@ -68,14 +68,10 @@ export function Head() {
             description:
               'Custom-trained AI chatbots that answer customer questions, capture leads and book appointments on your website 24/7 for UK businesses.',
             provider: {
-              '@type': 'LocalBusiness',
+              '@type': 'Organization',
+              '@id': 'https://www.antekautomation.com/#organization',
               name: 'Antek Automation',
               url: 'https://www.antekautomation.com',
-              address: {
-                '@type': 'PostalAddress',
-                addressRegion: 'Hampshire',
-                addressCountry: 'GB',
-              },
             },
             areaServed: {
               '@type': 'Country',

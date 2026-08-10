@@ -68,14 +68,10 @@ export function Head() {
             description:
               'Custom n8n workflow automation for UK businesses. We automate CRM updates, email follow-ups, invoicing, and data entry to save you 10-20 hours a week.',
             provider: {
-              '@type': 'LocalBusiness',
+              '@type': 'Organization',
+              '@id': 'https://www.antekautomation.com/#organization',
               name: 'Antek Automation',
               url: 'https://www.antekautomation.com',
-              address: {
-                '@type': 'PostalAddress',
-                addressRegion: 'Hampshire',
-                addressCountry: 'GB',
-              },
             },
             areaServed: {
               '@type': 'Country',
