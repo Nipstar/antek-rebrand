@@ -1,8 +1,17 @@
 {
-  "updatedAt": "2026-07-25T07:14:13Z",
-  "reviewCountTotal": 3,
+  "updatedAt": "2026-08-28T05:59:28.098690Z",
+  "reviewCountTotal": 4,
   "ratingAverageTotal": 5,
   "reviews": [
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvT2pONGRtNXdOM1Z4WVhSZmRUSnpNMmhTZW5SZmJsRRAB",
+      "author": "Tanna C.",
+      "rating": 5,
+      "text": "Andy is very responsive, informed, and easy to work with! Adapts quickly and always willing to explain things further or revisit an idea. Excited to continue building out projects with his expertise!",
+      "date": "2026-08-24T13:46:38.200Z",
+      "location": null,
+      "source": "google"
+    },
     {
       "id": "Ci9DQUlRQUNvZENodHljRjlvT21od05UaHRVblJrZWpWeFJXdElTR1JWVDBnNFVIYxAB",
       "author": "J H.",
