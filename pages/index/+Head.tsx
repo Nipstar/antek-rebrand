@@ -315,7 +315,7 @@ export function Head() {
                 "@type": "OfferCatalog",
                 "name": "AI Voice Agent Pricing",
                 "itemListElement": [
-                  { "@type": "Offer", "name": "AI Voice Agent Setup", "price": "249", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "249", "priceCurrency": "GBP", "unitText": "one-time" } },
+                  { "@type": "Offer", "name": "AI Voice Agent Setup", "price": "497", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "GBP", "unitText": "one-time" } },
                   { "@type": "Offer", "name": "AI Voice Agent Retainer", "price": "97", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "97", "priceCurrency": "GBP", "unitText": "month", "billingIncrement": 1, "billingDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } } }
                 ]
               },

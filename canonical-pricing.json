@@ -3,7 +3,7 @@
     "name": "AI Voice Assistant",
     "anchor": "ai-voice-assistant",
     "fromMonthly": 97,
-    "setup": 249,
+    "setup": 497,
     "billingType": "monthly",
     "overagePerMin": 0.18,
     "tiers": [
@@ -41,7 +41,7 @@
     "name": "AI Receptionist",
     "anchor": "ai-receptionist",
     "fromMonthly": 97,
-    "setup": 249,
+    "setup": 497,
     "billingType": "monthly",
     "overagePerMin": 0.18,
     "tiers": [

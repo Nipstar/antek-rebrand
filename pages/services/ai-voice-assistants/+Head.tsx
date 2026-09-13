@@ -142,7 +142,7 @@ export function Head() {
                 name: 'How much does an AI voice agent cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'From £97/month with a £249 setup. Bespoke outbound and multi-step builds are scoped on a quick call. See the pricing page for detail.',
+                  text: 'From £97/month with a £497 setup. Bespoke outbound and multi-step builds are scoped on a quick call. See the pricing page for detail.',
                 },
               },
             ],

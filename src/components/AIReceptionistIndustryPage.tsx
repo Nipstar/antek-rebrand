@@ -54,7 +54,7 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
               </a>
             </div>
             <p className="text-sm text-muted mt-4 tracking-wide">
-              Plans from &pound;97/month &middot; Setup from &pound;249
+              Plans from &pound;97/month &middot; Setup from &pound;497
             </p>
           </div>
         </Container>
@@ -145,7 +145,7 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
                 Simple Pricing
               </h3>
               <p className="text-body leading-relaxed mb-4">
-                Plans from &pound;97/month. Setup from &pound;249. 120 call minutes included per month, £0.18/min over. No hidden
+                Plans from &pound;97/month. Setup from &pound;497. 120 call minutes included per month, £0.18/min over. No hidden
                 fees.
               </p>
               <a href="/contact">
@@ -213,7 +213,7 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
       <QuickRecap items={[
         `AI receptionist built specifically for ${industry.name} — answers calls, screens callers, and books appointments 24/7`,
         `For ${industry.name.toLowerCase()} who miss calls when they're on jobs or out of hours`,
-        'From £97/month + £249 one-off setup — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'From £97/month + £497 one-off setup — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Live in 24–48 hours — configure from your website, set your screening questions, forward your number',
         '120 call minutes included per month — higher plans add more minutes and features; handles emergency vs routine calls differently based on your rules',
       ]} />

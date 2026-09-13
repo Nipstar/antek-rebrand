@@ -143,7 +143,7 @@ export default function Page() {
               </Button>
             </div>
             <p className="text-sm text-muted mt-4 tracking-wide">
-              Plans from &pound;97/month &middot; Setup from &pound;249 &middot; 120 call minutes included per month — higher plans add more minutes and features
+              Plans from &pound;97/month &middot; Setup from &pound;497 &middot; 120 call minutes included per month — higher plans add more minutes and features
             </p>
             <TrustStrip className="mt-6" />
           </div>
@@ -207,7 +207,7 @@ export default function Page() {
           </HeadlineBlock>
           <p className="text-lg text-body leading-normal mb-10 max-w-[65ch]">
             Plans start from &pound;97/month. 120 call minutes included per month, £0.18/min over. No hidden fees. Setup from
-            &pound;249. The exact cost depends on your call volume and what integrations you need
+            &pound;497. The exact cost depends on your call volume and what integrations you need
             &mdash; book a quick chat and we&rsquo;ll give you a straight answer.
           </p>
           <a href="/contact">
@@ -289,7 +289,7 @@ export default function Page() {
       <QuickRecap items={[
         'An AI receptionist that answers every call, screens callers against your criteria, and books appointments 24/7',
         'For UK trades businesses, professional services, and healthcare practices missing calls during the working day',
-        'From £97/month + £249 one-off setup — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'From £97/month + £497 one-off setup — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Live in 24–48 hours — we pull your services from your website, you set the screening questions',
         '120 call minutes included per month — higher plans add more minutes and features; industry-specific setups available for trades, legal, healthcare, and more',
       ]} />

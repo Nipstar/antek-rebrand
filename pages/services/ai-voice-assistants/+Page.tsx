@@ -77,7 +77,7 @@ export default function Page() {
         'An AI voice agent that calls new leads back in seconds, qualifies them, books the good ones, confirms appointments and handles routine customer calls',
         "Works inbound and outbound — the calls you can't get to, and the calls you never get round to making",
         'For UK businesses losing leads to slow follow-up, no-shows and a phone that never stops',
-        'From £97/month + £249 setup — bespoke outbound and multi-step builds scoped on a call — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see pricing</a>',
+        'From £97/month + £497 setup — bespoke outbound and multi-step builds scoped on a call — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see pricing</a>',
         'Live in 24–48 hours, configured from your website and your tools',
       ]} />
 
@@ -335,7 +335,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                From £97/month with a £249 setup. Bespoke outbound and multi-step builds are scoped on a quick call. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>.
+                From £97/month with a £497 setup. Bespoke outbound and multi-step builds are scoped on a quick call. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>.
               </div>
             </details>
           </div>

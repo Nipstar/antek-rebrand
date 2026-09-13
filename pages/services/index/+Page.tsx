@@ -13,7 +13,7 @@ const services = [
     slug: 'ai-voice-assistants',
     description:
       'Phone agents that answer every call 24/7, qualify leads, book appointments, and send you a summary — all without hiring anyone.',
-    price: 'From £249 setup + £97/month',
+    price: 'From £497 setup + £97/month',
   },
   {
     letter: 'C',

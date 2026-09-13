@@ -17,8 +17,8 @@ Page: https://www.antekautomation.com/ai-receptionist
 Productised AI phone answering service for UK SMBs and businesses. Screens every caller, captures the details you need, and books qualified enquiries straight into your calendar.
 
 Pricing tiers:
-- Starter: £97/month + £249 one-off setup. Includes 120 call minutes. Call answering, screening, summaries.
-- Standard: £198/month + £249 setup. Includes 240 call minutes. Adds CRM and API integrations.
+- Starter: £97/month + £497 one-off setup. Includes 120 call minutes. Call answering, screening, summaries.
+- Standard: £198/month + £497 setup. Includes 240 call minutes. Adds CRM and API integrations.
 - Pro: Contact sales. Custom minutes. Adds workflow automations for complex voice agent workflows.
 - Overage: £0.18/min over included minutes.
 

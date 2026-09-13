@@ -16,7 +16,7 @@ export function Head() {
     '@id': `${canonical}#service`,
     name: 'AI Receptionist',
     description:
-      'AI phone answering service for UK businesses. Screens callers, captures details, and books appointments 24/7. Plans from £97/month with setup from £249.',
+      'AI phone answering service for UK businesses. Screens callers, captures details, and books appointments 24/7. Plans from £97/month with setup from £497.',
     provider: { '@id': 'https://www.antekautomation.com/#organization' },
     serviceType: 'AI Phone Answering Service',
     areaServed: { '@type': 'Country', name: 'United Kingdom' },
@@ -41,11 +41,11 @@ export function Head() {
         {
           '@type': 'Offer',
           name: 'AI Receptionist Setup',
-          price: '249',
+          price: '497',
           priceCurrency: 'GBP',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '249',
+            price: '497',
             priceCurrency: 'GBP',
             unitText: 'one-time',
           },
@@ -123,7 +123,7 @@ export function Head() {
         name: 'Who provides no-code AI call agents in the UK?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24–48 hours. Plans from £97/month, setup from £249.',
+          text: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24–48 hours. Plans from £97/month, setup from £497.',
         },
       },
       {
