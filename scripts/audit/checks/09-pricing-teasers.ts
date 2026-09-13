@@ -4,7 +4,7 @@ import * as path from 'path'
 
 // Only flag these exact canonical product prices when they appear WITHOUT "from" prefix
 // Arbitrary financial figures (ROI calcs, case studies, comparison rows) are allowed
-const CANONICAL_PRICES = [57, 97, 149, 247, 250, 497, 997]
+const CANONICAL_PRICES = [57, 97, 247, 250, 297, 497, 997]
 
 const check: Check = {
   name: 'Pricing teaser strings on non-/pricing pages',

@@ -5,7 +5,7 @@
 ## Services
 
 - [AI Voice Agents](https://www.antekautomation.com/services/ai-voice-assistants): Custom AI voice agents that work inbound and outbound — answer calls in a natural voice, and call new leads back in seconds, qualify them, confirm appointments and chase follow-ups. 24/7. From £97/month + £497 setup. Certified Retell AI partner.
-- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Custom-trained website chatbots that answer questions, capture leads, book appointments, and qualify prospects. Handles ~80% of conversations autonomously. From £57/month + £149 setup.
+- [AI Chatbots](https://www.antekautomation.com/services/ai-chatbots): Custom-trained website chatbots that answer questions, capture leads, book appointments, and qualify prospects. Handles ~80% of conversations autonomously. From £57/month + £297 setup.
 - [Workflow Automation](https://www.antekautomation.com/services/workflow-automation): Business process automation built on n8n (open source) connecting 400+ tools including Google Workspace, Xero, Stripe, HubSpot, Slack, and WhatsApp. One-off projects from £250. Saves 10-20 hours/week.
 - [Generative Engine Optimisation Agency](https://www.antekautomation.com/services/geo): UK GEO agency — citability optimisation, schema, llms.txt, entity building and AI answer monitoring to get businesses cited by ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews. Free AI Visibility Check; full GEO Audit £247.
 - [AI SEO Agency](https://www.antekautomation.com/services/ai-seo): AI SEO services for UK businesses — Google rankings and AI answer visibility together. AI-assisted content strategy, technical SEO, AI Overview optimisation. Free AI Visibility Check.
@@ -41,7 +41,7 @@
 - Phone: 0333 038 9960
 - Founder: Andy Norman (30+ years in technology)
 - Certified Retell AI Partner, FSB member
-- Pricing: AI Voice Agents & AI Receptionist from £97/month + £497 setup · AI Chatbots from £57/month + £149 setup · Workflow Automation from £250 (one-off) · GEO Audit from £247
+- Pricing: AI Voice Agents & AI Receptionist from £97/month + £497 setup · AI Chatbots from £57/month + £297 setup · Workflow Automation from £250 (one-off) · GEO Audit from £247
 - Industries served: Hospitality, dental, legal, accounting, trades, cleaning, estate agents, restaurants, salons, fitness, property management, veterinary
 
 ## Contact

@@ -21,7 +21,7 @@ const services = [
     slug: 'ai-chatbots',
     description:
       "Website chat that handles enquiries, qualifies prospects, and books appointments around the clock — even when you're asleep.",
-    price:   'From £149 setup + £57/month',
+    price:   'From £297 setup + £57/month',
   },
   {
     letter: 'A',

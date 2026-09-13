@@ -264,7 +264,7 @@ export function Head() {
                 "@type": "OfferCatalog",
                 "name": "AI Chatbot Pricing",
                 "itemListElement": [
-                  { "@type": "Offer", "name": "AI Chatbot Setup", "price": "149", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "GBP", "unitText": "one-time" } },
+                  { "@type": "Offer", "name": "AI Chatbot Setup", "price": "297", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "297", "priceCurrency": "GBP", "unitText": "one-time" } },
                   { "@type": "Offer", "name": "AI Chatbot Subscription", "price": "57", "priceCurrency": "GBP", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "57", "priceCurrency": "GBP", "unitText": "month", "billingIncrement": 1, "billingDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } } }
                 ]
               },

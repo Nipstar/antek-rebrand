@@ -105,7 +105,7 @@ export function Head() {
                 name: 'How much does an AI chatbot cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Setup starts from £149, with monthly plans from £57/month. The exact pricing depends on features, integrations, and complexity. We offer a free consultation to scope your needs and give you a clear quote — no hidden fees.',
+                  text: 'Setup starts from £297, with monthly plans from £57/month. The exact pricing depends on features, integrations, and complexity. We offer a free consultation to scope your needs and give you a clear quote — no hidden fees.',
                 },
               },
               {

@@ -16,7 +16,7 @@
     "name": "AI Chatbot",
     "anchor": "ai-chatbot",
     "fromMonthly": 57,
-    "setup": 149,
+    "setup": 297,
     "billingType": "monthly"
   },
   "workflowAutomation": {
