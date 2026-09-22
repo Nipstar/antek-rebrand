@@ -332,7 +332,7 @@ export default function Page() {
                 </ul>
               </div>
               <div className="shrink-0 text-center md:text-right">
-                <p className="font-display font-extrabold text-5xl text-coral">&pound;497</p>
+                <p className="font-display font-extrabold text-5xl text-coral"><span className="text-2xl mr-2">from</span>&pound;497</p>
                 <p className="text-muted text-sm mb-4">per month</p>
                 <a href="/contact">
                   <Button variant="primary">Ask About the Retainer</Button>

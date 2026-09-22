@@ -511,7 +511,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                AI citation monitoring across 5 platforms, content updates based on what AI is currently rewarding, schema maintenance as standards evolve, new Q&amp;A content for emerging search prompts, a monthly citation report, and a quarterly strategy call. &pound;497/month, rolling monthly, typically starting after a 3-month foundation period.
+                AI citation monitoring across 5 platforms, content updates based on what AI is currently rewarding, schema maintenance as standards evolve, new Q&amp;A content for emerging search prompts, a monthly citation report, and a quarterly strategy call. From &pound;497/month, rolling monthly, typically starting after a 3-month foundation period.
               </div>
             </details>
 

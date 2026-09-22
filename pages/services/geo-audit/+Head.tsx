@@ -170,7 +170,7 @@ export function Head() {
                 name: 'What’s included in a GEO retainer?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'AI citation monitoring across 5 platforms, content updates based on what AI is currently rewarding, schema maintenance as standards evolve, new Q&A content for emerging search prompts, a monthly citation report, and a quarterly strategy call. £497/month, rolling monthly, typically starting after a 3-month foundation period.',
+                  text: 'AI citation monitoring across 5 platforms, content updates based on what AI is currently rewarding, schema maintenance as standards evolve, new Q&A content for emerging search prompts, a monthly citation report, and a quarterly strategy call. From £497/month, rolling monthly, typically starting after a 3-month foundation period.',
                 },
               },
               {
