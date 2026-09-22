@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: 'Who provides no-code AI call agents in the UK?',
-    a: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24\u201348 hours. Plans from \u00a397/month, setup from \u00a3249.',
+    a: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24\u201348 hours. Plans from \u00a397/month, setup from \u00a3497.',
   },
   {
     q: 'Who offers an AI receptionist that answers calls when my team is unavailable?',
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: 'How much does it cost?',
-    a: 'Plans start from \u00a397/month with setup from \u00a3249. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
+    a: 'Plans start from \u00a397/month with setup from \u00a3497. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
   },
   {
     q: 'What support is included?',

@@ -89,7 +89,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about Part P and certification questions?', answer: 'It captures what type of work is needed and whether a certificate is required. It doesn\u2019t give electrical advice \u2014 it gathers the information so you can assess the job properly.' },
       { question: 'Will it handle commercial enquiries differently from domestic?', answer: 'If you want it to, yes. You can set different screening flows for domestic vs commercial, so commercial enquiries capture site access details, project scope, and decision-maker contact information.' },
       { question: 'I work with a mate / small team \u2014 can we all see the bookings?', answer: 'Yes. Bookings go into a shared calendar, and call summaries can be sent to multiple people. Everyone sees what\u2019s coming in.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Stop Losing Jobs Because You\u2019re Busy Doing Jobs',
@@ -145,7 +145,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'Can it guide callers to turn off their stopcock?', answer: 'Yes. For active leaks, it can walk them through locating and turning off the stopcock while capturing the rest of the details. It won\u2019t give plumbing advice, but it can help with basic safety steps you define.' },
       { question: 'I do Gas Safe work \u2014 can it capture boiler details?', answer: 'It asks about boiler make, model, and the nature of the fault. It captures whether there\u2019s a smell of gas and advises them to call the Gas Emergency line if needed before continuing the screening.' },
       { question: 'What about commercial contracts vs domestic one-offs?', answer: 'You can set different screening flows. Commercial enquiries capture site contact, access arrangements, and contract details. Domestic calls focus on the immediate issue and booking.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month. Setup from \u00a3249. 120 call minutes included per month, £0.18/min over. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month. Setup from \u00a3497. 120 call minutes included per month, £0.18/min over. Book a quick call for an exact quote.' },
       { question: 'How quickly can I go live?', answer: 'Most plumbers are live within 24\u201348 hours. We pull your services from your website, you tell us your screening rules and emergency criteria, and you forward your number. That\u2019s it.' },
     ],
 
@@ -204,7 +204,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about F-Gas and refrigerant handling questions?', answer: 'It doesn\u2019t give technical advice. It captures system type, refrigerant concerns, and fault symptoms, then routes the information to you for assessment.' },
       { question: 'We do maintenance contracts \u2014 can it capture renewal enquiries?', answer: 'Yes. It can identify existing contract holders, capture renewal interest from new callers, and flag commercial maintenance opportunities separately from one-off repair calls.' },
       { question: 'What happens when someone calls with no heating in winter?', answer: 'It treats loss of heating as a priority. It captures the property details, system type, and how urgent the situation is, then flags the call to you straight away so genuine breakdowns jump the queue during a cold snap.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Peak Season Is Coming. Make Sure Every Call Gets Answered.',
@@ -262,7 +262,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about confidentiality?', answer: 'All calls are encrypted. You control what questions are asked and what information is captured. It doesn\u2019t access your systems or client data \u2014 it just handles the front door.' },
       { question: 'We specialise in specific sectors \u2014 can it filter for that?', answer: 'Absolutely. If you only work with property landlords and construction businesses, it can screen for sector fit and politely decline enquiries outside your specialisation.' },
       { question: 'Can it handle the rush around tax deadlines?', answer: 'Yes. During self-assessment and year-end peaks it answers every call at once, screens new enquiries, and books consultations into your diary, so deadline season no longer means missed calls and lost instructions.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Stop Losing Clients Because You Were Busy Serving Clients',
@@ -319,7 +319,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'We have multiple fee earners \u2014 can it route to the right person?', answer: 'Yes. Based on the area of law, it can route the booking to the right person\u2019s calendar. Family matters go to your family team, conveyancing to your property team, and so on.' },
       { question: 'What about legal aid vs private client?', answer: 'You can include screening for funding type. It\u2019ll capture whether they\u2019re looking for legal aid, have insurance cover, or are paying privately \u2014 so you know before the consultation.' },
       { question: 'Is it SRA-compliant?', answer: 'It handles call answering only \u2014 it doesn\u2019t give legal advice, doesn\u2019t access client files, and doesn\u2019t make decisions about matters. All data is encrypted. You remain in full control of client relationships and regulatory compliance.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Every Missed Call Is an Instruction That Went to Another Firm',
@@ -377,7 +377,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about out-of-hours calls?', answer: 'It handles them however you want. Route genuine emergencies to your OOH provider\u2019s number. Take messages for everything else. Or screen and book the first available morning appointment.' },
       { question: 'We use a practice management system \u2014 does it integrate?', answer: 'It works alongside your PMS rather than replacing it. Call summaries and booking details feed into your existing workflow. We can discuss specific PMS integrations for your practice.' },
       { question: 'Our clients are often distressed \u2014 is the AI sensitive to that?', answer: 'The voice is calm, patient, and reassuring. It doesn\u2019t rush callers. It acknowledges concern and gathers information at the caller\u2019s pace. It won\u2019t replace human empathy, but it won\u2019t make things worse either.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Your Team Shouldn\u2019t Have to Choose Between the Phone and the Patient in Front of Them',
@@ -434,7 +434,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about nervous patients calling to enquire?', answer: 'The AI is patient and reassuring. It doesn\u2019t rush the conversation. For callers who mention dental anxiety, it can highlight any nervous patient services you offer.' },
       { question: 'We have multiple practitioners \u2014 can it book into specific diaries?', answer: 'Yes. Hygiene appointments go to the hygienist\u2019s diary. Emergency slots go to the duty dentist. New patient check-ups go wherever you want them.' },
       { question: 'Can it deal with out-of-hours dental emergencies?', answer: 'Yes. Outside opening hours it captures the caller\u2019s details and symptoms, explains your emergency policy, and flags genuine emergencies so you can follow up first thing rather than losing them to another practice overnight.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Every Missed Call Is a Patient Who Went Somewhere Else',
@@ -493,7 +493,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What if someone calls in crisis?', answer: 'You define the protocol. For callers expressing immediate distress, it can provide your specified crisis resources (Samaritans on 116 123, Crisis Text Line \u2014 text SHOUT to 85258) and flag the call for your urgent attention.' },
       { question: 'I work from a home office \u2014 I don\u2019t want to share my address until I\u2019ve screened the client.', answer: 'It doesn\u2019t share your location. It books the consultation and lets you decide what information to share after you\u2019ve reviewed the enquiry.' },
       { question: 'Can it handle multiple therapists in a group practice?', answer: 'Yes. It can route based on specialisation \u2014 CBT, EMDR, couples, children \u2014 and book into the right therapist\u2019s calendar.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3249. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
     ],
 
     bottomCtaH2: 'Make Sure the Hardest Call They Ever Make Gets Answered',

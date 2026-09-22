@@ -163,7 +163,7 @@ export function Head() {
         name: 'How much does it cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Plans start from \u00a397/month with setup from \u00a3249. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
+          text: 'Plans start from \u00a397/month with setup from \u00a3497. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
         },
       },
     ],
