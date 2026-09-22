@@ -289,7 +289,7 @@ export default function Page() {
       <QuickRecap items={[
         'An AI receptionist that answers every call, screens callers against your criteria, and books appointments 24/7',
         'For UK trades businesses, professional services, and healthcare practices missing calls during the working day',
-        'From £97/month + £497 one-off setup — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'From £97/month + setup from £497 — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Live in 24–48 hours — we pull your services from your website, you set the screening questions',
         '120 call minutes included per month — higher plans add more minutes and features; industry-specific setups available for trades, legal, healthcare, and more',
       ]} />

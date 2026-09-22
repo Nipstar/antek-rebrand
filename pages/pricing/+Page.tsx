@@ -123,7 +123,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-baseline gap-3">
                     <span className="font-display font-extrabold text-3xl text-coral">{tier.price}</span>
-                    {tier.price !== 'Contact us' && <span className="text-muted text-sm">/month + £497 setup</span>}
+                    {tier.price !== 'Contact us' && <span className="text-muted text-sm">/month + setup from £497</span>}
                   </div>
                   <p className="text-sm text-body mt-1">{tier.mins}{tier.price !== 'Contact us' && ' · £0.18/min over'}</p>
                   <p className="text-xs text-muted mt-1">{tier.note}</p>
