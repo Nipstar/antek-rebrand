@@ -12,7 +12,7 @@ const rows: { label: string; values: string[] }[] = [
   },
   {
     label: 'Setup fee',
-    values: ['£497', '£297', 'Included', 'Included'],
+    values: ['from £497', 'from £297', 'Included', 'Included'],
   },
   {
     label: 'Time to live',

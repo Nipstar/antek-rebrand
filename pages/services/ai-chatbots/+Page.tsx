@@ -47,7 +47,7 @@ export default function Page() {
       <QuickRecap items={[
         'An AI chatbot trained on your business — answers questions, captures leads, and books appointments 24/7',
         'For businesses whose websites get traffic but lose visitors out of hours or at weekends',
-        'From £57/month + £297 one-off setup — <a href="/pricing#ai-chatbot" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'From £57/month + setup from £297 — <a href="/pricing#ai-chatbot" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
         'Live on your website within 24–48 hours',
         'Typically handles ~80% of standard conversations autonomously; flags the rest for your team',
       ]} />
@@ -261,7 +261,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                From £57/month with a £297 one-off setup fee. <a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — no hidden fees.
+                From £57/month with setup from £297. <a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — no hidden fees.
               </div>
             </details>
 

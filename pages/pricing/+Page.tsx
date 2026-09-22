@@ -161,7 +161,7 @@ export default function Page() {
               name="AI Chatbot"
               tagline="Trained on your business. Live on your website. Captures leads 24/7."
               price="£57/month"
-              setupNote="+ £297 one-off setup"
+              setupNote="+ setup from £297"
               billingLabel="per month, no contract"
               bullets={[
                 'Installed on your website within 24–48 hours',
