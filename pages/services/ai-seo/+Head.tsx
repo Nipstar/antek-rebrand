@@ -1,3 +1,5 @@
+import { PRICES } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
@@ -63,8 +65,8 @@ export function Head() {
             url: 'https://www.antekautomation.com/services/ai-seo',
             offers: [
               { '@type': 'Offer', name: 'AI Visibility Check', price: '0', priceCurrency: 'GBP', description: 'Free AI Visibility Check — both halves of your search presence, in plain English, within 48 hours.' },
-              { '@type': 'Offer', name: 'GEO Audit', price: '247', priceCurrency: 'GBP', description: 'One-off scored report with a prioritised fix list.' },
-              { '@type': 'Offer', name: 'AI SEO Retainer', price: '497', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '497', priceCurrency: 'GBP', unitText: 'MONTH' }, description: 'Monthly AI SEO retainer — strategy, content, technical work and reporting across Google and the AI engines. No long contracts.' },
+              { '@type': 'Offer', name: 'GEO Audit', price: String(PRICES.geo.quickCheck), priceCurrency: 'GBP', description: 'One-off scored report with a prioritised fix list.' },
+              { '@type': 'Offer', name: 'AI SEO Retainer', price: String(PRICES.geo.retainerFrom), priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: String(PRICES.geo.retainerFrom), priceCurrency: 'GBP', unitText: 'MONTH' }, description: 'Monthly AI SEO retainer — strategy, content, technical work and reporting across Google and the AI engines. ' + `${PRICES.geo.retainerMinimumMonths}-month minimum, then rolling monthly.` },
             ],
             potentialAction: {
               '@type': 'ScheduleAction',
@@ -93,6 +95,14 @@ export function Head() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'A traditional agency optimises for Google’s ranked links. An AI SEO agency covers those and the AI-generated answers in ChatGPT, Perplexity, Gemini and AI Overviews — because your customers now use both.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What’s the difference between AI SEO, LLM SEO and answer engine optimisation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'They’re overlapping names for the same shift in search. AI SEO is the umbrella: Google rankings and AI answers handled together. LLM SEO means making your business easy for large language models, the AI behind ChatGPT and Gemini, to understand and cite. Answer engine optimisation (AEO) means structuring pages so engines like Google AI Overviews and Perplexity can lift a direct answer from them. Generative engine optimisation (GEO) is the citation side of all this. As an AI SEO agency, we cover the lot under one strategy.',
                 },
               },
               {

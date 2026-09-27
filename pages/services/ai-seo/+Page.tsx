@@ -7,6 +7,7 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 import { AICitationProof } from '../../../src/components/AICitationProof';
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing';
 
 const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors';
 
@@ -77,6 +78,9 @@ export default function Page() {
             <p className="text-lg text-body leading-relaxed mb-8 max-w-[65ch]">
               We get you ranked in Google and cited in AI answers, with one strategy and one plain-English report. Start by finding out where you stand.
             </p>
+            <p className="text-lg text-body leading-relaxed mb-8 max-w-[65ch]">
+              Antek Automation is an AI SEO agency for UK businesses. We get you ranked in Google and cited by ChatGPT, Perplexity, Gemini and Google AI Overviews, under one strategy. It starts with a free AI visibility check. A GEO Audit is {PRICE_TEXT.geoQuickCheck}, and the monthly retainer is {PRICE_TEXT.geoRetainerFrom}. Based in Andover, Hampshire.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
               <a href="#visibility-check">
                 <Button variant="primary">Check My AI Visibility &mdash; Free</Button>
@@ -85,7 +89,7 @@ export default function Page() {
             <p className="text-sm text-muted mt-4">48-hour turnaround. No call required. No obligation.</p>
             <p className="text-body mt-6">
               Want the deep dive first?{' '}
-              <a href="/services/geo-audit" className={LINK}>GEO Audit &mdash; &pound;247 &rarr;</a>
+              <a href="/services/geo-audit" className={LINK}>GEO Audit &mdash; {PRICE_TEXT.geoQuickCheck} &rarr;</a>
             </p>
           </div>
         </Container>
@@ -218,7 +222,7 @@ export default function Page() {
 
             <div className="bg-charcoal border-2 border-hairline p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
-                <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Audit &mdash; &pound;247, one-off</h3>
+                <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Audit &mdash; {PRICE_TEXT.geoQuickCheck}, one-off</h3>
                 <p className="text-body leading-relaxed max-w-[60ch]">Full scored report with a prioritised fix list.</p>
               </div>
               <a href="/services/geo-audit" className="shrink-0">
@@ -227,9 +231,9 @@ export default function Page() {
             </div>
 
             <div className="bg-charcoal border-2 border-hairline p-6 md:p-8">
-              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">AI SEO Retainer &mdash; from &pound;497/month</h3>
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">AI SEO Retainer &mdash; {PRICE_TEXT.geoRetainerFrom}</h3>
               <p className="text-body leading-relaxed max-w-[60ch]">
-                Strategy, content, technical work and monthly reporting across Google and the AI engines. No long contracts.
+                Strategy, content, technical work and monthly reporting across Google and the AI engines. {PRICES.geo.retainerMinimumMonths}-month minimum, then rolling monthly.
               </p>
             </div>
           </div>
@@ -253,6 +257,16 @@ export default function Page() {
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
                 A traditional agency optimises for Google&rsquo;s ranked links. An AI SEO agency covers those and the AI-generated answers in ChatGPT, Perplexity, Gemini and AI Overviews &mdash; because your customers now use both.
+              </div>
+            </details>
+
+            <details className="border-2 border-hairline bg-ink group">
+              <summary className="font-display font-extrabold text-lg text-cream px-6 py-5 cursor-pointer list-none flex justify-between items-center gap-4">
+                What’s the difference between AI SEO, LLM SEO and answer engine optimisation?
+                <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
+              </summary>
+              <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
+                They’re overlapping names for the same shift in search. AI SEO is the umbrella: Google rankings and AI answers handled together. LLM SEO means making your business easy for large language models, the AI behind ChatGPT and Gemini, to understand and cite. Answer engine optimisation (AEO) means structuring pages so engines like Google AI Overviews and Perplexity can lift a direct answer from them. Generative engine optimisation (GEO) is the citation side of all this. As an AI SEO agency, we cover the lot under one strategy.
               </div>
             </details>
 
