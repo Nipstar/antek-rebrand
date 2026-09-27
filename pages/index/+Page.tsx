@@ -14,6 +14,9 @@ import { ReviewsStrip } from '../../src/components/ReviewsStrip';
 import { TrustStrip } from '../../src/components/TrustStrip';
 import { openBookingPopup } from '../../src/utils/bookingPopup';
 import { caseStudies } from '../../src/data/caseStudies';
+import { CONTRACT_TERMS, PRICES, PRICE_TEXT } from '../../src/data/pricing';
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors';
 
 const VoiceChat = lazy(() => import('../../src/components/VoiceChat').then(m => ({ default: m.VoiceChat })));
 
@@ -52,7 +55,7 @@ export default function Page() {
               </Button>
             </div>
             <p className="text-sm text-muted mt-4 tracking-wide">
-              Voice from &pound;97/mo &middot; Chatbots from &pound;57/mo &middot; Automation from &pound;250 &middot; GEO audits from &pound;247 &middot; <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>
+              Voice from &pound;{PRICES.receptionist.starter.monthly}/mo &middot; Chatbots from &pound;{PRICES.chatbot.monthly}/mo &middot; Automation from &pound;{PRICES.workflow.from} &middot; GEO audits from &pound;{PRICES.geo.quickCheck} &middot; <a href="/pricing" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>
             </p>
             <TrustStrip className="mt-6" />
           </div>
@@ -72,6 +75,9 @@ export default function Page() {
           </HeadlineBlock>
           <p className="snippet-bait text-lg text-body leading-relaxed max-w-[65ch]">
             Antek Automation is a UK-based AI automation company specialising in AI voice agents, chatbots, n8n workflow automation, and Generative Engine Optimisation (GEO). Based in Andover, Hampshire, we help UK SMBs automate calls, leads, and workflows. Transparent pricing, no offshore handoffs, and a certified Retell AI partnership.
+          </p>
+          <p className="text-lg text-body leading-relaxed max-w-[65ch] mt-6">
+            See how we compare with other UK AI automation agencies in our round-up of the <a href="https://blog.antekautomation.com/7-best-ai-automation-agencies-in-the-uk-2026/" target="_blank" rel="noopener noreferrer" className={LINK}>best AI automation agencies in the UK</a>.
           </p>
         </Container>
       </section>
@@ -166,6 +172,9 @@ export default function Page() {
               </a>
             </Card>
           </div>
+          <p className="text-lg text-body leading-relaxed mt-10 max-w-[65ch]">
+            Want Google rankings and AI answers handled together, month after month? Our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> service covers both.
+          </p>
         </Container>
       </section>
 
@@ -173,14 +182,17 @@ export default function Page() {
       <section className="bg-ink border-y-2 border-coral py-20 md:py-28">
         <Container>
           <Eyebrow className="mb-4">
-            NEW &middot; FROM &pound;97/MONTH
+            NEW &middot; FROM &pound;{PRICES.receptionist.starter.monthly}/MONTH
           </Eyebrow>
           <HeadlineBlock className="mb-6">
-            <span className="text-coral">AI Receptionist</span> &mdash; From &pound;97/Month
+            <span className="text-coral">AI Receptionist</span> &mdash; From &pound;{PRICES.receptionist.starter.monthly}/Month
           </HeadlineBlock>
-          <p className="text-lg md:text-xl text-body leading-relaxed mb-10 max-w-[60ch]">
+          <p className="text-lg md:text-xl text-body leading-relaxed mb-6 max-w-[60ch]">
             Your phone answered 24/7. Callers screened. Appointments booked. Summaries sent. All
             while you focus on the actual work.
+          </p>
+          <p className="text-lg text-body leading-relaxed mb-10 max-w-[60ch]">
+            Weighing it up against a human answering service? See how our <a href="/call-answering-service" className={LINK}>AI call answering service</a> compares.
           </p>
           <a href="/ai-receptionist">
             <Button variant="primary">See How It Works</Button>
@@ -288,7 +300,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                Voice agents from &pound;97/month, chatbots from &pound;57/month, workflow automation projects from &pound;250, and GEO audits from &pound;247. Setup fees are one-off and quoted up front. No long-term contracts.
+                Voice agents from {PRICE_TEXT.receptionistMonthly}, chatbots from {PRICE_TEXT.chatbotMonthly}, workflow automation projects from &pound;{PRICES.workflow.from}, and GEO audits from {PRICE_TEXT.geoQuickCheck}. Setup fees are one-off and quoted up front. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice.
               </div>
             </details>
 
@@ -338,7 +350,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                No long-term contracts and no lock-in. Monthly products are month to month.
+                {CONTRACT_TERMS}
               </div>
             </details>
           </div>
@@ -349,7 +361,7 @@ export default function Page() {
       <QuickRecap items={[
         'We build AI voice agents, chatbots, workflow automation and GEO for UK businesses',
         'For businesses missing calls, losing website leads, drowning in admin, or invisible in AI search',
-        'Voice from £97/mo, chatbots from £57/mo, automation from £250, GEO audits from £247 — no contracts, no lock-in',
+        `Voice from £${PRICES.receptionist.starter.monthly}/mo, chatbots from £${PRICES.chatbot.monthly}/mo, automation from £${PRICES.workflow.from}, GEO audits from £${PRICES.geo.quickCheck} — month-to-month plans, ${PRICES.noticeDays} days' notice`,
         'Voice and chat products live within 24–48 hours',
         '<a href="/contact" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Book a free 30-min discovery call</a> to see which fits',
       ]} />

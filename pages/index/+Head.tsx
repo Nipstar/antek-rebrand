@@ -1,3 +1,5 @@
+import { CONTRACT_TERMS, PRICES } from '../../src/data/pricing';
+
 import reviewsData from '../../src/data/reviews.json'
 
 export function Head() {
@@ -660,7 +662,7 @@ export function Head() {
         "name": "How much does it cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Voice agents from £97/month, chatbots from £57/month, workflow automation projects from £250, and GEO audits from £247. Setup fees are one-off and quoted up front. No long-term contracts."
+          "text": `Voice agents from £${PRICES.receptionist.starter.monthly}/month, chatbots from £${PRICES.chatbot.monthly}/month, workflow automation projects from £${PRICES.workflow.from}, and GEO audits from £${PRICES.geo.quickCheck}. Setup fees are one-off and quoted up front. Monthly plans roll month to month with ${PRICES.noticeDays} days’ notice.`
         }
       },
       {
@@ -700,7 +702,7 @@ export function Head() {
         "name": "Are you tied into a contract?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No long-term contracts and no lock-in. Monthly products are month to month."
+          "text": CONTRACT_TERMS
         }
       }
     ]
@@ -708,18 +710,18 @@ export function Head() {
 
   return (
     <>
-      <title>AI Automation Agency UK | Voice, Chat, Automation &amp; GEO</title>
+      <title>AI Automation Agency UK | AI Receptionist &amp; Automation</title>
       <meta name="description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
       <link rel="canonical" href="https://www.antekautomation.com/" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Agency UK | Voice, Chat, Automation &amp; GEO" />
+      <meta property="og:title" content="AI Automation Agency UK | AI Receptionist &amp; Automation" />
       <meta property="og:description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
       <meta property="og:url" content="https://www.antekautomation.com/" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Agency UK | Voice, Chat, Automation &amp; GEO" />
+      <meta name="twitter:title" content="AI Automation Agency UK | AI Receptionist &amp; Automation" />
       <meta name="twitter:description" content="Andover-based AI automation agency. AI voice agents, website chatbots, n8n workflow automation and GEO for UK businesses. Certified Retell AI partner." />
 
       {/* JSON-LD: WebPage + Organization schema */}
