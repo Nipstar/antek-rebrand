@@ -1,3 +1,5 @@
+import { PRICES } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
@@ -68,8 +70,8 @@ export function Head() {
             url: 'https://www.antekautomation.com/services/geo',
             offers: [
               { '@type': 'Offer', name: 'AI Visibility Check', price: '0', priceCurrency: 'GBP', description: 'Free AI Visibility Check — where you stand across the engines, in plain English, within 48 hours. No call, no obligation.' },
-              { '@type': 'Offer', name: 'GEO Audit', price: '247', priceCurrency: 'GBP', description: 'One-off scored GEO audit: citability, schema, llms.txt, crawler access, entity consistency, competitor citations, and a prioritised fix list.' },
-              { '@type': 'Offer', name: 'GEO Retainer', price: '497', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '497', priceCurrency: 'GBP', unitText: 'MONTH' }, description: 'Monthly GEO retainer — fixes, citation building and engine monitoring. Projects from £997. No long contracts.' },
+              { '@type': 'Offer', name: 'GEO Audit', price: String(PRICES.geo.quickCheck), priceCurrency: 'GBP', description: 'One-off scored GEO audit: citability, schema, llms.txt, crawler access, entity consistency, competitor citations, and a prioritised fix list.' },
+              { '@type': 'Offer', name: 'GEO Retainer', price: String(PRICES.geo.retainerFrom), priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: String(PRICES.geo.retainerFrom), priceCurrency: 'GBP', unitText: 'MONTH' }, description: 'Monthly GEO retainer — fixes, citation building and engine monitoring. Projects from £' + PRICES.geo.auditFixFrom + `. ${PRICES.geo.retainerMinimumMonths}-month minimum, then rolling monthly.` },
             ],
             potentialAction: {
               '@type': 'ScheduleAction',

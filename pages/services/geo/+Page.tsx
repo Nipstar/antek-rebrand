@@ -7,6 +7,9 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 import { AICitationProof } from '../../../src/components/AICitationProof';
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing';
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors';
 
 const SERVICES = [
   {
@@ -66,6 +69,12 @@ export default function Page() {
             <p className="text-lg text-body leading-relaxed mb-8 max-w-[65ch]">
               GEO is the work that puts your business inside AI answers. We do it for ourselves, we can prove it, and we&rsquo;ll show you exactly where you stand &mdash; free.
             </p>
+            <p className="text-lg text-body leading-relaxed mb-6 max-w-[65ch]">
+              Generative engine optimisation (GEO) is the work that gets your business named and cited when people ask ChatGPT, Perplexity, Gemini or Google AI Overviews for a recommendation. Antek Automation does it for UK businesses from Andover, Hampshire: a free visibility check, a GEO Audit at {PRICE_TEXT.geoQuickCheck}, and a monthly retainer {PRICE_TEXT.geoRetainerFrom}.
+            </p>
+            <p className="text-lg text-body leading-relaxed mb-8 max-w-[65ch] font-bold text-cream">
+              Want the done-for-you service? See our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> page.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
               <a href="#visibility-check">
                 <Button variant="primary">Check My AI Visibility &mdash; Free</Button>
@@ -75,7 +84,7 @@ export default function Page() {
             <p className="text-body mt-6">
               Prefer the full picture?{' '}
               <a href="/services/geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">
-                The GEO Audit is &pound;247 &rarr;
+                The GEO Audit is {PRICE_TEXT.geoQuickCheck} &rarr;
               </a>
             </p>
           </div>
@@ -256,7 +265,7 @@ export default function Page() {
 
             <div className="bg-charcoal border-2 border-hairline p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
-                <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Audit &mdash; &pound;247, one-off</h3>
+                <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Audit &mdash; {PRICE_TEXT.geoQuickCheck}, one-off</h3>
                 <p className="text-body leading-relaxed max-w-[60ch]">
                   The full scored report: citability, schema, llms.txt, crawler access, entity consistency, competitor citations &mdash; and a prioritised fix list you can action with anyone, not just us.
                 </p>
@@ -267,14 +276,17 @@ export default function Page() {
             </div>
 
             <div className="bg-charcoal border-2 border-hairline p-6 md:p-8">
-              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Retainer &mdash; from &pound;497/month</h3>
+              <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">GEO Retainer &mdash; {PRICE_TEXT.geoRetainerFrom}</h3>
               <p className="text-body leading-relaxed max-w-[60ch]">
-                We do the fixes, build the citations and monitor the engines monthly. Projects from &pound;997. No long contracts.
+                We do the fixes, build the citations and monitor the engines monthly. Projects from &pound;{PRICES.geo.auditFixFrom}. {PRICES.geo.retainerMinimumMonths}-month minimum, then rolling monthly.
               </p>
             </div>
           </div>
           <p className="text-body leading-relaxed mt-8 max-w-[65ch]">
-            If the audit finds nothing worth fixing, we&rsquo;ll tell you that too. We&rsquo;d rather keep the reputation than the &pound;247.
+            If the audit finds nothing worth fixing, we&rsquo;ll tell you that too. We&rsquo;d rather keep the reputation than the {PRICE_TEXT.geoQuickCheck}.
+          </p>
+          <p className="text-body leading-relaxed mt-4 max-w-[65ch]">
+            Want Google rankings and AI citations handled together, month after month? That&rsquo;s our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> service.
           </p>
         </Container>
       </section>
