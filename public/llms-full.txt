@@ -33,6 +33,11 @@ Industry-specific pages with tailored screening flows:
 - [Veterinary Practices](https://www.antekautomation.com/ai-receptionist/veterinary-practices) — Emergency triage, species/symptoms, OOH routing
 - [Dentists](https://www.antekautomation.com/ai-receptionist/dentists) — NHS vs private, emergency dental triage
 - [Therapists](https://www.antekautomation.com/ai-receptionist/therapists) — Warm intake, presenting concern capture, crisis protocol
+- [Property Managers & Letting Agents](https://www.antekautomation.com/ai-receptionist/property-management) — Tenant repair logging, viewing bookings, out-of-hours emergency flagging
+
+Related pages:
+- [Call Answering Service](https://www.antekautomation.com/call-answering-service) — AI call answering vs human answering service vs voicemail, pricing, sector setups
+- [Out of Hours Call Answering](https://www.antekautomation.com/out-of-hours-call-answering) — evenings, weekends and bank holidays; urgent calls flagged; no out-of-hours premium
 
 Live demo numbers (UK, 24/7, powered by Retell AI):
 - Bolt Electrical AI Reception: 07782 214455 (try asking about a fuse board replacement)

@@ -44,6 +44,16 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/call-answering-service" className="text-body hover:text-coral transition-colors text-sm inline-block min-h-[36px] py-1.5">
+                  Call Answering Service
+                </a>
+              </li>
+              <li>
+                <a href="/out-of-hours-call-answering" className="text-body hover:text-coral transition-colors text-sm inline-block min-h-[36px] py-1.5">
+                  Out of Hours Call Answering
+                </a>
+              </li>
+              <li>
                 <a href="/services/ai-chatbots" className="text-body hover:text-coral transition-colors text-sm inline-block min-h-[36px] py-1.5">
                   AI Chatbots
                 </a>

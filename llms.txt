@@ -10,7 +10,9 @@
 - [Generative Engine Optimisation Agency](https://www.antekautomation.com/services/geo): UK GEO agency — citability optimisation, schema, llms.txt, entity building and AI answer monitoring to get businesses cited by ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews. Free AI Visibility Check; full GEO Audit £247.
 - [AI SEO Agency](https://www.antekautomation.com/services/ai-seo): AI SEO services for UK businesses — Google rankings and AI answer visibility together. AI-assisted content strategy, technical SEO, AI Overview optimisation. Free AI Visibility Check.
 - [GEO Audit](https://www.antekautomation.com/services/geo-audit): £247 scored AI visibility audit across ChatGPT, Claude, Perplexity and Google AI Overviews — citation readiness score, prioritised fix list, delivered within 24 hours.
-- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised inbound call-answering service for UK SMBs — screens callers, captures details, and books appointments 24/7. From £97/month + setup from £497. Industry pages for electricians, plumbers, HVAC engineers, accountants, lawyers, veterinary practices, dentists, and therapists.
+- [AI Receptionist](https://www.antekautomation.com/ai-receptionist): Productised inbound call-answering service for UK SMBs — screens callers, captures details, and books appointments 24/7. From £97/month + setup from £497. Industry pages for electricians, plumbers, HVAC engineers, accountants, lawyers, veterinary practices, dentists, therapists, and property managers.
+- [Call Answering Service](https://www.antekautomation.com/call-answering-service): AI call answering service and virtual receptionist for UK businesses — every call answered 24/7, details captured, appointments booked. From £97/month; compared with human answering services and voicemail.
+- [Out of Hours Call Answering](https://www.antekautomation.com/out-of-hours-call-answering): Evening, weekend and bank holiday calls answered by AI, urgent jobs flagged against your rules. Same pricing as daytime, from £97/month, no out-of-hours premium.
 
 ## About
 
