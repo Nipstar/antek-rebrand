@@ -1,19 +1,19 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Andover | Voice Agents &amp; Chatbots | Antek</title>
-      <meta name="description" content="Stop losing Andover jobs to missed calls. AI voice agents, chatbots and workflow automation, founder-led from our Andover HQ at Chantry House. Book a free call." />
+      <title>AI Automation Andover | AI Receptionist from £97/month</title>
+      <meta name="description" content="Stop losing Andover jobs to missed calls. AI receptionist from £97/month, plus chatbots and automation, founder-led from Chantry House. Book a free call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/andover" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Andover | Voice Agents & Chatbots | Antek" />
-      <meta property="og:description" content="Stop losing Andover jobs to missed calls. AI voice agents, chatbots and workflow automation, founder-led from our Andover HQ at Chantry House. Book a free call." />
+      <meta property="og:title" content="AI Automation Andover | AI Receptionist from £97/month" />
+      <meta property="og:description" content="Stop losing Andover jobs to missed calls. AI receptionist from £97/month, plus chatbots and automation, founder-led from Chantry House. Book a free call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/andover" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Andover | Voice Agents & Chatbots | Antek" />
-      <meta name="twitter:description" content="Stop losing Andover jobs to missed calls. AI voice agents, chatbots and workflow automation, founder-led from our Andover HQ at Chantry House. Book a free call." />
+      <meta name="twitter:title" content="AI Automation Andover | AI Receptionist from £97/month" />
+      <meta name="twitter:description" content="Stop losing Andover jobs to missed calls. AI receptionist from £97/month, plus chatbots and automation, founder-led from Chantry House. Book a free call." />
 
       {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script

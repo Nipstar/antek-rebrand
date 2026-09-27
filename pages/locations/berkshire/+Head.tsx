@@ -1,19 +1,19 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Berkshire | Thames Valley | Antek</title>
-      <meta name="description" content="AI automation for Berkshire businesses across the M4 corridor and Thames Valley: AI chatbots, voice agents, workflow automation and GEO. Book a free call." />
+      <title>AI Automation Berkshire | AI Receptionist from £97/month</title>
+      <meta name="description" content="AI automation for Berkshire businesses on the M4 corridor: an AI receptionist from £97/month, chatbots from £57/month and workflow automation. Book a call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/berkshire" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Berkshire | Thames Valley | Antek" />
-      <meta property="og:description" content="AI automation for Berkshire businesses across the M4 corridor and Thames Valley: AI chatbots, voice agents, workflow automation and GEO. Book a free call." />
+      <meta property="og:title" content="AI Automation Berkshire | AI Receptionist from £97/month" />
+      <meta property="og:description" content="AI automation for Berkshire businesses on the M4 corridor: an AI receptionist from £97/month, chatbots from £57/month and workflow automation. Book a call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/berkshire" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Berkshire | Thames Valley | Antek" />
-      <meta name="twitter:description" content="AI automation for Berkshire businesses across the M4 corridor and Thames Valley: AI chatbots, voice agents, workflow automation and GEO. Book a free call." />
+      <meta name="twitter:title" content="AI Automation Berkshire | AI Receptionist from £97/month" />
+      <meta name="twitter:description" content="AI automation for Berkshire businesses on the M4 corridor: an AI receptionist from £97/month, chatbots from £57/month and workflow automation. Book a call." />
 
       {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script

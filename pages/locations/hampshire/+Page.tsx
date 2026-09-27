@@ -451,6 +451,9 @@ export default function Page() {
             </a>
             <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
           </div>
+          <p className="text-muted text-sm mt-10">
+            Shopping around? See how we stack up when you <a href="https://blog.antekautomation.com/7-best-ai-automation-agencies-in-the-uk-2026/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">compare UK AI automation agencies</a>.
+          </p>
         </Container>
       </section>
 

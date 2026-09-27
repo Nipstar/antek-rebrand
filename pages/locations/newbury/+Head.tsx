@@ -1,19 +1,19 @@
 export function Head() {
   return (
     <>
-      <title>AI Automation Newbury | Voice Agents &amp; Chatbots</title>
-      <meta name="description" content="Get your Newbury evenings back. AI that handles admin and follow-ups, answers your calls and captures leads, built just up the A34 in Andover. Book a free call." />
+      <title>AI Automation Newbury | Admin Automation from £250</title>
+      <meta name="description" content="Get your Newbury evenings back. Admin automation from £250, plus AI that answers calls and captures leads, built just up the A34 in Andover. Book a call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/newbury" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Automation Newbury | Voice Agents & Chatbots" />
-      <meta property="og:description" content="Get your Newbury evenings back. AI that handles admin and follow-ups, answers your calls and captures leads, built just up the A34 in Andover. Book a free call." />
+      <meta property="og:title" content="AI Automation Newbury | Admin Automation from £250" />
+      <meta property="og:description" content="Get your Newbury evenings back. Admin automation from £250, plus AI that answers calls and captures leads, built just up the A34 in Andover. Book a call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/newbury" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Automation Newbury | Voice Agents & Chatbots" />
-      <meta name="twitter:description" content="Get your Newbury evenings back. AI that handles admin and follow-ups, answers your calls and captures leads, built just up the A34 in Andover. Book a free call." />
+      <meta name="twitter:title" content="AI Automation Newbury | Admin Automation from £250" />
+      <meta name="twitter:description" content="Get your Newbury evenings back. Admin automation from £250, plus AI that answers calls and captures leads, built just up the A34 in Andover. Book a call." />
 
       {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script

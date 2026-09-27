@@ -1,19 +1,19 @@
 export function Head() {
   return (
     <>
-      <title>AI Agency Hampshire | Voice Agents &amp; Automation | Antek</title>
-      <meta name="description" content="Andover-based AI agency for Hampshire businesses. Voice agents, chatbots and automation that answer calls, reply online and chase follow-ups. Book a free call." />
+      <title>AI Automation Agency Hampshire | AI Receptionist £97/mo</title>
+      <meta name="description" content="Andover-based AI automation agency for Hampshire businesses: an AI receptionist from £97/month, plus chatbots, automation and GEO. Book a free call." />
       <link rel="canonical" href="https://www.antekautomation.com/locations/hampshire" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="AI Agency Hampshire | Voice Agents & Automation | Antek" />
-      <meta property="og:description" content="Andover-based AI agency for Hampshire businesses. Voice agents, chatbots and automation that answer calls, reply online and chase follow-ups. Book a free call." />
+      <meta property="og:title" content="AI Automation Agency Hampshire | AI Receptionist £97/mo" />
+      <meta property="og:description" content="Andover-based AI automation agency for Hampshire businesses: an AI receptionist from £97/month, plus chatbots, automation and GEO. Book a free call." />
       <meta property="og:url" content="https://www.antekautomation.com/locations/hampshire" />
       <meta property="og:type" content="website" />
 
       {/* Twitter Card */}
-      <meta name="twitter:title" content="AI Agency Hampshire | Voice Agents & Automation | Antek" />
-      <meta name="twitter:description" content="Andover-based AI agency for Hampshire businesses. Voice agents, chatbots and automation that answer calls, reply online and chase follow-ups. Book a free call." />
+      <meta name="twitter:title" content="AI Automation Agency Hampshire | AI Receptionist £97/mo" />
+      <meta name="twitter:description" content="Andover-based AI automation agency for Hampshire businesses: an AI receptionist from £97/month, plus chatbots, automation and GEO. Book a free call." />
 
       {/* JSON-LD @graph — references the canonical #organization node (no per-page org/LocalBusiness) */}
       <script
