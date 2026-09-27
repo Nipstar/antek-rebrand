@@ -28,8 +28,8 @@ const URGENT_STEPS = [
     b: 'You decide what counts as urgent: a burst pipe, no heating, a lockout, a tenant with water coming through the ceiling. It asks the questions that tell the difference.',
   },
   {
-    h: 'Urgent calls are flagged',
-    b: 'Anything urgent is flagged straight away, and it can pass the caller to a number you choose. Everything else is logged with full details for the morning.',
+    h: 'You get a text',
+    b: 'Anything urgent is sent to your mobile by SMS straight away, with who called, where they are and what\u2019s wrong. Everything else is logged with full details for the morning.',
   },
   {
     h: 'You get a summary',
@@ -75,7 +75,7 @@ export default function Page() {
               Your phone doesn&rsquo;t stop ringing at 5pm. Your customers&rsquo; problems don&rsquo;t either.
             </p>
             <p className="text-lg text-body leading-normal mb-8 max-w-[60ch]">
-              Antek Automation&rsquo;s out of hours call answering service uses AI to answer your business calls on evenings, weekends and bank holidays. It captures the caller&rsquo;s details, books appointments and flags urgent jobs so you see them first. It&rsquo;s the same 24/7 service as daytime, from {PRICE_TEXT.receptionistMonthly}, with no out-of-hours premium.
+              Antek Automation&rsquo;s out of hours call answering service uses AI to answer your business calls on evenings, weekends and bank holidays. It captures the caller&rsquo;s details, books appointments and texts you about urgent jobs straight away. It&rsquo;s the same 24/7 service as daytime, from {PRICE_TEXT.receptionistMonthly}, with no out-of-hours premium.
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
@@ -104,7 +104,6 @@ export default function Page() {
             <p>
               Out of hours call answering means every one of those calls is picked up, sorted into urgent and routine, and ready for you when you start.
             </p>
-            {/* TODO(andy): link the blog post about Andover service businesses losing leads after 5pm here once its URL is confirmed (blog URL not found in the repo and the blog isn't reachable from the build environment). */}
           </div>
         </Container>
       </section>
@@ -118,7 +117,6 @@ export default function Page() {
           <p className="text-lg text-body mb-12 max-w-[65ch]">
             You set the rules once. The AI follows them on every call, at any hour.
           </p>
-          {/* TODO(andy): confirm exactly how urgent calls reach you out of hours (live transfer, SMS, email, WhatsApp) and name the channels here. Copy below only uses what the site already claims: urgent calls flagged straight away, calls can be transferred, summary after every call. */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {URGENT_STEPS.map((step, i) => (
               <Card key={step.h} className="bg-charcoal h-full !p-6 md:!p-8">
@@ -193,7 +191,7 @@ export default function Page() {
 
       <QuickRecap items={[
         'Out of hours call answering by AI: evenings, weekends and bank holidays, 24/7',
-        'Urgent calls are flagged against rules you set; routine calls are logged and booked for the morning',
+        'Urgent calls are sent to you by SMS, based on rules you set; routine calls are logged and booked for the morning',
         'For trades, property managers, solicitors and anyone whose phone keeps ringing after 5pm',
         `From ${PRICE_TEXT.receptionistMonthly} with ${PRICES.receptionist.starter.minutes} minutes included, no out-of-hours premium — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         `Live within ${PRICES.receptionist.goLive}; built by Antek Automation, a Certified Retell AI Partner based in Andover, Hampshire`,
