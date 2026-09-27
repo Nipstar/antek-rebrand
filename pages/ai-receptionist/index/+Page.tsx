@@ -8,6 +8,7 @@ import {
   Stethoscope,
   Smile,
   Brain,
+  Building2,
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '../../../src/components/Button'
@@ -36,6 +37,7 @@ const iconMap: Record<IndustryData['iconName'], LucideIcon> = {
   Stethoscope,
   Smile,
   Brain,
+  Building2,
 }
 
 const faqs = [

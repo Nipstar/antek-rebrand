@@ -1,3 +1,8 @@
+import { PRICES, PRICE_TEXT } from './pricing'
+
+// One answer for every sector page's "How much does it cost?" FAQ (visible + JSON-LD).
+const RECEPTIONIST_COST_ANSWER = `Plans from ${PRICE_TEXT.receptionistMonthly} with ${PRICE_TEXT.receptionistMinutes}. Setup from £${PRICES.receptionist.setupFrom}. Additional minutes at £${PRICES.receptionist.overagePerMin.toFixed(2)}/min. Book a quick call for an exact quote.`
+
 export interface BeforeAfter {
   without: string
   with: string
@@ -13,12 +18,14 @@ export interface IndustryData {
   name: string
   metaTitle: string
   metaDescription: string
-  iconName: 'Zap' | 'Droplets' | 'Thermometer' | 'Calculator' | 'Scale' | 'Stethoscope' | 'Smile' | 'Brain'
+  iconName: 'Zap' | 'Droplets' | 'Thermometer' | 'Calculator' | 'Scale' | 'Stethoscope' | 'Smile' | 'Brain' | 'Building2'
   gridDescription: string
 
   heroEyebrow: string
   heroH1: string
   heroSubhead: string
+  /** 40–60 word plain-English answer block shown under the hero, written to be quoted by AI engines. */
+  answerBlock: string
 
   problemH2: string
   problemParagraphs: string[]
@@ -50,7 +57,8 @@ export const industries: Record<string, IndustryData> = {
 
     heroEyebrow: 'AI RECEPTIONIST FOR ELECTRICIANS',
     heroH1: 'You Can\u2019t Answer the Phone With Your Hands in a Consumer Unit',
-    heroSubhead: 'Emergency call at 6pm on a Friday? Someone wanting a quote for a full rewire? A landlord needing an EICR? Your AI receptionist handles all of it \u2014 screening callers, capturing job details, and booking the ones worth your time. From \u00a397/month.',
+    heroSubhead: `Emergency call at 6pm on a Friday? Someone wanting a quote for a full rewire? A landlord needing an EICR? Your AI receptionist handles all of it \u2014 screening callers, capturing job details, and booking the ones worth your time. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Need an answering service for your electrical business? This is an AI one. It answers every call 24/7, screens for emergencies like no power or a burning smell, and books jobs while you\u2019re on the tools. Built for UK electricians, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'Every Missed Call Is a Job That Went to the Bloke Who Answered',
     problemParagraphs: [
@@ -82,14 +90,14 @@ export const industries: Record<string, IndustryData> = {
 
     integrations: 'Connects with Jobber, Housecall Pro, ServiceM8, Tradify, Google Calendar, Outlook, and most CRM tools. Running something else? Ask us.',
 
-    alsoPopularWith: ['plumbers', 'hvac'],
+    alsoPopularWith: ['plumbers', 'hvac', 'property-management'],
 
     faqs: [
       { question: 'Can it tell the difference between an emergency and a routine enquiry?', answer: 'Yes. You define what counts as emergency \u2014 no power, burning smell, exposed wiring \u2014 and the AI screens for those triggers on every call. Emergencies get priority routing.' },
       { question: 'What about Part P and certification questions?', answer: 'It captures what type of work is needed and whether a certificate is required. It doesn\u2019t give electrical advice \u2014 it gathers the information so you can assess the job properly.' },
       { question: 'Will it handle commercial enquiries differently from domestic?', answer: 'If you want it to, yes. You can set different screening flows for domestic vs commercial, so commercial enquiries capture site access details, project scope, and decision-maker contact information.' },
       { question: 'I work with a mate / small team \u2014 can we all see the bookings?', answer: 'Yes. Bookings go into a shared calendar, and call summaries can be sent to multiple people. Everyone sees what\u2019s coming in.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Stop Losing Jobs Because You\u2019re Busy Doing Jobs',
@@ -99,14 +107,15 @@ export const industries: Record<string, IndustryData> = {
   plumbers: {
     slug: 'plumbers',
     name: 'Plumbers',
-    metaTitle: 'AI Receptionist for Plumbers UK | Never Miss a Callout',
+    metaTitle: 'Plumber Answering Service UK | AI Receptionist',
     metaDescription: 'An AI receptionist for UK plumbers \u2014 answers every call and books callouts 24/7 while you\u2019re on the job. Certified Retell partner. Hear a live demo.',
     iconName: 'Droplets',
     gridDescription: 'AI phone answering that captures emergency leaks and boiler breakdowns while you\u2019re on a job.',
 
     heroEyebrow: 'AI RECEPTIONIST FOR PLUMBERS',
     heroH1: 'A Burst Pipe Waits for No One. Neither Should Your Phone.',
-    heroSubhead: 'When someone\u2019s kitchen is flooding, they\u2019re calling three plumbers. First to answer wins. Your AI receptionist picks up instantly \u2014 screens for emergencies, captures the details, and books the callout. Even when you\u2019re elbow-deep in someone else\u2019s U-bend. From \u00a397/month.',
+    heroSubhead: `When someone\u2019s kitchen is flooding, they\u2019re calling three plumbers. First to answer wins. Your AI receptionist picks up instantly \u2014 screens for emergencies, captures the details, and books the callout. Even when you\u2019re elbow-deep in someone else\u2019s U-bend. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for a plumber answering service? This is an AI one. It answers every call 24/7, spots emergencies like active leaks and boiler breakdowns, and books the callout while you\u2019re on a job. Built for UK plumbers, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'They Called. You Were Under a Sink. They Called Someone Else.',
     problemParagraphs: [
@@ -139,13 +148,13 @@ export const industries: Record<string, IndustryData> = {
 
     integrations: 'Connects with Jobber, ServiceM8, Tradify, Housecall Pro, Google Calendar, Outlook, and most CRM tools.',
 
-    alsoPopularWith: ['electricians', 'hvac'],
+    alsoPopularWith: ['electricians', 'hvac', 'property-management'],
 
     faqs: [
       { question: 'Can it guide callers to turn off their stopcock?', answer: 'Yes. For active leaks, it can walk them through locating and turning off the stopcock while capturing the rest of the details. It won\u2019t give plumbing advice, but it can help with basic safety steps you define.' },
       { question: 'I do Gas Safe work \u2014 can it capture boiler details?', answer: 'It asks about boiler make, model, and the nature of the fault. It captures whether there\u2019s a smell of gas and advises them to call the Gas Emergency line if needed before continuing the screening.' },
       { question: 'What about commercial contracts vs domestic one-offs?', answer: 'You can set different screening flows. Commercial enquiries capture site contact, access arrangements, and contract details. Domestic calls focus on the immediate issue and booking.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month. Setup from \u00a3497. 120 call minutes included per month, £0.18/min over. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
       { question: 'How quickly can I go live?', answer: 'Most plumbers are live within 24\u201348 hours. We pull your services from your website, you tell us your screening rules and emergency criteria, and you forward your number. That\u2019s it.' },
     ],
 
@@ -163,7 +172,8 @@ export const industries: Record<string, IndustryData> = {
 
     heroEyebrow: 'AI RECEPTIONIST FOR HVAC ENGINEERS',
     heroH1: 'It\u2019s January. Their Boiler\u2019s Dead. You\u2019re on Another Job.',
-    heroSubhead: 'No heating in winter is a crisis, not a voicemail. Your AI receptionist picks up instantly, screens for emergencies, captures system details, and books the callout \u2014 while you\u2019re finishing the job you\u2019re already on. From \u00a397/month.',
+    heroSubhead: `No heating in winter is a crisis, not a voicemail. Your AI receptionist picks up instantly, screens for emergencies, captures system details, and books the callout \u2014 while you\u2019re finishing the job you\u2019re already on. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Need a call answering service for your heating and cooling business? This is an AI one. It answers every call 24/7, treats loss of heating as a priority, captures system details and books the callout. Built for UK HVAC engineers, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'Peak Season Doesn\u2019t Care That You\u2019re Already Flat Out',
     problemParagraphs: [
@@ -204,7 +214,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about F-Gas and refrigerant handling questions?', answer: 'It doesn\u2019t give technical advice. It captures system type, refrigerant concerns, and fault symptoms, then routes the information to you for assessment.' },
       { question: 'We do maintenance contracts \u2014 can it capture renewal enquiries?', answer: 'Yes. It can identify existing contract holders, capture renewal interest from new callers, and flag commercial maintenance opportunities separately from one-off repair calls.' },
       { question: 'What happens when someone calls with no heating in winter?', answer: 'It treats loss of heating as a priority. It captures the property details, system type, and how urgent the situation is, then flags the call to you straight away so genuine breakdowns jump the queue during a cold snap.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Peak Season Is Coming. Make Sure Every Call Gets Answered.',
@@ -214,14 +224,15 @@ export const industries: Record<string, IndustryData> = {
   accountants: {
     slug: 'accountants',
     name: 'Accountants',
-    metaTitle: 'AI Receptionist for Accountants UK | Never Miss a Client',
+    metaTitle: 'Answering Service for Accountants UK | AI Receptionist',
     metaDescription: 'An AI receptionist for UK accountants \u2014 answers every call, screens enquiries and books consultations 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Calculator',
     gridDescription: 'AI phone answering that screens new client enquiries while you\u2019re buried in returns.',
 
     heroEyebrow: 'AI RECEPTIONIST FOR ACCOUNTANTS',
     heroH1: 'A Business Owner Called Looking for a New Accountant. You Were Doing Someone Else\u2019s Tax Return.',
-    heroSubhead: 'That missed call might be a sole trader needing basic bookkeeping. Or it might be a limited company doing \u00a3800K turnover looking to switch accountants. Your AI receptionist finds out before you lift a finger. From \u00a397/month.',
+    heroSubhead: `That missed call might be a sole trader needing basic bookkeeping. Or it might be a limited company doing \u00a3800K turnover looking to switch accountants. Your AI receptionist finds out before you lift a finger. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for an answering service for your accountancy practice? This is an AI one. It answers every call 24/7, separates new enquiries from existing clients, and books consultations, even through the self-assessment rush. Built for UK accountants, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'You Don\u2019t Get 50 Calls a Day. But the Ones You Get Could Be Worth \u00a350,000.',
     problemParagraphs: [
@@ -255,14 +266,14 @@ export const industries: Record<string, IndustryData> = {
 
     integrations: 'Works with Xero, QuickBooks, FreeAgent, TaxCalc, Dext, and most practice management tools.',
 
-    alsoPopularWith: ['lawyers', 'therapists'],
+    alsoPopularWith: ['lawyers', 'therapists', 'property-management'],
 
     faqs: [
       { question: 'Can it handle calls from existing clients too?', answer: 'Yes. It identifies existing clients and either takes a message, transfers the call, or captures what they need \u2014 depending on your preference. New enquiries get the full screening treatment.' },
       { question: 'What about confidentiality?', answer: 'All calls are encrypted. You control what questions are asked and what information is captured. It doesn\u2019t access your systems or client data \u2014 it just handles the front door.' },
       { question: 'We specialise in specific sectors \u2014 can it filter for that?', answer: 'Absolutely. If you only work with property landlords and construction businesses, it can screen for sector fit and politely decline enquiries outside your specialisation.' },
       { question: 'Can it handle the rush around tax deadlines?', answer: 'Yes. During self-assessment and year-end peaks it answers every call at once, screens new enquiries, and books consultations into your diary, so deadline season no longer means missed calls and lost instructions.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Stop Losing Clients Because You Were Busy Serving Clients',
@@ -272,14 +283,15 @@ export const industries: Record<string, IndustryData> = {
   lawyers: {
     slug: 'lawyers',
     name: 'Lawyers & Solicitors',
-    metaTitle: 'AI Receptionist for Law Firms UK | Never Miss a Client',
+    metaTitle: 'Answering Service for Solicitors | AI Receptionist UK',
     metaDescription: 'An AI receptionist for UK law firms \u2014 answers every call, screens enquiries and books consultations 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Scale',
     gridDescription: 'AI phone answering that screens client enquiries and captures case details while you\u2019re in meetings.',
 
     heroEyebrow: 'AI RECEPTIONIST FOR LAW FIRMS',
     heroH1: 'Your Next Client Called While You Were With Your Current One',
-    heroSubhead: 'Personal injury, conveyancing, family law, commercial disputes \u2014 when someone needs a solicitor, they need one now. Your AI receptionist screens every call, captures the case details, and books consultations so you never lose an instruction because you were doing your job. From \u00a397/month.',
+    heroSubhead: `Personal injury, conveyancing, family law, commercial disputes \u2014 when someone needs a solicitor, they need one now. Your AI receptionist screens every call, captures the case details, and books consultations so you never lose an instruction because you were doing your job. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Need an answering service for your solicitors\u2019 firm? This one runs on AI. It answers every call 24/7, captures case details and opposing party names for your conflict check, and books consultations with the right fee earner. Built for UK law firms, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'They Won\u2019t Leave a Voicemail. They\u2019ll Just Call Another Firm.',
     problemParagraphs: [
@@ -319,7 +331,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'We have multiple fee earners \u2014 can it route to the right person?', answer: 'Yes. Based on the area of law, it can route the booking to the right person\u2019s calendar. Family matters go to your family team, conveyancing to your property team, and so on.' },
       { question: 'What about legal aid vs private client?', answer: 'You can include screening for funding type. It\u2019ll capture whether they\u2019re looking for legal aid, have insurance cover, or are paying privately \u2014 so you know before the consultation.' },
       { question: 'Is it SRA-compliant?', answer: 'It handles call answering only \u2014 it doesn\u2019t give legal advice, doesn\u2019t access client files, and doesn\u2019t make decisions about matters. All data is encrypted. You remain in full control of client relationships and regulatory compliance.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Every Missed Call Is an Instruction That Went to Another Firm',
@@ -329,14 +341,15 @@ export const industries: Record<string, IndustryData> = {
   'veterinary-practices': {
     slug: 'veterinary-practices',
     name: 'Veterinary Practices',
-    metaTitle: 'AI Receptionist for Vets UK | Never Miss a Call',
+    metaTitle: 'Veterinary Answering Service UK | AI Vet Receptionist',
     metaDescription: 'An AI receptionist for UK vets \u2014 answers every call, triages urgent cases and books appointments 24/7. Certified Retell partner. Hear a live demo.',
     iconName: 'Stethoscope',
     gridDescription: 'AI phone answering that triages emergencies and books appointments while your team focuses on patients.',
 
     heroEyebrow: 'AI RECEPTIONIST FOR VETS',
     heroH1: 'Your Receptionist Is Dealing With a Distressed Owner. The Phone\u2019s Ringing. Again.',
-    heroSubhead: 'Vet reception is one of the hardest front-desk jobs going. Your team is juggling walk-ins, dispensing meds, calming anxious owners, and trying to answer a phone that never stops. Your AI receptionist takes the calls they can\u2019t get to \u2014 triaging emergencies, booking routine appointments, and capturing the details your team needs. From \u00a397/month.',
+    heroSubhead: `Vet reception is one of the hardest front-desk jobs going. Your team is juggling walk-ins, dispensing meds, calming anxious owners, and trying to answer a phone that never stops. Your AI receptionist takes the calls they can\u2019t get to \u2014 triaging emergencies, booking routine appointments, and capturing the details your team needs. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for a veterinary answering service? This is an AI one. It answers every call to your practice 24/7, triages urgent cases against the criteria you set, and books routine appointments. Built for UK vet practices, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'Your Reception Team Is Brilliant. They\u2019re Also Overwhelmed.',
     problemParagraphs: [
@@ -377,7 +390,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about out-of-hours calls?', answer: 'It handles them however you want. Route genuine emergencies to your OOH provider\u2019s number. Take messages for everything else. Or screen and book the first available morning appointment.' },
       { question: 'We use a practice management system \u2014 does it integrate?', answer: 'It works alongside your PMS rather than replacing it. Call summaries and booking details feed into your existing workflow. We can discuss specific PMS integrations for your practice.' },
       { question: 'Our clients are often distressed \u2014 is the AI sensitive to that?', answer: 'The voice is calm, patient, and reassuring. It doesn\u2019t rush callers. It acknowledges concern and gathers information at the caller\u2019s pace. It won\u2019t replace human empathy, but it won\u2019t make things worse either.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Your Team Shouldn\u2019t Have to Choose Between the Phone and the Patient in Front of Them',
@@ -387,14 +400,15 @@ export const industries: Record<string, IndustryData> = {
   dentists: {
     slug: 'dentists',
     name: 'Dentists',
-    metaTitle: 'AI Receptionist for Dentists UK | Fill Every Appointment',
+    metaTitle: 'Dental Answering Service UK | AI Receptionist',
     metaDescription: 'An AI receptionist for UK dentists \u2014 answers every call and fills appointments 24/7, even out of hours. Certified Retell partner. Hear a live demo.',
     iconName: 'Smile',
     gridDescription: 'AI phone answering that books appointments and triages dental emergencies while your team treats patients.',
 
     heroEyebrow: 'AI RECEPTIONIST FOR DENTISTS',
     heroH1: 'The Phone Rang 40 Times Today. Your Receptionist Answered 25.',
-    heroSubhead: 'Dental reception desks are chaos. Check-ins, payments, nervous patients, treatment plan questions \u2014 and a phone that won\u2019t stop ringing. Your AI receptionist handles the overflow, booking appointments and screening emergencies so your front desk can focus on the people actually in the practice. From \u00a397/month.',
+    heroSubhead: `Dental reception desks are chaos. Check-ins, payments, nervous patients, treatment plan questions \u2014 and a phone that won\u2019t stop ringing. Your AI receptionist handles the overflow, booking appointments and screening emergencies so your front desk can focus on the people actually in the practice. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for a dental answering service? This is an AI one. It answers your practice\u2019s calls 24/7, books patients into the right diary and flags dental emergencies for your team. Built for UK dental practices, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'You\u2019re Not Losing Patients Because of Your Dentistry. You\u2019re Losing Them Because Nobody Answered the Phone.',
     problemParagraphs: [
@@ -434,7 +448,7 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What about nervous patients calling to enquire?', answer: 'The AI is patient and reassuring. It doesn\u2019t rush the conversation. For callers who mention dental anxiety, it can highlight any nervous patient services you offer.' },
       { question: 'We have multiple practitioners \u2014 can it book into specific diaries?', answer: 'Yes. Hygiene appointments go to the hygienist\u2019s diary. Emergency slots go to the duty dentist. New patient check-ups go wherever you want them.' },
       { question: 'Can it deal with out-of-hours dental emergencies?', answer: 'Yes. Outside opening hours it captures the caller\u2019s details and symptoms, explains your emergency policy, and flags genuine emergencies so you can follow up first thing rather than losing them to another practice overnight.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Every Missed Call Is a Patient Who Went Somewhere Else',
@@ -451,7 +465,8 @@ export const industries: Record<string, IndustryData> = {
 
     heroEyebrow: 'AI RECEPTIONIST FOR THERAPISTS',
     heroH1: 'You Can\u2019t Answer the Phone When You\u2019re With a Client. But They Can\u2019t Wait Until You\u2019re Free.',
-    heroSubhead: 'Someone reaches out for therapy when they\u2019re ready \u2014 not when it\u2019s convenient for your diary. Your AI receptionist answers that call with warmth and care, captures what they need, and books an initial consultation. No missed opportunities. No pressure. From \u00a397/month.',
+    heroSubhead: `Someone reaches out for therapy when they\u2019re ready \u2014 not when it\u2019s convenient for your diary. Your AI receptionist answers that call with warmth and care, captures what they need, and books an initial consultation. No missed opportunities. No pressure. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for an answering service for your therapy practice? This is an AI one. It answers enquiries 24/7 in a calm, warm tone, captures what the caller needs without probing for clinical detail, and books the first session. Built for UK therapists, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24\u201348 hours.`,
 
     problemH2: 'The Hardest Part of Getting Therapy Is Making That First Call. Don\u2019t Let It Go to Voicemail.',
     problemParagraphs: [
@@ -493,11 +508,69 @@ export const industries: Record<string, IndustryData> = {
       { question: 'What if someone calls in crisis?', answer: 'You define the protocol. For callers expressing immediate distress, it can provide your specified crisis resources (Samaritans on 116 123, Crisis Text Line \u2014 text SHOUT to 85258) and flag the call for your urgent attention.' },
       { question: 'I work from a home office \u2014 I don\u2019t want to share my address until I\u2019ve screened the client.', answer: 'It doesn\u2019t share your location. It books the consultation and lets you decide what information to share after you\u2019ve reviewed the enquiry.' },
       { question: 'Can it handle multiple therapists in a group practice?', answer: 'Yes. It can route based on specialisation \u2014 CBT, EMDR, couples, children \u2014 and book into the right therapist\u2019s calendar.' },
-      { question: 'How much does it cost?', answer: 'Plans from \u00a397/month with 120 call minutes included. Setup from \u00a3497. Additional minutes at £0.18/min. Book a quick call for an exact quote.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
     ],
 
     bottomCtaH2: 'Make Sure the Hardest Call They Ever Make Gets Answered',
     bottomCtaSubhead: 'Try the demo. Then imagine it answering with warmth while you\u2019re with a client.',
+  },
+
+  'property-management': {
+    slug: 'property-management',
+    name: 'Property Managers',
+    metaTitle: 'Property Management Answering Service | AI Receptionist',
+    metaDescription: `AI answering service for UK letting agents and property managers: tenant repairs logged, viewings booked, emergencies flagged 24/7. From ${PRICE_TEXT.receptionistMonthly}.`,
+    iconName: 'Building2',
+    gridDescription: 'AI phone answering that logs tenant repairs, books viewings and flags out-of-hours emergencies.',
+
+    heroEyebrow: 'AI RECEPTIONIST FOR PROPERTY MANAGERS',
+    heroH1: 'AI Receptionist for Property Managers and Letting Agents',
+    heroSubhead: `A tenant’s boiler has packed up. A landlord wants an update. Two people want to view the same flat. All at once, and you’re out on an inspection. Your AI receptionist answers every one of them, logs the details and books what needs booking. From ${PRICE_TEXT.receptionistMonthly}.`,
+    answerBlock: `Looking for a property management answering service? This is an AI one. It answers tenant, landlord and applicant calls 24/7, logs repair reports with the details your contractor needs, books viewings and flags out-of-hours emergencies. Built for UK letting agents and property managers, from ${PRICE_TEXT.receptionistMonthly} plus setup, and usually live within 24–48 hours.`,
+
+    problemH2: 'Your Phone Doesn’t Stop at 5pm. Neither Do Leaks.',
+    problemParagraphs: [
+      'Property management is a phone job. Tenants reporting repairs. Landlords chasing updates. Applicants wanting viewings. Contractors asking for access. Most of it lands while you’re out doing a check-in or an inspection.',
+      'The repair calls are the worst to miss. A tenant with water coming through the ceiling doesn’t leave a patient voicemail. They ring again, then they ring the landlord, then the landlord rings you.',
+      'And the viewing enquiries? Every one that goes to voicemail is a void week you didn’t need. The applicant has already booked a viewing with the agent who picked up.',
+    ],
+
+    beforeAfter: {
+      without: 'Tenant calls at 8pm: the boiler has stopped and there’s no hot water. Voicemail. They call again. Then they email, then they call the landlord. Result: an unhappy tenant, an irritated landlord and a morning spent firefighting.',
+      with: 'Tenant calls at 8pm. AI answers immediately. Captures the property address, the fault, whether there’s any leak, and when the tenant is home for access. Flags it as urgent under your rules. Result: the repair is logged with everything your contractor needs, and you see it first thing.',
+    },
+
+    howItWorks: [
+      'Share your website. We pull your services — lettings, full management, block management, sales — plus your office hours and the areas you cover.',
+      'What counts as an emergency repair? Who gets viewings? What do landlords get told? You set the rules for tenants, landlords, applicants and contractors. The AI follows them.',
+      '30 seconds to forward your number. Your AI receptionist answers every call, logs repairs, books viewings, and flags the urgent ones so nothing waits in a voicemail box overnight.',
+    ],
+
+    captures: [
+      'Caller type (tenant, landlord, applicant, contractor)',
+      'Property address',
+      'Repair type (heating, hot water, leak, electrics, lock, appliance)',
+      'Urgency, based on your emergency criteria',
+      'Access availability and contact details',
+      'Viewing requests: property, preferred date and time',
+      'Landlord enquiries and messages for the right property manager',
+    ],
+
+    integrations: 'Works alongside your property management software, Google Calendar, Outlook, and most CRM tools. Call summaries can be sent to your team by email. Running something specific? Ask us.',
+    // TODO(andy): confirm which property software (e.g. Alto, Reapit, Arthur) we have actually integrated before naming any here.
+
+    alsoPopularWith: ['plumbers', 'electricians', 'lawyers'],
+
+    faqs: [
+      { question: 'Can it tell a genuine emergency repair from a routine one?', answer: 'Yes. You define what counts as an emergency, such as no heating, an active leak or a security issue, and the AI screens every repair call against those rules. Emergencies are flagged; routine repairs are logged for the next working day.' },
+      { question: 'Can it book viewings?', answer: 'Yes. It captures which property the caller is interested in and books a viewing into your calendar, or takes their details for a callback if you prefer to confirm viewings yourself.' },
+      { question: 'What happens to out-of-hours calls?', answer: 'They get answered, 24/7. The AI logs the details, handles the call under your out-of-hours rules and flags anything urgent, so a tenant with a real emergency is never left talking to a voicemail box.' },
+      { question: 'Can it deal with landlords differently from tenants?', answer: 'Yes. It asks who is calling first and follows a different flow for tenants, landlords, applicants and contractors, so each caller gets the right questions.' },
+      { question: 'How much does it cost?', answer: RECEPTIONIST_COST_ANSWER },
+    ],
+
+    bottomCtaH2: 'Stop Firefighting Tomorrow Morning’s Voicemails',
+    bottomCtaSubhead: 'Try the demo. Then imagine it answering every tenant, landlord and applicant while you’re out on inspections.',
   },
 }
 

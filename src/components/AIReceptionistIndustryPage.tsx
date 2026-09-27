@@ -11,6 +11,7 @@ import { ResourcesCompliance } from './ResourcesCompliance'
 import { HeadlineBlock } from './HeadlineBlock'
 import type { IndustryData } from '../data/aiReceptionist'
 import { getIndustryBySlug } from '../data/aiReceptionist'
+import { PRICES, PRICE_TEXT } from '../data/pricing'
 
 const VoiceChat = lazy(() => import('./VoiceChat').then((m) => ({ default: m.VoiceChat })))
 
@@ -47,6 +48,9 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
             <p className="text-lg md:text-xl text-body leading-relaxed mb-8 max-w-[60ch]">
               {industry.heroSubhead}
             </p>
+            <p className="text-lg text-body leading-relaxed mb-8 max-w-[60ch]">
+              {industry.answerBlock}
+            </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <VoiceDemoButton onClick={() => setIsVoiceChatOpen(true)} />
               <a href="/contact">
@@ -54,7 +58,7 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
               </a>
             </div>
             <p className="text-sm text-muted mt-4 tracking-wide">
-              Plans from &pound;97/month &middot; Setup from &pound;497
+              Plans from {PRICE_TEXT.receptionistMonthly} &middot; Setup from &pound;{PRICES.receptionist.setupFrom}
             </p>
           </div>
         </Container>
@@ -145,7 +149,7 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
                 Simple Pricing
               </h3>
               <p className="text-body leading-relaxed mb-4">
-                Plans from &pound;97/month. Setup from &pound;497. 120 call minutes included per month, £0.18/min over. No hidden
+                Plans from {PRICE_TEXT.receptionistMonthly}. Setup from &pound;{PRICES.receptionist.setupFrom}. {PRICE_TEXT.receptionistMinutes}, {PRICE_TEXT.receptionistOverage}. No hidden
                 fees.
               </p>
               <a href="/contact">
@@ -193,9 +197,33 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
                   </Card>
                 </a>
               ))}
-              <a href="/ai-receptionist" className="block">
+              <a href="/call-answering-service" className="block">
                 <Card hover className="h-full">
                   <Icon letter={String(related.length + 1).padStart(2, '0')} size="md" mono />
+                  <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">Call Answering Service</h3>
+                  <p className="text-body leading-relaxed mb-4">
+                    Comparing answering services? See how our AI call answering service stacks up against a human one.
+                  </p>
+                  <p className="font-sans font-bold text-coral uppercase text-sm tracking-wide">
+                    Compare Answering Services &rarr;
+                  </p>
+                </Card>
+              </a>
+              <a href="/out-of-hours-call-answering" className="block">
+                <Card hover className="h-full">
+                  <Icon letter={String(related.length + 2).padStart(2, '0')} size="md" mono />
+                  <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">Out of Hours Call Answering</h3>
+                  <p className="text-body leading-relaxed mb-4">
+                    Evenings, weekends and bank holidays covered, with urgent calls flagged.
+                  </p>
+                  <p className="font-sans font-bold text-coral uppercase text-sm tracking-wide">
+                    See Out of Hours Cover &rarr;
+                  </p>
+                </Card>
+              </a>
+              <a href="/ai-receptionist" className="block">
+                <Card hover className="h-full">
+                  <Icon letter={String(related.length + 3).padStart(2, '0')} size="md" mono />
                   <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-4 mb-3">All Industries</h3>
                   <p className="text-body leading-relaxed mb-4">
                     See every industry we build AI receptionists for.
@@ -213,9 +241,9 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
       <QuickRecap items={[
         `AI receptionist built specifically for ${industry.name} — answers calls, screens callers, and books appointments 24/7`,
         `For ${industry.name.toLowerCase()} who miss calls when they're on jobs or out of hours`,
-        'From £97/month + setup from £497 — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        `From ${PRICE_TEXT.receptionistMonthly} + ${PRICE_TEXT.receptionistSetup} — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         'Live in 24–48 hours — configure from your website, set your screening questions, forward your number',
-        '120 call minutes included per month — higher plans add more minutes and features; handles emergency vs routine calls differently based on your rules',
+        `${PRICE_TEXT.receptionistMinutes} — higher plans add more minutes and features; handles emergency vs routine calls differently based on your rules`,
       ]} />
 
       <ResourcesCompliance links={[
