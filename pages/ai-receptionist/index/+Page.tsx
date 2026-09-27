@@ -23,6 +23,13 @@ import { RetellDemoCards } from '../../../src/components/RetellDemoCards'
 import { TrustStrip } from '../../../src/components/TrustStrip'
 import { openBookingPopup } from '../../../src/utils/bookingPopup'
 import { getAllIndustries, type IndustryData } from '../../../src/data/aiReceptionist'
+import { AnsweringComparisonTable } from '../../../src/components/AnsweringComparisonTable'
+import { LinkedText } from '../../../src/components/LinkedText'
+import { ReceptionistHowItWorks } from '../../../src/components/ReceptionistHowItWorks'
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing'
+import { faqs } from './faqs'
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
 
 const VoiceChat = lazy(() =>
   import('../../../src/components/VoiceChat').then((m) => ({ default: m.VoiceChat }))
@@ -39,61 +46,6 @@ const iconMap: Record<IndustryData['iconName'], LucideIcon> = {
   Brain,
   Building2,
 }
-
-const faqs = [
-  {
-    q: 'How long does setup take?',
-    a: 'Most customers are live within 24\u201348 hours. We scrape your website to build the knowledge base, you tell us your screening questions, and you forward your number. No forms. No faff.',
-  },
-  {
-    q: 'Will callers know it\u2019s AI?',
-    a: 'Most don\u2019t. The voice is natural, the conversation flows properly, and it doesn\u2019t sound like a robot reading a menu. Listen to the demo and judge for yourself.',
-  },
-  {
-    q: 'What happens if someone asks something it can\u2019t answer?',
-    a: 'It acknowledges the gap, takes a message, and flags it for you. No bluffing, no making things up, no awkward silences.',
-  },
-  {
-    q: 'Can it handle different types of calls differently?',
-    a: 'Yes. Emergency vs routine. New enquiry vs existing customer. Booking request vs general question. You set the rules, it follows them.',
-  },
-  {
-    q: 'Does it integrate with my existing tools?',
-    a: 'It works with most CRMs, calendars, and field service tools. If you\u2019re using something specific, ask us \u2014 we\u2019ll tell you straight whether it works.',
-  },
-  {
-    q: 'What if I already have a voicemail or answering service?',
-    a: 'You\u2019ll wonder why you kept it this long. Voicemail captures maybe 20% of callers. An answering service takes a message. This qualifies the lead, captures details, and books the appointment. Different league.',
-  },
-  {
-    q: 'Who provides no-code AI call agents in the UK?',
-    a: 'Antek Automation. We build AI voice agents for UK businesses using Retell AI, configured without writing code. Agents handle call screening, booking, and lead capture, live within 24\u201348 hours. Plans from \u00a397/month, setup from \u00a3497.',
-  },
-  {
-    q: 'Who offers an AI receptionist that answers calls when my team is unavailable?',
-    a: 'We do. It covers calls around the clock, including evenings, weekends, and bank holidays, or whenever your team is busy or unreachable. Every call gets answered on the first ring, and anything urgent gets flagged straight away.',
-  },
-  {
-    q: 'How many concurrent conversations can voice agents handle?',
-    a: 'Up to 20 calls at once on our Retell setup, each running as its own separate conversation rather than queuing behind a single line. Still miles ahead of a human receptionist, who can only take one call at a time.',
-  },
-  {
-    q: 'How does an AI receptionist work?',
-    a: 'It answers the phone using a natural-sounding voice, follows the screening questions you set to work out what the caller needs, captures their details, and either books them straight into your calendar or takes a message and flags it for you.',
-  },
-  {
-    q: 'What is an AI receptionist and how does it work for a business?',
-    a: 'It\u2019s a voice agent that answers incoming calls in place of, or alongside, a human receptionist. For a business that means no missed calls, consistent screening every time, and a summary of every call whether you were free to take it or not.',
-  },
-  {
-    q: 'How much does it cost?',
-    a: 'Plans start from \u00a397/month with setup from \u00a3497. 120 call minutes included per month, £0.18/min over. Book a quick call and we\u2019ll give you a straight answer based on your needs.',
-  },
-  {
-    q: 'What support is included?',
-    a: 'Standard queries are responded to within 24 hours. Critical incidents \u2014 such as the agent going offline during business hours \u2014 are responded to within 4 hours. Included across all plans.',
-  },
-]
 
 const features = [
   {
@@ -129,12 +81,18 @@ export default function Page() {
         <Container className="py-20 md:py-28">
           <div className="max-w-4xl">
             <HeadlineBlock as="h1" kicker={<>AI RECEPTIONIST &bull; UK</>}>
-              Every Missed Call Is a Customer Who <span className="text-coral">Found Someone Else</span>
+              AI Receptionist for UK Businesses: <span className="text-coral">Every Call Answered, 24/7</span>
             </HeadlineBlock>
-            <p className="text-lg md:text-xl text-body leading-normal mb-8 mt-6 max-w-[60ch]">
+            <p className="font-display font-extrabold uppercase text-cream text-[clamp(1.5rem,3vw,2rem)] leading-[0.95] tracking-[-0.01em] mt-6 max-w-[40ch]">
+              Every Missed Call Is a Customer Who <span className="text-coral">Found Someone Else</span>
+            </p>
+            <p className="text-lg md:text-xl text-body leading-normal mb-6 mt-6 max-w-[60ch]">
               An AI receptionist that picks up when you can&rsquo;t. It screens callers, captures
               the details you need, and books them into your calendar &mdash; 24/7, including
-              weekends and bank holidays. From &pound;97/month.
+              weekends and bank holidays. From {PRICE_TEXT.receptionistMonthly}.
+            </p>
+            <p className="text-lg text-body leading-normal mb-8 max-w-[60ch]">
+              Antek Automation&rsquo;s AI receptionist answers every call to your business 24/7, screens callers, captures their details and books appointments into your calendar. It&rsquo;s a virtual receptionist and call answering service for UK businesses, from {PRICE_TEXT.receptionistMonthly} with {PRICES.receptionist.starter.minutes} minutes included, and live within 24&ndash;48 hours. Built by a Certified Retell AI Partner based in Andover, Hampshire.
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <a href="#demo">
@@ -145,7 +103,7 @@ export default function Page() {
               </Button>
             </div>
             <p className="text-sm text-muted mt-4 tracking-wide">
-              Plans from &pound;97/month &middot; Setup from &pound;497 &middot; 120 call minutes included per month — higher plans add more minutes and features
+              Plans from {PRICE_TEXT.receptionistMonthly} &middot; Setup from &pound;{PRICES.receptionist.setupFrom} &middot; {PRICE_TEXT.receptionistMinutes} — higher plans add more minutes and features
             </p>
             <TrustStrip className="mt-6" />
           </div>
@@ -153,35 +111,7 @@ export default function Page() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="py-20 md:py-28">
-        <Container>
-          <HeadlineBlock className="mb-16">
-            Live in <span className="text-coral">24&ndash;48 Hours</span>. No Long Setup.
-          </HeadlineBlock>
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
-            {[
-              {
-                h: 'Tell Us About Your Business',
-                b: 'Share your website and phone number. We pull your services, hours, and service areas automatically.',
-              },
-              {
-                h: 'Set Your Screening Logic',
-                b: 'What questions should we ask? What qualifies a good lead for you? What\u2019s urgent vs routine? You set the rules. The AI follows them.',
-              },
-              {
-                h: 'Forward Your Calls',
-                b: 'Dial a short code or scan a QR. Takes 30 seconds. Your AI receptionist is live \u2014 answering calls, screening callers, and booking appointments while you get on with the actual work.',
-              },
-            ].map((step, i) => (
-              <Card key={i} className="h-full">
-                <Icon letter={String(i + 1).padStart(2, '0')} size="lg" mono />
-                <h3 className="font-display font-extrabold text-xl uppercase text-cream mt-6 mb-4">{step.h}</h3>
-                <p className="text-body leading-normal">{step.b}</p>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ReceptionistHowItWorks />
 
       {/* ── WHAT IT DOES ── */}
       <section className="bg-ink border-y border-hairline py-20 md:py-28">
@@ -201,6 +131,24 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* ── COMPARISON ── */}
+      <section className="py-20 md:py-28 border-b border-hairline">
+        <Container>
+          <HeadlineBlock className="mb-6">
+            AI Receptionist vs Virtual Receptionist vs <span className="text-coral">Call Answering Service</span>
+          </HeadlineBlock>
+          <div className="space-y-4 mb-12 max-w-[65ch]">
+            <p className="text-lg text-body leading-normal">
+              A human virtual receptionist or answering service puts a person on your line. That works until they&rsquo;re busy with another caller, and most charge by the call or the minute.
+            </p>
+            <p className="text-lg text-body leading-normal">
+              An AI receptionist answers every call at once, 24/7, and books the appointment itself. Voicemail is free, but it captures maybe 20% of callers. Comparing options? Our <a href="/call-answering-service" className={LINK}>call answering service</a> page goes through it in more detail.
+            </p>
+          </div>
+          <AnsweringComparisonTable />
+        </Container>
+      </section>
+
       {/* ── PRICING INDICATOR ── */}
       <section className="py-20 md:py-28">
         <Container>
@@ -208,9 +156,9 @@ export default function Page() {
             Simple, <span className="text-coral">Transparent Pricing</span>
           </HeadlineBlock>
           <p className="text-lg text-body leading-normal mb-10 max-w-[65ch]">
-            Plans start from &pound;97/month. 120 call minutes included per month, £0.18/min over. No hidden fees. Setup from
-            &pound;497. The exact cost depends on your call volume and what integrations you need
-            &mdash; book a quick chat and we&rsquo;ll give you a straight answer.
+            Plans start from {PRICE_TEXT.receptionistMonthly}. {PRICE_TEXT.receptionistMinutes}, {PRICE_TEXT.receptionistOverage}. No hidden fees. Setup from
+            &pound;{PRICES.receptionist.setupFrom}. The exact cost depends on your call volume and what integrations you need
+            &mdash; book a quick chat and we&rsquo;ll give you a straight answer. Every tier is on our <a href="/pricing#ai-receptionist" className={LINK}>AI receptionist pricing</a> page.
           </p>
           <a href="/contact">
             <Button variant="primary">Book a 30-Min Discovery Call</Button>
@@ -289,11 +237,11 @@ export default function Page() {
       </div>
 
       <QuickRecap items={[
-        'An AI receptionist that answers every call, screens callers against your criteria, and books appointments 24/7',
-        'For UK trades businesses, professional services, and healthcare practices missing calls during the working day',
-        'From £97/month + setup from £497 — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        'An AI receptionist and call answering service for UK businesses: answers every call, screens callers against your criteria, and books appointments 24/7',
+        'For UK trades businesses, professional services, property managers and healthcare practices missing calls during the working day or out of hours',
+        `From ${PRICE_TEXT.receptionistMonthly} + ${PRICE_TEXT.receptionistSetup} — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         'Live in 24–48 hours — we pull your services from your website, you set the screening questions',
-        '120 call minutes included per month — higher plans add more minutes and features; industry-specific setups available for trades, legal, healthcare, and more',
+        `${PRICE_TEXT.receptionistMinutes} (${PRICE_TEXT.receptionistOverage}) — higher plans add more minutes and features; industry-specific setups available for trades, legal, healthcare, and more`,
       ]} />
 
       <ResourcesCompliance links={[
@@ -321,7 +269,7 @@ export default function Page() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                  {faq.a}
+                  <LinkedText text={faq.a} links={faq.links} />
                 </div>
               </details>
             ))}
