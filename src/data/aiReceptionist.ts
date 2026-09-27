@@ -556,9 +556,7 @@ export const industries: Record<string, IndustryData> = {
       'Landlord enquiries and messages for the right property manager',
     ],
 
-    integrations: 'Works alongside your property management software, Google Calendar, Outlook, and most CRM tools. Call summaries can be sent to your team by email. Running something specific? Ask us.',
-    // TODO(andy): confirm which property software (e.g. Alto, Reapit, Arthur) we have actually integrated before naming any here.
-
+    integrations: 'Already integrated with Follow Up Boss, the real estate CRM, for an estate agency client. Also works alongside Google Calendar, Outlook and most CRM tools, with call summaries sent to your team by email. Using Alto, Reapit, Arthur or something else? Ask us and we\u2019ll tell you straight whether it connects.',
     alsoPopularWith: ['plumbers', 'electricians', 'lawyers'],
 
     faqs: [
