@@ -8,6 +8,9 @@ import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { RetellDemoCards } from '../../../src/components/RetellDemoCards'
 import { ReviewsStrip } from '../../../src/components/ReviewsStrip'
+import { PRICE_TEXT } from '../../../src/data/pricing'
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
 
 const VoiceChat = lazy(() =>
   import('../../../src/components/VoiceChat').then((m) => ({ default: m.VoiceChat }))
@@ -56,6 +59,12 @@ export default function Page() {
             <p className="text-xl text-body leading-normal mb-4 mt-6 max-w-[60ch]">
               Speed-to-lead callbacks, lead qualifying, appointment reminders and customer service. Inbound and outbound, around the clock. This is voice AI doing the whole job, not just answering the phone.
             </p>
+            <p className="text-lg text-body leading-normal mb-4 max-w-[60ch]">
+              Antek Automation&rsquo;s AI voice agents call your new leads back within seconds, qualify them, book the good ones, confirm tomorrow&rsquo;s appointments and chase quotes that went quiet. Built for UK businesses losing work to slow follow-up, from {PRICE_TEXT.receptionistMonthly} plus {PRICE_TEXT.receptionistSetup}, and live within 24&ndash;48 hours. Certified Retell AI Partner, based in Andover, Hampshire.
+            </p>
+            <p className="text-body leading-normal mb-4 max-w-[60ch]">
+              Need your inbound calls answered? See our <a href="/ai-receptionist" className={LINK}>AI receptionist</a>.
+            </p>
             <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Certified Retell AI Partner</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <Button variant="primary" onClick={() => setIsVoiceChatOpen(true)}>
@@ -77,7 +86,7 @@ export default function Page() {
         'An AI voice agent that calls new leads back in seconds, qualifies them, books the good ones, confirms appointments and handles routine customer calls',
         "Works inbound and outbound — the calls you can't get to, and the calls you never get round to making",
         'For UK businesses losing leads to slow follow-up, no-shows and a phone that never stops',
-        'From £97/month + setup from £497 — bespoke outbound and multi-step builds scoped on a call — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see pricing</a>',
+        `From ${PRICE_TEXT.receptionistMonthly} + ${PRICE_TEXT.receptionistSetup} — bespoke outbound and multi-step builds scoped on a call — <a href="/pricing#ai-voice-assistant" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see pricing</a>`,
         'Live in 24–48 hours, configured from your website and your tools',
       ]} />
 
@@ -199,7 +208,7 @@ export default function Page() {
                 </tr>
                 <tr className="border-t border-hairline bg-ink">
                   <td className="p-4 font-bold text-cream border-r border-hairline">Cost</td>
-                  <td className="p-4 text-body border-r border-hairline"><a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">From £97/month</a></td>
+                  <td className="p-4 text-body border-r border-hairline"><a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">From {PRICE_TEXT.receptionistMonthly}</a></td>
                   <td className="p-4 text-body border-r border-hairline">Your time</td>
                   <td className="p-4 text-body">£200–£800+/month</td>
                 </tr>
@@ -263,7 +272,7 @@ export default function Page() {
               Just want your inbound calls <span className="text-coral">answered and screened?</span>
             </p>
             <p className="text-body leading-normal mb-4">
-              That's our productised AI Receptionist — answer, screen and book, from £97/month.
+              That's our productised AI Receptionist — answer, screen and book, from {PRICE_TEXT.receptionistMonthly}.
             </p>
             <a href="/ai-receptionist" className="font-sans font-bold uppercase text-sm text-coral hover:underline">
               See the AI Receptionist &rarr;
@@ -335,7 +344,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform shrink-0">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                From £97/month with setup from £497. Bespoke outbound and multi-step builds are scoped on a quick call. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>.
+                From {PRICE_TEXT.receptionistMonthly} with {PRICE_TEXT.receptionistSetup}. Bespoke outbound and multi-step builds are scoped on a quick call. <a href="/pricing#ai-voice-assistant" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See pricing</a>.
               </div>
             </details>
           </div>
