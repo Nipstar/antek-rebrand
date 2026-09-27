@@ -397,7 +397,7 @@ export default function Page() {
             Your Phone&rsquo;s Covered. Is <span className="text-cream">AI Search Covering You?</span>
           </h2>
           <p className="text-lg text-ink leading-relaxed mb-6 max-w-[60ch]">
-            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From &pound;247.
+            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From {PRICE_TEXT.geoQuickCheck}.
           </p>
           <a href="/services/geo-audit">
             <Button variant="ink">Check Your AI Visibility &rarr;</Button>
