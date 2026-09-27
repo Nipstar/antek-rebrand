@@ -1,18 +1,20 @@
+import { PRICES } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
-      <title>Workflow Automation for UK Business | Antek Automation</title>
+      <title>Small Business Automation UK | Admin, CRM &amp; n8n Workflows</title>
       <meta
         name="description"
-        content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."
+        content="Automate the admin eating your evenings: CRM updates, follow-ups, invoicing and data entry, built on n8n so you own it. From £250, live in 1–14 days."
       />
       <link rel="canonical" href="https://www.antekautomation.com/services/workflow-automation" />
 
       {/* Open Graph */}
-      <meta property="og:title" content="Workflow Automation for UK Business | Antek Automation" />
+      <meta property="og:title" content="Small Business Automation UK | Admin, CRM & n8n Workflows" />
       <meta
         property="og:description"
-        content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."
+        content="Automate the admin eating your evenings: CRM updates, follow-ups, invoicing and data entry, built on n8n so you own it. From £250, live in 1–14 days."
       />
       <meta property="og:url" content="https://www.antekautomation.com/services/workflow-automation" />
       <meta property="og:type" content="website" />
@@ -20,10 +22,10 @@ export function Head() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Workflow Automation for UK Business | Antek Automation" />
+      <meta name="twitter:title" content="Small Business Automation UK | Admin, CRM & n8n Workflows" />
       <meta
         name="twitter:description"
-        content="We automate the admin that's burying you. CRM updates, email follow-ups, invoicing, data entry — all handled automatically with n8n. Based in Hampshire."
+        content="Automate the admin eating your evenings: CRM updates, follow-ups, invoicing and data entry, built on n8n so you own it. From £250, live in 1–14 days."
       />
 
       {/* BreadcrumbList Schema */}
@@ -79,6 +81,13 @@ export function Head() {
             },
             serviceType: 'Workflow Automation',
             url: 'https://www.antekautomation.com/services/workflow-automation',
+            offers: {
+              '@type': 'Offer',
+              name: 'Workflow automation project',
+              description: `From £${PRICES.workflow.from} per project, setup included. Live in ${PRICES.workflow.goLive} depending on complexity.`,
+              price: String(PRICES.workflow.from),
+              priceCurrency: 'GBP',
+            },
             potentialAction: {
               '@type': 'ScheduleAction',
               target: {

@@ -6,6 +6,9 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing'
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
 
 export default function Page() {
   return (
@@ -22,6 +25,9 @@ export default function Page() {
             </HeadlineBlock>
             <p className="text-xl text-body leading-normal mb-4 mt-6 max-w-[60ch]">
               As an AI automation company that builds bespoke n8n workflows, we connect your tools, automate your processes, and give you back the hours you're currently wasting on repetitive work. No lock-in, you own everything.
+            </p>
+            <p className="text-lg text-body leading-normal mb-4 max-w-[60ch]">
+              Small business automation from Antek Automation takes the admin off your plate: CRM updates, follow-up emails, invoicing and data entry, all handled automatically. We build on n8n, an open-source automation tool you own outright, so there are no per-task bills. From &pound;{PRICES.workflow.from} per project, setup included, and live in {PRICES.workflow.goLive}.
             </p>
             <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Last updated March 2026</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -43,10 +49,10 @@ export default function Page() {
       <ReviewsStrip limit={3} />
 
       <QuickRecap items={[
-        'We automate your repetitive admin using n8n (open-source) — you own the workflows outright, no vendor lock-in',
+        'Small business automation for your repetitive admin, built on n8n (open-source) — you own the workflows outright, no vendor lock-in',
         'For service businesses spending 10+ hours/week on manual data entry, follow-ups, and CRM updates',
-        'From £250 one-off for a starter workflow — <a href="/pricing#workflow-automation" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
-        'Simple workflows live in 1–2 days; complex multi-system builds take 1–2 weeks',
+        `From £${PRICES.workflow.from} per project, setup included — <a href="/pricing#workflow-automation" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
+        `Live in ${PRICES.workflow.goLive}: simple workflows in 1–2 days, complex multi-system builds in 1–2 weeks`,
         'Discovery audit first — we won\'t automate processes we don\'t fully understand',
       ]} />
 
@@ -82,7 +88,7 @@ export default function Page() {
       <section id="what-we-automate" className="bg-ink border-y border-hairline py-20 md:py-28">
         <Container>
           <HeadlineBlock className="mb-6">
-            Stuff You're Probably <span className="text-coral">Doing Manually</span> Right Now
+            Small Business Automation: <span className="text-coral">Stuff You're Doing Manually</span> Right Now
           </HeadlineBlock>
           <p className="text-lg text-body mb-16 max-w-[60ch]">
             Sound familiar? Every one of these can be fully automated. Set it up once, never think about it again.
@@ -263,6 +269,26 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* Migration from Zapier / Make */}
+      <section className="bg-ink border-t border-hairline py-20 md:py-28">
+        <Container>
+          <HeadlineBlock className="mb-8">
+            Outgrown Zapier? <span className="text-coral">Move to n8n</span>
+          </HeadlineBlock>
+          <div className="space-y-6 text-lg text-body leading-normal max-w-[65ch]">
+            <p>
+              Already running automations in Zapier or Make? We can rebuild them in n8n, self-hosted on your own server. You own the workflows outright, so they keep running even if you stop paying a subscription.
+            </p>
+            <p>
+              And there are no per-task bills. Whether you run 100 tasks or 100,000, the cost stays the same. We start by auditing what you&rsquo;ve got, then move it across.
+            </p>
+            <p>
+              <a href="/contact" className={`${LINK} font-bold text-cream`}>Book an automation audit</a> and we&rsquo;ll tell you what&rsquo;s worth moving.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       {/* What It Won't Do */}
       <section className="bg-ink border-y border-hairline py-20 md:py-28">
         <Container>
@@ -301,7 +327,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                From £250 one-off for a starter workflow. <a href="/pricing#workflow-automation" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — exact cost depends on workflow count and complexity.
+                From &pound;{PRICES.workflow.from} per project, setup included. <a href="/pricing#workflow-automation" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — exact cost depends on workflow count and complexity.
               </div>
             </details>
 
@@ -383,7 +409,7 @@ export default function Page() {
             Your Admin&rsquo;s Automated. <span className="text-cream">Is Your AI Visibility?</span>
           </h2>
           <p className="text-lg text-ink leading-relaxed mb-6 max-w-[60ch]">
-            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From &pound;247.
+            When buyers ask ChatGPT, Perplexity or Google&rsquo;s AI Overviews for a business like yours, our <a href="/services/geo-audit" className="underline underline-offset-4 decoration-ink decoration-2 hover:opacity-70 transition-opacity">GEO Audit</a> shows whether you&rsquo;re cited &mdash; and gives you a clear plan to get there. From {PRICE_TEXT.geoQuickCheck}.
           </p>
           <a href="/services/geo-audit">
             <Button variant="ink">Check Your AI Visibility &rarr;</Button>
@@ -403,7 +429,7 @@ export default function Page() {
                 <Icon letter="01" size="md" mono />
                 <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">AI Receptionist</h4>
                 <p className="text-body text-sm leading-normal">
-                  Productised phone answering from &pound;97/month. Screens callers and books appointments 24/7.
+                  Productised phone answering from {PRICE_TEXT.receptionistMonthly}. Screens callers and books appointments 24/7.
                 </p>
               </Card>
             </a>
