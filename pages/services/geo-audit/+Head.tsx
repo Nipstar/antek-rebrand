@@ -1,3 +1,5 @@
+import { PRICES } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
@@ -84,21 +86,21 @@ export function Head() {
               {
                 '@type': 'Offer',
                 name: 'Quick Check',
-                price: '247',
+                price: String(PRICES.geo.quickCheck),
                 priceCurrency: 'GBP',
                 description: 'AI visibility test across 4 platforms, 10 real customer prompts tested, citation readiness score, top 5 priorities, Loom video walkthrough + 1-page PDF. Delivered within 24 hours.',
               },
               {
                 '@type': 'Offer',
                 name: 'Full Audit',
-                price: '497',
+                price: String(PRICES.geo.fullAudit),
                 priceCurrency: 'GBP',
                 description: 'Everything in Quick Check plus full technical crawlability review, schema audit, content structure analysis, 3 competitor benchmarks, 30+ test prompts, effort/impact action plan, PDF report + 30-min video walkthrough. Delivered within 24 hours.',
               },
               {
                 '@type': 'AggregateOffer',
                 name: 'Audit + Fix',
-                lowPrice: '997',
+                lowPrice: String(PRICES.geo.auditFixFrom),
                 priceCurrency: 'GBP',
                 offerCount: '1',
                 description: 'Full Audit included plus hands-on implementation: schema deployment, content restructuring, llms.txt setup, directory submissions, re-test to measure improvement. Final price scoped to site size and complexity.',

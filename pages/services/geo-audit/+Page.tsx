@@ -8,6 +8,9 @@ import { QuickRecap } from '../../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance';
 import { AICitationProof } from '../../../src/components/AICitationProof';
 import { AIVisibilityCheckForm } from '../../../src/components/AIVisibilityCheckForm';
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing';
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors';
 
 export default function Page() {
   return (
@@ -23,7 +26,10 @@ export default function Page() {
             >
               Your Customers Are Asking AI. <span className="text-coral">Is It Recommending You?</span>
             </HeadlineBlock>
-            <p className="text-lg md:text-xl text-body leading-relaxed mb-4 mt-6 max-w-[65ch]">
+            <p className="text-lg text-body leading-relaxed mb-4 mt-6 max-w-[65ch]">
+              Antek Automation&rsquo;s GEO Audit shows how visible your business is when people ask ChatGPT, Perplexity, Gemini, Claude or Google AI Overviews for a recommendation, and exactly what to fix. It&rsquo;s built for UK businesses: Quick Check {PRICE_TEXT.geoQuickCheck}, Full Audit {PRICE_TEXT.geoFullAudit}, Audit + Fix {PRICE_TEXT.geoAuditFixFrom}, all delivered within 24 hours. Based in Andover, Hampshire.
+            </p>
+            <p className="text-lg md:text-xl text-body leading-relaxed mb-4 max-w-[65ch]">
               Right now, people are typing &ldquo;Who&rsquo;s the best plumber near me?&rdquo; into ChatGPT. They&rsquo;re asking Perplexity for recommendations. Google&rsquo;s showing AI-generated answers above the traditional results. If your business isn&rsquo;t in those answers, you&rsquo;re not ranking low &mdash; you&rsquo;re invisible. Completely absent from a channel that industry analysts expect to handle a substantial and growing share of search queries in 2026 and beyond.
             </p>
             <p className="text-lg md:text-xl text-body leading-relaxed mb-4 max-w-[65ch]">
@@ -50,7 +56,7 @@ export default function Page() {
       <QuickRecap items={[
         'A GEO audit (Generative Engine Optimisation) measures how visible your business is in AI-generated answers — ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini',
         'For UK SMEs that rely on being found online, especially those already investing in SEO or Google Ads',
-        'Quick Check from £247 one-off · Full Audit £497 · Audit + Fix from £997 · Retainer from £497/month — <a href="/pricing#geo-audit" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        `Quick Check ${PRICE_TEXT.geoQuickCheck} one-off · Full Audit ${PRICE_TEXT.geoFullAudit} · Audit + Fix ${PRICE_TEXT.geoAuditFixFrom} · Retainer ${PRICE_TEXT.geoRetainerFrom} (${PRICES.geo.retainerMinimumMonths}-month minimum) — <a href="/pricing#geo-audit" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         'All audits delivered within 24 hours',
         'GEO is ongoing work — most clients start with an audit, then move to a monthly retainer',
       ]} />
@@ -185,7 +191,7 @@ export default function Page() {
             <Card className="h-full">
               <div className="mb-6">
                 <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Quick Check</h3>
-                <p className="font-display font-extrabold text-5xl text-coral">&pound;247</p>
+                <p className="font-display font-extrabold text-5xl text-coral">{PRICE_TEXT.geoQuickCheck}</p>
               </div>
               <ul className="space-y-3 text-body mb-8">
                 <li className="flex items-start gap-3">
@@ -225,7 +231,7 @@ export default function Page() {
               </div>
               <div className="mb-6">
                 <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Full Audit</h3>
-                <p className="font-display font-extrabold text-5xl text-coral">&pound;497</p>
+                <p className="font-display font-extrabold text-5xl text-coral">{PRICE_TEXT.geoFullAudit}</p>
               </div>
               <ul className="space-y-3 text-body mb-8">
                 <li className="flex items-start gap-3">
@@ -274,7 +280,7 @@ export default function Page() {
             <Card className="h-full">
               <div className="mb-6">
                 <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Audit + Fix</h3>
-                <p className="font-display font-extrabold text-5xl text-coral"><span className="text-2xl mr-2">from</span>&pound;997</p>
+                <p className="font-display font-extrabold text-5xl text-coral"><span className="text-2xl mr-2">from</span>&pound;{PRICES.geo.auditFixFrom}</p>
               </div>
               <ul className="space-y-3 text-body mb-8">
                 <li className="flex items-start gap-3">
@@ -348,7 +354,10 @@ export default function Page() {
             Monthly <span className="text-coral">GEO Retainer</span>
           </HeadlineBlock>
           <p className="text-lg text-body leading-relaxed mb-8 max-w-[65ch]">
-            From <span className="font-display font-extrabold text-cream">&pound;497/month</span>, rolling monthly after an initial 3-month foundation period. Most clients start with a Full Audit or Audit + Fix, then move to the retainer once the foundations are in place.
+            From <span className="font-display font-extrabold text-cream">&pound;{PRICES.geo.retainerFrom}/month</span>, rolling monthly after an initial {PRICES.geo.retainerMinimumMonths}-month foundation period. Most clients start with a Full Audit or Audit + Fix, then move to the retainer once the foundations are in place.
+          </p>
+          <p className="text-body leading-relaxed mb-8 max-w-[65ch]">
+            Want your Google rankings handled in the same plan? That&rsquo;s what our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> service does.
           </p>
           <div className="grid md:grid-cols-2 gap-6 mb-8 items-stretch">
             <div className="bg-charcoal border-2 border-hairline p-6 shadow-brutal-sm h-full">
