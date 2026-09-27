@@ -29,7 +29,7 @@ const URGENT_STEPS = [
   },
   {
     h: 'You get a text',
-    b: 'Anything urgent is sent to your mobile by SMS straight away, with who called, where they are and what\u2019s wrong. Everything else is logged with full details for the morning.',
+    b: 'Anything urgent is sent to your mobile by SMS straight away, with who called, where they are and what\u2019s wrong. Want to speak to them there and then? Add live transfer and it puts the caller straight through to you. Everything else is logged for the morning.',
   },
   {
     h: 'You get a summary',
@@ -191,7 +191,7 @@ export default function Page() {
 
       <QuickRecap items={[
         'Out of hours call answering by AI: evenings, weekends and bank holidays, 24/7',
-        'Urgent calls are sent to you by SMS, based on rules you set; routine calls are logged and booked for the morning',
+        'Urgent calls are sent to you by SMS, based on rules you set, with optional live transfer to your phone; routine calls are logged and booked for the morning',
         'For trades, property managers, solicitors and anyone whose phone keeps ringing after 5pm',
         `From ${PRICE_TEXT.receptionistMonthly} with ${PRICES.receptionist.starter.minutes} minutes included, no out-of-hours premium — <a href="/pricing#ai-receptionist" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         `Live within ${PRICES.receptionist.goLive}; built by Antek Automation, a Certified Retell AI Partner based in Andover, Hampshire`,

@@ -10,7 +10,7 @@ export const faqs: { q: string; a: string; links?: InlineLink[] }[] = [
   },
   {
     q: 'Can urgent calls be passed to me?',
-    a: 'Yes. You decide what counts as urgent, such as a burst pipe, no heating or a lockout, and the AI screens every call against those rules. Urgent calls are sent to your mobile by SMS straight away, with the caller\u2019s details and what\u2019s wrong, so you can decide whether to ring back tonight. Routine calls are logged for the morning.',
+    a: 'Yes. You decide what counts as urgent, such as a burst pipe, no heating or a lockout, and the AI screens every call against those rules. Urgent calls are sent to your mobile by SMS straight away, with the caller\u2019s details and what\u2019s wrong, so you can decide whether to ring back tonight. If you\u2019d rather talk to them there and then, live transfer is available as an option: urgent callers are put straight through to your phone. Routine calls are logged for the morning.',
   },
   {
     q: 'What does out of hours call answering cost?',

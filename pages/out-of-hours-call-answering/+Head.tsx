@@ -22,7 +22,7 @@ export function Head() {
     '@type': 'Service',
     '@id': `${canonical}#service`,
     name: 'Out of Hours Call Answering',
-    description: `AI out of hours call answering for UK businesses. Answers evening, weekend and bank holiday calls, texts you urgent jobs by SMS, captures caller details and books appointments. From ${PRICE_TEXT.receptionistMonthly} with ${PRICE_TEXT.receptionistSetup}.`,
+    description: `AI out of hours call answering for UK businesses. Answers evening, weekend and bank holiday calls, texts you urgent jobs by SMS with optional live transfer, captures caller details and books appointments. From ${PRICE_TEXT.receptionistMonthly} with ${PRICE_TEXT.receptionistSetup}.`,
     provider: { '@id': 'https://www.antekautomation.com/#organization' },
     serviceType: 'Out of Hours Call Answering',
     areaServed: { '@type': 'Country', name: 'United Kingdom' },
