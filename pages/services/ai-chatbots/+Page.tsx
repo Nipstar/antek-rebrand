@@ -6,6 +6,9 @@ import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
+import { PRICE_TEXT } from '../../../src/data/pricing'
+
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
 
 export default function Page() {
   const openChatbot = () => {
@@ -27,6 +30,12 @@ export default function Page() {
             <p className="text-xl text-body leading-normal mb-4 mt-6 max-w-[60ch]">
               Not a generic FAQ widget. An AI trained on your services, prices, and availability that captures leads and books appointments around the clock.
             </p>
+            <p className="text-lg text-body leading-normal mb-4 max-w-[60ch]">
+              Antek Automation&rsquo;s AI chatbot answers your website visitors 24/7, captures their details and books appointments into your calendar. It&rsquo;s trained on your own services, prices and availability, built for UK businesses, and costs {PRICE_TEXT.chatbotMonthly} plus {PRICE_TEXT.chatbotSetup}, with unlimited conversations. It&rsquo;s installed within 24&ndash;48 hours.
+            </p>
+            <p className="text-body leading-normal mb-4 max-w-[60ch]">
+              Want the phone covered too? See our <a href="/ai-receptionist" className={LINK}>AI receptionist</a>.
+            </p>
             <p className="text-sm text-muted mb-8">By <a href="/about" className="underline decoration-coral underline-offset-4 hover:text-coral transition-colors">Andy Norman</a>, Founder | 30+ years in technology | Last updated March 2026</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <Button variant="primary" onClick={openChatbot}>
@@ -47,7 +56,7 @@ export default function Page() {
       <QuickRecap items={[
         'An AI chatbot trained on your business — answers questions, captures leads, and books appointments 24/7',
         'For businesses whose websites get traffic but lose visitors out of hours or at weekends',
-        'From £57/month + setup from £297 — <a href="/pricing#ai-chatbot" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>',
+        `From ${PRICE_TEXT.chatbotMonthly} + ${PRICE_TEXT.chatbotSetup} — <a href="/pricing#ai-chatbot" class="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">see full pricing</a>`,
         'Live on your website within 24–48 hours',
         'Typically handles ~80% of standard conversations autonomously; flags the rest for your team',
       ]} />
@@ -197,7 +206,7 @@ export default function Page() {
                 </tr>
                 <tr className="border-t border-hairline bg-charcoal">
                   <td className="p-4 font-bold text-cream border-r border-hairline">Monthly Cost</td>
-                  <td className="p-4 text-body border-r border-hairline"><a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">From £57/month — see pricing</a></td>
+                  <td className="p-4 text-body border-r border-hairline"><a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">From {PRICE_TEXT.chatbotMonthly} — see pricing</a></td>
                   <td className="p-4 text-body border-r border-hairline">£500+/month (staff costs)</td>
                   <td className="p-4 text-body">Free</td>
                 </tr>
@@ -261,7 +270,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                From £57/month with setup from £297. <a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — no hidden fees.
+                From {PRICE_TEXT.chatbotMonthly} with {PRICE_TEXT.chatbotSetup}. <a href="/pricing#ai-chatbot" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">See full pricing</a> — no hidden fees.
               </div>
             </details>
 
@@ -368,7 +377,7 @@ export default function Page() {
                 <Icon letter="01" size="md" mono />
                 <h4 className="font-display font-extrabold text-lg uppercase text-cream mt-4 mb-2">AI Receptionist</h4>
                 <p className="text-body text-sm leading-normal">
-                  Productised phone answering from &pound;97/month. Screens callers and books appointments 24/7.
+                  Productised phone answering from {PRICE_TEXT.receptionistMonthly}. Screens callers and books appointments 24/7.
                 </p>
               </Card>
             </a>
