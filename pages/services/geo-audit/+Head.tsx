@@ -140,7 +140,7 @@ export function Head() {
                 name: 'How is GEO different from SEO?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "SEO focuses on ranking in Google's traditional results. GEO focuses on getting cited in AI-generated answers. AI engines prioritise content clarity, structured data and extractable statements over keyword density and backlink volume.",
+                  text: "SEO focuses on ranking in Google’s traditional results. GEO focuses on getting cited in AI-generated answers. AI engines prioritise content clarity, structured data and extractable statements over keyword density and backlink volume.",
                 },
               },
               {
@@ -148,7 +148,7 @@ export function Head() {
                 name: 'How long does a GEO audit take?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'All audits delivered within 24 hours. Ongoing fixes are handled through the monthly GEO retainer.',
+                  text: "All audits are delivered within 24 hours. Ongoing fixes are handled through the monthly GEO retainer.",
                 },
               },
               {
@@ -164,7 +164,7 @@ export function Head() {
                 name: 'Do I need GEO if I already rank well on Google?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "Yes. Many businesses rank well in Google's blue links but are completely absent from AI-generated answers. GEO and SEO complement each other, but they're different disciplines.",
+                  text: "Yes. Many businesses rank well in Google’s blue links but are completely absent from AI-generated answers. GEO and SEO complement each other, but they’re different disciplines.",
                 },
               },
               {
@@ -180,7 +180,7 @@ export function Head() {
                 name: 'What size business is this for?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "We've priced this for small businesses and SMBs — sole traders through to companies with up to 50 staff. If you're spending money on Google Ads or SEO but haven't thought about AI search yet, this is for you.",
+                  text: "We’ve priced this for small businesses and SMBs — sole traders through to companies with up to 50 staff. If you’re spending money on Google Ads or SEO but haven’t thought about AI search yet, this is for you.",
                 },
               },
             ],

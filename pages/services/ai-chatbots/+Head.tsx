@@ -1,3 +1,5 @@
+import { PRICE_TEXT } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
@@ -105,7 +107,7 @@ export function Head() {
                 name: 'How much does an AI chatbot cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Setup starts from £297, with monthly plans from £57/month. The exact pricing depends on features, integrations, and complexity. We offer a free consultation to scope your needs and give you a clear quote — no hidden fees.',
+                  text: `From ${PRICE_TEXT.chatbotMonthly} with ${PRICE_TEXT.chatbotSetup}. See full pricing — no hidden fees.`,
                 },
               },
               {
@@ -121,7 +123,7 @@ export function Head() {
                 name: 'What percentage of conversations can it handle?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'About 80% of conversations are handled autonomously — common questions, lead capture, appointment booking. The other 20% (complex queries, complaints, edge cases) get flagged for your team to follow up.',
+                  text: "Typically around 80% of conversations are handled autonomously: common questions, lead capture and appointment booking. Exact rates depend on how well the bot is trained on your business. The other 20% (complex queries, complaints, edge cases) get flagged for your team to follow up.",
                 },
               },
               {

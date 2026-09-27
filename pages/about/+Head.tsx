@@ -97,7 +97,7 @@ export function Head() {
         name: 'Where are you based?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We are based in Andover, Hampshire, and work with businesses across Hampshire and the whole UK remotely.',
+          text: "We’re based in Andover, Hampshire, and work with businesses across Hampshire and the whole UK remotely.",
         },
       },
       {
@@ -121,7 +121,7 @@ export function Head() {
         name: 'How do I get started?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Book a free 30-minute discovery call. We will look at where AI can save you time and capture more leads — no obligation, no jargon.',
+          text: "Book a free 30-minute discovery call. We’ll look at where AI can save you time and capture more leads — no obligation, no jargon.",
         },
       },
     ],

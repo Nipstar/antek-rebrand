@@ -114,7 +114,7 @@ export function Head() {
                 name: 'How much does workflow automation cost?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Automations start from £250. The exact cost depends on the number of workflows, integrations, and complexity. We offer a free automation audit to scope your needs and give you a clear quote.',
+                  text: `From £${PRICES.workflow.from} per project, setup included. See full pricing — exact cost depends on workflow count and complexity.`,
                 },
               },
               {

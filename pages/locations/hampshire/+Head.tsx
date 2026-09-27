@@ -97,7 +97,7 @@ export function Head() {
                 name: 'Can I meet you in person?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "Absolutely \u2014 we're based in Andover, so if you're anywhere in Hampshire we're happy to meet for a coffee. That said, most of our Hampshire clients prefer video calls because it's faster and more convenient. Either way works.",
+                  text: "Absolutely — we’re based in Andover, so if you’re anywhere in Hampshire we’re happy to meet for a coffee. That said, most of our Hampshire clients prefer video calls because it’s faster and more convenient. Either way works.",
                 },
               },
               {
@@ -105,7 +105,7 @@ export function Head() {
                 name: 'Do you work with tradespeople in rural Hampshire?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "Yes. Some of our best-performing voice agents are for trades businesses covering rural areas \u2014 exactly the kind of businesses where you're most likely to miss calls because you're mid-job with no signal. The AI catches everything you can't.",
+                  text: "Yes. Some of our best-performing voice agents are for trades businesses covering rural areas — exactly the kind of businesses where you’re most likely to miss calls because you’re mid-job with no signal. The AI catches everything you can’t.",
                 },
               },
               {
@@ -113,7 +113,7 @@ export function Head() {
                 name: 'What areas of Hampshire do you cover?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "All of it — we've got dedicated pages for Andover, Basingstoke, Winchester, Southampton and Portsmouth. Our AI solutions work remotely, so there are no geographic limitations.",
+                  text: "All of it — we’ve got dedicated pages for Andover, Basingstoke, Winchester, Southampton and Portsmouth. Our AI solutions work remotely, so there are no geographic limitations.",
                 },
               },
               {
@@ -161,7 +161,7 @@ export function Head() {
                 name: 'Can you get my Hampshire business cited in ChatGPT and Google AI Overviews?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'That is what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.',
+                  text: "That’s what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.",
                 },
               },
                 ],

@@ -290,7 +290,7 @@ export default function Page() {
                 <span className="text-coral text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <div className="px-6 pb-6 text-body leading-relaxed border-t border-hairline pt-4">
-                Typically around 80% of conversations are handled autonomously (standard questions, lead capture, booking) — exact rates depend on how well the bot is trained on your business — common questions, lead capture, appointment booking. The other 20% (complex queries, complaints, edge cases) get flagged for your team to follow up.
+                Typically around 80% of conversations are handled autonomously: common questions, lead capture and appointment booking. Exact rates depend on how well the bot is trained on your business. The other 20% (complex queries, complaints, edge cases) get flagged for your team to follow up.
               </div>
             </details>
 

@@ -105,7 +105,7 @@ export function Head() {
                     name: 'Can you get my Andover business cited in ChatGPT and Google AI Overviews?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'That is what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.',
+                      text: "That’s what a GEO audit is for. We test your visibility across ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini, then give you the plan to get cited. Antek itself is cited in Google’s AI Overview for AI automation in Andover, so the methods are the ones we use on our own business.",
                     },
                   },
                 ],

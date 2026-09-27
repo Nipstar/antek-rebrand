@@ -1,3 +1,5 @@
+import { PRICE_TEXT } from '../../../src/data/pricing'
+
 export function Head() {
   return (
     <>
@@ -102,7 +104,7 @@ export function Head() {
                 name: "What's the difference between a voice agent and your AI Receptionist?",
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'The AI Receptionist is our productised inbound product that answers, screens and books incoming calls. A voice agent is the broader, bespoke build: it does that plus outbound work like speed-to-lead callbacks, appointment reminders, follow-ups and customer service. If you just need calls answered, start with the Receptionist.',
+                  text: "The AI Receptionist is our productised inbound product — it answers, screens and books your incoming calls. A voice agent is the broader, bespoke build: it does that plus outbound work like speed-to-lead callbacks, appointment reminders, follow-ups and customer service. If you just need calls answered, start with the Receptionist.",
                 },
               },
               {
@@ -110,7 +112,7 @@ export function Head() {
                 name: 'Can it make outbound calls, not just answer them?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. That is the main thing that sets it apart. It calls leads back, confirms appointments, chases quotes and follows up after jobs, triggered by your forms, your CRM or a schedule.',
+                  text: "Yes. That's the main thing that sets it apart. It calls leads back, confirms appointments, chases quotes and follows up after jobs — triggered by your forms, your CRM or a schedule.",
                 },
               },
               {
@@ -118,7 +120,7 @@ export function Head() {
                 name: 'How fast can it call a new lead back?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Within seconds of the lead coming in. The moment a form is submitted or a call is missed, the agent rings them back while they are still interested.',
+                  text: "Within seconds of the lead coming in. The moment a form is submitted or a call is missed, the agent rings them back, while they're still interested.",
                 },
               },
               {
@@ -126,7 +128,7 @@ export function Head() {
                 name: "Will callers know they're talking to AI?",
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'About 1 in 20 notice. The voice is natural. If someone wants a person, it transfers them to you or takes a message.',
+                  text: "About 1 in 20 notice. The voice is natural. If someone wants a person, it transfers or takes a message.",
                 },
               },
               {
@@ -139,10 +141,10 @@ export function Head() {
               },
               {
                 '@type': 'Question',
-                name: 'How much does an AI voice agent cost?',
+                name: "How much does it cost?",
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'From £97/month with setup from £497. Bespoke outbound and multi-step builds are scoped on a quick call. See the pricing page for detail.',
+                  text: `From ${PRICE_TEXT.receptionistMonthly} with ${PRICE_TEXT.receptionistSetup}. Bespoke outbound and multi-step builds are scoped on a quick call. See pricing.`,
                 },
               },
             ],
