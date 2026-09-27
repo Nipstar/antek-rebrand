@@ -5,6 +5,7 @@ import { Container } from '../../../src/components/Container'
 import { Eyebrow } from '../../../src/components/Eyebrow'
 import { HeadlineBlock } from '../../../src/components/HeadlineBlock'
 import { ReviewsStrip } from '../../../src/components/ReviewsStrip';
+import { PRICES, PRICE_TEXT } from '../../../src/data/pricing'
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
     slug: 'ai-voice-assistants',
     description:
       'Phone agents that answer every call 24/7, qualify leads, book appointments, and send you a summary — all without hiring anyone.',
-    price: 'From £497 setup + £97/month',
+    price: `From ${PRICE_TEXT.receptionistMonthly} + setup from £${PRICES.receptionist.setupFrom}`,
   },
   {
     letter: 'C',
@@ -21,7 +22,7 @@ const services = [
     slug: 'ai-chatbots',
     description:
       "Website chat that handles enquiries, qualifies prospects, and books appointments around the clock — even when you're asleep.",
-    price:   'From £297 setup + £57/month',
+    price: `${PRICE_TEXT.chatbotMonthly} + setup from £${PRICES.chatbot.setupFrom}`,
   },
   {
     letter: 'A',
@@ -29,7 +30,7 @@ const services = [
     slug: 'workflow-automation',
     description:
       "Connect your tools. Eliminate repetitive tasks. From invoice chasing to CRM updates — let AI handle the busywork so you don't have to.",
-    price: 'From £250 one-off',
+    price: `From £${PRICES.workflow.from} per project, setup included`,
   },
   {
     letter: 'G',
@@ -37,7 +38,7 @@ const services = [
     slug: 'geo-audit',
     description:
       'A full audit of how visible your business is in AI-generated answers from ChatGPT, Claude, Gemini, and Perplexity — with a clear action plan to fix it.',
-    price: 'From £247 one-time',
+    price: `From £${PRICES.geo.quickCheck} one-time`,
   },
 ]
 

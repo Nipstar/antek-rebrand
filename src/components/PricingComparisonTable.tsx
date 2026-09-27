@@ -1,3 +1,5 @@
+import { PRICES, PRICE_TEXT } from '../data/pricing'
+
 const products = [
   { name: 'AI Voice & Receptionist', href: '/pricing#ai-voice-assistant' },
   { name: 'AI Chatbot', href: '/pricing#ai-chatbot' },
@@ -8,15 +10,15 @@ const products = [
 const rows: { label: string; values: string[] }[] = [
   {
     label: 'Starting price',
-    values: ['from £97/month (3 tiers)', '£57/month', 'from £250', 'from £247'],
+    values: [`from ${PRICE_TEXT.receptionistMonthly} (3 tiers)`, PRICE_TEXT.chatbotMonthly, PRICE_TEXT.workflowFrom, `from ${PRICE_TEXT.geoQuickCheck}`],
   },
   {
     label: 'Setup fee',
-    values: ['from £497', 'from £297', 'Included', 'Included'],
+    values: [`from £${PRICES.receptionist.setupFrom}`, `from £${PRICES.chatbot.setupFrom}`, 'Included', 'Included'],
   },
   {
     label: 'Time to live',
-    values: ['24–48 hours', '24–48 hours', '1–14 days', '24 hours'],
+    values: [PRICES.receptionist.goLive, PRICES.chatbot.goLive, PRICES.workflow.goLive, '24 hours'],
   },
   {
     label: 'Best for',

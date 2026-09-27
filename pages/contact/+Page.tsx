@@ -241,7 +241,7 @@ export default function Page() {
                 Free 30-min discovery call. No sales pitch.
               </p>
               <p className="text-sm text-muted mt-1">
-                We reply within 1 hour Mon&ndash;Fri 9&ndash;6. No long-term contracts.
+                We reply within 1 hour Mon&ndash;Fri 9&ndash;6. Month-to-month plans, 30 days&rsquo; notice.
               </p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">

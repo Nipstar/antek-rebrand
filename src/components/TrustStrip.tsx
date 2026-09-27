@@ -7,7 +7,7 @@ interface TrustStripProps {
 const PILLS = [
   'Replies within 1 hour Mon–Fri',
   'Free 30-min discovery call',
-  'No long-term contracts',
+  'Month-to-month plans',
   'Certified Retell AI Partner',
 ]
 

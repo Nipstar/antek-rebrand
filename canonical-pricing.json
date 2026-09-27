@@ -7,23 +7,44 @@
     "billingType": "monthly",
     "overagePerMin": 0.18,
     "tiers": [
-      { "name": "Starter", "monthly": 97, "minutes": 120, "includes": "Call answering, screening, calendar booking, summaries" },
-      { "name": "Standard", "monthly": 198, "minutes": 240, "includes": "Starter + CRM and API integrations" },
-      { "name": "Pro", "monthly": null, "minutes": null, "includes": "Standard + workflow automations for complex voice agent workflows + advanced features", "note": "Contact sales" }
-    ]
+      {
+        "name": "Starter",
+        "monthly": 97,
+        "minutes": 120,
+        "includes": "Call answering, screening, calendar booking, summaries"
+      },
+      {
+        "name": "Standard",
+        "monthly": 198,
+        "minutes": 240,
+        "includes": "Starter + CRM and API integrations"
+      },
+      {
+        "name": "Pro",
+        "monthly": null,
+        "minutes": null,
+        "includes": "Standard + workflow automations for complex voice agent workflows + advanced features",
+        "note": "Contact sales"
+      }
+    ],
+    "setupFrom": true
   },
   "chatbot": {
     "name": "AI Chatbot",
     "anchor": "ai-chatbot",
     "fromMonthly": 57,
     "setup": 297,
-    "billingType": "monthly"
+    "billingType": "monthly",
+    "setupFrom": true,
+    "includes": "Unlimited conversations. Installed within 24–48 hours"
   },
   "workflowAutomation": {
     "name": "Workflow Automation",
     "anchor": "workflow-automation",
     "fromOneOff": 250,
-    "billingType": "one-off"
+    "billingType": "one-off",
+    "setupIncluded": true,
+    "timeToLive": "1–14 days depending on complexity"
   },
   "geoAudit": {
     "name": "GEO Audit",
@@ -31,11 +52,26 @@
     "fromOneOff": 247,
     "billingType": "one-off",
     "tiers": [
-      { "name": "Quick Check", "price": 247 },
-      { "name": "Full Audit", "price": 497 },
-      { "name": "Audit + Fix", "price": 997, "from": true }
+      {
+        "name": "Quick Check",
+        "price": 247
+      },
+      {
+        "name": "Full Audit",
+        "price": 497
+      },
+      {
+        "name": "Audit + Fix",
+        "price": 997,
+        "from": true
+      }
     ],
-    "retainer": { "name": "Monthly Retainer", "fromMonthly": 497 }
+    "retainer": {
+      "name": "Monthly Retainer",
+      "fromMonthly": 497,
+      "minimumMonths": 3,
+      "then": "rolling monthly"
+    }
   },
   "aiReceptionist": {
     "name": "AI Receptionist",
@@ -45,9 +81,28 @@
     "billingType": "monthly",
     "overagePerMin": 0.18,
     "tiers": [
-      { "name": "Starter", "monthly": 97, "minutes": 120 },
-      { "name": "Standard", "monthly": 198, "minutes": 240 },
-      { "name": "Pro", "monthly": null, "minutes": null, "note": "Contact sales" }
-    ]
+      {
+        "name": "Starter",
+        "monthly": 97,
+        "minutes": 120
+      },
+      {
+        "name": "Standard",
+        "monthly": 198,
+        "minutes": 240
+      },
+      {
+        "name": "Pro",
+        "monthly": null,
+        "minutes": null,
+        "note": "Contact sales"
+      }
+    ],
+    "setupFrom": true
+  },
+  "terms": {
+    "vat": "All prices ex-VAT. UK VAT applies to UK businesses where applicable.",
+    "monthlyPlans": "Roll month to month, 30 days' notice to cancel",
+    "source": "src/data/pricing.ts is the source of truth for rendered pages; keep this file in step."
   }
 }

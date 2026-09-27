@@ -17,12 +17,12 @@ Page: https://www.antekautomation.com/ai-receptionist
 Productised AI phone answering service for UK SMBs and businesses. Screens every caller, captures the details you need, and books qualified enquiries straight into your calendar.
 
 Pricing tiers:
-- Starter: £97/month + £497 one-off setup. Includes 120 call minutes. Call answering, screening, summaries.
-- Standard: £198/month + £497 setup. Includes 240 call minutes. Adds CRM and API integrations.
+- Starter: £97/month + setup from £497 (one-off). Includes 120 call minutes. Call answering, screening, summaries.
+- Standard: £198/month + setup from £497 (one-off). Includes 240 call minutes. Adds CRM and API integrations.
 - Pro: Contact sales. Custom minutes. Adds workflow automations for complex voice agent workflows.
 - Overage: £0.18/min over included minutes.
 
-Live in 24–48 hours. No contracts — rolling monthly.
+Live in 24–48 hours. No contract — rolling monthly with 30 days' notice.
 
 Industry-specific pages with tailored screening flows:
 - [Electricians](https://www.antekautomation.com/ai-receptionist/electricians) — Emergency vs routine triage, EICR/Part P capture
@@ -51,7 +51,7 @@ Page: https://www.antekautomation.com/services/ai-chatbots
 
 Custom-trained website chatbots. Trained on your specific business, services, pricing, and FAQs. Answers questions, qualifies leads, captures contact details, books appointments. Unlimited conversations — no per-message limits.
 
-Pricing: £57/month + £297 one-off setup. No contracts.
+Pricing: £57/month + setup from £297 (one-off). No contract — rolling monthly with 30 days' notice.
 
 Typically handles around 80% of standard conversations autonomously (rate depends on training quality and question complexity). Complex or unusual queries escalated to your team.
 
@@ -60,7 +60,7 @@ Page: https://www.antekautomation.com/services/workflow-automation
 
 Business process automation built on n8n (open-source, self-hosted). Connects 400+ tools including Google Workspace, Xero, Stripe, HubSpot, Slack, WhatsApp, Shopify, Tradify, Jobber, ServiceM8. You own the workflows — no vendor lock-in.
 
-Pricing: From £250 one-off for a starter workflow. Complex builds scoped per project. Ongoing retainer available.
+Pricing: From £250 per project, setup included. Live in 1–14 days depending on complexity. Complex builds scoped per project. Ongoing retainer available.
 Timeline: Simple workflows 1–2 days. Complex multi-system builds 1–2 weeks.
 Clients typically save 10–20 hours/week on admin (depends on volume of manual work replaced).
 
@@ -104,7 +104,8 @@ Full transparent pricing for all five products with comparison table, per-produc
 - Chat transcript retention: 12 months
 - Data residency: UK/EU
 - GDPR compliant. DPA available on request.
-- No long-term contracts on any monthly plan.
+- No contracts on AI receptionist, chatbot and workflow plans. Monthly plans roll month to month with 30 days' notice. The GEO retainer has a 3-month minimum.
+- All prices are ex-VAT. UK VAT applies to UK businesses where applicable.
 
 ## Service Areas
 Headquartered in Andover, Hampshire. UK-wide remote delivery.
