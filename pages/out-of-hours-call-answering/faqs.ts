@@ -16,4 +16,12 @@ export const faqs: { q: string; a: string; links?: InlineLink[] }[] = [
     q: 'What does out of hours call answering cost?',
     a: `The same as daytime cover, because it’s the same service: from ${PRICE_TEXT.receptionistMonthly} with ${PRICES.receptionist.starter.minutes} minutes included, ${PRICE_TEXT.receptionistOverage}, plus ${PRICE_TEXT.receptionistSetup}. There’s no out-of-hours premium. Human answering services typically charge per call or per minute, and prices vary by provider.`,
   },
+  {
+    q: 'Will callers know they\u2019re talking to AI?',
+    a: 'About 1 in 20 notice. The voice is natural and calm, which matters on a stressful evening call. If someone asks, it tells them honestly, and if they want a person it takes a message or passes the call on.',
+  },
+  {
+    q: 'How quickly can out of hours cover be live?',
+    a: `Usually within ${PRICES.receptionist.goLive}. We build it from your website, you tell us what counts as urgent and where urgent calls should go, and you forward your number. Forwarding takes about 30 seconds.`,
+  },
 ]
