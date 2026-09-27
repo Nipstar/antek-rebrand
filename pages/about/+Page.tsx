@@ -47,6 +47,12 @@ export default function Page() {
               <p>
                 Antek Automation is an AI automation company based in Andover, Hampshire, founded by Andy Norman. We build AI voice agents, chatbots, and workflow automation that help UK businesses stop missing calls, respond to customers faster, and eliminate hours of manual admin every week. Andy spent 30+ years in managed technology services before founding Antek — he's not guessing what businesses need, he's lived it.
               </p>
+              <p>
+                What we build: an <a href="/ai-receptionist" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">AI receptionist</a> and <a href="/call-answering-service" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">call answering service</a> that picks up every call 24/7, <a href="/services/ai-chatbots" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">website chatbots</a>, <a href="/services/workflow-automation" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">workflow automation</a> on n8n, and <a href="/services/ai-seo" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">AI SEO</a> so ChatGPT and Google&rsquo;s AI Overviews recommend you. We&rsquo;re a Certified Retell AI Partner serving UK businesses.
+              </p>
+              <p>
+                Want to see <a href="https://blog.antekautomation.com/7-best-ai-automation-agencies-in-the-uk-2026/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">how we compare with other UK AI automation agencies</a>? We wrote it up.
+              </p>
             </div>
           </Card>
         </Container>
