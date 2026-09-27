@@ -4,7 +4,7 @@ import { faqs } from './faqs'
 export function Head() {
   const title = 'Out of Hours Call Answering UK | 24/7 AI Answering Service'
   const description =
-    'Evening, weekend and bank holiday calls answered by AI: urgent jobs flagged, details captured, bookings made. 24/7 cover from £97/month.'
+    'Evening, weekend and bank holiday calls answered by AI: urgent jobs flagged, details captured, bookings made. 24/7 cover from £97/month, no extra fee.'
   const canonical = 'https://www.antekautomation.com/out-of-hours-call-answering'
 
   const breadcrumbSchema = {

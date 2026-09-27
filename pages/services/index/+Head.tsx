@@ -67,7 +67,7 @@ export function Head() {
       <title>AI Automation Services | Antek Automation</title>
       <meta
         name="description"
-        content="AI voice agents, chatbots, workflow automation and GEO audits for UK businesses. Built around your business, not a template. Hampshire-based, working UK-wide."
+        content="AI voice agents, chatbots, workflow automation and GEO audits for UK businesses. Built around your business, not a template. Hampshire-based, UK-wide."
       />
       <link rel="canonical" href={canonical} />
 
@@ -75,7 +75,7 @@ export function Head() {
       <meta property="og:title" content="AI Automation Services | Antek Automation" />
       <meta
         property="og:description"
-        content="AI voice agents, chatbots, workflow automation, and GEO audits for UK businesses. Built to your business, not a template. Based in Hampshire."
+        content="AI voice agents, chatbots, workflow automation and GEO audits for UK businesses. Built around your business, not a template. Hampshire-based, UK-wide."
       />
       <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
@@ -87,7 +87,7 @@ export function Head() {
       <meta name="twitter:title" content="AI Automation Services | Antek Automation" />
       <meta
         name="twitter:description"
-        content="AI voice agents, chatbots, workflow automation, and GEO audits for UK businesses. Built to your business, not a template."
+        content="AI voice agents, chatbots, workflow automation and GEO audits for UK businesses. Built around your business, not a template. Hampshire-based, UK-wide."
       />
       <meta name="twitter:image" content="https://www.antekautomation.com/og-image.png" />
 
