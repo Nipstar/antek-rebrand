@@ -1,4 +1,4 @@
-import { RECEPTIONIST_STEPS } from '../../../src/components/ReceptionistHowItWorks'
+import { RECEPTIONIST_STEPS } from '../../../src/data/receptionistSteps'
 import { PRICES, PRICE_TEXT } from '../../../src/data/pricing'
 import { faqs } from './faqs'
 
