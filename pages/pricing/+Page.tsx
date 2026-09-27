@@ -7,49 +7,10 @@ import { PricingCard } from '../../src/components/PricingCard'
 import { PricingComparisonTable } from '../../src/components/PricingComparisonTable'
 import { TrustStrip } from '../../src/components/TrustStrip'
 import { openBookingPopup } from '../../src/utils/bookingPopup'
+import { CONTRACT_TERMS, PRICE_TEXT, PRICES, VAT_NOTE } from '../../src/data/pricing'
+import { faq } from './faq'
 
-const faq = [
-  {
-    q: "What's included in setup?",
-    a: "For AI Voice Assistant and AI Receptionist: we scrape your website, configure call responses to your services and screening questions, and forward your number to us. For AI Chatbot: we train the bot on your content and integrate your calendar or CRM. For Workflow Automation: we run a discovery audit first — we won't automate processes until we understand them. Setup takes 24–48 hours for voice and chat products; 1–14 days for automations depending on complexity.",
-  },
-  {
-    q: "What support is included?",
-    a: "Standard support is responded to within 24 hours. Critical incidents — such as a voice agent going down during business hours — are responded to within 4 hours. Support is included across all monthly plans.",
-  },
-  {
-    q: "How is caller data handled under GDPR?",
-    a: "Call recordings are retained for 90 days then permanently deleted. Chat transcripts are retained for up to 12 months. Data is processed within the UK and EU. A Data Processing Agreement (DPA) is available on request. We are registered with the ICO as required under UK GDPR.",
-  },
-  {
-    q: "Are there contracts or minimum terms?",
-    a: "No contracts, no minimum terms. Monthly plans roll month-to-month — cancel with 30 days' notice. Workflow automation projects and GEO audits are one-off payments with no ongoing commitment unless you choose a retainer.",
-  },
-  {
-    q: "When do you quote bespoke?",
-    a: "Workflow automations with five or more steps, complex CRM integrations, or multi-system builds are scoped per project. We'll always audit first and give you a fixed quote before starting.",
-  },
-  {
-    q: "Do you offer discounts for multi-product bundles?",
-    a: "Yes. Speak to us if you're taking two or more products — we typically discount on a case-by-case basis. Book a free 30-min call to discuss.",
-  },
-  {
-    q: "What happens if I want to cancel?",
-    a: "Give us 30 days' notice. We'll return your data in a portable format. Workflow automations built on n8n keep running — you own them, not us. No lock-in.",
-  },
-  {
-    q: "Do prices include VAT?",
-    a: "All prices shown are ex-VAT. UK VAT at the current rate applies to UK-based businesses where applicable.",
-  },
-  {
-    q: "How quickly will I see results?",
-    a: "Voice and receptionist products start capturing calls from the first day live. Chatbots typically produce the first leads within 48 hours. Workflow automations save time from week one.",
-  },
-  {
-    q: "Will callers or visitors know they're talking to AI?",
-    a: "Most don't ask — and the majority of those who do are fine with it. About 1 in 20 callers notice unprompted. If someone asks directly, the AI will tell them honestly. If they request a human, we can transfer the call or take a message.",
-  },
-]
+const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
 
 export default function Page() {
   return (
@@ -61,12 +22,15 @@ export default function Page() {
           <div className="max-w-3xl">
             <HeadlineBlock
               as="h1"
-              kicker={<>Pricing &bull; No Contracts &bull; UK-Based</>}
+              kicker={<>Pricing &bull; Month-to-Month Plans &bull; UK-Based</>}
             >
               Transparent Pricing for <span className="text-coral">AI Automation</span>
             </HeadlineBlock>
             <p className="text-xl text-body leading-normal mb-8 mt-6 max-w-[60ch]">
               Fixed monthly plans for voice AI and chatbots. One-off projects for workflow automation and GEO audits. Voice plans start with 120 call minutes included. Chatbot conversations are unlimited. No hidden fees.
+            </p>
+            <p className="text-lg text-body leading-normal mb-8 max-w-[60ch]">
+              Antek Automation&rsquo;s pricing for UK businesses: an AI receptionist from {PRICE_TEXT.receptionistMonthly} with {PRICES.receptionist.starter.minutes} minutes included, an AI chatbot at {PRICE_TEXT.chatbotMonthly}, workflow automation {PRICE_TEXT.workflowFrom} per project and GEO audits from {PRICE_TEXT.geoQuickCheck}. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice. All prices are ex-VAT. Based in Andover, Hampshire, and a Certified Retell AI Partner.
             </p>
             <Button variant="primary" onClick={() => openBookingPopup('pricing-hero')}>
               Book a free 30-min discovery call
@@ -112,8 +76,8 @@ export default function Page() {
             </div>
             <div className="space-y-4">
               {[
-                { name: 'Starter', price: '£97', mins: '120 mins/month', note: 'Call answering, screening, summaries', featured: false },
-                { name: 'Standard', price: '£198', mins: '240 mins/month', note: 'Starter + CRM & API integrations', featured: true },
+                { name: 'Starter', price: `£${PRICES.receptionist.starter.monthly}`, mins: `${PRICES.receptionist.starter.minutes} mins/month`, note: 'Call answering, screening, summaries', featured: false },
+                { name: 'Standard', price: `£${PRICES.receptionist.standard.monthly}`, mins: `${PRICES.receptionist.standard.minutes} mins/month`, note: 'Starter + CRM & API integrations', featured: true },
                 { name: 'Pro', price: 'Contact us', mins: 'Custom minutes', note: 'Standard + workflow automations for complex voice agent workflows', featured: false },
               ].map((tier) => (
                 <div key={tier.name} className={`border-2 p-6 ${tier.featured ? 'bg-ink border-coral shadow-brutal-coral' : 'bg-ink border-hairline shadow-brutal-sm'}`}>
@@ -123,9 +87,9 @@ export default function Page() {
                   </div>
                   <div className="flex items-baseline gap-3">
                     <span className="font-display font-extrabold text-3xl text-coral">{tier.price}</span>
-                    {tier.price !== 'Contact us' && <span className="text-muted text-sm">/month + setup from £497</span>}
+                    {tier.price !== 'Contact us' && <span className="text-muted text-sm">/month + {PRICE_TEXT.receptionistSetup}</span>}
                   </div>
-                  <p className="text-sm text-body mt-1">{tier.mins}{tier.price !== 'Contact us' && ' · £0.18/min over'}</p>
+                  <p className="text-sm text-body mt-1">{tier.mins}{tier.price !== 'Contact us' && ` · ${PRICE_TEXT.receptionistOverage}`}</p>
                   <p className="text-xs text-muted mt-1">{tier.note}</p>
                 </div>
               ))}
@@ -160,9 +124,9 @@ export default function Page() {
               id="ai-chatbot-card"
               name="AI Chatbot"
               tagline="Trained on your business. Live on your website. Captures leads 24/7."
-              price="£57/month"
-              setupNote="+ setup from £297"
-              billingLabel="per month, no contract"
+              price={PRICE_TEXT.chatbotMonthly}
+              setupNote={`+ ${PRICE_TEXT.chatbotSetup}`}
+              billingLabel="per month, rolling monthly"
               bullets={[
                 'Installed on your website within 24–48 hours',
                 'Trained on your services, pricing, availability, and tone',
@@ -201,8 +165,8 @@ export default function Page() {
               id="workflow-automation-card"
               name="Workflow Automation"
               tagline="One-off project pricing. You own the automations outright."
-              price="from £250"
-              setupNote="Bespoke from there — scoped per project"
+              price={PRICE_TEXT.workflowFrom}
+              setupNote="Per project, setup included. Bespoke from there — scoped per project"
               bullets={[
                 'Discovery audit first — we won\'t automate processes we don\'t understand',
                 'Simple workflows: live in 1–2 working days',
@@ -228,12 +192,15 @@ export default function Page() {
             <p className="text-lg text-body leading-normal max-w-[65ch]">
               ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini now answer questions directly &mdash; without sending users to Google. A GEO audit shows you exactly where your business stands in those results and what to do about it.
             </p>
+            <p className="text-body leading-normal mt-4 max-w-[65ch]">
+              Want it done for you, month after month? See our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> service.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {/* Quick Check */}
             <div className="border-2 border-hairline bg-charcoal shadow-brutal-sm p-8 h-full">
               <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Quick Check</h3>
-              <p className="font-display font-extrabold text-5xl text-coral mb-6">&pound;247</p>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6">{PRICE_TEXT.geoQuickCheck}</p>
               <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'AI visibility test across 4 platforms',
@@ -260,7 +227,7 @@ export default function Page() {
                 <span className="font-sans font-bold uppercase text-xs text-ink">Most Popular</span>
               </div>
               <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Full Audit</h3>
-              <p className="font-display font-extrabold text-5xl text-coral mb-6">&pound;497</p>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6">{PRICE_TEXT.geoFullAudit}</p>
               <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'Everything in Quick Check',
@@ -287,7 +254,7 @@ export default function Page() {
             {/* Audit + Fix */}
             <div className="border-2 border-hairline bg-charcoal shadow-brutal-sm p-8 h-full">
               <h3 className="font-display font-extrabold text-2xl uppercase text-cream mb-2">Audit + Fix</h3>
-              <p className="font-display font-extrabold text-5xl text-coral mb-6"><span className="text-2xl mr-2">from</span>&pound;997</p>
+              <p className="font-display font-extrabold text-5xl text-coral mb-6"><span className="text-2xl mr-2">from</span>£{PRICES.geo.auditFixFrom}</p>
               <ul className="space-y-3 text-body text-sm mb-8">
                 {[
                   'Full Audit included',
@@ -322,7 +289,7 @@ export default function Page() {
                     'Content updates as AI rewarding patterns evolve',
                     'Schema maintenance and new structured data',
                     'Monthly report + quarterly strategy call',
-                    '3-month minimum, then rolling monthly',
+                    `${PRICES.geo.retainerMinimumMonths}-month minimum, then rolling monthly`,
                   ].map((b, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-coral font-bold shrink-0">&bull;</span>
@@ -332,7 +299,7 @@ export default function Page() {
                 </ul>
               </div>
               <div className="shrink-0 text-center md:text-right">
-                <p className="font-display font-extrabold text-5xl text-coral"><span className="text-2xl mr-2">from</span>&pound;497</p>
+                <p className="font-display font-extrabold text-5xl text-coral"><span className="text-2xl mr-2">from</span>£{PRICES.geo.retainerFrom}</p>
                 <p className="text-muted text-sm mb-4">per month</p>
                 <a href="/contact">
                   <Button variant="primary">Ask About the Retainer</Button>
@@ -345,6 +312,24 @@ export default function Page() {
               Full details &rarr; GEO Audit
             </a>
           </p>
+        </Container>
+      </section>
+
+      {/* Call answering cost explainer */}
+      <section className="py-20 md:py-28 border-b border-hairline">
+        <Container>
+          <HeadlineBlock className="mb-8">How much does a <span className="text-coral">call answering service</span> cost?</HeadlineBlock>
+          <div className="space-y-6 max-w-[65ch]">
+            <p className="text-lg text-body leading-normal">
+              Our AI call answering is a fixed monthly fee with minutes included. Starter is {PRICE_TEXT.receptionistMonthly} with {PRICES.receptionist.starter.minutes} minutes. Standard is {PRICE_TEXT.receptionistStandardMonthly} with {PRICES.receptionist.standard.minutes} minutes. Go over and it&rsquo;s {PRICE_TEXT.receptionistOverage}. Setup is from &pound;{PRICES.receptionist.setupFrom}.
+            </p>
+            <p className="text-lg text-body leading-normal">
+              Human answering services typically charge per call or per minute. What you pay varies by provider and by how many calls you get, so a busy month costs more.
+            </p>
+            <p className="text-lg text-body leading-normal">
+              With a fixed fee you know the bill before the month starts. See how our <a href="/call-answering-service" className={LINK}>call answering service</a> works.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -368,6 +353,7 @@ export default function Page() {
               </details>
             ))}
           </div>
+          <p className="text-sm text-muted mt-8 max-w-[65ch]">{CONTRACT_TERMS} {VAT_NOTE}</p>
         </Container>
       </section>
 
