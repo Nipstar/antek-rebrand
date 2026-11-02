@@ -1,56 +1,78 @@
-import { useState, useEffect } from 'react';
-import { useConversation } from '@elevenlabs/react';
+import { useEffect, useRef, useState } from 'react';
+import type { RetellWebClient } from 'retell-client-js-sdk';
 import { X, Mic, Phone } from 'lucide-react';
-import { CONSTANTS } from '../constants';
 
 interface VoiceChatProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+type DisplayStatus = 'idle' | 'connecting' | 'connected' | 'speaking' | 'listening' | 'error';
+
+// Retell web call: the browser asks /api/retell-web-call for a session, then
+// joins it with RetellWebClient. The API key stays on the server.
 export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
-  const { status, isSpeaking, startSession, endSession } = useConversation({
-    agentId: CONSTANTS.ELEVENLABS_AGENT_ID,
-  });
-
-  const [displayStatus, setDisplayStatus] = useState<'idle' | 'connecting' | 'connected' | 'speaking' | 'listening' | 'error'>(
-    'idle'
-  );
+  const clientRef = useRef<RetellWebClient | null>(null);
+  const [displayStatus, setDisplayStatus] = useState<DisplayStatus>('idle');
 
   useEffect(() => {
-    if (!isOpen) {
-      if (status === 'connected') {
-        endSession();
-      }
-      setDisplayStatus('idle');
-    } else {
-      // Auto-start conversation when modal opens
-      if (status === 'disconnected') {
-        startSession({
-          agentId: CONSTANTS.ELEVENLABS_AGENT_ID,
-          connectionType: 'websocket',
+    if (!isOpen) return;
+
+    let cancelled = false;
+    setDisplayStatus('connecting');
+
+    (async () => {
+      try {
+        const [{ RetellWebClient }, res] = await Promise.all([
+          import('retell-client-js-sdk'),
+          fetch('/api/retell-web-call', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ page: window.location.pathname }),
+          }),
+        ]);
+        if (cancelled) return;
+        if (!res.ok) throw new Error('Could not start the demo call');
+        const session = (await res.json()) as {
+          call_id: string;
+          access_token: string;
+          transport?: 'gateway' | 'livekit';
+          ice_servers?: RTCIceServer[];
+        };
+
+        const client = new RetellWebClient();
+        clientRef.current = client;
+        client.on('call_started', () => setDisplayStatus('listening'));
+        client.on('agent_start_talking', () => setDisplayStatus('speaking'));
+        client.on('agent_stop_talking', () => setDisplayStatus('listening'));
+        client.on('call_ended', () => setDisplayStatus('idle'));
+        client.on('error', () => {
+          setDisplayStatus('error');
+          client.stopCall();
         });
-      }
-    }
-  }, [isOpen, status, startSession, endSession]);
 
-  // Update display status based on actual status and speaking state
-  useEffect(() => {
-    if (status === 'connecting') {
-      setDisplayStatus('connecting');
-    } else if (status === 'connected') {
-      if (isSpeaking) {
-        setDisplayStatus('speaking');
-      } else {
-        setDisplayStatus('listening');
+        await client.startCall({
+          accessToken: session.access_token,
+          callId: session.call_id,
+          transport: session.transport,
+          iceServers: session.ice_servers,
+          sampleRate: 24000,
+        });
+      } catch {
+        if (!cancelled) setDisplayStatus('error');
       }
-    } else {
+    })();
+
+    return () => {
+      cancelled = true;
+      clientRef.current?.stopCall();
+      clientRef.current = null;
       setDisplayStatus('idle');
-    }
-  }, [status, isSpeaking]);
+    };
+  }, [isOpen]);
 
   const handleEndCall = () => {
-    endSession();
+    clientRef.current?.stopCall();
     onClose();
   };
 
@@ -83,11 +105,8 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col items-center justify-center p-6 space-y-6">
-          {/* Status Indicator */}
           <div className="flex flex-col items-center space-y-4">
-            {/* Animated Microphone Indicator */}
             <div className="relative w-24 h-24 flex items-center justify-center">
-              {/* Background circles for animation */}
               {displayStatus === 'speaking' && (
                 <>
                   <div className="absolute inset-0 border-2 border-coral rounded-full animate-pulse" />
@@ -107,7 +126,6 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
                 </>
               )}
 
-              {/* Center Circle */}
               <div
                 className={`relative z-10 w-16 h-16 rounded-full border-2 border-ink flex items-center justify-center ${
                   displayStatus === 'speaking'
@@ -129,7 +147,6 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
               </div>
             </div>
 
-            {/* Status Text */}
             <div className="text-center">
               <p className="font-display font-extrabold text-cream uppercase text-sm">
                 {displayStatus === 'idle' && 'Ready'}
@@ -142,6 +159,7 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
               <p className="text-xs text-muted mt-1">
                 {displayStatus === 'listening' && 'Your microphone is active'}
                 {displayStatus === 'speaking' && 'The agent is speaking'}
+                {displayStatus === 'error' && 'Check your microphone permission and try again'}
               </p>
             </div>
           </div>
@@ -149,7 +167,6 @@ export function VoiceChat({ isOpen, onClose }: VoiceChatProps) {
 
         {/* Controls */}
         <div className="border-t-2 border-hairline bg-ink p-4 flex gap-3">
-          {/* End Call Button */}
           <button
             onClick={handleEndCall}
             className="w-full bg-coral text-ink px-4 py-3 border-2 border-ink shadow-brutal-xs font-sans font-bold uppercase text-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150 flex items-center justify-center gap-2"
