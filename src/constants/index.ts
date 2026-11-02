@@ -1,8 +1,5 @@
 // Application constants
 export const CONSTANTS = {
-  // ElevenLabs Voice Agent
-  ELEVENLABS_AGENT_ID: 'agent_0701k72hgm7se1gvm1db45vg23r1',
-
   // Chatbot behavior
   CHATBOT_AUTO_OPEN_DELAY_MS: 5000,
   CHATBOT_VISITED_KEY: 'chatbot_visited',
