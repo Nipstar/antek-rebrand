@@ -9,7 +9,6 @@ import { VoiceDemoButton } from '../../src/components/VoiceDemoButton';
 import { CaseStudyCard } from '../../src/components/CaseStudyCard';
 import { QuickRecap } from '../../src/components/QuickRecap';
 import { ResourcesCompliance } from '../../src/components/ResourcesCompliance';
-import { TestimonialsStrip } from '../../src/components/TestimonialsStrip';
 import { ReviewsStrip } from '../../src/components/ReviewsStrip';
 import { TrustStrip } from '../../src/components/TrustStrip';
 import { openBookingPopup } from '../../src/utils/bookingPopup';
@@ -61,9 +60,6 @@ export default function Page() {
           </div>
         </Container>
       </section>
-
-      {/* ── TESTIMONIALS STRIP (illustrative case studies) ── */}
-      <TestimonialsStrip limit={3} />
 
       <ReviewsStrip />
 
