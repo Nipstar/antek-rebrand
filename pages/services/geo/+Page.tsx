@@ -288,6 +288,9 @@ export default function Page() {
           <p className="text-body leading-relaxed mt-4 max-w-[65ch]">
             Want Google rankings and AI citations handled together, month after month? That&rsquo;s our <a href="/services/ai-seo" className={LINK}>AI SEO agency</a> service.
           </p>
+          <p className="text-body leading-relaxed mt-4 max-w-[65ch]">
+            Need a new site as well? See our <a href="/services/website-design" className={LINK}>small business website design</a>.
+          </p>
         </Container>
       </section>
 

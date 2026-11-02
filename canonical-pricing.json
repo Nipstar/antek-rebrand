@@ -100,6 +100,16 @@
     ],
     "setupFrom": true
   },
+  "website": {
+    "name": "Website Design",
+    "anchor": "website-design",
+    "from": 995,
+    "maxPages": 8,
+    "extraPage": 125,
+    "billingType": "one-off",
+    "payment": "50% to start, 50% on launch",
+    "includes": "Up to 8 pages, bespoke design, mobile-first Next.js build, forms and click-to-call, on-page SEO foundation, structured data and AI crawler access, launch on client domain and email, full ownership. Hosting and domain paid separately."
+  },
   "terms": {
     "monthlyPlans": "Roll month to month, 30 days' notice to cancel",
     "source": "src/data/pricing.ts is the source of truth for rendered pages; keep this file in step."

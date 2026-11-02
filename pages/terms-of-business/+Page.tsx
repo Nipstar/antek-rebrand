@@ -38,6 +38,7 @@ export default function Page() {
               <li>AI voice agents for inbound and outbound call handling</li>
               <li>AI-powered chatbots for website and messaging platforms</li>
               <li>Workflow automation and business process integration</li>
+              <li>Website design and development</li>
               <li>Ongoing maintenance, support, and optimisation of delivered solutions</li>
             </ul>
             <p className="leading-relaxed mt-2">
@@ -67,6 +68,7 @@ export default function Page() {
               <li>Fees will be quoted in advance and confirmed in writing prior to commencement of work</li>
               <li>Payment terms are typically 50% deposit on agreement, with the remaining 50% due on completion, unless otherwise agreed</li>
               <li>Recurring service fees (e.g., monthly maintenance, hosting, or subscription charges) are invoiced monthly in advance and due within 14 days of invoice date</li>
+              <li>For website builds, hosting and domain renewal are paid separately by you, unless agreed in writing</li>
               <li>We reserve the right to suspend services if payment is overdue beyond 14 days</li>
               <li>Late payment interest may apply in accordance with the Late Payment of Commercial Debts (Interest) Act 1998</li>
               <li>We reserve the right to adjust recurring fees with 30 days' written notice</li>
@@ -77,6 +79,9 @@ export default function Page() {
             <h2 className="font-display font-extrabold text-2xl uppercase tracking-tight-lg mb-4 text-cream">5. Intellectual Property</h2>
             <p className="leading-relaxed">
               All intellectual property rights in the services, software, systems, and deliverables created by us shall remain the property of Antek Automation unless otherwise agreed in writing. Upon full payment of all fees, you are granted a non-exclusive, non-transferable licence to use the deliverables for your business purposes.
+            </p>
+            <p className="leading-relaxed mt-2">
+              <strong>Exception for website builds.</strong> For website builds, you own the website design and content we create for you once we have received your final payment. Third-party items such as fonts, stock images and software libraries remain subject to their own licences.
             </p>
             <p className="leading-relaxed mt-2">
               Any pre-existing intellectual property, frameworks, templates, or tools used in the delivery of services remain our property. You may not reverse-engineer, decompile, or attempt to extract the source code of any software or systems we provide.

@@ -27,6 +27,12 @@ export const PRICES = {
     retainerFrom: 497,
     retainerMinimumMonths: 3,
   },
+  website: {
+    from: 995,
+    extraPage: 125,
+    maxPages: 8,
+    goLive: '2 to 3 weeks',
+  },
   noticeDays: 30,
 } as const
 
@@ -46,6 +52,8 @@ export const PRICE_TEXT = {
   geoFullAudit: gbp(PRICES.geo.fullAudit),
   geoAuditFixFrom: `from ${gbp(PRICES.geo.auditFixFrom)}`,
   geoRetainerFrom: `from ${gbp(PRICES.geo.retainerFrom)}/month`,
+  websiteFrom: `from ${gbp(PRICES.website.from)}`,
+  websiteExtraPage: gbp(PRICES.website.extraPage),
 } as const
 
 // The one true line about contracts. The GEO retainer has a minimum term,

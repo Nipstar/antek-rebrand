@@ -315,6 +315,20 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* Website Design */}
+      <section id="website-design" className="py-20 md:py-28 border-b border-hairline">
+        <Container>
+          <Eyebrow className="mb-3">Website Design</Eyebrow>
+          <HeadlineBlock className="mb-6">A Website That Works <span className="text-coral">With Your AI</span></HeadlineBlock>
+          <p className="text-lg text-body leading-normal mb-8 max-w-[60ch]">
+            Website builds start from &pound;{PRICES.website.from} for up to {PRICES.website.maxPages} pages, with a fixed quote before we start. Hosting and your domain are paid separately. Add a chatbot or AI receptionist whenever you&rsquo;re ready.
+          </p>
+          <a href="/services/website-design">
+            <Button variant="primary">See Website Design</Button>
+          </a>
+        </Container>
+      </section>
+
       {/* Call answering cost explainer */}
       <section className="py-20 md:py-28 border-b border-hairline">
         <Container>
