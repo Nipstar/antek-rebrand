@@ -163,7 +163,7 @@ export default function Page() {
               <span className="text-coral">Packages</span>
             </HeadlineBlock>
             <p className="text-muted text-sm">
-              All prices ex-VAT. <a href="/pricing#geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Full pricing page</a>
+              <a href="/pricing#geo-audit" className="underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors">Full pricing page</a>
             </p>
           </div>
 

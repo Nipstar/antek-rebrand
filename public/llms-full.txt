@@ -110,7 +110,6 @@ Full transparent pricing for all five products with comparison table, per-produc
 - Data residency: UK/EU
 - GDPR compliant. DPA available on request.
 - No contracts on AI receptionist, chatbot and workflow plans. Monthly plans roll month to month with 30 days' notice. The GEO retainer has a 3-month minimum.
-- All prices are ex-VAT. UK VAT applies to UK businesses where applicable.
 
 ## Service Areas
 Headquartered in Andover, Hampshire. UK-wide remote delivery.

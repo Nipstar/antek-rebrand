@@ -176,7 +176,7 @@ export default function Page() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-coral font-bold text-lg leading-none mt-0.5 shrink-0">&bull;</span>
-                <span>Extra minutes {PRICE_TEXT.receptionistOverage}; one-off setup from &pound;{PRICES.receptionist.setupFrom}; all prices ex-VAT</span>
+                <span>Extra minutes {PRICE_TEXT.receptionistOverage}; one-off setup from &pound;{PRICES.receptionist.setupFrom}</span>
               </li>
             </ul>
             <p>

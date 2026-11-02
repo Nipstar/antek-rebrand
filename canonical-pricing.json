@@ -101,7 +101,6 @@
     "setupFrom": true
   },
   "terms": {
-    "vat": "All prices ex-VAT. UK VAT applies to UK businesses where applicable.",
     "monthlyPlans": "Roll month to month, 30 days' notice to cancel",
     "source": "src/data/pricing.ts is the source of truth for rendered pages; keep this file in step."
   }

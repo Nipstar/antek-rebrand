@@ -67,7 +67,6 @@ export default function Page() {
               <li>Fees will be quoted in advance and confirmed in writing prior to commencement of work</li>
               <li>Payment terms are typically 50% deposit on agreement, with the remaining 50% due on completion, unless otherwise agreed</li>
               <li>Recurring service fees (e.g., monthly maintenance, hosting, or subscription charges) are invoiced monthly in advance and due within 14 days of invoice date</li>
-              <li>All fees are exclusive of VAT unless otherwise stated</li>
               <li>We reserve the right to suspend services if payment is overdue beyond 14 days</li>
               <li>Late payment interest may apply in accordance with the Late Payment of Commercial Debts (Interest) Act 1998</li>
               <li>We reserve the right to adjust recurring fees with 30 days' written notice</li>

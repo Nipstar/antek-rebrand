@@ -107,7 +107,7 @@ export default function Page() {
             Call Answering <span className="text-coral">Pricing</span>
           </HeadlineBlock>
           <p className="text-lg text-body leading-normal mb-10 max-w-[65ch]">
-            A fixed monthly fee with minutes included, so you know the bill before the month starts. All prices ex-VAT. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice.
+            A fixed monthly fee with minutes included, so you know the bill before the month starts. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice.
           </p>
           <div className="overflow-x-auto mb-10">
             <table className="w-full border-2 border-hairline text-left text-sm">
