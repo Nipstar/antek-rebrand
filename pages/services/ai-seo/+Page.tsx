@@ -95,7 +95,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <ReviewsStrip limit={3} />
+      <ReviewsStrip />
 
       {/* ── PROBLEM ── */}
       <section className="py-20 md:py-28">

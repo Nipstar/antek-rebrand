@@ -51,7 +51,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <ReviewsStrip limit={3} />
+      <ReviewsStrip />
 
       <QuickRecap items={[
         'An AI chatbot trained on your business — answers questions, captures leads, and books appointments 24/7',
