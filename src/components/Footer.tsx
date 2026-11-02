@@ -74,6 +74,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/services/website-design" className="text-body hover:text-coral transition-colors text-sm inline-block min-h-[36px] py-1.5">
+                  Website Design
+                </a>
+              </li>
+              <li>
                 <a href="/free-ai-visibility-check" className="text-body hover:text-coral transition-colors text-sm inline-block min-h-[36px] py-1.5">
                   Free AI Visibility Check
                 </a>
