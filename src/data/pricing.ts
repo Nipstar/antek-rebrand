@@ -1,4 +1,4 @@
-// Single source of truth for every public price on the site (all ex-VAT).
+// Single source of truth for every public price on the site.
 // Mirrors /pricing. Change a number here and every page, FAQ and JSON-LD
 // block that imports it updates together. canonical-pricing.json (used by
 // scripts/audit) must be kept in step with these values.
@@ -52,5 +52,3 @@ export const PRICE_TEXT = {
 // so "no contracts, no minimum terms" is never true site-wide.
 export const CONTRACT_TERMS =
   `No contracts on AI receptionist, chatbot and workflow plans. Monthly plans roll month to month with ${PRICES.noticeDays} days' notice. The GEO retainer has a ${PRICES.geo.retainerMinimumMonths}-month minimum.`
-
-export const VAT_NOTE = 'All prices are ex-VAT. UK VAT applies to UK businesses where applicable.'

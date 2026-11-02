@@ -7,7 +7,7 @@ import { PricingCard } from '../../src/components/PricingCard'
 import { PricingComparisonTable } from '../../src/components/PricingComparisonTable'
 import { TrustStrip } from '../../src/components/TrustStrip'
 import { openBookingPopup } from '../../src/utils/bookingPopup'
-import { CONTRACT_TERMS, PRICE_TEXT, PRICES, VAT_NOTE } from '../../src/data/pricing'
+import { CONTRACT_TERMS, PRICE_TEXT, PRICES } from '../../src/data/pricing'
 import { faq } from './faq'
 
 const LINK = 'underline underline-offset-4 decoration-coral decoration-2 hover:text-coral transition-colors'
@@ -30,7 +30,7 @@ export default function Page() {
               Fixed monthly plans for voice AI and chatbots. One-off projects for workflow automation and GEO audits. Voice plans start with 120 call minutes included. Chatbot conversations are unlimited. No hidden fees.
             </p>
             <p className="text-lg text-body leading-normal mb-8 max-w-[60ch]">
-              Antek Automation&rsquo;s pricing for UK businesses: an AI receptionist from {PRICE_TEXT.receptionistMonthly} with {PRICES.receptionist.starter.minutes} minutes included, an AI chatbot at {PRICE_TEXT.chatbotMonthly}, workflow automation {PRICE_TEXT.workflowFrom} per project and GEO audits from {PRICE_TEXT.geoQuickCheck}. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice. All prices are ex-VAT. Based in Andover, Hampshire, and a Certified Retell AI Partner.
+              Antek Automation&rsquo;s pricing for UK businesses: an AI receptionist from {PRICE_TEXT.receptionistMonthly} with {PRICES.receptionist.starter.minutes} minutes included, an AI chatbot at {PRICE_TEXT.chatbotMonthly}, workflow automation {PRICE_TEXT.workflowFrom} per project and GEO audits from {PRICE_TEXT.geoQuickCheck}. Monthly plans roll month to month with {PRICES.noticeDays} days&rsquo; notice. Based in Andover, Hampshire, and a Certified Retell AI Partner.
             </p>
             <Button variant="primary" onClick={() => openBookingPopup('pricing-hero')}>
               Book a free 30-min discovery call
@@ -353,7 +353,7 @@ export default function Page() {
               </details>
             ))}
           </div>
-          <p className="text-sm text-muted mt-8 max-w-[65ch]">{CONTRACT_TERMS} {VAT_NOTE}</p>
+          <p className="text-sm text-muted mt-8 max-w-[65ch]">{CONTRACT_TERMS}</p>
         </Container>
       </section>
 

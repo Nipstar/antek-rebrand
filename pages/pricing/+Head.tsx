@@ -4,7 +4,7 @@ import { faq } from './faq'
 export function Head() {
   const title = 'AI Receptionist & Automation Pricing UK | From £97/month'
   const description =
-    'UK pricing: AI receptionist from £97/month, chatbot £57/month, workflows from £250, GEO audits from £247. Month-to-month plans. Prices ex-VAT.'
+    'UK pricing: AI receptionist from £97/month, chatbot £57/month, workflows from £250, GEO audits from £247. Month-to-month plans.'
   const canonical = 'https://www.antekautomation.com/pricing'
 
   const breadcrumbSchema = {

@@ -1,4 +1,4 @@
-import { CONTRACT_TERMS, PRICES, VAT_NOTE } from '../../src/data/pricing'
+import { CONTRACT_TERMS, PRICES } from '../../src/data/pricing'
 
 // Shared by +Page.tsx (visible FAQ) and +Head.tsx (FAQPage JSON-LD) so the
 // schema always matches the visible answers word for word.
@@ -30,10 +30,6 @@ export const faq = [
   {
     q: "What happens if I want to cancel?",
     a: `Give us ${PRICES.noticeDays} days' notice (the GEO retainer has a ${PRICES.geo.retainerMinimumMonths}-month minimum first). We'll return your data in a portable format. Workflow automations built on n8n keep running — you own them, not us.`,
-  },
-  {
-    q: "Do prices include VAT?",
-    a: VAT_NOTE,
   },
   {
     q: "How quickly will I see results?",
