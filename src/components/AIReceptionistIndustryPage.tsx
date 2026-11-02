@@ -9,6 +9,7 @@ import { RetellDemoCards } from './RetellDemoCards'
 import { QuickRecap } from './QuickRecap'
 import { ResourcesCompliance } from './ResourcesCompliance'
 import { HeadlineBlock } from './HeadlineBlock'
+import { ReviewsStrip } from './ReviewsStrip'
 import type { IndustryData } from '../data/aiReceptionist'
 import { getIndustryBySlug } from '../data/aiReceptionist'
 import { PRICES, PRICE_TEXT } from '../data/pricing'
@@ -168,6 +169,8 @@ export function AIReceptionistIndustryPage({ industry }: Props) {
           </div>
         </Container>
       </section>
+
+      <ReviewsStrip />
 
       {/* ── DEMO (live Retell voice orbs) ── */}
       <div id="demo">

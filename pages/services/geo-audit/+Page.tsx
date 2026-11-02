@@ -51,7 +51,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <ReviewsStrip limit={3} />
+      <ReviewsStrip />
 
       <QuickRecap items={[
         'A GEO audit (Generative Engine Optimisation) measures how visible your business is in AI-generated answers — ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini',

@@ -14,7 +14,7 @@ interface Review {
 interface ReviewsStripProps {
   /** Town/county to prioritise (matches the `location` tag). Omit for the general pool. */
   town?: string
-  /** Max cards to render (default 3). */
+  /** Max cards to render (default 4). */
   limit?: number
   className?: string
 }
@@ -51,7 +51,7 @@ function Stars({ rating }: { rating: number }) {
   )
 }
 
-export function ReviewsStrip({ town, limit = 3, className = '' }: ReviewsStripProps) {
+export function ReviewsStrip({ town, limit = 4, className = '' }: ReviewsStripProps) {
   if (allReviews.length === 0) return null
 
   // Town-tagged first; fall back to the general pool if fewer than 3 tagged.
@@ -70,7 +70,7 @@ export function ReviewsStrip({ town, limit = 3, className = '' }: ReviewsStripPr
         <HeadlineBlock kicker={<>What clients say</>} className="mb-8">
           Reviewed by <span className="text-coral">real customers</span>
         </HeadlineBlock>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${items.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-5 md:gap-6 items-stretch`}>
           {items.map((r) => (
             <article
               key={r.id || r.author + r.date}

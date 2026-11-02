@@ -46,7 +46,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <ReviewsStrip limit={3} />
+      <ReviewsStrip />
 
       <QuickRecap items={[
         'Small business automation for your repetitive admin, built on n8n (open-source) — you own the workflows outright, no vendor lock-in',

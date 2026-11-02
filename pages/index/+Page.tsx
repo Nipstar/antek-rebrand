@@ -65,7 +65,7 @@ export default function Page() {
       {/* ── TESTIMONIALS STRIP (illustrative case studies) ── */}
       <TestimonialsStrip limit={3} />
 
-      <ReviewsStrip limit={4} />
+      <ReviewsStrip />
 
       {/* ── SNIPPET BAIT ── */}
       <section className="border-b border-hairline py-16 md:py-20">

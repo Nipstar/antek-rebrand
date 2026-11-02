@@ -21,6 +21,7 @@ import { QuickRecap } from '../../../src/components/QuickRecap'
 import { ResourcesCompliance } from '../../../src/components/ResourcesCompliance'
 import { RetellDemoCards } from '../../../src/components/RetellDemoCards'
 import { TrustStrip } from '../../../src/components/TrustStrip'
+import { ReviewsStrip } from '../../../src/components/ReviewsStrip'
 import { openBookingPopup } from '../../../src/utils/bookingPopup'
 import { getAllIndustries, type IndustryData } from '../../../src/data/aiReceptionist'
 import { AnsweringComparisonTable } from '../../../src/components/AnsweringComparisonTable'
@@ -148,6 +149,8 @@ export default function Page() {
           <AnsweringComparisonTable />
         </Container>
       </section>
+
+      <ReviewsStrip />
 
       {/* ── PRICING INDICATOR ── */}
       <section className="py-20 md:py-28">

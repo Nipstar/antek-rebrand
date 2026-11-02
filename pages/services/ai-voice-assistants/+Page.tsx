@@ -80,7 +80,7 @@ export default function Page() {
         </Container>
       </section>
 
-      <ReviewsStrip limit={3} />
+      <ReviewsStrip />
 
       <QuickRecap items={[
         'An AI voice agent that calls new leads back in seconds, qualifies them, books the good ones, confirms appointments and handles routine customer calls',
